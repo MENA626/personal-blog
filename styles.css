@@ -3864,3 +3864,76 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #home.hero-poster .poster-art{width:243%!important}
 }
 
+/* CLEAN M LETTERMARK + SMOOTH SINGLE-RIBBON GRAPHIC + WELCOME EDITORIAL COPY */
+.site-header .site-name .brand-letter,
+.site-header.is-scrolled .site-name .brand-letter,
+.site-footer .footer-name .brand-letter{
+  display:inline-block!important;
+  font-family:"DM Sans",Arial,sans-serif!important;
+  font-size:clamp(38px,3.2vw,49px)!important;
+  font-weight:900!important;
+  letter-spacing:-.1em;
+  line-height:.86;
+  color:#FF6624!important;
+  text-transform:lowercase;
+  background:none!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:0!important;
+}
+.site-header .site-name,.site-footer .footer-name{display:inline-flex!important;align-items:center;justify-content:center}
+#home.hero-poster .poster-static-ribbon path{stroke:none!important}
+#home.hero-poster .poster-title{
+  white-space:normal!important;
+  line-height:1.55!important;
+  font-size:clamp(26px,3.15vw,45px)!important;
+  letter-spacing:0!important;
+  max-width:620px;
+  text-wrap:balance;
+}
+#home.hero-poster .poster-title .poster-marker{
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+#home.hero-poster .poster-intro{line-height:1.75!important}
+#home.hero-poster .poster-description{
+  max-width:550px!important;
+  font-size:clamp(16px,1.42vw,21px)!important;
+  line-height:1.95!important;
+  text-wrap:pretty;
+  margin-bottom:15px!important;
+}
+#home.hero-poster .poster-description strong{
+  font-weight:900!important;
+  color:inherit!important;
+}
+#home.hero-poster .poster-followup{
+  max-width:550px;
+  font-size:clamp(15px,1.25vw,18px);
+  line-height:1.95;
+  color:#2329A8!important;
+  font-weight:600;
+  margin:0 0 24px;
+  text-wrap:pretty;
+}
+#home.hero-poster .poster-tagline{
+  max-width:550px;
+  line-height:1.9!important;
+  font-size:clamp(14px,1.16vw,17px)!important;
+}
+@media(max-width:700px){
+  .site-header .site-name .brand-letter{font-size:38px!important}
+  #home.hero-poster .poster-shell{min-height:1170px!important}
+  #home.hero-poster .poster-title{
+    font-size:clamp(25px,6.7vw,36px)!important;
+    line-height:1.58!important;
+  }
+  #home.hero-poster .poster-description{
+    font-size:15px!important;line-height:1.85!important;
+  }
+  #home.hero-poster .poster-followup{
+    font-size:14px!important;line-height:1.85!important;
+    margin-bottom:22px!important;
+  }
+}
+
