@@ -11,8 +11,9 @@
   --tangerine: #fcac82;
   --dark: #20241f;
   --shadow: 0 24px 80px rgba(36, 40, 30, .08);
-  --font-ar: "IBM Plex Sans Arabic", sans-serif;
-  --font-display: "Readex Pro", "IBM Plex Sans Arabic", sans-serif;
+  --font-ar: "Thmanyah Sans", "IBM Plex Sans Arabic", sans-serif;
+  --font-reading: "Thmanyah Serif Text", "IBM Plex Sans Arabic", serif;
+  --font-display: "Thmanyah Serif Display", "Readex Pro", "IBM Plex Sans Arabic", sans-serif;
   --font-en: "DM Sans", sans-serif;
 }
 html[data-theme="dark"] {
@@ -77,7 +78,7 @@ html[data-theme="dark"] .sun-icon { display: block }
 .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 12px; letter-spacing: .02em; color: var(--ink-soft) }
 .live-dot { width: 9px; height: 9px; border-radius: 50%; background: #9ac54d; box-shadow: 0 0 0 5px rgba(165,206,88,.2); animation: breathe 2.8s infinite }
 .eyebrow-line { display: inline-block; height: 1px; width: 28px; background: var(--line) }
-.hero-title { font-family: var(--font-display); font-size: clamp(76px, 8vw, 130px); font-weight: 700; letter-spacing: -.075em; line-height: 1.32; margin: 22px 0 12px; position: relative }
+.hero-title { font-family: var(--font-display); font-size: clamp(76px, 8vw, 130px); font-weight: 700; letter-spacing: -.025em; line-height: 1.35; margin: 22px 0 12px; position: relative }
 .handdrawn { position: relative; white-space: nowrap; isolation: isolate }
 .handdrawn::before { content: ""; position: absolute; z-index: -1; background: var(--lime); height: 27%; right: 1%; left: -2%; bottom: 17%; transform: rotate(-2deg); border-radius: 11px 4px 14px 8px }
 .handdrawn-dot { color: #8fb345 }
@@ -133,7 +134,7 @@ html[data-theme="dark"] .visual-stage { background: radial-gradient(circle at 45
 .section-title-row { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 47px }
 .section-eyebrow { font: 700 13px var(--font-ar); color: var(--ink-soft); margin-bottom: 22px }
 .section-eyebrow span { font: 800 14px var(--font-en); color: #90b63f }
-.section-title { font: 700 clamp(44px, 5.6vw, 75px)/1.5 var(--font-display); letter-spacing: -.065em; margin: 0 }
+.section-title { font: 700 clamp(44px, 5.6vw, 75px)/1.5 var(--font-display); letter-spacing: -.025em; margin: 0 }
 .serif-accent { position: relative }
 .serif-accent::after { content: ""; position: absolute; bottom: -2px; right: 0; width: 100%; height: 8px; background: #f1a878; border-radius: 50%; transform: rotate(-2deg) }
 .section-subtitle { color: var(--ink-soft); font-size: 16px; margin: 8px 0 0; line-height: 2 }
@@ -170,7 +171,7 @@ html[data-theme="dark"] .visual-stage { background: radial-gradient(circle at 45
 .cover-star { position: absolute; left: 25px; top: 22px; font-size: 26px }
 .story-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 25px; color: var(--ink-soft); font-size: 12px; font-weight: 600 }
 .story-card-meta .tag { background: var(--surface-2); border-radius: 20px; padding: 5px 12px; color: var(--ink) }
-.story-card-title { font-size: clamp(20px, 2.3vw, 26px); letter-spacing: -.045em; line-height: 1.6; margin: 12px 0 10px; font-weight: 700; transition: color .2s }
+.story-card-title { font-size: clamp(20px, 2.3vw, 26px); letter-spacing: -.015em; line-height: 1.6; margin: 12px 0 10px; font-weight: 700; transition: color .2s }
 .story-card:hover .story-card-title { color: #719c35 }
 .story-card-description { font-size: 14px; line-height: 2; color: var(--ink-soft); margin: 0; min-height: 56px }
 .story-card-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; margin-top: 22px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 700 }
@@ -185,7 +186,7 @@ html[data-theme="dark"] .visual-stage { background: radial-gradient(circle at 45
 .about { background: var(--dark); color: #f8f8ed; overflow: hidden; padding: 114px 0 126px }
 .about-layout { display: grid; grid-template-columns: .94fr 1.06fr; gap: 85px; align-items: center }
 .about-eyebrow { color: #a8b1a5 }
-.about-title { font: 700 clamp(51px,5.5vw,77px)/1.55 var(--font-display); letter-spacing: -.07em; margin: 8px 0 8px }
+.about-title { font: 700 clamp(51px,5.5vw,77px)/1.55 var(--font-display); letter-spacing: -.025em; margin: 8px 0 8px }
 .about-title span { color: var(--lime) }
 .about-intro > p { max-width: 425px; font-size: 16px; line-height: 2.25; color: #b5beb2; margin-bottom: 32px }
 .about-link { color: var(--lime); border-bottom: 1px solid var(--lime); padding-bottom: 8px; font-weight: 700; font-size: 14px }
@@ -212,7 +213,7 @@ html[data-theme="dark"] .visual-stage { background: radial-gradient(circle at 45
 .contact { position: relative; isolation: isolate; padding: 127px 0 112px; overflow: hidden }
 .contact-content { position: relative; z-index: 1 }
 .contact-kicker { font-size: 16px; font-weight: 600; color: var(--ink-soft); margin: 36px 0 4px }
-.contact h2 { font: 700 clamp(85px, 14vw, 200px)/1.2 var(--font-display); letter-spacing: -.09em; margin: 0 0 34px }
+.contact h2 { font: 700 clamp(85px, 14vw, 200px)/1.2 var(--font-display); letter-spacing: -.03em; margin: 0 0 34px }
 .contact h2 > span:first-child { color: #95b847 }
 .contact-asterisk { font: 400 clamp(46px,7vw,90px)/1 var(--font-en); vertical-align: top; margin-right: 20px; animation: slowSpin 22s linear infinite; display: inline-block }
 .contact-bottom { display: flex; align-items: end; justify-content: space-between; gap: 36px; border-top: 1px solid var(--line); padding-top: 28px }
@@ -239,7 +240,7 @@ html[data-theme="dark"] .visual-stage { background: radial-gradient(circle at 45
 .dialog-body { padding: 38px clamp(25px,6vw,62px) 48px }
 .dialog-meta { font-size: 12px; color: var(--ink-soft); margin: 0 }
 .dialog-body h2 { font: 700 clamp(28px,4vw,45px)/1.65 var(--font-display); letter-spacing: -.04em; margin: 14px 0 21px }
-.dialog-content { border-top: 1px solid var(--line); padding-top: 22px; font-size: 17px; line-height: 2.4; color: var(--ink-soft) }
+.dialog-content { border-top: 1px solid var(--line); padding-top: 22px; font-family: var(--font-reading); font-size: 18px; line-height: 2.3; color: var(--ink-soft) }
 .dialog-content p { margin: 0 0 22px }
 .dialog-footer { border-top: 1px solid var(--line); margin-top: 29px; padding-top: 22px; display: flex; align-items: center; justify-content: space-between; gap: 15px; font-size: 13px }
 .share-button { border: 0; background: var(--lime); color: #26331c; border-radius: 30px; padding: 12px 18px; font-size: 13px; font-weight: 700 }
