@@ -616,6 +616,306 @@ html[lang="en"] .cv-summary p,html[lang="en"] .cv-record p,html[lang="en"] .stac
 @media(max-width:720px){.video-grid{grid-template-columns:1fr}.video-card-copy{padding:23px}.cosmos-art{min-height:280px}.cosmos-wordmark{font-size:46px}}
 @media(prefers-reduced-motion:reduce){.cosmos-planet,.cosmos-orbit{animation:none!important}.video-card:hover{transform:none!important}.video-frame:hover img{transform:none!important}}
 
+
+/* ================================================================
+   CINEMATIC VIOLET / MINIMAL EDITORIAL — NOVEMBER 2026
+   Full screen atmospheric cover, Cairo headings, refined inner pages
+   ================================================================ */
+:root {
+  --display:"Cairo",sans-serif;
+  --ui:"Cairo",sans-serif;
+  --reading:"Cairo",sans-serif;
+  --english:"DM Sans",Arial,sans-serif;
+  --ink:#251E35;
+  --muted:#645D70;
+  --line:#ECE8F2;
+  --surface:#FFFFFF;
+  --softbg:#FBFAFD;
+  --shadow:0 12px 37px rgba(32,22,57,.045);
+}
+html { scroll-padding-top:78px; }
+body { background:#FFFFFF; color:var(--ink); font-family:"Cairo",sans-serif; }
+.shell { width:min(1180px,calc(100% - 80px)); max-width:none; margin-inline:auto; }
+.section { padding:clamp(76px,8vw,122px) 0; border-bottom:1px solid #F0EDF5; }
+.section::before { display:none; }
+.section-kicker { color:#73618F; font:700 12px/1.8 "Cairo",sans-serif; letter-spacing:.01em; margin-bottom:15px; }
+.section-kicker>span:first-child { color:#8C76B6; font:800 12px var(--english); }
+.section-header { margin-bottom:42px; }
+.editorial-heading { font:800 clamp(34px,4.2vw,62px)/1.43 "Cairo",sans-serif; color:#231B32; letter-spacing:-.035em; }
+.editorial-heading em { color:#745B9E; font-style:normal; }
+.editorial-heading em::after { display:none; }
+.section-stamp { display:none; }
+.section-deck { font:500 clamp(15px,1.55vw,18px)/2 "Cairo",sans-serif; max-width:780px; color:#6D6675; }
+.underlined-link { color:#574277; border-color:#A68BC8; font-weight:800; }
+.underlined-link:hover { color:#362249; }
+
+/* Navigation rests lightly on the atmospheric image, then becomes white. */
+.site-header {
+  position:fixed; top:0; left:0; right:0; z-index:110;
+  background:transparent; border-bottom:1px solid rgba(255,255,255,.15);
+  box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none;
+  transition:background .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.site-header.is-scrolled {
+  background:rgba(255,255,255,.965);
+  border-bottom:1px solid #EBE7F1;
+  box-shadow:0 6px 22px rgba(33,23,57,.055);
+  backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px);
+}
+.nav-shell { min-height:76px; }
+.site-name .name-ar { width:119px; filter:brightness(0) invert(1); }
+.site-name .name-en { color:#fff; font:700 19px/1.2 var(--english); }
+.site-header.is-scrolled .site-name .name-ar { filter:none; }
+.site-header.is-scrolled .site-name .name-en { color:#584276; }
+.nav-links { gap:clamp(9px,1.7vw,24px); }
+.nav-links a { color:#F6F3FF; font:700 12px/1.6 "Cairo",sans-serif; opacity:.87; transition:opacity .2s,color .2s; }
+.nav-links a:hover,.nav-links a.active { color:#FFFFFF; opacity:1; }
+.nav-links a::after { background:#D6C3F0; height:2px; }
+.site-header.is-scrolled .nav-links a { color:#625570; opacity:1; }
+.site-header.is-scrolled .nav-links a:hover,
+.site-header.is-scrolled .nav-links a.active { color:#634B8D; }
+.site-header.is-scrolled .nav-links a::after { background:#A586CC; }
+.nav-actions { gap:10px; }
+.language-toggle {
+  color:#FFFFFF; background:rgba(255,255,255,.075); border-color:rgba(255,255,255,.45);
+  font:700 12px var(--english); border-radius:8px; padding:10px 12px; min-width:62px;
+}
+.language-toggle:hover { color:#fff; background:rgba(255,255,255,.15); border-color:rgba(255,255,255,.85); }
+.site-header.is-scrolled .language-toggle { background:white; color:#604C82; border-color:#E1DCEB; }
+.site-header.is-scrolled .language-toggle:hover { background:#F8F6FB; border-color:#B8A5D2; }
+.nav-cta {
+  border-radius:8px; color:white; background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.55); padding:10px 16px;
+}
+.nav-cta:hover { background:rgba(255,255,255,.2); transform:translateY(-1px); }
+.nav-cta span:last-child { color:#E8DCFB; }
+.site-header.is-scrolled .nav-cta { background:#5D4783; color:#fff; border-color:#5D4783; }
+.site-header.is-scrolled .nav-cta:hover { background:#493667; }
+.site-header.is-scrolled .nav-cta span:last-child { color:#ECE1FC; }
+.menu-toggle { background:rgba(255,255,255,.13); border-color:rgba(255,255,255,.53); }
+.menu-toggle span { background:#fff; }
+.site-header.is-scrolled .menu-toggle { background:#fff; border-color:#E4DDF0; }
+.site-header.is-scrolled .menu-toggle span { background:#5A4776; }
+
+/* Hero: a real SVG atmospheric image with CSS gradient fallback. */
+.hero.hero-cinematic {
+  position:relative; display:block; width:100%; min-height:100vh; min-height:100svh;
+  padding:0; overflow:hidden; isolation:isolate; border:0;
+  background-color:#120C20;
+  background-image:
+    radial-gradient(ellipse at 0% 10%,rgba(213,192,238,.24) 0%,transparent 62%),
+    url("assets/violet-ambient-cover.svg");
+  background-position:center,center; background-repeat:no-repeat; background-size:cover,cover;
+  color:#fff;
+}
+.hero.hero-cinematic::before,
+.hero.hero-cinematic::after { display:none; content:none; }
+.hero-cinematic-shade {
+  position:absolute; z-index:0; inset:0; pointer-events:none;
+  background:linear-gradient(90deg,rgba(24,12,37,.03) 0%,rgba(12,7,25,.12) 54%,rgba(6,4,15,.32) 100%),
+    radial-gradient(ellipse at 51% 51%,rgba(12,8,26,.22),transparent 62%);
+}
+.hero-cinematic-inner {
+  position:relative; z-index:1; width:100%; min-height:100vh; min-height:100svh;
+  display:flex; align-items:center; justify-content:center;
+  padding:100px clamp(20px,5vw,90px) 110px;
+}
+.hero-identity {
+  display:flex; align-items:center; justify-content:center; flex-direction:column;
+  gap:0; text-align:center; max-width:90vw;
+  transform:translateY(-12px); animation:brandArrive 1.25s ease-out both;
+}
+@keyframes brandArrive {
+  from { opacity:0; transform:translateY(12px); filter:blur(6px); }
+  to { opacity:1; transform:translateY(-12px); filter:blur(0); }
+}
+.hero-monogram {
+  width:clamp(66px,6.2vw,94px); height:auto; color:#F8F6FD;
+  filter:drop-shadow(0 3px 16px rgba(255,255,255,.09));
+  margin-bottom:26px;
+}
+.hero-brand-title {
+  color:#FFFFFF; font:700 clamp(26px,3.15vw,40px)/1.6 "Cairo",sans-serif;
+  margin:0 0 14px; letter-spacing:.005em; text-shadow:0 3px 18px rgba(4,2,14,.18);
+}
+.hero-brand-meta {
+  display:flex; align-items:center; justify-content:center; gap:22px;
+  color:rgba(251,247,255,.86); font:600 clamp(11px,1.1vw,13px)/1.8 "Cairo",sans-serif;
+  letter-spacing:.025em; white-space:nowrap;
+}
+.hero-brand-meta span[lang="en"] { font:600 11px/1.6 var(--english); letter-spacing:.13em; }
+.hero-brand-rule { width:1px; height:17px; background:rgba(255,255,255,.48); }
+.hero-cinematic-footer {
+  position:absolute; bottom:clamp(25px,5.8vh,55px); inset-inline:clamp(24px,5vw,90px);
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  color:rgba(255,255,255,.74); direction:ltr;
+}
+.hero-cinematic-caption { font:600 10px var(--english); letter-spacing:.13em; }
+.hero-scroll-link {
+  display:inline-flex; align-items:center; justify-content:center; gap:14px;
+  color:#FFFFFF; font:700 12px "Cairo",sans-serif; padding:9px 6px;
+  border-bottom:1px solid rgba(255,255,255,.52); transition:gap .23s,border-color .2s;
+}
+.hero-scroll-link:hover { gap:22px; border-color:#fff; }
+.hero-scroll-link span:last-child { font:400 21px var(--english); line-height:.8; }
+.journey-indicator,.marquee { display:none!important; }
+.cursor-glow { display:none!important; }
+
+/* One quiet white editorial system across the entire page. */
+.about,.cv,.stack,.videos,.contact { background:#FFFFFF; }
+.projects,.notes { background:#FAF9FD; }
+.about-layout { gap:clamp(32px,5vw,84px); }
+.about-lead>p { font:500 clamp(15px,1.5vw,17px)/2.1 "Cairo",sans-serif; color:#625D6F; }
+.about-lead>.about-secondary { font-size:15px; }
+.bio-panel { background:#4D3B6B; min-height:260px; border-radius:18px; }
+.bio-panel::after { opacity:.35; }
+.bio-panel h3 { color:white; font:800 25px/1.6 "Cairo",sans-serif; }
+.bio-panel p { color:#E7DEED; }
+.bio-tiles { gap:13px; }
+.bio-tile { min-height:158px; border-radius:16px; }
+.neon-tile { background:#F4F0F9; color:#4F3D6D; border-color:#E8E2EE; }
+.neon-tile strong { font-size:52px; }
+.dark-tile { background:#F0ECF6; color:#4F3D6D; }
+.dark-tile strong { font:800 21px/1.5 "Cairo",sans-serif; }
+.tile-arrow,.tile-plus { color:#A28ABB; }
+.cv-grid { gap:clamp(25px,4vw,55px); }
+.cv-summary {
+  background:#F4F1F8; color:#392B50; box-shadow:none;
+  border:1px solid #EAE4F2; border-radius:18px;
+}
+.cv-summary::before { display:none; }
+.cv-summary .section-kicker,.cv-summary .editorial-heading,.cv-summary p,.cv-note { color:#3F3454; }
+.cv-summary .editorial-heading em { color:#79619E; }
+.cv-summary p { font:500 16px/2 "Cairo",sans-serif; }
+.cv-view { border-radius:8px; background:#544176; }
+.cv-view:hover { background:#3F305F; }
+.cv-record {
+  border:1px solid #EAE6F0; background:#fff; border-radius:14px;
+  box-shadow:none; padding:22px 24px; gap:18px;
+}
+.cv-record:hover { box-shadow:0 10px 27px rgba(41,29,73,.06); border-color:#CFC3DC; transform:translateY(-3px); }
+.cv-icon { background:#F2EEF8; color:#6C568E; border-radius:12px; }
+.cv-record:nth-child(2) .cv-icon,.cv-record:nth-child(3) .cv-icon { background:#F2EEF8; }
+.cv-record h3 { font:800 18px/1.7 "Cairo",sans-serif; color:#332642; }
+.cv-record p { font:500 14px/1.9 "Cairo",sans-serif; color:#6A6471; }
+.cv-label { color:#8C7D9F; font:700 10px var(--english); }
+.project-list { gap:22px; }
+.project-card {
+  background:#fff; border:1px solid #EAE6EF; border-radius:18px;
+  box-shadow:none; min-height:345px; transition:transform .28s,box-shadow .28s;
+}
+.project-card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(42,32,72,.08); }
+.project-demo { background:linear-gradient(140deg,#5B4779,#312444); }
+.demo-orbit { opacity:.24; }
+.demo-panel { border-radius:11px; }
+.site-project-art { background:#ECE6F6; }
+.site-art-type { color:#6A538E; }
+.site-art-type span { color:#9777BC; }
+.cosmos-art { background:linear-gradient(135deg,#352648,#0D0A19); }
+.project-details { padding:clamp(28px,3.7vw,45px); }
+.project-details h3 { color:#2D203D; font:800 clamp(24px,2.6vw,34px)/1.5 "Cairo",sans-serif; margin:24px 0 12px; }
+.project-details>p { font:500 15px/2 "Cairo",sans-serif; }
+.project-chips span { background:#F5F2F8; color:#605077; border-color:#EAE4F0; }
+.project-status { color:#66507D; }
+.status-point { background:#9878C6; box-shadow:0 0 0 4px rgba(152,120,198,.12); }
+.tech-group { background:#FFFFFF; border:1px solid #EAE7EF; box-shadow:none; border-radius:16px; }
+.tech-group:hover { border-color:#D1C4E0; box-shadow:0 10px 30px rgba(35,24,72,.05); }
+.tech-group-head h3 { color:#3D3056; }
+.tech-group-mark { background:#F1ECF7; color:#6A528E; }
+.tech-item { background:#FAF9FC; border-color:#EFEBF3; border-radius:9px; }
+.tech-item:hover { background:#F3EFF8; border-color:#CBB9E1; }
+.tech-item strong { color:#53475F; }
+.ai-banner { background:#50406C; border-radius:16px; }
+.ai-banner-star { color:#C7B2E0; }
+.stack-use-card { background:#FFFFFF; box-shadow:none; border:1px solid #EAE7EF; }
+.stack-use-card:hover { box-shadow:0 10px 24px rgba(35,25,60,.07); transform:translateY(-3px); }
+.stack-use-card::before { background:#BBA5D1!important; width:3px; }
+.stack-use-symbol { background:#F1EDF8!important; color:#695183; }
+.stack-use-card h3 { font:800 18px/1.6 "Cairo",sans-serif; color:#342647; }
+.stack-use-card p { font:500 14px/1.9 "Cairo",sans-serif; }
+.video-card { background:#fff; box-shadow:none; border:1px solid #EAE7EF; border-radius:16px; }
+.video-card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(42,32,72,.07); }
+.video-frame { background:#3D2A55; }
+.video-play { background:#FFFFFF; color:#4D3A6B; border:2px solid rgba(255,255,255,.85); width:66px; height:66px; }
+.video-play:hover { background:#E9DFF5; }
+.video-kicker { color:#8E7DA9; }
+.video-card h3 { font:800 23px/1.6 "Cairo",sans-serif; color:#362849; }
+.video-card p { font:500 15px/2 "Cairo",sans-serif; }
+.note-card { background:#fff; border:1px solid #EAE6F0; border-radius:15px; box-shadow:none; }
+.note-card:hover { transform:translateY(-4px); box-shadow:0 12px 26px rgba(33,21,65,.08); }
+.note-cover { background:#5A4976; }
+.note-card:nth-child(2) .note-cover { background:#B5A1CC; color:#46335E; }
+.note-card:nth-child(3) .note-cover { background:#E9E4F2; color:#574674; }
+.note-category { color:#8C72B4; }
+.note-card h3 { font:800 20px/1.65 "Cairo",sans-serif; color:#3B2B50; }
+.note-card p { font:500 14px/2 "Cairo",sans-serif; }
+.contact-layout p { font:500 17px/2 "Cairo",sans-serif; color:#6A6471; }
+.contact-title { font:800 clamp(39px,5.2vw,65px)/1.45 "Cairo",sans-serif; color:#2E2440; }
+.contact-title em { color:#6B5588; border-color:#C0ABD6; border-bottom-width:4px; }
+.contact-button { background:#574475; border-radius:9px; }
+.contact-button:hover { background:#45335E; }
+.contact-button span:last-child { color:#DDD0ED; }
+.contact-decoration { background:#F6F3FA; border-color:#ECE6F2; }
+.contact-symbol { color:#9F8BB9; opacity:.4; animation:none; }
+.contact-decoration>span { color:#816D98; }
+.site-footer { background:#191325; }
+.top-link { border-color:#B39ACB; }
+.footer-name .name-ar { filter:brightness(0) invert(1); }
+.note-dialog { border-radius:16px; }
+.dialog-share { background:#584477; }
+.modal,dialog { font-family:"Cairo",sans-serif; }
+html[lang="en"] .editorial-heading,html[lang="en"] .project-details h3,
+html[lang="en"] .cv-record h3,html[lang="en"] .stack-use-card h3,
+html[lang="en"] .video-card h3,html[lang="en"] .note-card h3,
+html[lang="en"] .contact-title { font-family:"DM Sans",sans-serif; letter-spacing:-.045em; }
+html[lang="en"] .hero-brand-title { font-family:"DM Sans",sans-serif; font-size:clamp(22px,2.6vw,32px); letter-spacing:.095em; font-weight:600; }
+html[lang="en"] .hero-brand-meta { font-family:"DM Sans",sans-serif; }
+@media(max-width:960px) {
+  .shell { width:calc(100% - 52px); }
+  .nav-links {
+    background:#FFFFFF; border-bottom:1px solid #EAE4F1;
+    box-shadow:0 14px 25px rgba(31,22,53,.10);
+  }
+  .nav-links a,.nav-links a.active,.site-header.is-scrolled .nav-links a {
+    color:#4E3D67; opacity:1; font-size:14px;
+  }
+  .nav-links a:hover,.nav-links a.active { color:#735796; }
+  .nav-links a::after { background:#A58BBF; }
+  .nav-cta { display:none; }
+}
+@media(max-width:720px) {
+  .shell { width:calc(100% - 36px); }
+  .site-header .nav-shell { min-height:65px; }
+  .site-name .name-ar { width:104px; }
+  .site-name .name-en { font-size:15px; }
+  .hero-identity { transform:translateY(-20px); }
+  .hero-monogram { width:68px; margin-bottom:17px; }
+  .hero-brand-title { font-size:clamp(25px,6vw,34px); margin-bottom:12px; }
+  .hero-brand-meta { gap:14px; font-size:10px; }
+  .hero-brand-meta span[lang="en"] { font-size:9px; letter-spacing:.08em; }
+  .hero-cinematic-footer { bottom:32px; justify-content:center; }
+  .hero-cinematic-footer .hero-cinematic-caption { display:none; }
+  .hero-cinematic-inner { padding-top:88px; padding-bottom:90px; }
+  .section { padding:72px 0; }
+  .editorial-heading { font-size:clamp(33px,7.4vw,46px); line-height:1.52; }
+  .cv-summary { padding:30px; }
+  .cv-record { padding:19px; }
+  .bio-tiles { gap:12px; }
+}
+@media(max-width:440px) {
+  .shell { width:calc(100% - 28px); }
+  .site-name .name-ar { width:94px; }
+  .hero-brand-title { font-size:25px; }
+  .hero-brand-meta { flex-wrap:wrap; gap:10px; }
+  .hero-brand-rule { height:12px; }
+  .section { padding:60px 0; }
+  .editorial-heading { font-size:32px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-identity { animation:none!important; transform:none!important; }
+  .hero-scroll-link,.site-header { transition:none!important; }
+}
+
   </style>
 
 </head>
@@ -707,10 +1007,10 @@ html[lang="en"] .cv-summary p,html[lang="en"] .cv-record p,html[lang="en"] .stac
           <small class="cv-note" data-i18n="cvFootnote">هذه السيرة مبنية على معلومات مؤكدة. يمكن إضافة الخبرات الوظيفية والشهادات عندما تتوفر تفاصيلها.</small>
         </div>
         <div class="cv-list">
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">🎓</span><div><span class="cv-label" data-i18n="cvEducationLabel">التعليم</span><h3 data-i18n="cvEducationTitle">جامعة طرابلس · كلية تقنية المعلومات</h3><p data-i18n="cvEducationDesc">خريجة كلية تقنية المعلومات، مع اهتمام بهندسة البرمجيات وبناء حلول تقنية متكاملة.</p></div></article>
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">&lt;/&gt;</span><div><span class="cv-label" data-i18n="cvDevelopmentLabel">التطوير</span><h3 data-i18n="cvDevelopmentTitle">الويب والتطبيقات متعددة المنصات</h3><p data-i18n="cvDevelopmentDesc">PHP وLaravel وJava وJavaScript لتطوير الويب والأنظمة الخلفية، وFlutter وDart لتطبيقات الموبايل.</p></div></article>
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">✳</span><div><span class="cv-label" data-i18n="cvAILabel">الذكاء الاصطناعي</span><h3 data-i18n="cvAITitle">نماذج اللغة والبحث الدلالي</h3><p data-i18n="cvAIDesc">أستكشف LLMs وRAG وEmbeddings والبحث الدلالي، مع مشروع «ميزان» كتوجه تطبيقي في LegalTech.</p></div></article>
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">⌘</span><div><span class="cv-label" data-i18n="cvDataLabel">البيانات وأدوات العمل</span><h3 data-i18n="cvDataTitle">قواعد البيانات والبنية التقنية</h3><p data-i18n="cvDataDesc">PostgreSQL وMySQL وSupabase وpgvector، إلى جانب Docker وGit وLinux.</p></div></article>
+          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">01</span><div><span class="cv-label" data-i18n="cvEducationLabel">التعليم</span><h3 data-i18n="cvEducationTitle">جامعة طرابلس · كلية تقنية المعلومات</h3><p data-i18n="cvEducationDesc">خريجة كلية تقنية المعلومات، مع اهتمام بهندسة البرمجيات وبناء حلول تقنية متكاملة.</p></div></article>
+          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">02</span><div><span class="cv-label" data-i18n="cvDevelopmentLabel">التطوير</span><h3 data-i18n="cvDevelopmentTitle">الويب والتطبيقات متعددة المنصات</h3><p data-i18n="cvDevelopmentDesc">PHP وLaravel وJava وJavaScript لتطوير الويب والأنظمة الخلفية، وFlutter وDart لتطبيقات الموبايل.</p></div></article>
+          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">03</span><div><span class="cv-label" data-i18n="cvAILabel">الذكاء الاصطناعي</span><h3 data-i18n="cvAITitle">نماذج اللغة والبحث الدلالي</h3><p data-i18n="cvAIDesc">أستكشف LLMs وRAG وEmbeddings والبحث الدلالي، مع مشروع «ميزان» كتوجه تطبيقي في LegalTech.</p></div></article>
+          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">04</span><div><span class="cv-label" data-i18n="cvDataLabel">البيانات وأدوات العمل</span><h3 data-i18n="cvDataTitle">قواعد البيانات والبنية التقنية</h3><p data-i18n="cvDataDesc">PostgreSQL وMySQL وSupabase وpgvector، إلى جانب Docker وGit وLinux.</p></div></article>
         </div>
       </div>
     </section>
@@ -863,6 +1163,9 @@ const english = {
   heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
+  heroIdentity: "MENAT ALLAH AHMED",
+  heroRole: "SOFTWARE ENGINEER",
+  heroExplore: "Explore my work",
   heroPanelText: "A sharper question.<br>A smarter design.<br>Lasting impact.",
   aboutKicker: "Behind the screen",
   aboutHeadOne: "Beyond the interface.",
@@ -1238,23 +1541,13 @@ if("IntersectionObserver" in window) {
   document.querySelectorAll("section.anchor").forEach(s=>sectionObserver.observe(s));
 }
 
-const board=document.getElementById("heroBoard");
-const glow=document.getElementById("cursorGlow");
-if(!reduceMotion && window.matchMedia("(pointer:fine)").matches){
-  window.addEventListener("pointermove",e=>{
-    glow.style.left=e.clientX+"px";
-    glow.style.top=e.clientY+"px";
-    glow.style.opacity="1";
-  },{passive:true});
-  board.addEventListener("pointermove",e=>{
-    const r=board.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width-.5;
-    const y=(e.clientY-r.top)/r.height-.5;
-    board.style.transform="rotateX("+(-y*2)+"deg) rotateY("+(x*2.6)+"deg)";
-  },{passive:true});
-  board.addEventListener("pointerleave",()=>{board.style.transform="";});
+// Minimal fixed navigation floats over the cover and becomes opaque on scroll.
+const siteHeader=document.getElementById("siteHeader");
+function syncHeaderAppearance(){
+  if(siteHeader)siteHeader.classList.toggle("is-scrolled",window.scrollY>42);
 }
-
+window.addEventListener("scroll",syncHeaderAppearance,{passive:true});
+syncHeaderAppearance();
 
 // A subtle stagger for the CV, deliverables and skills. The content never depends on it.
 if (!reduceMotion) {
