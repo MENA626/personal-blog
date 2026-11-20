@@ -2729,3 +2729,87 @@ html body :is(
   #cv.cv-featured::before {font-size:clamp(220px,68vw,365px);opacity:.65}
 }
 
+/* HAND-WAVE EDITORIAL HERO 2026 — original SVG in the layout, following the user reference. */
+#home.hero.hero-saas.hero-hello {background:#FFFFFF!important;color:#080923!important;display:block!important;visibility:visible!important;opacity:1!important;min-height:0!important;padding:0!important;overflow:hidden}
+#home.hero-hello .hello-cover {
+ display:block!important;position:relative!important;isolation:isolate;overflow:hidden;
+ width:100%;max-width:1600px;height:clamp(730px,94svh,940px);min-height:730px;
+ margin-inline:auto;background:#FFFFFF!important;
+}
+#home.hero-hello .hello-cover::after{content:none!important;display:none!important}
+#home.hero-hello .hello-cover-graphic {
+ position:absolute!important;display:block!important;visibility:visible!important;opacity:1!important;
+ z-index:1;width:min(81vw,1070px)!important;height:auto!important;max-width:none!important;
+ top:-1%!important;left:34%!important;pointer-events:none;filter:none!important;transform:none!important;
+}
+#home.hero-hello .hello-greeting {
+ position:absolute!important;z-index:3;top:5%;left:5.7%;margin:0;direction:ltr;
+ font:900 clamp(98px,12.7vw,194px)/1 "DM Sans",Arial,sans-serif!important;
+ letter-spacing:-.078em;color:#0A0B2B!important;white-space:nowrap;
+}
+#home.hero-hello .hello-next {
+ position:absolute!important;z-index:6;top:4.8%;right:4.8%;
+ width:56px;height:56px;display:grid;place-items:center;
+ border-radius:15px;color:#10132D;background:#F1F4FB!important;
+ box-shadow:none;transition:transform .2s ease;
+}
+#home.hero-hello .hello-next:hover{transform:translateX(3px)}
+#home.hero-hello .hello-copy{
+ position:absolute!important;z-index:5;left:5.8%!important;right:auto!important;
+ bottom:7.3%!important;width:min(660px,61%)!important;padding:0!important;
+ direction:rtl;text-align:right!important;color:#0A0B2B!important;
+ background:none!important;border:0!important;box-shadow:none!important;
+}
+#home.hero-hello .hello-intro{
+ margin:0 0 9px!important;color:#1A49AF!important;
+ font-size:clamp(13px,1.4vw,17px)!important;font-weight:800!important;
+ line-height:1.6;
+}
+#home.hero-hello .hello-title{
+ margin:0 0 17px!important;font:900 clamp(46px,5.8vw,88px)/1.24 var(--thmanyah-heading)!important;
+ color:#0A0B2B!important;letter-spacing:0!important;
+}
+#home.hero-hello .hello-title span{display:block}
+#home.hero-hello .hello-welcome-description {
+ margin:0 0 19px!important;max-width:590px;color:#393C56!important;
+ font-size:clamp(14px,1.45vw,19px)!important;line-height:1.9!important;font-weight:500!important;
+}
+#home.hero-hello .hello-project-link{
+ display:inline-flex;align-items:center;gap:12px;padding:0 0 6px;
+ color:#12378E!important;border-bottom:2px solid #009EFF;
+ font-size:clamp(13px,1.1vw,16px);font-weight:800;
+}
+@media(max-width:850px){
+ #home.hero-hello .hello-cover{height:830px;min-height:750px}
+ #home.hero-hello .hello-cover-graphic{width:125%!important;left:0%!important;top:2%!important}
+ #home.hero-hello .hello-greeting{font-size:clamp(80px,15vw,130px)}
+ #home.hero-hello .hello-copy{width:82%!important}
+}
+@media(max-width:600px){
+ #home.hero-hello .hello-cover{height:clamp(760px,108svh,935px);min-height:760px}
+ #home.hero-hello .hello-cover-graphic {
+  width:188%!important;top:6.7%!important;left:-32%!important;
+ }
+ #home.hero-hello .hello-greeting{
+  top:5.5%;left:6%;font-size:clamp(72px,18vw,108px)!important;
+ }
+ #home.hero-hello .hello-next{
+  top:3%;right:4.5%;width:45px;height:45px;border-radius:13px;
+ }
+ #home.hero-hello .hello-next svg{width:25px;height:25px}
+ #home.hero-hello .hello-copy{
+  left:6.5%!important;bottom:5.5%!important;
+  width:87%!important;text-align:right!important;
+ }
+ #home.hero-hello .hello-title{font-size:clamp(37px,10vw,53px)!important;line-height:1.32!important}
+ #home.hero-hello .hello-intro{font-size:13px!important}
+ #home.hero-hello .hello-welcome-description{font-size:14px!important;line-height:1.8!important;max-width:100%}
+ #home.hero-hello .hello-project-link{font-size:13px}
+}
+@media(max-width:365px){
+ #home.hero-hello .hello-cover{min-height:750px}
+ #home.hero-hello .hello-title{font-size:35px!important}
+ #home.hero-hello .hello-greeting{font-size:71px!important}
+}
+@media(prefers-reduced-motion:reduce){#home.hero-hello .hello-next{transition:none}}
+
