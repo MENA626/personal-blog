@@ -3008,6 +3008,26 @@ html body :is(
   #home.hero-hello .hello-copy{width:87%!important;bottom:4%!important}
 }
 
+
+/* Friendly hand wave: the sleeve stays attached while the palm greets visitors. */
+#home .hello-cover-graphic .wave-moving-hand{
+  transform-box:view-box;
+  transform-origin:498px 415px;
+  animation:menatHelloWave 3.6s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes menatHelloWave{
+  0%,10%,79%,100%{transform:rotate(0deg)}
+  21%{transform:rotate(-10deg)}
+  34%{transform:rotate(10deg)}
+  47%{transform:rotate(-9deg)}
+  60%{transform:rotate(7deg)}
+  71%{transform:rotate(0deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  #home .hello-cover-graphic .wave-moving-hand{animation:none!important;transform:none!important}
+}
+
 </style>
 
 </head>
@@ -3039,15 +3059,15 @@ html body :is(
     <section id="home" class="hero hero-saas hero-hello anchor" aria-labelledby="heroMainTitle">
       <div class="hello-cover">
         <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 900" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-  <g fill="#1A49AF">
-    <!-- Slim diagonal sleeve sweeps fully across the cover -->
+  <g class="wave-stationary-arm" fill="#355CF5">
     <path d="M-115 491 L475 299 L507 398 L-115 606Z"/>
-    <!-- Taller, clearly separated rounded fingers and open palm -->
-    <path d="M446 340 L447 121 Q447 102 461 102 Q475 102 475 121 L480 183 L481 81 Q481 63 495 63 Q511 63 511 82 L514 183 L515 47 Q515 27 532 27 Q549 27 549 47 L550 183 L557 84 Q559 65 575 67 Q589 69 588 88 L586 219 Q603 191 619 183 Q637 176 648 186 Q659 198 647 215 L618 256 Q600 288 601 325 L602 385 Q600 446 555 464 L497 460 Q453 435 446 340Z"/>
-    <!-- Narrow descending continuation stays visible all the way down -->
     <path d="M480 385 C511 445 506 563 540 681 C575 801 652 896 741 904 L741 1000 C622 996 524 927 475 810 C435 716 425 570 421 468Z"/>
+    <circle cx="489" cy="406" r="43"/>
   </g>
-  <path d="M604 250 Q614 236 630 230" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <g class="wave-moving-hand" fill="#355CF5">
+    <path d="M446 340 L447 121 Q447 102 461 102 Q475 102 475 121 L480 183 L481 81 Q481 63 495 63 Q511 63 511 82 L514 183 L515 47 Q515 27 532 27 Q549 27 549 47 L550 183 L557 84 Q559 65 575 67 Q589 69 588 88 L586 219 Q603 191 619 183 Q637 176 648 186 Q659 198 647 215 L618 256 Q600 288 601 325 L602 385 Q600 446 555 464 L497 460 Q453 435 446 340Z"/>
+    <path d="M604 250 Q614 236 630 230" fill="none" stroke="#F2E7E1" stroke-width="8" stroke-linecap="round"/>
+  </g>
 </svg>
         <span class="hello-greeting" lang="en" aria-label="Hello!">Hello!</span>
         <div class="hello-copy">
