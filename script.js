@@ -22,6 +22,9 @@ const english = {
   heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
+  heroIdentity: "MENAT ALLAH AHMED",
+  heroRole: "SOFTWARE ENGINEER",
+  heroExplore: "Explore my work",
   heroPanelText: "A sharper question.<br>A smarter design.<br>Lasting impact.",
   aboutKicker: "Behind the screen",
   aboutHeadOne: "Beyond the interface.",
@@ -397,23 +400,13 @@ if("IntersectionObserver" in window) {
   document.querySelectorAll("section.anchor").forEach(s=>sectionObserver.observe(s));
 }
 
-const board=document.getElementById("heroBoard");
-const glow=document.getElementById("cursorGlow");
-if(!reduceMotion && window.matchMedia("(pointer:fine)").matches){
-  window.addEventListener("pointermove",e=>{
-    glow.style.left=e.clientX+"px";
-    glow.style.top=e.clientY+"px";
-    glow.style.opacity="1";
-  },{passive:true});
-  board.addEventListener("pointermove",e=>{
-    const r=board.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width-.5;
-    const y=(e.clientY-r.top)/r.height-.5;
-    board.style.transform="rotateX("+(-y*2)+"deg) rotateY("+(x*2.6)+"deg)";
-  },{passive:true});
-  board.addEventListener("pointerleave",()=>{board.style.transform="";});
+// Minimal fixed navigation floats over the cover and becomes opaque on scroll.
+const siteHeader=document.getElementById("siteHeader");
+function syncHeaderAppearance(){
+  if(siteHeader)siteHeader.classList.toggle("is-scrolled",window.scrollY>42);
 }
-
+window.addEventListener("scroll",syncHeaderAppearance,{passive:true});
+syncHeaderAppearance();
 
 // A subtle stagger for the CV, deliverables and skills. The content never depends on it.
 if (!reduceMotion) {
