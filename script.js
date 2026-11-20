@@ -19,6 +19,7 @@ const english = {
   heroLearnMore: "Discover my story",
   heroCaption: "I don't just write code. I build systems that solve real problems.",
   heroScroll: "Scroll to explore ↓",
+  heroEngineState: "AI system concept",
   aboutKicker: "Behind the screen",
   aboutHeadOne: "Understand the problem.",
   aboutHeadTwo: "Then build the solution.",
@@ -249,6 +250,10 @@ function updateLanguage(next) {
   document.getElementById("mainNav").setAttribute("aria-label",language==="ar"?"القائمة الرئيسية":"Main navigation");
   document.getElementById("homeBrand").setAttribute("aria-label",language==="ar"?"منة الله أحمد — الرئيسية":"Menat Allah Ahmed — Home");
   closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
+  const heroDiagram = document.querySelector(".hero-art");
+  if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar"
+    ? "تصوّر تفاعلي لمسار الذكاء الاصطناعي: مستندات، OCR، استرجاع دلالي، وإجابات"
+    : "Animated AI architecture concept: documents, OCR, vector retrieval, and answers");
   document.title = language==="ar"?"منة الله أحمد | مهندسة برمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
   const description = document.querySelector('meta[name="description"]');
   description.content = language==="ar"
