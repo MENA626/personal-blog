@@ -5,54 +5,55 @@
 const english = {
   skip: "Skip to content",
   navAbout: "About",
+  navCV: "CV & Experience",
   navProjects: "Projects",
   navStack: "Expertise",
   navNotes: "Journal",
   navContact: "Contact",
   navCta: "Let's collaborate",
   heroEyebrow: "Menat Allah Ahmed / Software Engineer in Tripoli",
-  heroTitleOne: "I understand the idea.",
-  heroTitleTwo: "I engineer the solution.",
-  heroTitleThree: "I build what’s next.",
-  heroDescription: "I'm Menat Allah Ahmed, a Software Engineer and Faculty of Information Technology graduate from the University of Tripoli. I build web and mobile experiences and explore how AI can solve real problems for real people.",
+  heroTitleOne: "I unpack complexity.",
+  heroTitleTwo: "I design possibilities.",
+  heroTitleThree: "I engineer solutions.",
+  heroDescription: "I'm Menat Allah Ahmed, a Software Engineer and Faculty of Information Technology graduate from the University of Tripoli. My interests span reliable backend systems, web and mobile applications, and applying AI to problems worth solving.",
   heroProjectButton: "Explore my projects",
   heroLearnMore: "About me",
-  heroCaption: "I don't just write code. I build systems that solve real problems.",
+  heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
-  heroIntro: "Hello, I’m Menat Allah Ahmed",
+  heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
   heroPanelText: "Clear thinking.<br>Smarter systems.<br>Real impact.",
   aboutKicker: "Behind the screen",
-  aboutHeadOne: "Understand the problem.",
-  aboutHeadTwo: "Then build the solution.",
-  aboutBio: "I'm Menat Allah Ahmed, a Software Engineer from Libya and an IT graduate of the University of Tripoli. I care about robust backend systems, elegant mobile apps, and experiences that bring solid engineering and practical AI together.",
-  aboutPhilosophy: "I love clean interfaces and details that matter—from Bento Grids and Glassmorphism to intentional user experiences. To me, the best technology makes people's lives simpler.",
+  aboutHeadOne: "Beyond the interface.",
+  aboutHeadTwo: "Engineering that matters.",
+  aboutBio: "I’m Menat Allah Ahmed, a Software Engineer from Tripoli and a Faculty of Information Technology graduate from the University of Tripoli. I'm interested in the complete journey from understanding requirements to designing maintainable systems and thoughtful user experiences.",
+  aboutPhilosophy: "My focus connects backend engineering, web and mobile development, and AI-powered knowledge retrieval. I care about clear architecture, intentional design, and technology whose value extends beyond the screen.",
   aboutGithub: "Explore my work on GitHub",
   eduTitle: "University of Tripoli",
   eduDesc: "Faculty of Information Technology graduate, specializing in Software Engineering.",
   focusLabel: "AI with real impact",
   approachLabel: "Understand.<br>Design.<br>Build.",
   projectsKicker: "Selected projects",
-  projectsHeadOne: "An idea becomes",
-  projectsHeadTwo: "something real.",
-  projectsDesc: "I see projects as solutions to real problems, not just lines of code.",
+  projectsHeadOne: "From a bold idea",
+  projectsHeadTwo: "to a meaningful build.",
+  projectsDesc: "Every project starts with a problem worth understanding. Here are the solutions I'm shaping, with transparent development status and no inflated claims.",
   mizanStatus: "In development",
   mizanTitle: "Mizan",
-  mizanDesc: "A comprehensive LegalTech platform I'm building to bridge technology and legal work: an AI-powered legal assistant, a Smart Vault document library with OCR, and a lawyer directory.",
+  mizanDesc: "Mizan is a LegalTech system in development: an AI legal assistant, a Smart Vault document library with OCR, and a lawyer directory. The goal is to make legal information more organized and accessible through responsible technology.",
   mizanNote: "This project is in development. Live demo and code links will be added when available.",
   siteStatus: "Live website",
   siteTitle: "My personal site & tech journal",
-  siteDesc: "A home for my professional story, projects, technologies, and ideas, with bilingual Arabic-English content and responsive interaction.",
+  siteDesc: "An independent bilingual portfolio where I present my story, share work in progress, explore AI, and translate complex engineering into a clear, responsive digital experience.",
   viewSource: "Explore the source code",
   stackKicker: "Technology & tools",
-  stackHeadOne: "Many technologies.",
-  stackHeadTwo: "One purpose.",
-  stackDesc: "From backend engineering to mobile apps and semantic search, I choose tools that serve the idea and help it grow.",
-  aiTitle: "From knowledge to meaningful answers.",
-  aiDesc: "I'm exploring Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), semantic search, and embeddings to build AI experiences grounded in real knowledge.",
+  stackHeadOne: "I choose the tools.",
+  stackHeadTwo: "The problem leads.",
+  stackDesc: "From Laravel and Flutter to PostgreSQL and retrieval-based AI, I connect the right technologies to design dependable backends, intuitive mobile experiences, and knowledge-aware solutions.",
+  aiTitle: "From scattered documents to useful knowledge.",
+  aiDesc: "I'm exploring LLMs, Retrieval-Augmented Generation, embeddings and semantic search to connect intelligent responses to relevant information rather than relying on generation alone.",
   notesKicker: "Technical journal",
   notesHeadOne: "Ideas shouldn't stay",
   notesHeadTwo: "in my head.",
-  notesDesc: "Topics I'm preparing to write about—from software engineering to AI. These are previews of future articles, not previously published work.",
+  notesDesc: "Writing ideas I'm preparing on software architecture, RAG and LegalTech. These are upcoming article concepts, clearly distinguished from published work.",
   contactKicker: "Start a conversation",
   contactHeadOne: "Have an idea",
   contactHeadTwo: "worth building?",
@@ -62,7 +63,35 @@ const english = {
   topLink: "Back to top",
   footerName: "Menat Allah Ahmed",
   draftDisclaimer: "This article idea is being prepared.",
-  copyLink: "Copy link ↗"
+  copyLink: "Copy link ↗",
+  heroVisualNote: "THINK · DESIGN · BUILD",
+  cvKicker: "Professional profile · CV",
+  cvHeadOne: "A clear direction.",
+  cvHeadTwo: "A growing toolkit.",
+  cvSummary: "I’m a Software Engineer from Tripoli, educated at the University of Tripoli’s Faculty of Information Technology. My profile brings together backend and web development, cross-platform mobile applications, data systems and a growing focus on practical AI.",
+  cvView: "Open my CV / Save as PDF",
+  cvFootnote: "This profile highlights my confirmed background and technical focus. Additional formal experience and certifications can be added when provided.",
+  cvEducationLabel: "EDUCATION",
+  cvEducationTitle: "University of Tripoli · Faculty of Information Technology",
+  cvEducationDesc: "Graduate of the Faculty of Information Technology, working in Software Engineering and interested in building end-to-end solutions.",
+  cvDevelopmentLabel: "DEVELOPMENT",
+  cvDevelopmentTitle: "Web systems and mobile applications",
+  cvDevelopmentDesc: "PHP, Laravel, Java and JavaScript for web/backend foundations; Flutter and Dart for cross-platform mobile experiences.",
+  cvAILabel: "AI & RESEARCH INTERESTS",
+  cvAITitle: "Language models and semantic retrieval",
+  cvAIDesc: "Exploring LLMs, RAG, embeddings and semantic search, with Mizan as an applied LegalTech direction.",
+  cvDataLabel: "DATA & WORKFLOW",
+  cvDataTitle: "Databases and engineering tools",
+  cvDataDesc: "PostgreSQL, MySQL, Supabase and pgvector, alongside Docker, Git and Linux.",
+  stackUseKicker: "WHAT I LIKE BUILDING",
+  stackUse1Title: "Backend systems",
+  stackUse1Desc: "APIs, business logic, maintainable structure and clear boundaries.",
+  stackUse2Title: "Cross-platform mobile",
+  stackUse2Desc: "Flutter experiences that connect useful features to intuitive interfaces.",
+  stackUse3Title: "AI knowledge systems",
+  stackUse3Desc: "Document workflows, embeddings, retrieval and LLM-assisted features.",
+  stackUse4Title: "Data foundations",
+  stackUse4Desc: "Relational data, vector search and reliable development tooling."
 };
 
 const stackGroups = [
@@ -258,6 +287,8 @@ function updateLanguage(next) {
   description.content = language==="ar"
     ? "منة الله أحمد — مهندسة برمجيات، خريجة جامعة طرابلس. تطوير ويب وموبايل وذكاء اصطناعي، ومشروع ميزان للتقنيات القانونية."
     : "Menat Allah Ahmed — Software Engineer, University of Tripoli graduate, web/mobile developer exploring AI, LLMs, RAG and Mizan LegalTech.";
+  const cvLink=document.getElementById("cvPageLink");
+  if(cvLink) cvLink.href="cv.html?lang="+language;
   renderStack();
   renderNotes();
   renderDialog();
@@ -362,7 +393,15 @@ if(!reduceMotion && window.matchMedia("(pointer:fine)").matches){
     const r=board.getBoundingClientRect();
     const x=(e.clientX-r.left)/r.width-.5;
     const y=(e.clientY-r.top)/r.height-.5;
-    board.style.transform="rotateX("+(-y*1.8)+"deg) rotateY("+(x*2.2)+"deg)";
+    board.style.transform="rotateX("+(-y*2)+"deg) rotateY("+(x*2.6)+"deg)";
   },{passive:true});
   board.addEventListener("pointerleave",()=>{board.style.transform="";});
+}
+
+
+// A subtle stagger for the CV, deliverables and skills. The content never depends on it.
+if (!reduceMotion) {
+  document.querySelectorAll(".cv-record,.stack-use-card").forEach((item,index)=>{
+    item.style.transitionDelay=Math.min(index,5)*75+"ms";
+  });
 }
