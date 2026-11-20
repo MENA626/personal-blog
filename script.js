@@ -91,6 +91,7 @@ const menuBtn = document.getElementById("menuToggle");
 const elements = [...document.querySelectorAll("[data-i18n]")];
 const arabic = new Map(elements.map(e=>[e.dataset.i18n,e.textContent]));
 let lang = "ar";
+let catGuideReady = false;
 function setLanguage(next) {
   lang = next === "en" ? "en" : "ar";
   html.lang = lang;
@@ -105,7 +106,7 @@ function setLanguage(next) {
     b.classList.toggle("is-active",selected);
     b.setAttribute("aria-pressed",String(selected));
   });
-  if(guideMessage && currentSection)updateGuideMessage();
+  if(catGuideReady)updateGuideMessage();
   try{localStorage.setItem("menat-matcha-blog-language",lang)}catch{}
 }
 document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>setLanguage(btn.dataset.lang)));
@@ -206,6 +207,6 @@ function scrollGuide(){
   }
   if(currentSection!==section){currentSection=section;updateGuideMessage()}
 }
-window.addEventListener("scroll",scrollGuide,{passive:true});scrollGuide();updateGuideMessage();
+window.addEventListener("scroll",scrollGuide,{passive:true});scrollGuide();updateGuideMessage();catGuideReady=true;
 document.addEventListener("pointerdown",e=>{if(guide&&!guide.contains(e.target))closeGuide()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeNav();closeGuide()}});
