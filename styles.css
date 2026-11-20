@@ -543,3 +543,24 @@ html,body{background:#FFFFFF}
  .hero-title span,.hero-visual-note,.hero-left::before,.project-demo::after{animation:none!important}
  .hero-right{transform:none!important}
 }
+
+/* Delivery-oriented capability cards, beneath the complete technology list. */
+.stack-use-heading{margin:38px 0 18px;color:var(--violet-ink);font:800 11px var(--english);letter-spacing:.18em}
+.stack-use-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.stack-use-card{position:relative;min-width:0;border:1px solid #E8E1F2;border-radius:15px;padding:24px 20px 23px;background:#FBFAFF;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
+.stack-use-card::before{content:"";position:absolute;inset-inline-start:0;top:0;width:5px;height:100%;background:var(--lilac)}
+.stack-use-card:nth-child(2)::before{background:var(--sky)}
+.stack-use-card:nth-child(3)::before{background:var(--apricot)}
+.stack-use-card:nth-child(4)::before{background:var(--violet)}
+.stack-use-card:hover{transform:translateY(-7px);box-shadow:0 16px 34px rgba(83,58,138,.12);border-color:var(--lilac)}
+.stack-use-symbol{display:inline-grid;place-items:center;height:50px;width:50px;background:var(--sky);color:var(--violet-ink);border-radius:13px;font:900 24px var(--english);margin-bottom:16px}
+.stack-use-card:nth-child(2) .stack-use-symbol{background:var(--lilac)}
+.stack-use-card:nth-child(3) .stack-use-symbol{background:var(--apricot)}
+.stack-use-card:nth-child(4) .stack-use-symbol{background:#E7DAFF}
+.stack-use-card h3{font:700 20px/1.5 var(--display);color:var(--violet-ink);margin:0 0 10px}
+.stack-use-card p{font:500 14px/1.8 var(--ui);color:var(--muted);margin:0}
+html[lang="en"] .cv-record h3,html[lang="en"] .cv-summary .editorial-heading,html[lang="en"] .stack-use-card h3{font-family:Georgia,serif;line-height:1.35}
+html[lang="en"] .cv-summary p,html[lang="en"] .cv-record p,html[lang="en"] .stack-use-card p{font-family:var(--english);line-height:1.65}
+@media(max-width:1100px){.stack-use-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.stack-use-grid{grid-template-columns:1fr 1fr;gap:11px}.stack-use-card{padding:21px 15px}}
+@media(max-width:420px){.stack-use-grid{grid-template-columns:1fr}}
