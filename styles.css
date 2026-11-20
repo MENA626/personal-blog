@@ -2273,3 +2273,120 @@ html,body {background:#FFFFFF;color:#153A85}
 @media(prefers-reduced-motion:reduce){
  .hero-flat-word{animation:none!important;transform:none!important}
 }
+
+
+/* ================================================================
+   THMANYAH TYPOGRAPHY — OFFICIAL LICENSE-RESPECTING INTEGRATION
+   No font binaries are hosted, uploaded, sublicensed, or embedded.
+   The browser uses legally installed local Thmanyah when present;
+   accessible Cairo fallback is used elsewhere.
+   ================================================================ */
+@font-face{
+  font-family:"Thmanyah Web Sans";
+  src:local("thmanyah sans Regular"),local("thmanyahsans-Regular"),local("thmanyah sans");
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Sans";
+  src:local("thmanyah sans Medium"),local("thmanyahsans-Medium");
+  font-weight:500;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Sans";
+  src:local("thmanyah sans Bold"),local("thmanyahsans-Bold");
+  font-weight:700;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Sans";
+  src:local("thmanyah sans Black"),local("thmanyahsans-Black");
+  font-weight:900;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Display";
+  src:local("thmanyah serif display Regular"),local("thmanyahserifdisplay-Regular");
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Display";
+  src:local("thmanyah serif display Bold"),local("thmanyahserifdisplay-Bold");
+  font-weight:700;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Display";
+  src:local("thmanyah serif display Black"),local("thmanyahserifdisplay-Black");
+  font-weight:900;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Reading";
+  src:local("thmanyah serif text Regular"),local("thmanyahseriftext-Regular");
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Thmanyah Web Reading";
+  src:local("thmanyah serif text Bold"),local("thmanyahseriftext-Bold");
+  font-weight:700;
+  font-display:swap;
+}
+:root{
+  --thmanyah-body:"Thmanyah Web Sans","thmanyah sans","Cairo","Tahoma",sans-serif;
+  --thmanyah-heading:"Thmanyah Web Display","thmanyah serif display","Cairo","Tahoma",sans-serif;
+  --thmanyah-reading:"Thmanyah Web Reading","thmanyah serif text","Cairo","Tahoma",serif;
+  --ui:var(--thmanyah-body);
+  --display:var(--thmanyah-heading);
+  --reading:var(--thmanyah-reading);
+}
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
+html[lang="ar"] .site-header,
+html[lang="ar"] .section-deck,
+html[lang="ar"] .about-lead p,
+html[lang="ar"] .cv-summary p,
+html[lang="ar"] .cv-record p,
+html[lang="ar"] .project-details p,
+html[lang="ar"] .video-card-copy p,
+html[lang="ar"] .note-card p,
+html[lang="ar"] .contact p,
+html[lang="ar"] .nav-links a,
+html[lang="ar"] .saas-btn,
+html[lang="ar"] .hero-saas-eyebrow,
+html[lang="ar"] .hero-saas-description,
+html[lang="ar"] .section-kicker,
+html[lang="ar"] .tech-group-head h3,
+html[lang="ar"] .cv-view,
+html[lang="ar"] .contact-button,
+html[lang="ar"] .underlined-link{
+  font-family:var(--thmanyah-body)!important;
+}
+html[lang="ar"] .hero-saas-title,
+html[lang="ar"] .hero-saas-title *,
+html[lang="ar"] .editorial-heading,
+html[lang="ar"] .editorial-heading *,
+html[lang="ar"] .contact-title,
+html[lang="ar"] .contact-title *,
+html[lang="ar"] .project-details h3,
+html[lang="ar"] .video-card h3,
+html[lang="ar"] .note-card h3{
+  font-family:var(--thmanyah-heading)!important;
+  font-style:normal;
+}
+html[lang="ar"] .notes .note-card p,
+html[lang="ar"] .notes .note-card .note-excerpt{
+  font-family:var(--thmanyah-reading)!important;
+}
+html[lang="ar"] .hero-saas-title{line-height:1.45;letter-spacing:0}
+html[lang="ar"] .editorial-heading{line-height:1.5;letter-spacing:0}
+html[lang="ar"] .contact-title{line-height:1.5}
+@media(max-width:570px){
+  html[lang="ar"] .editorial-heading{line-height:1.58}
+  html[lang="ar"] .hero-saas-title{line-height:1.52}
+}
