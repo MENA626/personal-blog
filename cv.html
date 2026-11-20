@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--purple:#009EFF;--dark:#1A49AF;--sky:#EAF6FF;--lilac:#009EFF;--peach:#FFD850;--ink:#1A49AF;--muted:#536883;--font:"Cairo",sans-serif;--eng:"DM Sans",Arial,sans-serif}
+:root{--purple:#009EFF;--dark:#1A49AF;--sky:#EAF6FF;--lilac:#009EFF;--peach:#FFD850;--ink:#1A49AF;--muted:#536883;--font:"Thmanyah Web Sans","thmanyah sans","Cairo",sans-serif;--eng:"DM Sans",Arial,sans-serif}
 *{box-sizing:border-box}body{margin:0;background:#FDFEFF;color:var(--ink);font:500 15px/1.9 var(--font)}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
 .toolbar{max-width:970px;margin:0 auto;padding:15px 23px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .toolbar a{font-weight:700}.toolbar-actions{display:flex;align-items:center;gap:7px}.toolbar button{border:1px solid #D7EAF6;border-radius:9px;padding:8px 13px;background:white;color:var(--ink);font-weight:700}.toolbar button:hover{background:#EFF8FF}
@@ -57,6 +57,20 @@ body{background:#EAF6FF}
 .toolbar .print{background:#1A49AF;color:#FFFFFF;border-color:#1A49AF}
 .toolbar .print:hover{background:#153A85}
 @media print{body{background:#FFFFFF}.head{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* Uses only fonts locally installed by the viewer, with Cairo fallback.
+   Thmanyah font files are not hosted here, per the official license. */
+@font-face{font-family:"Thmanyah Web Sans";src:local("thmanyahsans-Regular"),local("thmanyah sans Regular"),local("thmanyah sans");font-weight:400;font-display:swap}
+@font-face{font-family:"Thmanyah Web Sans";src:local("thmanyahsans-Bold"),local("thmanyah sans Bold");font-weight:700;font-display:swap}
+@font-face{font-family:"Thmanyah Web Sans";src:local("thmanyahsans-Black"),local("thmanyah sans Black");font-weight:900;font-display:swap}
+@font-face{font-family:"Thmanyah Web Display";src:local("thmanyahserifdisplay-Regular"),local("thmanyah serif display Regular");font-weight:400;font-display:swap}
+@font-face{font-family:"Thmanyah Web Display";src:local("thmanyahserifdisplay-Bold"),local("thmanyah serif display Bold");font-weight:700;font-display:swap}
+@font-face{font-family:"Thmanyah Web Display";src:local("thmanyahserifdisplay-Black"),local("thmanyah serif display Black");font-weight:900;font-display:swap}
+html[lang="ar"]{--font:"Thmanyah Web Sans","thmanyah sans","Cairo",sans-serif}
+html[lang="ar"] .head h1,
+html[lang="ar"] .section h2{font-family:"Thmanyah Web Display","thmanyah serif display","Cairo",sans-serif;line-height:1.55}
+html[lang="ar"] .panel strong,
+html[lang="ar"] .head .specialty{font-family:"Thmanyah Web Sans","thmanyah sans","Cairo",sans-serif}
 </style></head>
 <body>
 <div class="toolbar">
