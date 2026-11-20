@@ -3795,3 +3795,56 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
  .site-header .language-switch-thumb,.site-header .nav-cta,.site-header .nav-cta-arrow{transition:none!important}
 }
 
+/* CLEAN ORANGE CONTACT BUTTON + ORANGE M BRAND MARK */
+.site-header .site-name .brand-monogram,
+.site-header.is-scrolled .site-name .brand-monogram,
+.site-footer .footer-name .brand-monogram {
+  color:#FF6624!important;
+}
+.site-header .nav-cta,
+.site-header.is-scrolled .nav-cta {
+  background:#FF6624!important;
+  border-color:#FF6624!important;
+  color:#FFFFFF!important;
+  border-radius:999px!important;
+  padding:11px 20px!important;
+  min-height:43px!important;
+  gap:0!important;
+  box-shadow:none!important;
+}
+.site-header .nav-cta .nav-cta-text,
+.site-header.is-scrolled .nav-cta .nav-cta-text {
+  color:#FFFFFF!important;
+  font-size:13px!important;
+  line-height:1.2!important;
+}
+.site-header .nav-cta .nav-cta-arrow{display:none!important}
+.site-header .nav-cta:hover,
+.site-header.is-scrolled .nav-cta:hover {
+  background:#FF9B29!important;
+  border-color:#FF9B29!important;
+}
+@media(max-width:700px) {
+  .site-header .nav-cta,
+  .site-header.is-scrolled .nav-cta {
+    min-height:38px!important;
+    padding:9px 12px!important;
+  }
+  .site-header .nav-cta .nav-cta-text {font-size:11px!important}
+}
+@media(max-width:390px) {
+  .site-header .nav-cta,
+  .site-header.is-scrolled .nav-cta {
+    min-height:36px!important;
+    padding:8px 9px!important;
+  }
+  .site-header .nav-cta .nav-cta-text,
+  .site-header.is-scrolled .nav-cta .nav-cta-text {
+    font-size:10px!important;
+  }
+  .site-header .nav-cta .nav-cta-text::after {
+    content:none!important;
+    display:none!important;
+  }
+}
+
