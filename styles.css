@@ -1742,3 +1742,170 @@ html,body {background:#FFFFFF;color:#153A85}
  .notes{background:#FFF8DC}
  .contact{background:linear-gradient(145deg,#1A49AF,#153A85)}
 }
+
+
+/* ================================================================
+   TECH TOOL WALL / PERMANENT FULL-COLOR ICONS
+   Crisp brand colors are visible at rest, never unveiled on hover.
+   Groups read as concise labelled rows with neighboring icons.
+   ================================================================ */
+#stack .stack-groups{
+ display:flex;
+ flex-direction:column;
+ align-items:stretch;
+ gap:14px;
+ margin-top:34px;
+ margin-bottom:50px;
+}
+#stack .tech-group{
+ display:grid;
+ grid-template-columns:minmax(172px,225px) minmax(0,1fr);
+ align-items:center;
+ gap:20px;
+ min-width:0;
+ padding:19px 22px;
+ border:1px solid #D7E7F5;
+ border-radius:18px;
+ background:#FFFFFF;
+ box-shadow:0 7px 22px rgba(26,73,175,.035);
+}
+#stack .tech-group:hover{
+ border-color:#B0D7F5;
+ box-shadow:0 12px 28px rgba(26,73,175,.07);
+}
+#stack .tech-group-head{
+ display:flex;
+ flex-wrap:wrap;
+ align-items:center;
+ gap:11px;
+ min-width:0;
+}
+#stack .tech-group-head h3{
+ color:#153A85;
+ font:800 15px/1.6 "Cairo",sans-serif;
+ flex:1;
+ min-width:110px;
+}
+#stack .tech-group-head>span:last-child{
+ display:none;
+}
+#stack .tech-group-mark{
+ display:grid;
+ place-items:center;
+ width:40px;
+ height:40px;
+ min-width:40px;
+ color:#1A49AF!important;
+ background:#EAF6FF!important;
+ border-radius:11px;
+ font:800 16px/1 var(--english);
+}
+#stack .tech-items{
+ display:flex;
+ flex-flow:row wrap;
+ direction:ltr;
+ justify-content:flex-start;
+ align-items:stretch;
+ gap:11px;
+ min-width:0;
+}
+#stack .tech-item{
+ flex:0 0 92px;
+ min-width:0;
+ min-height:108px;
+ padding:12px 6px 10px;
+ gap:10px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ border:1px solid #DBE9F5;
+ border-radius:13px;
+ background:#F7FBFF;
+ text-align:center;
+ transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease;
+}
+#stack .tech-item:hover{
+ background:#FFFFFF;
+ border-color:#7CB9FA;
+ box-shadow:0 9px 22px rgba(26,73,175,.09);
+ transform:translateY(-3px);
+}
+#stack .tech-graphic{
+ display:grid;
+ place-items:center;
+ width:54px;
+ height:54px;
+ min-width:54px;
+ border-radius:11px;
+ background:#FFFFFF;
+}
+#stack .tech-graphic img,
+#stack .tech-item:hover .tech-graphic img{
+ display:block;
+ width:47px;
+ height:47px;
+ max-width:100%;
+ object-fit:contain;
+ opacity:1;
+ filter:none!important;
+ transition:none;
+}
+#stack .tech-item strong{
+ display:block;
+ color:#1A3664;
+ font:800 11px/1.4 var(--english);
+ text-align:center;
+ overflow-wrap:anywhere;
+}
+#stack .tech-fallback{
+ color:#1A49AF;
+ font:900 17px/1.4 var(--english);
+}
+#stack .tech-item[data-tech="Gemini"] .tech-graphic{
+ background:linear-gradient(135deg,#1A49AF,#009EFF 51%,#C5A0FF);
+}
+#stack .tech-item[data-tech="Gemini"] .tech-graphic img{
+ width:39px;height:39px;filter:invert(1)!important;
+}
+#stack .tech-item[data-tech="OpenAI"] .tech-graphic{
+ background:#ECF3FA;
+}
+#stack .tech-item[data-tech="RAG"] .tech-graphic,
+#stack .tech-item[data-tech="Embeddings"] .tech-graphic{
+ background:transparent;
+}
+@media(max-width:940px){
+ #stack .tech-group{
+  grid-template-columns:1fr;
+  gap:13px;
+  padding:17px;
+ }
+ #stack .tech-items{gap:10px}
+ #stack .tech-item{flex-basis:86px}
+}
+@media(max-width:570px){
+ #stack .stack-groups{gap:12px}
+ #stack .tech-group{padding:14px 12px;gap:13px}
+ #stack .tech-group-head h3{font-size:14px}
+ #stack .tech-items{gap:8px}
+ #stack .tech-item{
+  flex:0 0 calc((100% - 24px)/4);
+  min-height:91px;
+  padding:9px 2px 7px;
+  gap:7px;
+  border-radius:10px;
+ }
+ #stack .tech-graphic{width:42px;height:42px;min-width:42px}
+ #stack .tech-graphic img,
+ #stack .tech-item:hover .tech-graphic img{width:38px;height:38px}
+ #stack .tech-item[data-tech="Gemini"] .tech-graphic img{width:32px;height:32px}
+ #stack .tech-item strong{font-size:9px}
+}
+@media(max-width:340px){
+ #stack .tech-item{flex-basis:calc((100% - 16px)/3)}
+}
+@media(prefers-reduced-motion:reduce){
+ #stack .tech-item{transition:none!important}
+ #stack .tech-item:hover{transform:none!important}
+}
