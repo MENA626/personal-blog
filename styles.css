@@ -349,3 +349,17 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
  *,*::before,*::after{animation:none!important;transition:none!important}
  .motion-on .reveal:not(.visible){opacity:1!important;transform:none!important}
 }
+
+/* Directional composition: illustration on the left, story on the right. */
+.hero-content,.about-layout,.projects-layout,.contact-layout{direction:ltr}
+.hero-text,.about-copy,.projects-side,.project-cards,.contact-content{direction:rtl}
+html[lang="en"] .hero-text,
+html[lang="en"] .about-copy,
+html[lang="en"] .projects-side,
+html[lang="en"] .project-cards,
+html[lang="en"] .contact-content{direction:ltr}
+@media(max-width:700px){
+ .hero-content{flex-direction:column-reverse}
+ .hero-text{order:2}
+ .hero-illustration{order:1}
+}
