@@ -1193,3 +1193,17 @@ html[lang="en"] .contact-title{font-family:"DM Sans",Arial,sans-serif}
  .notes{background:linear-gradient(155deg,#FFE6D6,#FFF9F5)}
  .contact{background:linear-gradient(155deg,#3F0B78,#261A66)}
 }
+
+
+/* Precision: the smaller opposite-color accents remain legible on each lead color. */
+.section:not(.hero) .section-kicker>span:first-child{color:var(--section-secondary)}
+.cv .cv-summary .section-kicker,
+.cv .cv-summary .section-kicker>span:first-child,
+.cv .cv-summary .editorial-heading,
+.cv .cv-summary .editorial-heading em{color:#261A66}
+.section.contact .section-kicker,
+.section.contact .section-kicker>span:first-child{color:#FFAD81}
+.section.contact .contact-title,
+.section.contact .contact-title em{color:#FFFFFF}
+.section.contact .contact-title em{border-bottom-color:#FE5000}
+.section.contact .contact-content p{color:#EFE7F9}
