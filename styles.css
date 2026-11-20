@@ -962,8 +962,11 @@ html,body{background:#FFFFFF}
 .site-header.is-scrolled .language-toggle{color:#3F0B78;border-color:#E6D3F2}
 .hero.hero-cinematic{
  background-color:#261A66;
- background-image:radial-gradient(ellipse at 11% 15%,rgba(189,75,248,.17) 0%,transparent 61%),
- url("assets/violet-ambient-cover.svg");
+ background-image:
+ radial-gradient(ellipse at 99% 109%,rgba(254,80,0,.13) 0%,transparent 47%),
+ radial-gradient(ellipse at 11% 15%,rgba(189,75,248,.17) 0%,transparent 61%),
+ url("assets/violet-ambient-cover.svg?v=violet-orange-20261120");
+ background-size:cover,cover,cover;
 }
 .hero-cinematic-shade{
  background:linear-gradient(90deg,rgba(22,7,54,.05),rgba(19,9,49,.13) 51%,rgba(11,7,33,.32) 100%),
