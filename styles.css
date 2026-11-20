@@ -4079,3 +4079,114 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #home.hero-poster .poster-intro{top:-16px!important}
 }
 
+/* HERO COPY IN ONE FLOW BELOW HELLO + PARTICIPATIONS NAV/SECTION 20261121 */
+@media (min-width:701px){
+  #home.hero-poster .poster-shell{align-items:flex-start!important}
+  #home.hero-poster .poster-copy{
+    align-self:flex-start!important;
+    padding-top:18px!important;
+    margin-top:0!important;
+  }
+  #home.hero-poster .poster-english{
+    position:static!important;
+    top:auto!important;
+    transform:none!important;
+    margin-top:0!important;
+    margin-bottom:24px!important;
+  }
+  #home.hero-poster .poster-intro{
+    position:static!important;
+    top:auto!important;
+    transform:none!important;
+    margin-top:0!important;
+    margin-bottom:18px!important;
+  }
+  #home.hero-poster .poster-title{
+    margin-top:0!important;
+    margin-bottom:20px!important;
+  }
+  #home.hero-poster .poster-description{
+    margin-top:0!important;
+    margin-bottom:16px!important;
+  }
+  #home.hero-poster .poster-followup{
+    margin-top:0!important;
+    margin-bottom:18px!important;
+  }
+  #home.hero-poster .poster-tagline{
+    margin-top:0!important;
+    margin-bottom:24px!important;
+  }
+}
+.site-header .nav-links{gap:clamp(8px,1.25vw,19px)!important}
+.site-header .nav-links a{font-size:clamp(11px,.9vw,13px)!important}
+#participations.participations{
+  background:#F2E7E1!important;
+  color:#2329A8;
+  border-top:1px solid rgba(35,41,168,.13);
+  border-bottom:1px solid rgba(35,41,168,.13);
+}
+#participations .participations-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(240px,.95fr);
+  gap:clamp(25px,5vw,72px);
+  align-items:center;
+  padding-block:clamp(66px,8vw,105px);
+}
+#participations .participations-kicker{
+  display:block;
+  color:#355CF5;
+  font-size:13px;
+  font-weight:850;
+  margin-bottom:15px;
+}
+#participations .participations-title{
+  font-family:var(--display),var(--ui),sans-serif;
+  font-size:clamp(38px,5vw,65px);
+  line-height:1.26;
+  letter-spacing:-.025em;
+  color:#2329A8;
+  margin:0 0 22px;
+}
+#participations .participations-desc{
+  max-width:570px;
+  margin:0;
+  font-size:clamp(16px,1.35vw,19px);
+  line-height:1.95;
+  color:#2329A8;
+}
+#participations .participations-aside{
+  min-height:205px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:32px;
+  background:#FF9B29;
+  color:#2329A8;
+  border-radius:20px;
+  transform:rotate(-2deg);
+}
+#participations .participations-status{
+  font-size:clamp(17px,2.1vw,25px);
+  line-height:1.8;
+  font-weight:850;
+}
+@media(max-width:920px){
+  .site-header .nav-links a{font-size:14px!important}
+}
+@media(max-width:700px){
+  #participations .participations-inner{
+    grid-template-columns:1fr;
+    padding-block:58px;
+    gap:22px;
+  }
+  #participations .participations-aside{
+    min-height:110px;
+    transform:none;
+    border-radius:14px;
+  }
+  #participations .participations-title{font-size:38px}
+  #participations .participations-desc{font-size:15px}
+}
+
