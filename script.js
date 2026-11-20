@@ -63,7 +63,7 @@ const english = {
   videoWatch: "Watch video on YouTube",
   matchaStatus: "Published app",
   matchaTitle: "MATCHA MOOD | ماتشا مود",
-  matchaDesc: "MATCHA MOOD is another project I share here. It's a web app published on Floot, with a live link available to explore the experience.",
+  matchaDesc: "MATCHA MOOD is one of my web projects. I chose a matcha cup-inspired cover and a calm natural green palette to present it. The application is published on Floot, with a direct link to explore the live experience.",
   matchaLink: "Open MATCHA MOOD",
   matchaNote: "Independent web project · Live app link",
   cosmosStatus: "Published project",
