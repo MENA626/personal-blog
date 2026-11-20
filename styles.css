@@ -2390,3 +2390,25 @@ html[lang="ar"] .contact-title{line-height:1.5}
   html[lang="ar"] .editorial-heading{line-height:1.58}
   html[lang="ar"] .hero-saas-title{line-height:1.52}
 }
+
+/* Sitewide Thmanyah typography: use only locally licensed font installations.
+   The official font license does not permit rehosting the font binaries. */
+html body,
+html body :where(*) {
+  font-family:var(--thmanyah-body) !important;
+}
+html body :is(
+  h1,h2,h3,h4,h5,h6,
+  .hero-title,.hero-saas-title,.editorial-heading,.contact-title,
+  .hero-panel-bottom strong,.hero-flat-word,
+  .project-details h3,.video-card h3,.note-card h3
+) {
+  font-family:var(--thmanyah-heading) !important;
+}
+html body :is(
+  .notes .note-card p,.notes .note-excerpt,
+  article p,article li,.article-body p,.article-body li
+) {
+  font-family:var(--thmanyah-reading) !important;
+}
+
