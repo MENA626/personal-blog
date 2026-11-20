@@ -4017,3 +4017,47 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* DESKTOP HELLO ALIGNMENT + WIDE EDITORIAL PARAGRAPHS 2026 */
+@media(min-width:901px){
+  #home.hero-poster .poster-art{
+    top:0!important;
+    right:0!important;
+    transform:translateY(68px)!important;
+  }
+  #home.hero-poster .poster-art svg{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:1016/647;
+  }
+  #home.hero-poster .poster-copy{
+    width:53%!important;
+    padding-top:52px!important;
+  }
+  #home.hero-poster .poster-description,
+  #home.hero-poster .poster-followup{
+    max-width:none!important;
+    width:100%!important;
+    font-size:clamp(15px,1.2vw,18px)!important;
+    line-height:1.8!important;
+    text-wrap:pretty;
+  }
+  #home.hero-poster .poster-description{margin-bottom:15px!important}
+  #home.hero-poster .poster-followup{margin-bottom:19px!important}
+}
+@media(min-width:701px) and (max-width:900px){
+  #home.hero-poster .poster-art{
+    transform:translateY(28px)!important;
+  }
+  #home.hero-poster .poster-art svg{
+    height:auto!important;
+    aspect-ratio:1016/647;
+  }
+  #home.hero-poster .poster-description,
+  #home.hero-poster .poster-followup{
+    max-width:none!important;
+    font-size:15px!important;
+    line-height:1.8!important;
+  }
+}
+
