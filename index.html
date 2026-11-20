@@ -2856,6 +2856,91 @@ html body :is(
   #cv.cv-featured::before {font-size:clamp(220px,68vw,365px);opacity:.65}
 }
 
+
+/* HAND-WAVE EDITORIAL HERO 2026 — original SVG in the layout, following the user reference. */
+#home.hero.hero-saas.hero-hello {background:#FFFFFF!important;color:#080923!important;display:block!important;visibility:visible!important;opacity:1!important;min-height:0!important;padding:0!important;overflow:hidden}
+#home.hero-hello .hello-cover {
+ display:block!important;position:relative!important;isolation:isolate;overflow:hidden;
+ width:100%;max-width:1600px;height:clamp(730px,94svh,940px);min-height:730px;
+ margin-inline:auto;background:#FFFFFF!important;
+}
+#home.hero-hello .hello-cover::after{content:none!important;display:none!important}
+#home.hero-hello .hello-cover-graphic {
+ position:absolute!important;display:block!important;visibility:visible!important;opacity:1!important;
+ z-index:1;width:min(81vw,1070px)!important;height:auto!important;max-width:none!important;
+ top:-1%!important;left:34%!important;pointer-events:none;filter:none!important;transform:none!important;
+}
+#home.hero-hello .hello-greeting {
+ position:absolute!important;z-index:3;top:5%;left:5.7%;margin:0;direction:ltr;
+ font:900 clamp(98px,12.7vw,194px)/1 "DM Sans",Arial,sans-serif!important;
+ letter-spacing:-.078em;color:#0A0B2B!important;white-space:nowrap;
+}
+#home.hero-hello .hello-next {
+ position:absolute!important;z-index:6;top:4.8%;right:4.8%;
+ width:56px;height:56px;display:grid;place-items:center;
+ border-radius:15px;color:#10132D;background:#F1F4FB!important;
+ box-shadow:none;transition:transform .2s ease;
+}
+#home.hero-hello .hello-next:hover{transform:translateX(3px)}
+#home.hero-hello .hello-copy{
+ position:absolute!important;z-index:5;left:5.8%!important;right:auto!important;
+ bottom:7.3%!important;width:min(660px,61%)!important;padding:0!important;
+ direction:rtl;text-align:right!important;color:#0A0B2B!important;
+ background:none!important;border:0!important;box-shadow:none!important;
+}
+#home.hero-hello .hello-intro{
+ margin:0 0 9px!important;color:#1A49AF!important;
+ font-size:clamp(13px,1.4vw,17px)!important;font-weight:800!important;
+ line-height:1.6;
+}
+#home.hero-hello .hello-title{
+ margin:0 0 17px!important;font:900 clamp(46px,5.8vw,88px)/1.24 var(--thmanyah-heading)!important;
+ color:#0A0B2B!important;letter-spacing:0!important;
+}
+#home.hero-hello .hello-title span{display:block}
+#home.hero-hello .hello-welcome-description {
+ margin:0 0 19px!important;max-width:590px;color:#393C56!important;
+ font-size:clamp(14px,1.45vw,19px)!important;line-height:1.9!important;font-weight:500!important;
+}
+#home.hero-hello .hello-project-link{
+ display:inline-flex;align-items:center;gap:12px;padding:0 0 6px;
+ color:#12378E!important;border-bottom:2px solid #009EFF;
+ font-size:clamp(13px,1.1vw,16px);font-weight:800;
+}
+@media(max-width:850px){
+ #home.hero-hello .hello-cover{height:830px;min-height:750px}
+ #home.hero-hello .hello-cover-graphic{width:125%!important;left:0%!important;top:2%!important}
+ #home.hero-hello .hello-greeting{font-size:clamp(80px,15vw,130px)}
+ #home.hero-hello .hello-copy{width:82%!important}
+}
+@media(max-width:600px){
+ #home.hero-hello .hello-cover{height:clamp(760px,108svh,935px);min-height:760px}
+ #home.hero-hello .hello-cover-graphic {
+  width:188%!important;top:6.7%!important;left:-32%!important;
+ }
+ #home.hero-hello .hello-greeting{
+  top:5.5%;left:6%;font-size:clamp(72px,18vw,108px)!important;
+ }
+ #home.hero-hello .hello-next{
+  top:3%;right:4.5%;width:45px;height:45px;border-radius:13px;
+ }
+ #home.hero-hello .hello-next svg{width:25px;height:25px}
+ #home.hero-hello .hello-copy{
+  left:6.5%!important;bottom:5.5%!important;
+  width:87%!important;text-align:right!important;
+ }
+ #home.hero-hello .hello-title{font-size:clamp(37px,10vw,53px)!important;line-height:1.32!important}
+ #home.hero-hello .hello-intro{font-size:13px!important}
+ #home.hero-hello .hello-welcome-description{font-size:14px!important;line-height:1.8!important;max-width:100%}
+ #home.hero-hello .hello-project-link{font-size:13px}
+}
+@media(max-width:365px){
+ #home.hero-hello .hello-cover{min-height:750px}
+ #home.hero-hello .hello-title{font-size:35px!important}
+ #home.hero-hello .hello-greeting{font-size:71px!important}
+}
+@media(prefers-reduced-motion:reduce){#home.hero-hello .hello-next{transition:none}}
+
 </style>
 
 </head>
@@ -2887,16 +2972,14 @@ html body :is(
   <main id="main">
     <section id="home" class="hero hero-saas hero-hello anchor" aria-labelledby="heroMainTitle">
       <div class="hello-cover">
-        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-<g fill="#1459F5">
-<!-- flowing sleeve drawn from the lower left across the canvas -->
-<path d="M-150 503 L476 297 L531 449 L-150 671Z"/>
-<!-- arm bending downward on the right -->
-<path d="M465 305 C510 295 562 319 594 363 C621 404 630 478 639 540 C656 650 714 718 802 715 C853 713 906 686 951 652 L965 814 C850 860 727 852 647 792 C548 718 510 611 490 512 L461 421Z"/>
-<!-- open upright hand with fingers and thumb -->
-<path d="M468 386 L469 188 C469 173 476 164 488 164 C502 164 506 174 507 186 L512 264 L515 111 C515 96 522 86 535 86 C549 86 555 97 555 112 L557 257 L565 75 C565 58 573 49 586 49 C601 49 608 60 607 76 L605 257 L617 98 C619 82 628 74 641 76 C654 78 659 91 657 106 L648 280 C666 267 681 254 699 244 C715 235 728 242 732 255 C736 267 727 279 717 291 L680 338 C667 356 665 384 665 407 C662 463 622 503 556 500 C509 497 481 460 468 386Z"/>
-</g>
-<path d="M676 313 Q691 289 712 285" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 900" aria-hidden="true" focusable="false">
+  <g fill="#115AF5">
+    <path d="M-75 490 L471 321 L522 428 L-75 618Z"/>
+    <path d="M480 388 L577 354 C573 446 586 559 634 625 C674 683 740 691 793 660 C822 645 848 626 877 604 L885 729 C805 777 697 781 627 738 C544 686 514 588 497 489Z"/>
+    <path d="M457 341 L456 138 Q456 120 470 119 Q484 119 485 135 L490 174 L490 105 Q490 89 504 89 Q519 89 519 106 L521 172 L522 84 Q522 69 536 69 Q551 69 552 84 L553 169 L557 103 Q557 89 570 89 Q584 89 583 106 L583 194 L594 174 Q609 150 627 151 Q644 152 648 167 Q651 180 638 196 L617 228 Q606 251 602 289 L603 352 Q601 411 559 435 L507 443 Q460 419 457 341Z"/>
+    <path d="M583 304 C620 299 660 286 706 285 L765 291 L765 404 L575 451Z"/>
+  </g>
+  <path d="M539 189 Q548 175 563 174" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
 </svg>
         <span class="hello-greeting" lang="en" aria-label="Hello!">Hello!</span>
         <a class="hello-next" href="#cv" aria-label="انتقل إلى قسم السيرة الذاتية" title="السيرة الذاتية">
@@ -2905,9 +2988,9 @@ html body :is(
           </svg>
         </a>
         <div class="hello-copy">
-          <p class="hello-intro">أهلًا وسهلًا! ✳ أنا منة الله أحمد</p>
-          <h1 id="heroMainTitle" class="hello-title"><span>مرحبًا بك في</span><span>مدونتي الرقمية.</span></h1>
-          <p class="hello-welcome-description">مساحتي الصغيرة للأفكار والتصميم والبرمجة؛ هنا أشارك مشاريعي وما أتعلّمه في رحلتي التقنية.</p>
+          <p class="hello-intro">أهلًا، أنا منة الله أحمد ✳</p>
+          <h1 id="heroMainTitle" class="hello-title"><span>أفكار أصمّمها.</span><span>ومشاريع أبنيها.</span></h1>
+          <p class="hello-welcome-description">من التصميم والبرمجة إلى تجاربي مع الذكاء الاصطناعي… أهلًا بك في مدونتي، حيث أشارك ما أصنعه وما أتعلّمه.</p>
           <a class="hello-project-link" href="#projects"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
