@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 74" role="img" aria-label="Menat Allah M monogram">
 <title>Menat Allah — M</title>
-<path d="M8 61V13H26L52 42L78 13H96V61H78V37L57 61H47L26 37V61Z" fill="#F7F4FC"/>
+<rect width="104" height="74" rx="13" fill="#261A66"/>
+<path d="M8 61V13H26L52 42L78 13H96V61H78V37L57 61H47L26 37V61Z" fill="#FFFFFF"/>
 </svg>
