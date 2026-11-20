@@ -22,6 +22,13 @@ const english = {
   heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
+  saasIntro: "SOFTWARE ENGINEERING · PORTFOLIO",
+  saasTitleOne: "Digital solutions.",
+  saasTitleTwo: "Engineered with purpose.",
+  saasDescription: "The professional portfolio of Menat Allah Ahmed, a University of Tripoli Faculty of Information Technology graduate, featuring real web, mobile and AI projects where ideas are transformed into practical digital experiences.",
+  saasProjects: "Explore projects",
+  saasCV: "View résumé",
+  saasScroll: "Discover more",
   heroIdentity: "MENAT ALLAH AHMED",
   heroRole: "SOFTWARE ENGINEERING",
   heroExplore: "View the portfolio",
@@ -54,6 +61,11 @@ const english = {
   videoTwoTitle: "Video design & editing — 02",
   videoTwoDesc: "A second visual project demonstrating another presentation approach.",
   videoWatch: "Watch video on YouTube",
+  matchaStatus: "Published app",
+  matchaTitle: "MATCHA MOOD | ماتشا مود",
+  matchaDesc: "An independently published web project named MATCHA MOOD, available as a live experience on Floot. The direct app link is provided to explore the project.",
+  matchaLink: "Open MATCHA MOOD",
+  matchaNote: "Independent web project · Live app link",
   cosmosStatus: "Published project",
   cosmosTitle: "COSMOS — A Journey Through Space",
   cosmosDesc: "A visually driven web experience inspired by the cosmos, with a distinctive collection of space imagery and a bold, immersive presentation. An exploration of how digital design can tell a story.",
@@ -434,3 +446,27 @@ document.querySelectorAll("[data-play-video]").forEach(button => {
     button.hidden = true;
   });
 });
+
+
+// Subtle three-dimensional interaction for the technical showcase.
+// Works with fine pointers only; respects reduced-motion preferences.
+const showcase=document.getElementById("codeDevice");
+if(showcase && !reduceMotion && window.matchMedia("(hover:hover) and (pointer:fine)").matches){
+  const parent=showcase.closest(".hero-saas-art");
+  let frame=null;
+  parent.addEventListener("pointermove",(event)=>{
+    const r=parent.getBoundingClientRect();
+    const x=Math.max(-1,Math.min(1,(event.clientX-r.left)/r.width*2-1));
+    const y=Math.max(-1,Math.min(1,(event.clientY-r.top)/r.height*2-1));
+    if(frame!==null)cancelAnimationFrame(frame);
+    frame=requestAnimationFrame(()=>{
+      showcase.style.transform="rotateY("+(-9+x*4).toFixed(2)+"deg) rotateX("+(5-y*3).toFixed(2)+"deg) rotateZ(-1deg) translateY(-3px)";
+      frame=null;
+    });
+  },{passive:true});
+  parent.addEventListener("pointerleave",()=>{
+    if(frame!==null)cancelAnimationFrame(frame);
+    showcase.style.transform="";
+    frame=null;
+  });
+}
