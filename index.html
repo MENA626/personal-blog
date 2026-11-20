@@ -2565,7 +2565,106 @@ html body :is(
   .hero-hello .hello-next{transition:none}
 }
 
-  </style>
+  
+/* FEATURED CV 2026 — clean royal-blue single-column section with gray CV wordmark. */
+#cv.cv.cv-featured{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#1558E8!important;
+  color:#fff;
+  padding:clamp(92px,11vw,160px) 0 clamp(100px,12vw,175px);
+  min-height:610px;
+}
+#cv.cv-featured::before{
+  content:"CV";
+  position:absolute;
+  z-index:0;
+  left:50%;
+  top:49%;
+  transform:translate(-50%,-50%);
+  color:rgba(209,214,225,.34);
+  font-family:"DM Sans",Arial,sans-serif!important;
+  font-weight:900;
+  font-size:clamp(240px,39vw,670px);
+  line-height:.75;
+  letter-spacing:-.09em;
+  pointer-events:none;
+  user-select:none;
+  white-space:nowrap;
+}
+#cv.cv-featured .cv-grid{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:min(880px,calc(100% - 60px));
+  max-width:880px;
+  margin-inline:auto;
+}
+#cv.cv-featured .cv-summary{
+  position:relative;
+  width:100%;
+  max-width:none;
+  text-align:right;
+  padding:0;
+  color:#fff;
+}
+#cv.cv-featured .section-kicker,
+#cv.cv-featured .section-kicker > span:first-child{
+  color:#F5F8FF!important;
+}
+#cv.cv-featured .editorial-heading,
+#cv.cv-featured .editorial-heading span,
+#cv.cv-featured .editorial-heading em{
+  color:#FFFFFF!important;
+  font-size:clamp(43px,6vw,84px);
+  line-height:1.4;
+}
+#cv.cv-featured .cv-summary > p{
+  max-width:690px;
+  color:#F5F7FF;
+  font-size:clamp(16px,1.45vw,19px);
+  line-height:2.1;
+  font-weight:500;
+  margin-top:26px;
+}
+#cv.cv-featured .cv-actions{margin-top:32px}
+#cv.cv-featured .cv-view{
+  display:inline-flex;
+  align-items:center;
+  gap:22px;
+  background:#FFFFFF;
+  color:#123EAF!important;
+  border:1px solid #FFFFFF;
+  border-radius:12px;
+  padding:16px 23px;
+  box-shadow:0 12px 28px rgba(9,32,95,.1);
+}
+#cv.cv-featured .cv-view:hover{background:#EAF1FF}
+#cv.cv-featured .cv-note{
+  display:block;
+  margin-top:25px;
+  color:#E5EBFA;
+  max-width:680px;
+  line-height:1.85;
+  font-size:12px;
+}
+@media(max-width:700px){
+  #cv.cv.cv-featured{min-height:610px;padding:98px 0 100px}
+  #cv.cv-featured::before{
+    font-size:clamp(230px,74vw,390px);
+    top:44%;
+    color:rgba(211,216,227,.25);
+  }
+  #cv.cv-featured .cv-grid{width:calc(100% - 42px)}
+  #cv.cv-featured .editorial-heading,
+  #cv.cv-featured .editorial-heading span,
+  #cv.cv-featured .editorial-heading em{font-size:clamp(37px,9vw,56px)}
+  #cv.cv-featured .cv-summary > p{font-size:15px;line-height:2}
+  #cv.cv-featured .cv-view{padding:14px 16px;font-size:13px;gap:10px}
+}
+
+</style>
 
 </head>
 <body>
@@ -2577,7 +2676,7 @@ html body :is(
     <div class="shell nav-shell">
       <a href="#home" class="site-name" aria-label="منة الله أحمد — الرئيسية" id="homeBrand"><svg class="brand-monogram" viewBox="0 0 205 193" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شعار منة الله أحمد"><path d="M13,23 L9,30 L6,40 L6,142 L36,142 L36,42 L40,36 L46,33 L54,35 L58,39 L60,44 L60,113 L67,129 L77,138 L91,144 L107,145 L124,139 L136,128 L141,119 L143,111 L143,43 L149,35 L157,33 L164,37 L167,44 L167,142 L197,142 L197,42 L192,27 L186,19 L180,14 L167,8 L149,7 L140,9 L132,13 L120,24 L116,31 L113,44 L113,110 L105,118 L98,118 L90,111 L90,46 L86,29 L82,23 L71,13 L54,7 L41,7 L30,10 L20,16Z" fill="currentColor"/><path d="M173,158 L169,162 L166,170 L168,179 L175,186 L185,187 L191,185 L197,177 L197,165 L191,158 L186,156 L178,156Z" fill="currentColor"/></svg></a>
       <nav class="nav-links" id="mainNav" aria-label="القائمة الرئيسية">
-        <a href="#about" data-i18n="navAbout">التعريف</a>
+        <a href="#cv" data-i18n="navAbout">التعريف</a>
         <a href="#cv" data-i18n="navCV">السيرة الذاتية</a>
         <a href="#projects" data-i18n="navProjects">المشاريع</a>
         <a href="#videos" data-i18n="navVideos">الأعمال المرئية</a>
@@ -2603,7 +2702,7 @@ html body :is(
   <path d="M805 246 Q815 231 828 226" fill="none" stroke="#F1F1F3" stroke-width="8" stroke-linecap="round"/>
 </svg>
         <span class="hello-greeting" lang="en" aria-hidden="true">Hello!</span>
-        <a class="hello-next" href="#about" aria-label="انتقل إلى قسم التعريف" title="تعرّف عليّ">
+        <a class="hello-next" href="#cv" aria-label="انتقل إلى قسم السيرة الذاتية" title="السيرة الذاتية">
           <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 16h21m-9-9 9 9-9 9" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -2625,28 +2724,7 @@ html body :is(
       <span>SOFTWARE ENGINEERING</span><i>✳</i><span>FULL‑STACK DEVELOPMENT</span><i>✳</i><span>AI • LLMs • RAG</span><i>✳</i><span>LEGALTECH</span><i>✳</i>
     </div></div>
 
-    <section id="about" class="section about anchor">
-      <div class="shell">
-        <div class="section-kicker reveal"><span>01 /</span> <span data-i18n="aboutKicker">تعرّف عليّ</span></div>
-        <div class="about-layout">
-          <div class="about-lead reveal">
-            <h2 class="editorial-heading"><span data-i18n="aboutHeadOne">أفهم المشكلة أولًا.</span><br><em data-i18n="aboutHeadTwo">ثم أصمّم الحل.</em></h2>
-            <p data-i18n="aboutBio">أهلًا، أنا منة الله أحمد. درست تقنيات الإنترنت في كلية تقنية المعلومات بجامعة طرابلس. أحب أن أبدأ من السؤال الصحيح: ما المشكلة التي تحتاج إلى حل؟ بعدها أحلّل الاحتياج، وأصمّم التجربة، وأختار التقنية المناسبة لتحويل الفكرة إلى شيء واضح ومفيد.</p>
-            <p class="about-secondary" data-i18n="aboutPhilosophy">أتنقّل بين تطوير الويب والموبايل والأنظمة الخلفية، وأهتم بالذكاء الاصطناعي وRAG والبحث الدلالي. بالنسبة لي، الواجهة الجميلة مهمة، لكن القيمة الحقيقية تظهر عندما يلتقي التصميم المدروس مع كود منظّم وتجربة تعمل بسلاسة.</p>
-            <a class="underlined-link" href="https://github.com/MENA626" target="_blank" rel="noopener noreferrer"><span data-i18n="aboutGithub">استعرض أعمالي على GitHub</span><span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="about-aside reveal">
-            <div class="bio-panel"><span class="panel-index">01 — EDUCATION</span><span class="panel-illustration" aria-hidden="true">✺</span><h3 data-i18n="eduTitle">تقنيات الإنترنت · جامعة طرابلس</h3><p data-i18n="eduDesc">درست تخصص تقنيات الإنترنت بكلية تقنية المعلومات في جامعة طرابلس، وأهتم بتطوير البرمجيات وتجارب الويب.</p><span class="panel-meta">TRIPOLI · LIBYA</span></div>
-            <div class="bio-tiles">
-              <div class="bio-tile neon-tile"><span class="panel-index">02 — FOCUS</span><strong>AI<span class="tile-plus">+</span></strong><span data-i18n="focusLabel">ما أستكشفه الآن: الذكاء الاصطناعي</span></div>
-              <div class="bio-tile dark-tile"><span class="panel-index">03 — APPROACH</span><strong data-i18n="approachLabel">أحلّل.<br>أصمّم.<br>أبني.</strong><span class="tile-arrow">↗</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cv" class="section cv anchor" aria-labelledby="cvHeading">
+    <section id="cv" class="section cv cv-featured anchor" aria-labelledby="cvHeading">
       <div class="shell cv-grid">
         <div class="cv-summary reveal">
           <div class="section-kicker"><span>02 /</span><span data-i18n="cvKicker">عن مساري · السيرة الذاتية</span></div>
@@ -2654,12 +2732,6 @@ html body :is(
           <p data-i18n="cvSummary">درست تقنيات الإنترنت في كلية تقنية المعلومات بجامعة طرابلس. أهتم بتطوير الويب والأنظمة الخلفية وتطبيقات الموبايل وقواعد البيانات، وأواصل استكشاف الاستخدامات العملية للذكاء الاصطناعي. في سيرتي أجمع خلفيتي التقنية ومشاريعي والأدوات التي أعمل بها.</p>
           <div class="cv-actions"><a class="cv-view" id="cvPageLink" href="cv.html?lang=ar" target="_blank" rel="noopener noreferrer"><span data-i18n="cvView">عرض السيرة الذاتية · حفظ PDF</span><span aria-hidden="true">↗</span></a></div>
           <small class="cv-note" data-i18n="cvFootnote">أذكر هنا المعلومات المؤكدة عن دراستي ومهاراتي، ويمكن إضافة الخبرات والشهادات لاحقًا عندما تتوفر تفاصيلها.</small>
-        </div>
-        <div class="cv-list">
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">01</span><div><span class="cv-label" data-i18n="cvEducationLabel">التعليم</span><h3 data-i18n="cvEducationTitle">جامعة طرابلس · تخصص تقنيات الإنترنت</h3><p data-i18n="cvEducationDesc">درست تخصص تقنيات الإنترنت في كلية تقنية المعلومات بجامعة طرابلس، مع اهتمام بتطوير البرمجيات والويب.</p></div></article>
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">02</span><div><span class="cv-label" data-i18n="cvDevelopmentLabel">التطوير</span><h3 data-i18n="cvDevelopmentTitle">الويب والتطبيقات متعددة المنصات</h3><p data-i18n="cvDevelopmentDesc">أستخدم PHP وLaravel وJava وJavaScript في تطوير الويب والأنظمة الخلفية، وFlutter وDart في تطبيقات الموبايل.</p></div></article>
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">03</span><div><span class="cv-label" data-i18n="cvAILabel">الذكاء الاصطناعي</span><h3 data-i18n="cvAITitle">نماذج اللغة والبحث الدلالي</h3><p data-i18n="cvAIDesc">أستكشف LLMs وRAG وEmbeddings والبحث الدلالي، وأهتم بتطبيق هذه الأفكار عمليًا ضمن مشروع «ميزان».</p></div></article>
-          <article class="cv-record reveal"><span class="cv-icon" aria-hidden="true">04</span><div><span class="cv-label" data-i18n="cvDataLabel">البيانات وأدوات العمل</span><h3 data-i18n="cvDataTitle">قواعد البيانات والبنية التقنية</h3><p data-i18n="cvDataDesc">أعمل بأدوات وقواعد بيانات مثل PostgreSQL وMySQL وSupabase وpgvector، إلى جانب Docker وGit وLinux.</p></div></article>
         </div>
       </div>
     </section>
