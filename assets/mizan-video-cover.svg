@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
-<title id="title">ميزان — غلاف الفيديو الترويجي</title>
-<desc id="desc">تصميم أزرق ملكي وسماوي مع موازين العدالة الهندسية ولمسات صفراء، خاص بالفيديو الترويجي لمنصة ميزان</desc>
+<title id="title">مِيـــــزَان — غلاف الفيديو الترويجي</title>
+<desc id="desc">غلاف احترافي لفيديو منصة مِيـــــزَان، باسم عربي مشكّل، وميزان عدالة هندسي ولمسات باللون الأزرق والسماوي والأصفر</desc>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071E55"/><stop offset=".46" stop-color="#0D55B4"/><stop offset="1" stop-color="#009EFF"/></linearGradient>
 <radialGradient id="glow"><stop stop-color="#38C9FF" stop-opacity=".55"/><stop offset=".48" stop-color="#009EFF" stop-opacity=".16"/><stop offset="1" stop-color="#009EFF" stop-opacity="0"/></radialGradient>
@@ -14,7 +14,7 @@
 <rect width="1200" height="675" fill="url(#bg)"/>
 <rect width="1200" height="675" fill="url(#grid)"/>
 <ellipse cx="835" cy="332" rx="470" ry="383" fill="url(#glow)"/>
-<ellipse cx="1080" cy="115" rx="380" ry="230" fill="#58D9FF" opacity=".16" filter="url(#blur)"/>
+<ellipse cx="1080" cy="115" rx="380" ry="230" fill="#58D9FF" opacity=".11" filter="url(#blur)"/>
 <path d="M0 546C240 464 416 651 692 570S1042 476 1200 547V675H0Z" fill="#069BFF" opacity=".35"/>
 <path d="M0 592C241 520 362 670 663 607S997 551 1200 601V675H0Z" fill="#107AFF" opacity=".4"/>
 <path d="M0 629C204 581 373 685 589 652S1003 612 1200 650V675H0Z" fill="url(#yellow)" opacity=".78"/>
@@ -24,7 +24,7 @@
 <path d="M725 100h210m-218 436h222M1030 198v270"/>
 </g>
 <!-- translucent legal document panels -->
-<g transform="translate(828 69) rotate(10)" opacity=".78">
+<g transform="translate(855 72) rotate(10)" opacity=".62">
 <rect x="0" y="0" width="222" height="341" rx="25" fill="url(#panel)" stroke="#7FD9FF" stroke-width="2"/>
 <rect x="48" y="72" width="137" height="8" rx="4" fill="#CCF3FF" opacity=".43"/>
 <rect x="48" y="102" width="137" height="8" rx="4" fill="#CCF3FF" opacity=".38"/>
@@ -32,12 +32,12 @@
 <rect x="48" y="185" width="137" height="8" rx="4" fill="#CCF3FF" opacity=".28"/>
 <rect x="48" y="215" width="120" height="8" rx="4" fill="#CCF3FF" opacity=".28"/>
 </g>
-<g transform="translate(666 107) rotate(-9)" opacity=".55">
+<g transform="translate(694 113) rotate(-9)" opacity=".43">
 <rect x="0" y="0" width="160" height="261" rx="20" fill="url(#panel)" stroke="#8CDAFF" stroke-width="2"/>
 <path d="M35 69h92M35 92h92M35 115h64" stroke="#BCEAFF" stroke-width="7" stroke-linecap="round" opacity=".5"/>
 </g>
 <!-- judicial scales: symmetrical geometric iconic construction -->
-<g transform="translate(845 348)">
+<g transform="translate(859 349) scale(.92)">
 <ellipse cx="0" cy="198" rx="222" ry="28" fill="#091A5B" opacity=".52" filter="url(#soft)"/>
 <path d="M-134 202H134" stroke="#163C95" stroke-width="31" stroke-linecap="round"/>
 <rect x="-126" y="178" width="252" height="28" rx="14" fill="url(#metal)"/>
@@ -49,13 +49,17 @@
 <ellipse cx="-179" cy="14" rx="79" ry="13" fill="#E5F8FF"/><ellipse cx="179" cy="14" rx="79" ry="13" fill="#E5F8FF"/>
 <circle cx="0" cy="-143" r="17" fill="url(#yellow)"/>
 </g>
-<!-- Editorial typography on left -->
-<path d="M70 168h84" stroke="#FFD850" stroke-width="7" stroke-linecap="round"/>
-<text x="69" y="232" fill="#E5F5FF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="3.4">LEGALTECH  /  PROMO  01</text>
-<text x="520" y="377" fill="#FFFFFF" font-family="Cairo,Arial,sans-serif" font-size="144" font-weight="900" direction="rtl" text-anchor="start">ميزان</text>
-<text x="70" y="432" fill="#DDF0FF" font-family="Cairo,Arial,sans-serif" font-size="32" font-weight="700">فيديو ترويجي لمنصة ميزان</text>
-<path d="M70 468h349" stroke="#FFD850" stroke-width="5" stroke-linecap="round"/>
-<text x="71" y="541" fill="#CDEBFF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">MIZAN  ·  SMARTER LEGAL TOOLS</text>
+<!-- Editorial left-side typography: exact requested vocalized MIZAN name. -->
+<rect x="62" y="107" width="286" height="42" rx="21" fill="#103D8A" stroke="#7ABFF5" stroke-opacity=".47"/>
+<circle cx="89" cy="128" r="6" fill="#FFD850"/>
+<text x="112" y="134" fill="#E7F5FF" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2.25">LEGALTECH  /  PROMO FILM</text>
+<path d="M76 184H122" stroke="#FFD850" stroke-width="6" stroke-linecap="round"/>
+<!-- Anchor from the right edge to guarantee long Arabic kashida stays within the left column. -->
+<text x="551" y="369" text-anchor="start" direction="rtl" unicode-bidi="plaintext" textLength="456" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" font-family="Cairo,Noto Kufi Arabic,Noto Sans Arabic,Tahoma,Arial,sans-serif" font-size="135" font-weight="900">مِيـــــزَان</text>
+<text x="516" y="434" text-anchor="start" direction="rtl" unicode-bidi="plaintext" fill="#DDF0FF" font-family="Cairo,Noto Kufi Arabic,Noto Sans Arabic,Tahoma,Arial,sans-serif" font-size="33" font-weight="700">فيديو ترويجي لمنصة ميزان</text>
+<path d="M70 468H462" stroke="#FFD850" stroke-width="6" stroke-linecap="round"/>
+<text x="74" y="517" fill="#CCE9FF" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="2.4">MIZAN  ·  PROMOTIONAL VIDEO</text>
+<text x="74" y="554" fill="#A8D7FB" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.65">DESIGN &amp; VIDEO EDITING / 01</text>
 <circle cx="1117" cy="74" r="8" fill="#FFD850"/>
 <circle cx="1087" cy="74" r="8" fill="#EFFAFF" opacity=".76"/>
 </svg>
