@@ -1,282 +1,363 @@
-/*
- * منة الله software engineering portfolio — DEMO articles.
- * Replace these editorial samples with your own writing. They do not
- * represent verified personal experiences or published original works.
- */
-const posts = [
+/* منة الله أحمد — bilingual software engineering portfolio.
+   No API secrets, data collection, or backend required. */
+"use strict";
+
+const english = {
+  skip: "Skip to content",
+  navAbout: "About",
+  navProjects: "Projects",
+  navStack: "Expertise",
+  navNotes: "Journal",
+  navContact: "Contact",
+  navCta: "Let's collaborate",
+  heroEyebrow: "Menat Allah Ahmed / Software Engineer in Tripoli",
+  heroTitleOne: "Turning",
+  heroTitleTwo: "ideas into",
+  heroTitleThree: "intelligent systems.",
+  heroDescription: "I'm Menat Allah Ahmed, a Software Engineer and Faculty of Information Technology graduate from the University of Tripoli. I build web and mobile experiences and explore how AI can solve real problems for real people.",
+  heroProjectButton: "Explore my work",
+  heroLearnMore: "Discover my story",
+  heroCaption: "I don't just write code. I build systems that solve real problems.",
+  heroScroll: "Scroll to explore ↓",
+  aboutKicker: "Behind the screen",
+  aboutHeadOne: "Understand the problem.",
+  aboutHeadTwo: "Then build the solution.",
+  aboutBio: "I'm Menat Allah Ahmed, a Software Engineer from Libya and an IT graduate of the University of Tripoli. I care about robust backend systems, elegant mobile apps, and experiences that bring solid engineering and practical AI together.",
+  aboutPhilosophy: "I love clean interfaces and details that matter—from Bento Grids and Glassmorphism to intentional user experiences. To me, the best technology makes people's lives simpler.",
+  aboutGithub: "Explore my work on GitHub",
+  eduTitle: "University of Tripoli",
+  eduDesc: "Faculty of Information Technology graduate, specializing in Software Engineering.",
+  focusLabel: "AI with real impact",
+  approachLabel: "Understand.<br>Design.<br>Build.",
+  projectsKicker: "Selected projects",
+  projectsHeadOne: "An idea becomes",
+  projectsHeadTwo: "something real.",
+  projectsDesc: "I see projects as solutions to real problems, not just lines of code.",
+  mizanStatus: "In development",
+  mizanTitle: "Mizan",
+  mizanDesc: "A comprehensive LegalTech platform I'm building to bridge technology and legal work: an AI-powered legal assistant, a Smart Vault document library with OCR, and a lawyer directory.",
+  mizanNote: "This project is in development. Live demo and code links will be added when available.",
+  siteStatus: "Live website",
+  siteTitle: "My personal site & tech journal",
+  siteDesc: "A home for my professional story, projects, technologies, and ideas, with bilingual Arabic-English content and responsive interaction.",
+  viewSource: "Explore the source code",
+  stackKicker: "Technology & tools",
+  stackHeadOne: "Many technologies.",
+  stackHeadTwo: "One purpose.",
+  stackDesc: "From backend engineering to mobile apps and semantic search, I choose tools that serve the idea and help it grow.",
+  aiTitle: "From knowledge to meaningful answers.",
+  aiDesc: "I'm exploring Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), semantic search, and embeddings to build AI experiences grounded in real knowledge.",
+  notesKicker: "Technical journal",
+  notesHeadOne: "Ideas shouldn't stay",
+  notesHeadTwo: "in my head.",
+  notesDesc: "Topics I'm preparing to write about—from software engineering to AI. These are previews of future articles, not previously published work.",
+  contactKicker: "Start a conversation",
+  contactHeadOne: "Have an idea",
+  contactHeadTwo: "worth building?",
+  contactDesc: "I'm interested in meaningful technical projects, collaboration, and exchanging knowledge. Connect with me through GitHub; professional email and other channels can be added when ready for public sharing.",
+  contactButton: "Connect on GitHub",
+  footerAbout: "Software Engineering · Web & Mobile · AI<br>Tripoli, Libya",
+  topLink: "Back to top",
+  footerName: "Menat Allah Ahmed",
+  draftDisclaimer: "This article idea is being prepared.",
+  copyLink: "Copy link ↗"
+};
+
+const stackGroups = [
   {
-    id: "first-question",
-    title: "قبل أول سطر كود… اسألي: لماذا؟",
-    description: "البرمجة ليست سباقًا نحو لوحة المفاتيح. أحيانًا سؤال واحد يصنع فرقًا أكبر من مئة سطر.",
-    category: "thoughts",
-    categoryName: "تفكير هندسي • مثال",
-    date: "نص تجريبي",
-    readTime: "3 دقائق",
-    theme: "peach",
-    illustration: "؟",
-    paragraphs: [
-      "هذا المقال مثال تحريري يوضح أسلوب المدونة، وليس تجربة شخصية منشورة باسم صاحبة الموقع.",
-      "قبل أن نختار لغة برمجة أو نبدأ برسم الواجهة، نحتاج أن نفهم المشكلة: من يواجهها؟ ولماذا تحدث؟ وكيف نعرف أن الحل نجح؟ الإجابة الدقيقة عن هذه الأسئلة تختصر الكثير من العمل.",
-      "الكود أداة قوية، لكن قيمته الحقيقية تظهر عندما يخدم هدفًا واضحًا. لذلك تبدأ هندسة البرمجيات بفهم الإنسان والمشكلة قبل كتابة الحل."
+    ar: "الويب والأنظمة الخلفية", en: "Web & Backend", mark: "</>",
+    tech: [
+      ["PHP","php/php-original.svg","PHP"],
+      ["Laravel","laravel/laravel-original.svg","L"],
+      ["Java","java/java-original.svg","J"],
+      ["JavaScript","javascript/javascript-original.svg","JS"]
     ]
   },
   {
-    id: "small-project-big-learning",
-    title: "مشروع صغير. تعلّم لا ينتهي.",
-    description: "النسخة الأولى لا تحتاج أن تكون مثالية؛ تحتاج فقط أن توجد، وأن تمنحك شيئًا حقيقيًا تتعلّمين منه.",
-    category: "life",
-    categoryName: "تعلّم • مثال",
-    date: "نص تجريبي",
-    readTime: "4 دقائق",
-    theme: "lime",
-    illustration: "∞",
-    paragraphs: [
-      "هذا المقال مثال تجريبي، ويمكن استبداله بمقال توثّقين فيه مشروعًا أو تجربة تعلم حقيقية.",
-      "حين تبنين مشروعًا صغيرًا، تتضح أمور لا تظهر في الشروحات: كيف تُقسّمين المهام؟ ماذا يحدث عندما يفشل جزء من التطبيق؟ وكيف تتعاملين مع ملاحظة مستخدم حقيقي؟",
-      "ابدئي بما يكفي ليعمل. اختبريه. حسّنيه. ثم ابدئي دورة جديدة. بهذه الطريقة لا تصبح المشاريع مجرد ملفات؛ تصبح خطوات ملموسة في رحلة التطور."
+    ar: "تطوير تطبيقات الموبايل", en: "Mobile Development", mark: "◫",
+    tech: [
+      ["Flutter","flutter/flutter-original.svg","F"],
+      ["Dart","dart/dart-original.svg","D"]
     ]
   },
   {
-    id: "code-that-lasts",
-    title: "ليس المهم أن يعمل الكود… فقط.",
-    description: "الكود الناجح لا يُقاس بما يفعله اليوم وحده، بل بمدى وضوحه وسهولة تطويره غدًا.",
-    category: "tech",
-    categoryName: "هندسة برمجيات • مثال",
-    date: "نص تجريبي",
-    readTime: "5 دقائق",
-    theme: "violet",
-    illustration: "{ }",
-    paragraphs: [
-      "هذا مثال لموضوع تقني مستقبلي، وليس ادعاءً بخبرة عملية محددة.",
-      "قد يحقق حلّان النتيجة نفسها، لكن أحدهما أسهل فهمًا واختبارًا وصيانةً. هنا تظهر قيمة التسمية الواضحة، وتقسيم المسؤوليات، وكتابة اختبارات مناسبة.",
-      "الهندسة الجيدة تعني التفكير في من سيقرأ هذا الكود لاحقًا، حتى لو كنتِ أنتِ ذلك الشخص بعد شهور. اجعلي قراراتك مفهومة، والهدف واضحًا، والتعقيد بقدر الحاجة."
+    ar: "الذكاء الاصطناعي والبحث", en: "AI & Semantic Search", mark: "✳",
+    tech: [
+      ["OpenAI","openai/openai-original.svg","AI"],
+      ["Gemini",null,"✧"],
+      ["RAG",null,"◈"],
+      ["Embeddings",null,"∞"]
+    ]
+  },
+  {
+    ar: "البيانات والبنية والأدوات", en: "Data & Infrastructure", mark: "⌘",
+    tech: [
+      ["PostgreSQL","postgresql/postgresql-original.svg","PG"],
+      ["Supabase","supabase/supabase-original.svg","S"],
+      ["pgvector","postgresql/postgresql-original.svg","V"],
+      ["MySQL","mysql/mysql-original.svg","DB"],
+      ["Docker","docker/docker-original.svg","D"],
+      ["Git","git/git-original.svg","G"],
+      ["Linux","linux/linux-original.svg","L"]
     ]
   }
 ];
-const grid = document.getElementById("storyGrid");
-const filters = document.getElementById("categoryFilters");
-const search = document.getElementById("storySearch");
-const empty = document.getElementById("emptyMessage");
-const storyCount = document.getElementById("storyCount");
-const dialog = document.getElementById("articleDialog");
-const closeDialog = document.getElementById("dialogClose");
-const dialogBanner = document.getElementById("dialogBanner");
-const dialogMeta = document.getElementById("dialogMeta");
-const dialogTitle = document.getElementById("dialogTitle");
-const dialogContent = document.getElementById("dialogContent");
-const shareButton = document.getElementById("shareArticle");
 
-let selectedCategory = "all";
-let searchValue = "";
-let activePost = null;
+const drafts = [
+  {
+    id:"rag-explained", motif:"AI",
+    ar:{ category:"الذكاء الاصطناعي · فكرة مقال", title:"حين تتعلّم الآلة أن تبحث قبل أن تجيب.", description:"عن أنظمة RAG: كيف نربط النماذج اللغوية بمصادر معرفة يمكن الرجوع إليها؟", content:[
+      "هذه معاينة لفكرة مقال قيد الإعداد، وليست مقالًا منشورًا أو تجربة شخصية موثقة.",
+      "النموذج اللغوي قد يكون بارعًا في توليد الكلمات، لكن بناء نظام يعتمد عليه يتطلب أكثر من ذلك. الفكرة في RAG هي استرجاع المعلومات ذات الصلة من قاعدة معرفة، ثم الاستعانة بها قبل توليد الإجابة.",
+      "سيتناول المقال المقترح مراحل تقسيم المستندات، وإنشاء Embeddings، والبحث الدلالي، وطرق تقييم دقة الاسترجاع والإجابات."
+    ]},
+    en:{ category:"AI · Article concept", title:"What if AI searched before it answered?", description:"RAG systems, and how language models can consult relevant knowledge before responding.", content:[
+      "This is a preview of an article idea in preparation, not a published article or a verified personal project report.",
+      "A language model can be fluent without being grounded. Retrieval-Augmented Generation pairs generation with search over relevant knowledge to make responses better informed.",
+      "The proposed article will explore document chunking, embeddings, semantic retrieval, and evaluating both retrieved context and generated answers."
+    ]}
+  },
+  {
+    id:"mizan-vision", motif:"◈",
+    ar:{ category:"LegalTech · فكرة مقال", title:"عندما تلتقي العدالة بالتقنية.", description:"لماذا يستحق القطاع القانوني أدوات أذكى لتنظيم المستندات وتيسير البحث؟", content:[
+      "هذه فكرة مقال مستقبلي عن الرؤية التقنية لمشروع ميزان، وهو قيد التطوير.",
+      "في الأنظمة القانونية توجد كميات كبيرة من الوثائق والأسئلة المتشابهة والبيانات التي تحتاج إلى ترتيب. هنا تظهر فرص أدوات مثل OCR ومكتبات المستندات الذكية والبحث الدلالي.",
+      "سيتناول المقال كيف يمكن تصميم أدوات مساعدة مفهومة ومحترمة للخصوصية، مع ضرورة عدم اعتبار مخرجات الذكاء الاصطناعي بديلًا عن المراجعة القانونية المهنية."
+    ]},
+    en:{ category:"LegalTech · Article concept", title:"When legal work meets technology.", description:"Why the legal field deserves smarter ways to organize documents and find information.", content:[
+      "This is a planned article about the vision behind Mizan, a project currently in development.",
+      "Legal work involves complex documents, recurring questions, and information that needs careful organization. OCR, intelligent document libraries, and semantic search could make that work more accessible.",
+      "The proposed piece will examine responsible, privacy-aware tools—and why AI output should not be treated as a replacement for professional legal review."
+    ]}
+  },
+  {
+    id:"architecture-matters", motif:"{ }",
+    ar:{ category:"هندسة البرمجيات · فكرة مقال", title:"أن يعمل الكود؟ هذه مجرد البداية.", description:"عن المعمارية الواضحة، والاختبارات، والتفاصيل التي تجعل النظام قابلًا للتطوير.", content:[
+      "هذه مسودة فكرة لمقال تقني قابل للتطوير لاحقًا.",
+      "قد تعمل نسخة أولى من التطبيق بشكل جيد، لكن أي نظام حقيقي يواجه تغيّر المتطلبات وتوسّع عدد المستخدمين وأخطاء غير متوقعة. المعمارية الجيدة تجعل هذه التغييرات قابلة للإدارة.",
+      "سيركز المقال المقترح على تقسيم المسؤوليات، والتوثيق والاختبارات، وكيف نوازن بين السرعة والبساطة وقابلية الصيانة."
+    ]},
+    en:{ category:"Engineering · Article concept", title:"Working code is only the beginning.", description:"On clear architecture, testing, and the details that make software maintainable.", content:[
+      "This is a draft article concept for future development.",
+      "An early version of an app might work perfectly—until requirements change, users multiply, or unexpected failures appear. Thoughtful architecture makes change manageable.",
+      "The proposed article will look at boundaries, documentation, testing, and balancing delivery speed with simplicity and maintainability."
+    ]}
+  }
+];
 
-function makeElement(tag, className, textContent) {
-  const element = document.createElement(tag);
-  if (className) element.className = className;
-  if (textContent !== undefined) element.textContent = textContent;
-  return element;
+const root = document.documentElement;
+const langToggle = document.getElementById("langToggle");
+const langLabel = document.getElementById("langLabel");
+const translated = [...document.querySelectorAll("[data-i18n]")];
+const originals = new Map(translated.map(el => [el.dataset.i18n, el.innerHTML]));
+const richKeys = new Set(["approachLabel", "footerAbout"]);
+const stackContainer = document.getElementById("stackGroups");
+const noteContainer = document.getElementById("notesGrid");
+const dialog = document.getElementById("noteDialog");
+const closeBtn = document.getElementById("dialogClose");
+const shareBtn = document.getElementById("shareNote");
+const noteTitle = document.getElementById("noteDialogTitle");
+const noteBody = document.getElementById("dialogBody");
+const noteEyebrow = document.getElementById("dialogEyebrow");
+let language = "ar";
+let currentNote = null;
+
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
 }
-
-function makeCard(post, index) {
-  const card = makeElement("article", "story-card");
-  const trigger = makeElement("button", "story-card-button");
-  trigger.type = "button";
-  trigger.setAttribute("aria-label", "اقرأ: " + post.title);
-  trigger.addEventListener("click", () => openPost(post.id));
-
-  const cover = makeElement("div", "story-cover cover-" + post.theme);
-  cover.append(
-    makeElement("span", "cover-number", String(index + 1).padStart(2, "0") + " / " + String(posts.length).padStart(2, "0")),
-    makeElement("span", "cover-star", "✳"),
-    makeElement("span", "cover-art", post.illustration),
-    makeElement("span", "cover-bottom", "منة الله / DEV JOURNAL")
-  );
-  cover.setAttribute("aria-hidden", "true");
-
-  const meta = makeElement("div", "story-card-meta");
-  meta.append(makeElement("span", "tag", post.categoryName), makeElement("span", "", post.date));
-
-  const title = makeElement("h3", "story-card-title", post.title);
-  const description = makeElement("p", "story-card-description", post.description);
-
-  const bottom = makeElement("div", "story-card-bottom");
-  bottom.append(makeElement("span", "", post.readTime + " قراءة"), makeElement("span", "read-arrow", "↗"));
-  trigger.append(cover, meta, title, description, bottom);
-  card.append(trigger);
-  return card;
-}
-
-function renderPosts() {
-  const filtered = posts.filter(post => {
-    const matchesCategory = selectedCategory === "all" || selectedCategory === post.category;
-    const content = [post.title, post.description, post.categoryName, ...post.paragraphs].join(" ").toLocaleLowerCase("ar");
-    return matchesCategory && content.includes(searchValue);
+function renderStack() {
+  const groups = stackGroups.map(group => {
+    const card = el("section","tech-group reveal is-visible");
+    const head = el("div","tech-group-head");
+    head.append(el("span","tech-group-mark",group.mark),
+      el("h3","",group[language]),
+      el("span","",String(group.tech.length).padStart(2,"0") + " TECH"));
+    const grid = el("div","tech-items");
+    group.tech.forEach(([name,path,glyph]) => {
+      const item = el("div","tech-item");
+      const holder = el("span","tech-graphic");
+      if (path) {
+        const img = document.createElement("img");
+        img.src = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" + path;
+        img.alt = "";
+        img.width = 36;
+        img.height = 36;
+        img.loading = "lazy";
+        img.addEventListener("error", () => {
+          holder.replaceChildren(el("span","tech-fallback",glyph));
+        }, {once:true});
+        holder.append(img);
+      } else holder.append(el("span","tech-fallback",glyph));
+      item.append(holder,el("strong","",name));
+      grid.append(item);
+    });
+    card.append(head,grid);
+    return card;
   });
-  grid.replaceChildren(...filtered.map((post, index) => makeCard(post, index)));
-  empty.hidden = filtered.length !== 0;
-  storyCount.textContent = String(filtered.length).padStart(2, "0") + " STORIES / " + String(posts.length).padStart(2, "0") + " TOTAL";
+  stackContainer.replaceChildren(...groups);
 }
 
-filters.addEventListener("click", event => {
-  const button = event.target.closest("button[data-category]");
-  if (!button) return;
-  selectedCategory = button.dataset.category;
-  filters.querySelectorAll("button").forEach(item => {
-    const selected = item === button;
-    item.classList.toggle("selected", selected);
-    item.setAttribute("aria-pressed", String(selected));
+function renderNotes() {
+  const cards = drafts.map(note => {
+    const t = note[language];
+    const article = el("article","note-card reveal is-visible");
+    const trigger = el("button","note-open");
+    trigger.type = "button";
+    trigger.setAttribute("aria-label",(language==="ar"?"افتحي معاينة: ":"Open preview: ")+t.title);
+    const cover = el("div","note-cover");
+    cover.setAttribute("aria-hidden","true");
+    cover.append(el("span","",note.motif));
+    const inner = el("div","note-card-body");
+    inner.append(el("span","note-category",t.category),el("h3","",t.title),el("p","",t.description));
+    const read = el("div","note-read");
+    read.append(el("span","",language==="ar"?"استكشفي الفكرة":"Explore concept"),el("b","","↗"));
+    inner.append(read);
+    trigger.append(cover,inner);
+    trigger.addEventListener("click",()=>openNote(note.id));
+    article.append(trigger);
+    return article;
   });
-  renderPosts();
-});
-search.addEventListener("input", () => {
-  searchValue = search.value.trim().toLocaleLowerCase("ar");
-  renderPosts();
-});
-renderPosts();
+  noteContainer.replaceChildren(...cards);
+}
+function renderDialog() {
+  if (!currentNote) return;
+  const note = drafts.find(n => n.id === currentNote);
+  if (!note) return;
+  const t = note[language];
+  noteTitle.textContent = t.title;
+  noteEyebrow.textContent = t.category;
+  noteBody.replaceChildren(...t.content.map(p=>el("p","",p)));
+}
+function updateLanguage(next) {
+  language = next === "en" ? "en" : "ar";
+  root.lang = language;
+  root.dir = language==="ar" ? "rtl" : "ltr";
+  translated.forEach(node => {
+    const key = node.dataset.i18n;
+    if (language==="ar") node.innerHTML = originals.get(key) || "";
+    else if (english[key] !== undefined) {
+      if (richKeys.has(key)) node.innerHTML = english[key];
+      else node.textContent = english[key];
+    }
+  });
+  langLabel.textContent = language==="ar" ? "EN" : "عربي";
+  langToggle.setAttribute("aria-label",language==="ar" ? "Switch to English" : "التبديل إلى العربية");
+  langToggle.title = language==="ar" ? "Switch to English" : "التحويل للعربية";
+  document.getElementById("mainNav").setAttribute("aria-label",language==="ar"?"القائمة الرئيسية":"Main navigation");
+  document.getElementById("homeBrand").setAttribute("aria-label",language==="ar"?"منة الله أحمد — الرئيسية":"Menat Allah Ahmed — Home");
+  closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
+  document.title = language==="ar"?"منة الله أحمد | مهندسة برمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
+  const description = document.querySelector('meta[name="description"]');
+  description.content = language==="ar"
+    ? "منة الله أحمد — مهندسة برمجيات، خريجة جامعة طرابلس. تطوير ويب وموبايل وذكاء اصطناعي، ومشروع ميزان للتقنيات القانونية."
+    : "Menat Allah Ahmed — Software Engineer, University of Tripoli graduate, web/mobile developer exploring AI, LLMs, RAG and Mizan LegalTech.";
+  renderStack();
+  renderNotes();
+  renderDialog();
+  try { localStorage.setItem("menatallah-portfolio-language",language); } catch {}
+}
+let savedLanguage = "ar";
+try { savedLanguage = localStorage.getItem("menatallah-portfolio-language") || "ar"; } catch {}
+const urlLanguage = new URLSearchParams(location.search).get("lang");
+updateLanguage(urlLanguage==="en"||urlLanguage==="ar" ? urlLanguage : savedLanguage);
+langToggle.addEventListener("click",()=>updateLanguage(language==="ar"?"en":"ar"));
 
-function openPost(id, updateUrl = true) {
-  const post = posts.find(item => item.id === id);
-  if (!post) return;
-  activePost = post;
-  dialogBanner.className = "dialog-banner cover-" + post.theme;
-  dialogBanner.firstElementChild.textContent = post.illustration;
-  dialogMeta.textContent = post.categoryName + "  •  " + post.date + "  •  " + post.readTime + " قراءة";
-  dialogTitle.textContent = post.title;
-  dialogContent.replaceChildren(...post.paragraphs.map(paragraph => makeElement("p", "", paragraph)));
+function openNote(id,changeHash=true) {
+  if (!drafts.some(x=>x.id===id)) return;
+  currentNote=id;
+  renderDialog();
   if (!dialog.open) dialog.showModal();
   document.body.classList.add("dialog-open");
-  if (updateUrl) history.replaceState(null, "", "#post-" + post.id);
+  if (changeHash) history.replaceState(null,"","#note-"+id);
 }
-function closePost() {
-  if (dialog.open) dialog.close();
-}
-closeDialog.addEventListener("click", closePost);
-dialog.addEventListener("click", event => {
-  if (event.target === dialog) closePost();
-});
-dialog.addEventListener("close", () => {
+function closeNote() { if(dialog.open) dialog.close(); }
+closeBtn.addEventListener("click",closeNote);
+dialog.addEventListener("click",e=>{if(e.target===dialog)closeNote();});
+dialog.addEventListener("close",()=>{
+  currentNote=null;
   document.body.classList.remove("dialog-open");
-  activePost = null;
-  if (location.hash.startsWith("#post-")) history.replaceState(null, "", "#stories");
+  if(location.hash.startsWith("#note-"))history.replaceState(null,"","#notes");
 });
-window.addEventListener("hashchange", () => {
-  const id = decodeURIComponent(location.hash.slice(6));
-  if (location.hash.startsWith("#post-")) openPost(id, false);
-  else if (dialog.open) closePost();
+window.addEventListener("hashchange",()=>{
+  if(location.hash.startsWith("#note-"))openNote(decodeURIComponent(location.hash.slice(6)),false);
+  else if(dialog.open)closeNote();
 });
-if (location.hash.startsWith("#post-")) openPost(decodeURIComponent(location.hash.slice(6)), false);
-
-shareButton.addEventListener("click", async () => {
-  if (!activePost) return;
-  const link = location.href.split("#")[0] + "#post-" + activePost.id;
+if(location.hash.startsWith("#note-"))openNote(decodeURIComponent(location.hash.slice(6)),false);
+shareBtn.addEventListener("click",async()=>{
+  if(!currentNote)return;
+  const shareUrl=location.href.split("#")[0]+"#note-"+currentNote;
   try {
-    await navigator.clipboard.writeText(link);
-    shareButton.textContent = "تم نسخ الرابط ✓";
-    window.setTimeout(() => { shareButton.textContent = "نسخ رابط التدوينة ↗"; }, 2300);
-  } catch {
-    shareButton.textContent = "انسخ الرابط من شريط العنوان";
-    window.setTimeout(() => { shareButton.textContent = "نسخ رابط التدوينة ↗"; }, 2800);
-  }
+    await navigator.clipboard.writeText(shareUrl);
+    shareBtn.textContent=language==="ar"?"تم النسخ ✓":"Copied ✓";
+  } catch { shareBtn.textContent=language==="ar"?"انسخي الرابط من شريط العنوان":"Copy from address bar"; }
+  window.setTimeout(()=>{shareBtn.textContent=language==="ar"?"انسخي الرابط ↗":"Copy link ↗";},2300);
 });
 
-/* Appearance — respect system preference, remember user choice. */
-const themeToggle = document.getElementById("themeToggle");
-let savedTheme = null;
-// White is the default for the refreshed portfolio, even on dark-mode devices.
-// Keep an explicit visitor choice for future visits.
-try { savedTheme = localStorage.getItem("mena-theme-emerald-v1"); } catch {}
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  themeToggle.setAttribute("aria-label", theme === "dark" ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن");
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", theme === "dark" ? "#002E22" : "#FFFFFF");
-}
-applyTheme(savedTheme === "dark" ? "dark" : "light");
-themeToggle.addEventListener("click", () => {
-  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-  applyTheme(next);
-  try { localStorage.setItem("mena-theme-emerald-v1", next); } catch {}
-});
-
-/* Mobile navigation */
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+const nav = document.getElementById("mainNav");
+const menuBtn = document.getElementById("menuToggle");
 function closeMenu() {
-  mainNav.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "فتح القائمة");
+  nav.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded","false");
 }
-menuToggle.addEventListener("click", () => {
-  const isOpen = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "إغلاق القائمة" : "فتح القائمة");
+menuBtn.addEventListener("click",()=>{
+  const open=nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded",String(open));
 });
-mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
-document.addEventListener("click", event => {
-  if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
-});
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") closeMenu();
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape")closeMenu();
 });
 
-/* Scroll progress, nav state and reveal on intersection */
+document.getElementById("year").textContent=new Date().getFullYear();
 const progress = document.getElementById("scrollProgress");
-const siteHeader = document.getElementById("siteHeader");
-let scrollTicking = false;
-function syncScroll() {
-  const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-  progress.style.transform = "scaleX(" + Math.min(1, window.scrollY / max) + ")";
-  siteHeader.classList.toggle("scrolled", window.scrollY > 18);
-  scrollTicking = false;
+function onScroll() {
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.transform="scaleX("+(max>0?Math.min(1,Math.max(0,window.scrollY/max)):0)+")";
 }
-window.addEventListener("scroll", () => {
-  if (scrollTicking) return;
-  scrollTicking = true;
-  requestAnimationFrame(syncScroll);
-}, { passive: true });
-syncScroll();
+window.addEventListener("scroll",onScroll,{passive:true});
+onScroll();
 
-const reveals = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
-    }
-  }, { threshold: .09, rootMargin: "0px 0px 30px 0px" });
-  reveals.forEach(element => revealObserver.observe(element));
-  const sectionObserver = new IntersectionObserver(entries => {
-    const visible = entries.filter(entry => entry.isIntersecting);
-    if (!visible.length) return;
-    const sectionId = visible[0].target.id;
-    document.querySelectorAll(".nav-link").forEach(link => {
-      link.classList.toggle("active", link.getAttribute("href") === "#" + sectionId);
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduceMotion && "IntersectionObserver" in window) {
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
     });
-  }, { rootMargin: "-20% 0px -55% 0px", threshold: 0 });
-  document.querySelectorAll(".section-anchor").forEach(section => sectionObserver.observe(section));
-} else {
-  reveals.forEach(element => element.classList.add("visible"));
+  },{rootMargin:"0px 0px -35px 0px",threshold:.08});
+  document.querySelectorAll(".reveal").forEach(item=>observer.observe(item));
+  document.documentElement.classList.add("motion-on");
+}
+if("IntersectionObserver" in window) {
+  const navItems=[...nav.querySelectorAll("a[href^='#']")];
+  const sectionObserver=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        navItems.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));
+      }
+    });
+  },{rootMargin:"-25% 0px -60% 0px"});
+  document.querySelectorAll("section.anchor").forEach(s=>sectionObserver.observe(s));
 }
 
-/* Subtle pointer-responsive 3D hero; disabled for touch and reduced-motion. */
-const stage = document.getElementById("heroStage");
-const cursor = document.getElementById("cursorLight");
-const motionOkay = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (motionOkay && window.matchMedia("(pointer: fine)").matches) {
-  stage.addEventListener("pointermove", event => {
-    const rect = stage.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - .5;
-    const y = (event.clientY - rect.top) / rect.height - .5;
-    stage.style.transform = "rotateY(" + (x * 6) + "deg) rotateX(" + (-y * 6) + "deg)";
-  });
-  stage.addEventListener("pointerleave", () => { stage.style.transform = ""; });
-  document.addEventListener("pointermove", event => {
-    cursor.style.left = event.clientX + "px";
-    cursor.style.top = event.clientY + "px";
-    cursor.style.opacity = "1";
-  }, { passive: true });
-  document.addEventListener("pointerout", event => {
-    if (!event.relatedTarget) cursor.style.opacity = "0";
-  });
+const board=document.getElementById("heroBoard");
+const glow=document.getElementById("cursorGlow");
+if(!reduceMotion && window.matchMedia("(pointer:fine)").matches){
+  window.addEventListener("pointermove",e=>{
+    glow.style.left=e.clientX+"px";
+    glow.style.top=e.clientY+"px";
+    glow.style.opacity="1";
+  },{passive:true});
+  board.addEventListener("pointermove",e=>{
+    const r=board.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    board.style.transform="rotateX("+(-y*6)+"deg) rotateY("+(x*7)+"deg)";
+  },{passive:true});
+  board.addEventListener("pointerleave",()=>{board.style.transform="";});
 }
-document.getElementById("year").textContent = String(new Date().getFullYear());
