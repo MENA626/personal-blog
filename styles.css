@@ -1,16 +1,16 @@
 /* MENA — editorial personal journal. No build tools needed. */
 :root {
   color-scheme: light;
-  /* Palette: Aegean Sky / Sandy Linen / Scarlet Bikini */
-  --bg: #EFE8DE;
-  --surface: #FFF9F1;
-  --surface-2: #E7DDD0;
+  /* Palette: White canvas + Aegean Blue + Scarlet Red + Neon Lime; Sandy Linen accents */
+  --bg: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F5F6F8;
   --ink: #172F48;
   --ink-soft: #526376;
-  --line: #D5C6B6;
+  --line: #DFE3EA;
   --blue: #1664B0;
   --red: #D21624;
-  --lime: #1664B0;
+  --lime: #C6FF00;
   --tangerine: #D21624;
   --dark: #0F3156;
   --shadow: 0 24px 80px rgba(17, 49, 86, .12);
@@ -29,7 +29,7 @@ html[data-theme="dark"] {
   --line: #365475;
   --blue: #7FB6EE;
   --red: #F45B68;
-  --lime: #7FB6EE;
+  --lime: #C6FF00;
   --tangerine: #F45B68;
   --dark: #071B31;
   --shadow: 0 24px 80px rgba(0, 0, 0, .28);
@@ -541,4 +541,68 @@ html[data-theme="dark"] .story-card-meta .tag { background: #284B6E; color: #F6E
 }
 @media (prefers-reduced-motion: reduce) {
   .code-window,.project-feature:hover .code-window,.project-placeholder { transform: none }
+}
+
+
+/* =============================================================
+   WHITE + NEON REVISION
+   White canvas, Aegean blue, scarlet red, electric lime #C6FF00.
+   Keep lime behind dark text and in graphical highlights for contrast.
+   ============================================================= */
+:root { --neon: #C6FF00; --sand: #EFE8DE }
+html[data-theme="dark"] { --neon: #C6FF00; --sand: #EFE8DE }
+body { background: var(--bg) }
+.site-header { background: rgba(255,255,255,.94) }
+html[data-theme="dark"] .site-header { background: rgba(11,33,56,.94) }
+.hero { background: var(--bg) }
+.projects,.skills,.stories,.contact { background: var(--bg) }
+.section-padding { position: relative }
+.cursor-light { background: radial-gradient(circle, rgba(198,255,0,.17), transparent 67%) }
+.logo-symbol { box-shadow: 5px 5px 0 var(--neon) }
+.logo-symbol .dot { color: var(--neon) }
+.nav-link.active::after { background: var(--neon); box-shadow: 0 0 0 1px #1664B0 }
+.live-dot { background: var(--neon); box-shadow: 0 0 0 5px rgba(198,255,0,.25) }
+@keyframes breathe { 50% { box-shadow: 0 0 0 11px rgba(198,255,0,0) } }
+.handdrawn::before { background: var(--neon); opacity: 1 }
+.handdrawn-dot { color: var(--red) }
+.btn-arrow { background: var(--neon); color: #102C4D }
+.btn:hover .btn-arrow { box-shadow: 0 0 0 5px rgba(198,255,0,.20) }
+.note-icon { color: #1664B0 }
+.visual-stage { background: radial-gradient(circle at 53% 43%, #FFFFFF 0%, #E2EFFA 54%, #B3D8F1 100%) }
+html[data-theme="dark"] .visual-stage { background: radial-gradient(circle at 53% 43%, #4173A2, #1C456F 58%, #102F50) }
+.orb-shine { border-color: rgba(198,255,0,.65) }
+.visual-spark.spark-one { color: var(--neon); text-shadow: 0 3px 9px rgba(12,42,67,.4) }
+.visual-spark.spark-three { color: #D21624 }
+.float-note-dot { background: #9ACF00 }
+.float-note-top { box-shadow: 7px 7px 0 var(--neon), 0 10px 27px rgba(15,49,86,.1) }
+.ticker-wrap { background: var(--neon); color: #102C4D }
+.base-decoration,.section-sun { color: #1664B0 }
+.section-eyebrow span { color: #D21624 }
+.serif-accent::after { background: var(--neon); height: 11px; z-index: -1; bottom: 3px; border-radius: 40px }
+.serif-accent { isolation: isolate }
+.story-card-meta .tag { background: #E9F3FF; color: #164B7E }
+.story-card:hover .read-arrow { background: var(--neon); color: #102C4D; border-color: transparent }
+.about-title span { color: var(--neon); text-decoration-color: #D21624 }
+.about-symbol { color: var(--neon); opacity: .9 }
+.about-link { border-color: var(--neon) }
+.about-card-large { box-shadow: inset -5px -5px 0 rgba(198,255,0,.55) }
+.about-card-lime { background: var(--neon); color: #102C4D }
+.card-arrow { color: var(--neon) }
+.project-art-star { color: var(--neon); opacity: .5 }
+.code-cursor { color: var(--neon) }
+.project-tag { border-color: var(--neon) }
+.project-link { border-color: var(--neon) }
+.project-placeholder { background: #EFE8DE; border-color: #E3D7C8 }
+.project-placeholder-accent { background: #D21624; color: #FFFFFF; border-color: transparent }
+.placeholder-badge { font-weight: 700 }
+.skills-panel,.experience-panel { box-shadow: 0 11px 40px rgba(17,49,86,.035) }
+.panel-icon { background: var(--neon); color: #102C4D }
+.timeline-dot { box-shadow: 0 0 0 2px var(--neon) }
+.contact-method-live:hover { border-color: #1664B0; box-shadow: 0 9px 0 rgba(198,255,0,.65) }
+.footer-brand span { color: var(--neon) }
+.share-button { background: var(--neon); color: #102C4D }
+.skip-link { background: var(--neon); color: #102C4D }
+::selection { background: var(--neon); color: #102C4D }
+@media (prefers-reduced-motion: reduce) {
+  .contact-method-live:hover { box-shadow: none }
 }
