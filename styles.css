@@ -899,3 +899,36 @@ html[lang="en"] .hero-brand-meta { font-family:"DM Sans",sans-serif; }
   .hero-identity { animation:none!important; transform:none!important; }
   .hero-scroll-link,.site-header { transition:none!important; }
 }
+
+
+/* Uniform geometric M identity: hero, navigation, footer. */
+.site-name .brand-monogram {
+  width:53px;
+  height:42px;
+  display:block;
+  color:#FBF9FF;
+  flex-shrink:0;
+  transition:color .28s ease,transform .28s ease;
+}
+.site-name:hover .brand-monogram {transform:translateY(-2px);}
+.site-header.is-scrolled .site-name .brand-monogram {color:#574274;}
+.footer-name .brand-monogram {
+  display:block;
+  width:68px;
+  height:50px;
+  flex-shrink:0;
+  color:#FBF9FF;
+  transition:transform .28s ease;
+}
+.footer-name:hover .brand-monogram {transform:translateY(-2px);}
+.hero-monogram {color:#FBF9FF;}
+@media(max-width:720px){
+  .site-name .brand-monogram {width:46px;height:36px;}
+  .footer-name .brand-monogram {width:60px;height:45px;}
+}
+@media(max-width:440px){
+  .site-name .brand-monogram {width:43px;height:34px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .site-name .brand-monogram,.footer-name .brand-monogram {transition:none!important;}
+}
