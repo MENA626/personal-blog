@@ -52,7 +52,7 @@
 <!-- Editorial typography on left -->
 <path d="M70 168h84" stroke="#FFD850" stroke-width="7" stroke-linecap="round"/>
 <text x="69" y="232" fill="#E5F5FF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="3.4">LEGALTECH  /  PROMO  01</text>
-<text x="66" y="377" fill="#FFFFFF" font-family="Cairo,Arial,sans-serif" font-size="144" font-weight="900" direction="rtl" text-anchor="start">ميزان</text>
+<text x="520" y="377" fill="#FFFFFF" font-family="Cairo,Arial,sans-serif" font-size="144" font-weight="900" direction="rtl" text-anchor="start">ميزان</text>
 <text x="70" y="432" fill="#DDF0FF" font-family="Cairo,Arial,sans-serif" font-size="32" font-weight="700">فيديو ترويجي لمنصة ميزان</text>
 <path d="M70 468h349" stroke="#FFD850" stroke-width="5" stroke-linecap="round"/>
 <text x="71" y="541" fill="#CDEBFF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">MIZAN  ·  SMARTER LEGAL TOOLS</text>
