@@ -4664,6 +4664,71 @@ function renderDialog() {
   noteEyebrow.textContent = t.category;
   noteBody.replaceChildren(...t.content.map(p=>el("p","",p)));
 }
+
+/* Automatic contrast: words crossing the blue hand ribbon become cream-white. */
+function recolorHeroWords() {
+  const copy=document.querySelector("#home .poster-copy");
+  if(!copy || typeof DOMPoint==="undefined") return;
+  const selectors=[
+    ".poster-intro",".poster-description",".poster-followup",
+    ".poster-tagline",".poster-link"
+  ];
+  const nodes=copy.querySelectorAll(selectors.join(","));
+  nodes.forEach(parent=>{
+    const tree=document.createTreeWalker(parent,NodeFilter.SHOW_TEXT);
+    const texts=[];
+    while(tree.nextNode()){
+      const node=tree.currentNode;
+      if(node.nodeValue.trim() && !node.parentElement.closest("[data-blue-word]")) texts.push(node);
+    }
+    texts.forEach(node=>{
+      const pieces=node.nodeValue.split(/(\s+)/u);
+      const fragment=document.createDocumentFragment();
+      pieces.forEach(piece=>{
+        if(!piece) return;
+        if(/^\s+$/u.test(piece)){fragment.appendChild(document.createTextNode(piece));return;}
+        const wrap=document.createElement("span");
+        wrap.dataset.blueWord="";
+        wrap.textContent=piece;
+        fragment.appendChild(wrap);
+      });
+      node.replaceWith(fragment);
+    });
+  });
+  const painted=[...document.querySelectorAll(
+    "#home .poster-static-ribbon path,#home .poster-waving-palm path"
+  )].filter(path=>path.getAttribute("fill")!=="none" &&
+    typeof path.isPointInFill==="function" && path.getScreenCTM());
+  if(!painted.length)return;
+  const geometries=painted.map(path=>({path,matrix:path.getScreenCTM().inverse()}));
+  copy.querySelectorAll("[data-blue-word]").forEach(word=>{
+    let overBlue=false;
+    for(const rect of word.getClientRects()){
+      if(overBlue)break;
+      for(const x of [.2,.5,.8]){
+        if(overBlue)break;
+        for(const y of [.3,.7]){
+          const point=new DOMPoint(rect.left+rect.width*x,rect.top+rect.height*y);
+          if(geometries.some(g=>g.path.isPointInFill(point.matrixTransform(g.matrix)))){
+            overBlue=true;break;
+          }
+        }
+      }
+    }
+    if(overBlue)word.style.setProperty("color","#F2E7E1","important");
+    else word.style.removeProperty("color");
+  });
+}
+let heroContrastFrame=0;
+function scheduleHeroContrast(){
+  if(heroContrastFrame)cancelAnimationFrame(heroContrastFrame);
+  heroContrastFrame=requestAnimationFrame(()=>{
+    heroContrastFrame=0;
+    recolorHeroWords();
+  });
+}
+window.addEventListener("resize",scheduleHeroContrast,{passive:true});
+
 function updateLanguage(next) {
   language = next === "en" ? "en" : "ar";
   root.lang = language;
@@ -4700,6 +4765,7 @@ function updateLanguage(next) {
   renderStack();
   renderNotes();
   renderDialog();
+  scheduleHeroContrast();
   try { localStorage.setItem("menatallah-portfolio-language",language); } catch {}
 }
 let savedLanguage = "ar";
