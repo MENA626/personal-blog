@@ -2813,3 +2813,12 @@ html body :is(
 }
 @media(prefers-reduced-motion:reduce){#home.hero-hello .hello-next{transition:none}}
 
+/* Photo-reference portrait proportions: keep white text area below the blue arm. */
+@media(max-width:600px){
+ #home.hero-hello .hello-cover{height:max(900px,103svh);min-height:900px;max-height:1050px}
+ #home.hero-hello .hello-cover-graphic{top:0!important}
+ #home.hero-hello .hello-copy{bottom:5%!important}
+ #home.hero-hello .hello-title{font-size:clamp(36px,9.1vw,49px)!important;margin-bottom:11px!important}
+ #home.hero-hello .hello-welcome-description{font-size:13px!important;line-height:1.7!important;margin-bottom:12px!important}
+}
+
