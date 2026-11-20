@@ -1,61 +1,58 @@
-/* 
- * MENA Personal Journal
- * ------------------------------------------------------------
- * EDIT YOUR ARTICLES HERE. All posts below are example content;
- * replace titles, descriptions, and paragraphs with your own writing.
- * No frameworks, external APIs, or build step required.
+/*
+ * MENA software engineering portfolio — blog data.
+ * Important: the three articles below are demo content, not verified user-authored posts.
+ * Replace with your actual technical writing when ready.
  */
 const posts = [
   {
-    id: "the-beginning",
-    title: "كل شيء يبدأ بفكرة.",
-    description: "ليش نحتاج مساحة خاصة نكتب فيها أفكارنا؟ هذه بداية الحكاية، وبداية رحلة جديدة.",
+    id: "first-project",
+    title: "كيف نبدأ مشروعًا برمجيًا؟",
+    description: "من تحديد الفكرة إلى نسخة أولية قابلة للتجربة. تدوينة تقنية تجريبية للمعاينة.",
     category: "thoughts",
-    categoryName: "أفكار",
-    date: "20 نوفمبر 2026",
+    categoryName: "تطوير • مثال",
+    date: "مقال تجريبي",
     readTime: "3 دقائق",
     theme: "peach",
-    illustration: "✳",
+    illustration: "</>",
     paragraphs: [
-      "أحيانًا تكون عندك أفكار كثيرة، لكنها تتزاحم في رأسك وتختفي قبل ما تقدر تمسكها. الكتابة تعطينا فرصة نرتّب هذه الأفكار ونشوفها بوضوح أكبر.",
-      "هذه المدونة مساحة للتجربة. مش لازم تكون كل فكرة مكتملة، ولا كل إجابة نهائية. المهم أن نبدأ، نكتشف، ونتعلّم من الطريق.",
-      "إذا وصلت إلى هنا، فأنت جزء من أول صفحة في هذه الرحلة. أهلاً بك، وأتمنى أن تجد بين هذه السطور شيئًا يلهمك."
+      "هذا محتوى تجريبي للمدونة، يُستبدل لاحقًا بتدوينة أصلية من صاحبة الموقع.",
+      "تبدأ المشاريع عادة بتحديد مشكلة واضحة، ثم التفكير في أبسط حل يمكن اختباره. بعد ذلك نرتّب المهام ونختار الأدوات المناسبة لطبيعة المشروع.",
+      "فكرة هذا القسم هي عرض مقالات في هندسة البرمجيات والتقنيات والتجارب العملية بطريقة منظمة."
     ]
   },
   {
-    id: "learning-every-day",
-    title: "فنّ التعلّم كل يوم.",
-    description: "مو شرط تتغيّر حياتنا بخطوة كبيرة؛ أحيانًا خمس دقائق يومية تصنع فرقًا حقيقيًا.",
+    id: "learning-programming",
+    title: "تعلّم البرمجة بالممارسة.",
+    description: "ليش المشاريع الصغيرة مفيدة أثناء التعلم؟ مثال قابل للاستبدال بمقالك الحقيقي.",
     category: "life",
-    categoryName: "تجارب",
-    date: "18 نوفمبر 2026",
+    categoryName: "تعلّم • مثال",
+    date: "مقال تجريبي",
     readTime: "4 دقائق",
     theme: "lime",
-    illustration: "∞",
+    illustration: "{ }",
     paragraphs: [
-      "من أسهل الأشياء اللي ننسى قيمتها هي الخطوات الصغيرة. ننتظر الوقت المثالي والمزاج المناسب، مع إن دقائق قليلة من التركيز ممكن تكون بداية تغيّر كبير.",
-      "جرّب تختار موضوعًا يثير فضولك، واقرأ أو مارس فيه شيئًا بسيطًا كل يوم. ما تحتاج خطة معقّدة؛ الاستمرارية أهم من الكمال.",
-      "وفي النهاية، التعلّم مش سباقًا. خذ وقتك، احتفل بالتقدّم، واسمح لنفسك تغيّر رأيك كلما اكتشفت شيئًا جديدًا."
+      "هذا نص تجريبي يشرح شكل المقالات في الموقع، وليس سيرة ذاتية أو تجربة شخصية موثّقة.",
+      "الممارسة تساعد على ربط المفاهيم النظرية بتطبيقات حقيقية. مشروع صغير بواجهة واضحة ومنطق بسيط غالبًا يعلّم أكثر من القراءة وحدها.",
+      "في النسخة النهائية يمكن إضافة صور من مشروعك، مقتطفات كود، وروابط المصدر."
     ]
   },
   {
-    id: "technology-and-creativity",
-    title: "بين التقنية والإبداع.",
-    description: "كيف نقدر نستخدم الأدوات الرقمية لصنع أشياء تحمل بصمتنا، مش مجرد تقليد للآخرين؟",
+    id: "engineering-thinking",
+    title: "عقلية مهندس البرمجيات.",
+    description: "التخطيط، التنظيم، والاهتمام بتجربة المستخدم قبل كتابة الكود. مقال تجريبي.",
     category: "tech",
-    categoryName: "تقنية",
-    date: "15 نوفمبر 2026",
+    categoryName: "تقنية • مثال",
+    date: "مقال تجريبي",
     readTime: "5 دقائق",
     theme: "violet",
-    illustration: "{ }",
+    illustration: "01",
     paragraphs: [
-      "التقنية في حد ذاتها ليست الفكرة؛ هي الوسيلة اللي نقدر نحوّل بها الخيال إلى شيء ملموس. موقع إلكتروني، تصميم بسيط، أو مشروع صغير يمكن أن يبدأ بسؤال واحد: ماذا لو؟",
-      "الأدوات تتغير بسرعة، لكن الأشياء اللي تعطي أي مشروع قيمته ما زالت نفسها: الفضول، والوضوح، والاهتمام بالتفاصيل.",
-      "أفضل طريقة تتعلّم بها هي أن تصنع شيئًا حقيقيًا. ابدأ بنسخة صغيرة، اعرضها، تعلّم من الملاحظات، ثم طوّرها خطوة بعد خطوة."
+      "هذا المقال مثال واجهة، ويمكن تبديله بالكامل بموضوع تقني من كتاباتك.",
+      "هندسة البرمجيات لا تتوقف عند كتابة الكود؛ فهي تشمل فهم المتطلبات وتصميم الحلول واختبارها وتحسينها.",
+      "حين تصل معلومات مشاريعك وخبراتك، نستطيع إعداد مقالات تقنية تعبّر عن تخصصك ومسيرتك الحقيقية."
     ]
   }
 ];
-
 const grid = document.getElementById("storyGrid");
 const filters = document.getElementById("categoryFilters");
 const search = document.getElementById("storySearch");
@@ -89,10 +86,10 @@ function makeCard(post, index) {
 
   const cover = makeElement("div", "story-cover cover-" + post.theme);
   cover.append(
-    makeElement("span", "cover-number", String(index + 1).padStart(2, "0") + " / 03"),
+    makeElement("span", "cover-number", String(index + 1).padStart(2, "0") + " / " + String(posts.length).padStart(2, "0")),
     makeElement("span", "cover-star", "✳"),
     makeElement("span", "cover-art", post.illustration),
-    makeElement("span", "cover-bottom", "MENA JOURNAL")
+    makeElement("span", "cover-bottom", "MENA / DEV JOURNAL")
   );
   cover.setAttribute("aria-hidden", "true");
 
@@ -190,7 +187,7 @@ const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   themeToggle.setAttribute("aria-label", theme === "dark" ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن");
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", theme === "dark" ? "#171b17" : "#f6f5ef");
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", theme === "dark" ? "#0B2138" : "#EFE8DE");
 }
 applyTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : (systemDark ? "dark" : "light"));
 themeToggle.addEventListener("click", () => {
