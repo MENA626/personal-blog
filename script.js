@@ -39,7 +39,7 @@ const english = {
   mizanStatus: "In development",
   mizanTitle: "Mizan",
   mizanDesc: "Mizan is a LegalTech system in development: an AI legal assistant, a Smart Vault document library with OCR, and a lawyer directory. The goal is to make legal information more organized and accessible through responsible technology.",
-  mizanNote: "This project is in development. Live demo and code links will be added when available.",
+  mizanNote: "Mizan is in development. Its live demo is available, and functionality may change as work continues.",
   mizanDemoLink: "Try the Mizan demo",
   cosmosStatus: "Published project",
   cosmosTitle: "COSMOS — A Journey Through Space",
