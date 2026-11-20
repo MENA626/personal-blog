@@ -3275,6 +3275,28 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+
+/* Orange felt-tip highlight directly behind the whole Arabic hero headline. */
+#home.hero-poster .poster-title .poster-marker{
+  display:inline;
+  color:#2329A8!important;
+  background:linear-gradient(
+    to bottom,
+    transparent 43%,
+    #FF9B29 43%,
+    #FF9B29 89%,
+    transparent 89%
+  )!important;
+  padding:0 .11em .035em;
+  border-radius:0;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+#home.hero-poster .poster-title .poster-marker span{
+  color:#2329A8!important;
+  background:transparent!important;
+}
+
 </style>
 
 </head>
@@ -3316,7 +3338,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     <div class="poster-copy">
       <p class="poster-english" lang="en" dir="ltr" aria-label="Helloworld!">Helloworld!</p>
       <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا مساحتي الصغيرة! ✳</p>
-      <h1 id="heroMainTitle" class="poster-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span> <span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
+      <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span> <span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></mark></h1>
       <p class="poster-description" data-i18n="saasDescription">هنا أشارككم مهاراتي وخبراتي وحكاياتي، وأوثّق تجاربي في التصميم والبرمجة، وكل فكرة ألهمتني أو علّمتني شيئًا جديدًا.</p>
       <p class="poster-tagline" data-i18n="saasTagline">أهلًا بكم في عالمي الرقمي، حيث تتحوّل الأفكار إلى تجارب ومشاريع!</p>
       <a href="#projects" class="poster-link"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
