@@ -661,3 +661,10 @@ html[data-theme="dark"] .about-intro > p strong { color: #FFFFFF }
   .stack-item:hover { transform: none; box-shadow: none }
   .stack-item:hover .stack-icon,.skill-row:hover .skill-icon { transform: none }
 }
+/* Arabic identity for منة الله */
+.logo-symbol { font-family: var(--font-display); font-size: 29px; letter-spacing: 0; padding-left: 0 }
+.logo-copy { font-family: var(--font-display); letter-spacing: 0; font-size: 16px }
+.logo-copy span { font-family: var(--font-en); letter-spacing: .12em; font-size: 8px }
+.orb-letter { font-family: var(--font-display); font-size: 124px; letter-spacing: 0; transform: rotate(-12deg) }
+.footer-brand { font-family: var(--font-display); font-size: clamp(39px, 6vw, 63px); letter-spacing: -.01em }
+@media (max-width: 560px) { .orb-letter { font-size: 95px } .logo-copy { font-size: 15px } }
