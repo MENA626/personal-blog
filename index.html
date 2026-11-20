@@ -3151,6 +3151,52 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
  #home.hero-hello .hello-tagline{font-size:12px;line-height:1.65;margin-bottom:16px}
 }
 
+
+/* REFERENCE-MATCHING WAVING POSTER COVER — navy/cyan hero, left hand, right copy */
+#home.hero-poster{display:block!important;position:relative;isolation:isolate;overflow:hidden;background:#010554!important;color:#F2E7E1!important;padding:0!important;margin:0!important;border:0!important;min-height:0!important}
+#home.hero-poster .poster-shell{position:relative;width:100%;max-width:1650px;min-height:920px;margin-inline:auto;overflow:hidden}
+#home.hero-poster .poster-art{position:absolute;z-index:1;top:4%;bottom:-4%;left:-5%;width:56%;pointer-events:none}
+#home.hero-poster .poster-art svg{display:block;width:100%;height:100%;overflow:visible}
+#home.hero-poster .poster-arm,#home.hero-poster .poster-wave-hand,#home.hero-poster .poster-motion{stroke:#23CDFF;stroke-linecap:round;stroke-linejoin:round;fill:none}
+#home.hero-poster .poster-arm,#home.hero-poster .poster-wave-hand{stroke-width:26}
+#home.hero-poster .poster-motion{stroke-width:26}
+#home.hero-poster .poster-wave-hand{transform-box:fill-box;transform-origin:67% 94%;animation:menatPosterWave 3.1s ease-in-out infinite;will-change:transform}
+#home.hero-poster .poster-motion{animation:menatPosterWaveMarks 3.1s ease-in-out infinite}
+@keyframes menatPosterWave{0%,12%,77%,100%{transform:rotate(0deg)}22%{transform:rotate(-10deg)}36%{transform:rotate(8deg)}50%{transform:rotate(-7deg)}65%{transform:rotate(5deg)}}
+@keyframes menatPosterWaveMarks{0%,12%,77%,100%{opacity:.95}23%,51%{opacity:.4}36%,65%{opacity:1}}
+#home.hero-poster .poster-copy{position:relative;z-index:3;width:52%;margin-right:0;margin-left:auto;padding:76px 6% 80px 16px;text-align:right;direction:rtl;color:#F2E7E1}
+#home.hero-poster .poster-english{display:block;margin:0 0 50px;font-family:"DM Sans",Arial,sans-serif!important;direction:ltr;text-align:right;font-weight:900;font-size:clamp(72px,8.7vw,138px);letter-spacing:-.055em;line-height:.98;color:#23CDFF!important}
+#home.hero-poster .poster-english span{display:block}
+#home.hero-poster .poster-intro{font-size:clamp(18px,2.2vw,30px);line-height:1.65;margin:0 0 35px;color:#F2E7E1!important;font-weight:800}
+#home.hero-poster .poster-title{font-weight:900;font-size:clamp(49px,5.7vw,78px);line-height:1.38;color:#23CDFF!important;margin:0 0 32px;letter-spacing:0}
+#home.hero-poster .poster-title span{display:block;color:#23CDFF!important}
+#home.hero-poster .poster-description{font-size:clamp(17px,1.55vw,23px);line-height:1.85;font-weight:600;color:#F2E7E1!important;max-width:620px;margin:0 0 16px}
+#home.hero-poster .poster-tagline{font-size:16px;line-height:1.75;color:#F2E7E1!important;margin:0 0 22px;font-weight:700}
+#home.hero-poster .poster-link{display:inline-flex;gap:12px;direction:rtl;align-items:center;border-bottom:2px solid #23CDFF;color:#F2E7E1!important;font-weight:800;padding:8px 0;font-size:15px}
+#home.hero-poster .poster-link span{color:#F2E7E1!important}
+#home.hero-poster .poster-link:hover{color:#23CDFF!important}
+@media(max-width:700px){
+ #home.hero-poster .poster-shell{min-height:1120px}
+ #home.hero-poster .poster-art{top:15%;bottom:auto;left:-16%;width:100%;height:auto}
+ #home.hero-poster .poster-art svg{height:auto}
+ #home.hero-poster .poster-copy{width:66%;padding:60px 5% 40px 2%}
+ #home.hero-poster .poster-english{font-size:clamp(49px,11vw,75px);margin-bottom:315px}
+ #home.hero-poster .poster-intro{font-size:clamp(16px,4.2vw,20px);margin-bottom:20px}
+ #home.hero-poster .poster-title{font-size:clamp(28px,6.4vw,42px);margin-bottom:22px}
+ #home.hero-poster .poster-description{font-size:clamp(13px,3.2vw,17px);line-height:1.85}
+ #home.hero-poster .poster-tagline{font-size:13px}
+ #home.hero-poster .poster-link{font-size:13px}
+}
+@media(max-width:365px){
+ #home.hero-poster .poster-shell{min-height:1170px}
+ #home.hero-poster .poster-copy{width:69%}
+ #home.hero-poster .poster-english{font-size:49px}
+ #home.hero-poster .poster-title{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){
+ #home.hero-poster .poster-wave-hand,#home.hero-poster .poster-motion{animation:none!important;transform:none!important;will-change:auto}
+}
+
 </style>
 
 </head>
@@ -3179,29 +3225,35 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   </header>
 
   <main id="main">
-    <section id="home" class="hero hero-saas hero-hello anchor" aria-labelledby="heroMainTitle">
-      <div class="hello-cover">
-        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 900" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-  <g class="wave-stationary-arm" fill="#355CF5">
-    <path d="M-115 491 L475 299 L507 398 L-115 606Z"/>
-    <path d="M480 385 C511 445 506 563 540 681 C575 801 652 896 741 904 L741 1000 C622 996 524 927 475 810 C435 716 425 570 421 468Z"/>
-    <circle cx="489" cy="406" r="43"/>
-  </g>
-  <g class="wave-moving-hand" fill="#355CF5">
-    <path d="M446 340 L447 121 Q447 102 461 102 Q475 102 475 121 L480 183 L481 81 Q481 63 495 63 Q511 63 511 82 L514 183 L515 47 Q515 27 532 27 Q549 27 549 47 L550 183 L557 84 Q559 65 575 67 Q589 69 588 88 L586 219 Q603 191 619 183 Q637 176 648 186 Q659 198 647 215 L618 256 Q600 288 601 325 L602 385 Q600 446 555 464 L497 460 Q453 435 446 340Z"/>
-    <path d="M604 250 Q614 236 630 230" fill="none" stroke="#F2E7E1" stroke-width="8" stroke-linecap="round"/>
-  </g>
-</svg>
-        <span class="hello-greeting" lang="en" aria-label="Hello world!"><span>Hello</span><span>world!</span></span>
-        <div class="hello-copy">
-          <p class="hello-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا مساحتي الصغيرة! ✳</p>
-          <h1 id="heroMainTitle" class="hello-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span><span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
-          <p class="hello-welcome-description" data-i18n="saasDescription">هنا أشارككم مهاراتي وخبراتي وحكاياتي، وأوثّق تجاربي في التصميم والبرمجة، وكل فكرة ألهمتني أو علّمتني شيئًا جديدًا.</p>
-          <p class="hello-tagline" data-i18n="saasTagline">أهلًا بكم في عالمي الرقمي، حيث تتحوّل الأفكار إلى تجارب ومشاريع!</p>
-          <a class="hello-project-link" href="#projects"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
+    <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
+  <div class="poster-shell">
+    <div class="poster-art" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1050" focusable="false" aria-hidden="true">
+        <g class="poster-arm">
+          <path d="M-180 814 C57 806 170 720 202 582 C216 535 221 497 228 456"/>
+          <path d="M-180 983 C135 976 299 822 317 632 C323 575 325 531 329 488"/>
+        </g>
+        <g class="poster-wave-hand">
+          <path d="M227 476 L225 359 Q225 333 242 333 Q259 333 259 352 L259 399 L259 307 Q259 286 275 286 Q292 286 292 306 L292 397 L292 334 Q292 316 310 316 Q326 316 326 334 L326 410 L326 365 Q326 348 341 348 Q358 348 358 366 L358 480 C357 514 344 546 319 571"/>
+          <path d="M227 461 L170 410 Q156 394 145 406 Q135 418 150 434 L219 502"/>
+          <path d="M238 449 Q287 449 310 491"/>
+        </g>
+        <g class="poster-motion">
+          <path d="M401 451 L400 558"/>
+          <path d="M461 478 L457 555"/>
+        </g>
+      </svg>
+    </div>
+    <div class="poster-copy">
+      <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!"><span>Hello</span><span>world!</span></p>
+      <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا مساحتي الصغيرة! ✳</p>
+      <h1 id="heroMainTitle" class="poster-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span><span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
+      <p class="poster-description" data-i18n="saasDescription">هنا أشارككم مهاراتي وخبراتي وحكاياتي، وأوثّق تجاربي في التصميم والبرمجة، وكل فكرة ألهمتني أو علّمتني شيئًا جديدًا.</p>
+      <p class="poster-tagline" data-i18n="saasTagline">أهلًا بكم في عالمي الرقمي، حيث تتحوّل الأفكار إلى تجارب ومشاريع!</p>
+      <a href="#projects" class="poster-link"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
 
     <div class="journey-indicator" aria-hidden="true"><span>01 / INTRO</span><span class="journey-line"></span><span class="journey-bullet">✳</span><span>08 / LET’S CONNECT</span></div>
     <div class="marquee" aria-hidden="true"><div class="marquee-track">
