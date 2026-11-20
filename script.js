@@ -311,6 +311,7 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Escape")closeMenu();
 });
 
+window.__menatSiteReady = true;
 document.getElementById("year").textContent=new Date().getFullYear();
 const progress = document.getElementById("scrollProgress");
 function onScroll() {
