@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">السيارات ذاتية القيادة — فيديو تعليمي</title>
+<desc id="desc">غلاف تعليمي لطيف وبسيط باللونين الأزرق الملكي والسماوي، مع سيارة هندسية مسطحة وخطوط مسار ومدارات رقيقة ونجوم صفراء</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0E337C"/><stop offset=".66" stop-color="#1A49AF"/><stop offset="1" stop-color="#009EFF"/></linearGradient>
+<linearGradient id="planet" x1="0" y1="0" x2=".95" y2="1"><stop stop-color="#CBEAFF"/><stop offset=".48" stop-color="#009EFF"/><stop offset="1" stop-color="#1366D0"/></linearGradient>
+<pattern id="stars" width="149" height="134" patternUnits="userSpaceOnUse"><circle cx="23" cy="18" r="2.2" fill="#D8EBFF" opacity=".52"/><circle cx="109" cy="93" r="1.5" fill="#E2F3FF" opacity=".3"/></pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#stars)"/>
+<circle cx="872" cy="310" r="214" fill="url(#planet)"/>
+<ellipse cx="867" cy="317" rx="322" ry="142" transform="rotate(-20 867 317)" fill="none" stroke="#E3F3FF" stroke-opacity=".39" stroke-width="2"/>
+<ellipse cx="865" cy="310" rx="337" ry="111" transform="rotate(19 865 310)" fill="none" stroke="#FFD850" stroke-opacity=".5" stroke-width="2"/>
+<g fill="#FFD850"><path d="M1101 92v-15m0 48v-15m-16-17h-16m64 0h-16" stroke="#FFD850" stroke-width="6" stroke-linecap="round"/><circle cx="1028" cy="117" r="4"/><circle cx="106" cy="111" r="5"/></g>
+<!-- route / road -->
+<path d="M652 484Q855 434 1119 490" stroke="#0B3178" stroke-opacity=".5" stroke-width="89" fill="none" stroke-linecap="round"/>
+<path d="M652 484Q855 434 1119 490" stroke="#F0F9FF" stroke-opacity=".84" stroke-width="3" stroke-dasharray="22 23" fill="none" stroke-linecap="round"/>
+<!-- charming flat electric autonomous vehicle -->
+<g transform="translate(687 224)">
+<path d="M67 113L120 49Q141 24 171 24H246Q280 24 303 52L342 114H386Q407 114 414 137L423 189Q423 215 400 215H38Q17 215 17 191L26 141Q30 116 54 116Z" fill="#FFFFFF" stroke="#B4E4FF" stroke-width="5" stroke-linejoin="round"/>
+<path d="M120 107L158 56Q163 49 181 49H235Q251 49 260 60L294 107Z" fill="#1366D0"/>
+<path d="M154 49L118 109M248 53L282 108" stroke="#8BD3FF" stroke-width="5" stroke-opacity=".62"/>
+<rect x="41" y="140" width="347" height="34" rx="15" fill="#E8F4FF"/>
+<rect x="44" y="151" width="59" height="12" rx="6" fill="#FFD850"/>
+<rect x="324" y="151" width="59" height="12" rx="6" fill="#FFD850"/>
+<rect x="148" y="170" width="137" height="7" rx="3" fill="#88C6F3"/>
+<circle cx="111" cy="209" r="39" fill="#0B2968" stroke="#FFFFFF" stroke-width="9"/>
+<circle cx="111" cy="209" r="15" fill="#58B7F4"/>
+<circle cx="325" cy="209" r="39" fill="#0B2968" stroke="#FFFFFF" stroke-width="9"/>
+<circle cx="325" cy="209" r="15" fill="#58B7F4"/>
+<!-- light sensor on roof -->
+<rect x="193" y="9" width="43" height="21" rx="10" fill="#FFD850"/><circle cx="215" cy="4" r="10" fill="#FFFFFF"/>
+</g>
+<!-- sensing radar waves -->
+<g fill="none" stroke="#FFFFFF" stroke-opacity=".66" stroke-width="4" stroke-linecap="round">
+<path d="M840 195q25-26 50 0"/><path d="M828 177q39-42 74 0"/>
+</g>
+<path d="M0 595Q235 553 445 596T854 586T1200 584V675H0Z" fill="#009EFF" opacity=".33"/>
+<path d="M0 633Q265 598 468 639T882 629T1200 618V675H0Z" fill="#0D3077" opacity=".35"/>
+<rect x="68" y="106" width="327" height="44" rx="22" fill="#FFFFFF" fill-opacity=".075" stroke="#D5EBFF" stroke-opacity=".47"/>
+<circle cx="92" cy="128" r="6" fill="#FFD850"/>
+<text x="111" y="134" fill="#EAF7FF" font-size="16" font-family="Arial,sans-serif" font-weight="700" letter-spacing="2.2">EDUCATIONAL VIDEO / 02</text>
+<text x="522" y="331" text-anchor="start" direction="rtl" unicode-bidi="plaintext" textLength="438" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" font-family="Cairo,Noto Sans Arabic,Arial,sans-serif" font-size="85" font-weight="900">السيارات</text>
+<text x="523" y="420" text-anchor="start" direction="rtl" unicode-bidi="plaintext" textLength="438" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" font-family="Cairo,Noto Sans Arabic,Arial,sans-serif" font-size="76" font-weight="900">ذاتية القيادة</text>
+<path d="M73 459H431" stroke="#FFD850" stroke-width="6" stroke-linecap="round"/>
+<text x="73" y="542" fill="#C5E7FF" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="2.5">AUTONOMOUS DRIVING  •  VIDEO 02</text>
+</svg>
