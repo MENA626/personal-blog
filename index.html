@@ -2769,6 +2769,93 @@ html body :is(
 }
 
 
+
+/* CV INTEGRATED SECTION 2026 — full-bleed background, no boxed content. */
+#cv.cv.cv-featured {
+  display:block;
+  width:100%;
+  max-width:none;
+  margin:0;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  background:#1558E8!important;
+}
+#cv.cv-featured .cv-grid {
+  display:block;
+  width:min(1100px,calc(100% - 9vw));
+  max-width:none;
+  margin-inline:auto;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+  border:0;
+}
+#cv.cv-featured .cv-content {
+  display:block;
+  position:relative;
+  z-index:2;
+  isolation:auto;
+  overflow:visible;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  color:white;
+  text-align:right;
+}
+#cv.cv-featured .cv-content::before {
+  content:none!important;
+  display:none!important;
+}
+#cv.cv-featured .cv-content .editorial-heading {
+  display:block;
+  max-width:900px;
+  margin-bottom:0;
+}
+#cv.cv-featured .cv-content .editorial-heading::after {
+  content:"";
+  display:block;
+  width:clamp(68px,12vw,135px);
+  height:3px;
+  margin-top:23px;
+  border-radius:100px;
+  background:rgba(245,248,255,.7);
+}
+#cv.cv-featured .cv-content > p {
+  max-width:830px;
+  margin:28px 0 26px;
+  font-weight:700;
+  color:#FFFFFF!important;
+}
+#cv.cv-featured .cv-content .cv-note {
+  display:block;
+  max-width:830px;
+  color:#ECF1FF!important;
+  font-size:clamp(12px,1vw,14px);
+  font-weight:600;
+  line-height:1.9;
+}
+#cv.cv-featured .cv-content .cv-view {
+  background:#FFFFFF!important;
+  border-color:#FFFFFF!important;
+  color:#123EAF!important;
+  box-shadow:none!important;
+}
+#cv.cv-featured .cv-content .cv-view span {color:#123EAF!important}
+@media(max-width:700px) {
+  #cv.cv-featured .cv-grid {width:calc(100% - 38px);padding:0}
+  #cv.cv-featured .cv-content {padding:0!important}
+  #cv.cv-featured .cv-content > p {font-size:15px;line-height:2;font-weight:650}
+  #cv.cv-featured .cv-content .editorial-heading::after {margin-top:16px}
+  #cv.cv-featured::before {font-size:clamp(220px,68vw,365px);opacity:.65}
+}
+
 </style>
 
 </head>
@@ -2834,7 +2921,7 @@ html body :is(
 
     <section id="cv" class="section cv cv-featured anchor" aria-labelledby="cvHeading">
       <div class="shell cv-grid">
-        <div class="cv-summary reveal">
+        <div class="cv-content reveal">
           <div class="section-kicker"><span>02 /</span><span data-i18n="cvKicker">عن مساري · السيرة الذاتية</span></div>
           <h2 id="cvHeading" class="editorial-heading"><span data-i18n="cvHeadOne">من هنا بدأت.</span><br><em data-i18n="cvHeadTwo">وما زلت أتطوّر.</em></h2>
           <p data-i18n="cvSummary">درست تقنيات الإنترنت في كلية تقنية المعلومات بجامعة طرابلس. أهتم بتطوير الويب والأنظمة الخلفية وتطبيقات الموبايل وقواعد البيانات، وأواصل استكشاف الاستخدامات العملية للذكاء الاصطناعي. في سيرتي أجمع خلفيتي التقنية ومشاريعي والأدوات التي أعمل بها.</p>
