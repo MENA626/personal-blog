@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620">
+<title>قطة منة الله البيضاء بنظارة حمراء ومنديل وردي وكوب ماتشا</title>
+<defs>
+ <linearGradient id="ivory" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#FFFDF4"/><stop offset=".63" stop-color="#F7F3E9"/><stop offset="1" stop-color="#D9CDC5"/></linearGradient>
+ <linearGradient id="scarf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F47E9A"/><stop offset=".58" stop-color="#DA5984"/><stop offset="1" stop-color="#BA456F"/></linearGradient>
+ <linearGradient id="mug" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#3D7048"/><stop offset=".6" stop-color="#245438"/><stop offset="1" stop-color="#173B2B"/></linearGradient>
+ <linearGradient id="sunglass" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#464046"/><stop offset=".7" stop-color="#232B2D"/><stop offset="1" stop-color="#10171D"/></linearGradient>
+ <pattern id="flowers" patternUnits="userSpaceOnUse" width="58" height="51"><g fill="#FFF6EE"><ellipse cx="27" cy="16" rx="3.5" ry="9"/><ellipse cx="27" cy="16" rx="3.5" ry="9" transform="rotate(60 27 16)"/><ellipse cx="27" cy="16" rx="3.5" ry="9" transform="rotate(120 27 16)"/><circle cx="27" cy="16" r="3" fill="#F9CD51"/><circle cx="49" cy="39" r="3"/></g></pattern>
+ <filter id="pastelPaper" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence baseFrequency=".008 .022" numOctaves="2" seed="5" result="w"/><feDisplacementMap in="SourceGraphic" in2="w" scale="1.5"/></filter>
+ <g id="tail"><path d="M426 407C507 409 545 455 530 505C520 538 477 548 468 516C462 498 488 494 486 468C483 446 452 443 431 450" stroke="#E5DCD5" stroke-width="41" stroke-linecap="round" fill="none"/><path d="M430 409C501 412 533 453 515 486" stroke="#FFFDF6" stroke-width="25" stroke-linecap="round" fill="none"/></g>
+ <g id="cat-head">
+   <path d="M151 204C145 147 145 70 175 42C210 54 249 104 271 159C297 152 321 152 345 160C368 103 406 56 446 45C469 85 459 162 443 210C476 250 475 325 446 379C413 433 350 453 291 455C229 456 167 432 136 387C98 331 106 252 151 204Z" fill="url(#ivory)" stroke="#EFE4DA" stroke-width="6" filter="url(#pastelPaper)"/>
+   <path d="M171 66C196 83 220 120 235 171L165 206C162 149 163 96 171 66Z" fill="#F5BDC9" stroke="#F7E6DC" stroke-width="9"/>
+   <path d="M432 67C409 88 386 119 370 175L442 210C452 155 448 94 432 67Z" fill="#F4B5C4" stroke="#F7E6DC" stroke-width="9"/>
+   <path d="M175 110C190 128 204 148 215 160M428 108C408 125 394 145 385 161" fill="none" stroke="#DEA6AE" stroke-width="5" stroke-linecap="round" opacity=".67"/>
+   <path d="M186 194C216 179 247 175 276 181M340 182C364 173 397 179 419 192" stroke="#FFFFFF" stroke-width="12" opacity=".65" stroke-linecap="round"/>
+   <path d="M255 329L288 337L316 328Q304 349 286 350Q266 348 255 329Z" fill="#F4A5B4"/>
+   <path d="M286 349q-10 27-29 25m29-25q17 27 37 22" stroke="#675C5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+   <path d="M147 344Q108 326 75 336M147 357Q108 361 78 378M440 344Q473 321 518 333M442 357Q477 357 515 377" stroke="#BFB2AE" stroke-width="4" stroke-linecap="round" fill="none"/>
+   <ellipse cx="193" cy="345" rx="35" ry="22" fill="#F4BBC6" opacity=".34"/><ellipse cx="405" cy="347" rx="35" ry="22" fill="#F4BBC6" opacity=".3"/>
+   <path d="M176 224C185 212 228 214 250 225M334 221C362 207 405 216 419 229" stroke="#D8CEC8" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+   <g id="glasses" transform="rotate(-6 299 265)">
+     <path d="M129 249Q147 224 180 227L249 241Q265 246 269 268L265 300Q259 335 215 339L171 337Q137 334 124 308Q115 289 129 249Z" fill="url(#sunglass)" stroke="#DA5947" stroke-width="17" stroke-linejoin="round"/>
+     <path d="M318 247Q332 229 358 227L417 226Q455 226 466 257L464 302Q456 335 424 339L368 342Q332 338 323 310L311 276Q308 260 318 247Z" fill="url(#sunglass)" stroke="#DA5947" stroke-width="17" stroke-linejoin="round"/>
+     <path d="M270 258q18-14 37-3" stroke="#D9503F" stroke-width="16" stroke-linecap="round" fill="none"/>
+     <path d="M126 265L93 258M464 270L498 256" stroke="#D9503F" stroke-width="11" stroke-linecap="round"/>
+     <path d="M160 267L188 247M352 255L375 242" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" opacity=".16"/>
+     <path d="M194 311L223 288M382 313L407 289" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity=".15"/>
+   </g>
+ </g>
+ <g id="cat-scarf">
+   <path d="M169 378Q284 415 423 377L449 406Q365 450 298 450Q214 451 148 411Z" fill="url(#scarf)" stroke="#E96C94" stroke-width="8"/>
+   <path d="M169 378Q284 415 423 377L449 406Q365 450 298 450Q214 451 148 411Z" fill="url(#flowers)" opacity=".93"/>
+   <path d="M404 412Q452 416 481 452Q474 485 450 517Q430 491 414 454Z" fill="url(#scarf)" stroke="#CA5375" stroke-width="6"/>
+   <path d="M404 412Q452 416 481 452Q474 485 450 517Q430 491 414 454Z" fill="url(#flowers)" opacity=".87"/>
+   <path d="M414 413Q453 386 484 412Q508 433 511 456Q469 475 430 454Z" fill="#DE6285" stroke="#BD496F" stroke-width="6"/>
+   <path d="M414 413Q453 386 484 412Q508 433 511 456Q469 475 430 454Z" fill="url(#flowers)"/>
+   <path d="M439 431q17 6 32 10M450 465q2 20 1 30" stroke="#F49AB1" stroke-width="6" opacity=".66" fill="none"/>
+ </g>
+ <g id="cat-body">
+   <use href="#tail"/>
+   <path d="M187 396Q155 419 153 488L158 570Q185 606 272 615L386 612Q451 587 452 526L438 433Q409 407 379 393Z" fill="url(#ivory)" stroke="#E7DED8" stroke-width="6"/>
+   <path d="M176 483Q164 548 191 576M426 478Q441 540 415 577" stroke="#DCCFC5" stroke-width="8" opacity=".4" fill="none"/>
+   <ellipse cx="193" cy="582" rx="65" ry="36" fill="#FBF4EB"/><ellipse cx="389" cy="581" rx="64" ry="33" fill="#F9F1E9"/>
+ </g>
+ <g id="matcha">
+   <path d="M230 473L409 472L403 579Q397 603 364 603L274 601Q239 592 233 558Z" fill="url(#mug)" stroke="#1C4432" stroke-width="7"/>
+   <path d="M403 486Q478 464 468 542Q454 574 406 553" fill="none" stroke="#265438" stroke-width="25"/>
+   <ellipse cx="320" cy="474" rx="91" ry="22" fill="#255439" stroke="#1C4534" stroke-width="7"/>
+   <ellipse cx="321" cy="467" rx="78" ry="16" fill="#91B96F"/>
+   <path d="M271 463Q315 435 359 463Q316 489 271 463ZM296 463Q323 442 338 463Q322 476 296 463Z" fill="none" stroke="#FFF4D7" stroke-width="7" stroke-linecap="round"/>
+   <path d="M322 475q-15-16-20-22m21 19q16-12 22-24" fill="none" stroke="#FFF4D7" stroke-width="5" stroke-linecap="round"/>
+   <path d="M227 505Q206 479 192 503Q176 522 199 562Q215 572 246 559M414 514Q436 485 453 509Q470 535 447 562Q427 578 403 560" fill="#FBF5EC" stroke="#E9DDD5" stroke-width="7"/>
+ </g>
+ <g id="book">
+  <path d="M125 469Q199 442 296 479Q382 443 476 469L468 569Q374 554 298 591Q202 555 135 572Z" fill="#E9F2D1" stroke="#28543D" stroke-width="13" stroke-linejoin="round"/>
+  <path d="M298 484V585M157 492Q208 480 270 508M158 530Q215 518 270 542M321 507Q374 484 450 496M323 545Q387 524 448 533" fill="none" stroke="#B7C9A5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M298 590Q349 565 468 575" fill="none" stroke="#D96381" stroke-width="9" stroke-linecap="round"/>
+  <path d="M140 478Q122 470 117 499M453 484Q479 472 481 504" fill="none" stroke="#FAF5ED" stroke-width="26" stroke-linecap="round"/>
+ </g>
+ <g id="laptop">
+   <path d="M153 469H452L435 577H172Z" fill="#C26E7B" stroke="#995063" stroke-width="12" stroke-linejoin="round"/>
+   <path d="M177 489H425L412 552H186Z" fill="#EFA0A6" opacity=".62"/>
+   <path d="M173 578H436L461 600H148Z" fill="#A65C70"/>
+   <path d="M242 523l-19 16 18 17M353 522l18 18-19 17M314 516l-20 49" fill="none" stroke="#FFF0DF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M159 531Q140 515 132 542M444 531Q465 510 471 538" stroke="#FFF8EF" stroke-width="23" stroke-linecap="round"/>
+ </g>
+ <g id="thinking">
+  <path d="M158 500Q166 467 202 476L252 537Q244 564 221 557Z" fill="#FFF8F1" stroke="#E6D7CB" stroke-width="7"/>
+  <path d="M193 486Q202 462 224 482" stroke="#F6F0E6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M383 515q25 16 41-3" stroke="#D6C5BC" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="441" cy="192" r="22" fill="#FFF9DC" stroke="#D6A76F" stroke-width="5"/>
+  <path d="M441 175v17m-12-5h24" stroke="#DAA56A" stroke-width="5"/>
+  <path d="M452 158l13-23m-33 19-10-18" stroke="#DD8B79" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <g id="sleep">
+   <path d="M137 540Q223 519 296 560Q382 514 469 539" fill="none" stroke="#F5F3EA" stroke-width="35" stroke-linecap="round"/>
+   <text x="451" y="182" fill="#285439" font-family="Arial" font-size="53" font-weight="bold">z</text>
+   <text x="491" y="141" fill="#285439" font-family="Arial" font-size="38" font-weight="bold">z</text>
+   <text x="515" y="102" fill="#285439" font-family="Arial" font-size="25" font-weight="bold">z</text>
+ </g>
+</defs>
+<symbol id="menat-cat-hero" viewBox="0 0 600 620"><use href="#cat-body"/><use href="#cat-head"/><use href="#cat-scarf"/><use href="#matcha"/></symbol>
+<symbol id="menat-cat-reading" viewBox="0 0 600 620"><use href="#cat-body"/><use href="#cat-head"/><use href="#cat-scarf"/><use href="#book"/></symbol>
+<symbol id="menat-cat-coding" viewBox="0 0 600 620"><use href="#cat-body"/><use href="#cat-head"/><use href="#cat-scarf"/><use href="#laptop"/></symbol>
+<symbol id="menat-cat-thinking" viewBox="0 0 600 620"><use href="#cat-body"/><use href="#cat-head"/><use href="#cat-scarf"/><use href="#thinking"/></symbol>
+<symbol id="menat-cat-sleeping" viewBox="0 0 600 620"><use href="#cat-body"/><use href="#cat-head"/><use href="#cat-scarf"/><use href="#sleep"/></symbol>
+<symbol id="menat-cat-hi" viewBox="0 0 600 620"><use href="#cat-body"/><use href="#cat-head"/><use href="#cat-scarf"/><use href="#matcha"/></symbol>
+</svg>
