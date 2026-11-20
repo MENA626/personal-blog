@@ -3085,3 +3085,24 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* Orange felt-tip highlight directly behind the whole Arabic hero headline. */
+#home.hero-poster .poster-title .poster-marker{
+  display:inline;
+  color:#2329A8!important;
+  background:linear-gradient(
+    to bottom,
+    transparent 43%,
+    #FF9B29 43%,
+    #FF9B29 89%,
+    transparent 89%
+  )!important;
+  padding:0 .11em .035em;
+  border-radius:0;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+#home.hero-poster .poster-title .poster-marker span{
+  color:#2329A8!important;
+  background:transparent!important;
+}
+
