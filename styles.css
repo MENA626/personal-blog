@@ -3227,3 +3227,78 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* MIRRORED HERO LAYOUT — right-hand waving illustration, left-side copy, reduced lower whitespace. */
+#home.hero-poster .poster-shell {
+  min-height:690px!important;
+  height:auto!important;
+}
+#home.hero-poster .poster-art {
+  left:auto!important;
+  right:-11%!important;
+  top:-3%!important;
+  bottom:auto!important;
+  width:68%!important;
+  height:730px!important;
+}
+#home.hero-poster .poster-copy {
+  width:52%!important;
+  margin-left:0!important;
+  margin-right:auto!important;
+  padding:60px 12px 34px 5%!important;
+  direction:rtl!important;
+  text-align:right!important;
+}
+#home.hero-poster .poster-english {
+  text-align:left!important;
+  margin-bottom:25px!important;
+}
+#home.hero-poster .poster-title {margin-bottom:18px!important}
+#home.hero-poster .poster-description {margin-bottom:10px!important}
+#home.hero-poster .poster-tagline {margin-bottom:12px!important}
+@media(max-width:900px) {
+  #home.hero-poster .poster-art {
+    right:-22%!important;
+    left:auto!important;
+    width:82%!important;
+    height:695px!important;
+  }
+  #home.hero-poster .poster-copy {
+    width:58%!important;
+    padding-left:5%!important;
+    padding-right:10px!important;
+  }
+}
+@media(max-width:700px) {
+  #home.hero-poster .poster-shell {
+    min-height:760px!important;
+    height:auto!important;
+  }
+  #home.hero-poster .poster-art {
+    top:92px!important;
+    right:-34%!important;
+    left:auto!important;
+    width:122%!important;
+    height:480px!important;
+  }
+  #home.hero-poster .poster-copy {
+    width:100%!important;
+    margin:0!important;
+    padding:34px 5.5% 28px!important;
+    text-align:right!important;
+  }
+  #home.hero-poster .poster-english {
+    text-align:left!important;
+    margin:0 0 370px!important;
+  }
+}
+@media(max-width:365px) {
+  #home.hero-poster .poster-shell {min-height:790px!important}
+  #home.hero-poster .poster-art {
+    top:85px!important;
+    right:-39%!important;
+    width:129%!important;
+    height:465px!important;
+  }
+  #home.hero-poster .poster-english {margin-bottom:355px!important}
+}
+
