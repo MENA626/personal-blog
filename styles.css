@@ -3937,3 +3937,51 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* M DOT LOCKUP + BLUE HERO TEXT WITH CLEAR ART SPACING */
+.site-header .site-name .brand-letter,
+.site-footer .footer-name .brand-letter{
+  position:relative!important;
+  color:#FF6624!important;
+  display:inline-block!important;
+  padding:0 .11em 0 0!important;
+}
+.site-header .site-name .brand-letter::after,
+.site-footer .footer-name .brand-letter::after{
+  content:"";
+  position:absolute;
+  top:-.045em;
+  right:-.01em;
+  width:.18em;
+  height:.18em;
+  background:#FF6624;
+  border-radius:50%;
+  pointer-events:none;
+}
+#home.hero-poster .poster-copy,
+#home.hero-poster .poster-copy p,
+#home.hero-poster .poster-copy h1,
+#home.hero-poster .poster-copy h1 span,
+#home.hero-poster .poster-copy strong,
+#home.hero-poster .poster-copy a,
+#home.hero-poster .poster-copy a span{
+  color:#2329A8!important;
+}
+#home.hero-poster .poster-copy [data-blue-word]{color:#2329A8!important}
+#home.hero-poster .poster-art{pointer-events:none!important}
+@media(min-width:701px){
+  #home.hero-poster .poster-shell{min-height:1120px!important}
+  #home.hero-poster .poster-copy{
+    padding-top:52px!important;
+    padding-bottom:125px!important;
+  }
+  #home.hero-poster .poster-art{transform:translateY(195px)!important}
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-shell{min-height:1250px!important}
+  #home.hero-poster .poster-art{transform:translateY(-38px)!important}
+  #home.hero-poster .poster-english{
+    margin-bottom:clamp(440px,123vw,520px)!important;
+  }
+  #home.hero-poster .poster-copy{padding-bottom:95px!important}
+}
+
