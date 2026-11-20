@@ -21,7 +21,7 @@
 1. **التعريف:** «أنا منة الله أحمد» — دراسة تقنيات الإنترنت، وتحليل الأفكار وتصميم التجارب وبناء الحلول.
 2. **CV:** المسار العلمي والتقني، وصفحة cv.html قابلة للطباعة أو الحفظ PDF.
 3. **المشاريع:** [ميزان](https://mizan-libya-demo.onrender.com) — قيد التطوير مع معاينة تجريبية، و[COSMOS](https://rawcdn.githack.com/MENA626/personal-blog/009f8918bfb3ff41165c9af129cdd845d0b28196/cosmos/index.html)، و[MATCHA MOOD | ماتشا مود](https://matcha-mood-ly.floot.app/) — تطبيق ويب منشور على Floot، والمدونة الشخصية.
-4. **الفيديوهات:** [العمل الأول](https://youtu.be/hgrRXHWNMFQ) و[العمل الثاني](https://youtu.be/dF6-pAAfHgs)، بعد المشاريع مباشرة.
+4. **الفيديوهات:** [العمل الأول](https://youtu.be/hgrRXHWNMFQ) و[فيديو تعليمي عن السيارات ذاتية القيادة](https://youtu.be/dF6-pAAfHgs)، بعد المشاريع مباشرة.
 5. **التقنيات:** Laravel، PHP، Java، JavaScript، Flutter، Dart، OpenAI، Gemini، RAG، Embeddings، PostgreSQL، Supabase، pgvector، MySQL، Docker، Git، Linux. تُعرض 17 أيقونة ملونة ومُجاورة دون الاعتماد على تأثيرات Hover.
 6. **المقالات:** أفكار لمقالات قادمة؛ ليست منشورات مكتملة.
 7. **التواصل:** [GitHub MENA626](https://github.com/MENA626).
