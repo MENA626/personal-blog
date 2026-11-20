@@ -2664,6 +2664,111 @@ html body :is(
   #cv.cv-featured .cv-view{padding:14px 16px;font-size:13px;gap:10px}
 }
 
+/* WHITE HELLO COVER — visible, inline illustrated hand on phones and desktop */
+#home.hero.hero-saas.hero-hello{
+ display:block!important;
+ visibility:visible!important;
+ opacity:1!important;
+ background:#FFFFFF!important;
+ color:#090B27!important;
+ padding:0!important;
+ min-height:0!important;
+ position:relative;
+ overflow:hidden;
+}
+#home.hero-hello .hello-cover{
+ display:block!important;
+ visibility:visible!important;
+ opacity:1!important;
+ position:relative;
+ background:#FFFFFF!important;
+ width:100%;
+ min-height:660px;
+ height:min(850px, calc(100svh - 65px));
+ max-height:none;
+ overflow:hidden;
+}
+#home.hero-hello .hello-cover::after{display:none!important}
+#home.hero-hello .hello-cover-graphic{
+ display:block!important;
+ visibility:visible!important;
+ opacity:1!important;
+ position:absolute!important;
+ z-index:1;
+ width:min(95%, 950px)!important;
+ height:auto!important;
+ left:20%!important;
+ top:0!important;
+ max-width:none!important;
+ pointer-events:none;
+}
+#home.hero-hello .hello-greeting{
+ position:absolute;
+ z-index:3;
+ top:5%;
+ left:6%;
+ direction:ltr;
+ color:#090B27;
+ font-family:"DM Sans",Arial,sans-serif!important;
+ font-size:clamp(78px,12vw,172px);
+ font-weight:900;
+ letter-spacing:-.075em;
+ line-height:1;
+}
+#home.hero-hello .hello-next{top:5%;right:5%;z-index:5;background:#F3F4F7}
+#home.hero-hello .hello-copy{
+ position:absolute;
+ z-index:5;
+ bottom:7%;
+ left:6.5%;
+ width:min(660px,83%);
+ direction:rtl;
+ text-align:right;
+ padding:0;
+ color:#090B27;
+}
+#home.hero-hello .hello-intro{color:#1459F5;font-weight:800}
+#home.hero-hello .hello-title{font-size:clamp(43px,5.5vw,76px);color:#090B27!important;line-height:1.3;margin:0 0 16px}
+#home.hero-hello .hello-title span{display:block}
+#home.hero-hello .hello-welcome-description{
+ color:#292F4C;
+ font-size:clamp(14px,1.25vw,18px);
+ line-height:1.85;
+ max-width:520px;
+ margin:0 0 20px;
+}
+@media(max-width:700px){
+ #home.hero-hello .hello-cover{
+  height:calc(100svh - 55px);
+  min-height:650px;
+  max-height:840px;
+ }
+ #home.hero-hello .hello-cover-graphic{
+  width:165%!important;
+  left:-27%!important;
+  top:9%!important;
+ }
+ #home.hero-hello .hello-greeting{
+  top:5%;
+  left:5%;
+  font-size:clamp(66px,17vw,110px);
+ }
+ #home.hero-hello .hello-next{right:4%;top:4%;width:47px;height:47px}
+ #home.hero-hello .hello-copy{
+  width:90%;
+  left:5%;
+  bottom:5%;
+ }
+ #home.hero-hello .hello-title{font-size:clamp(33px,8.8vw,52px);line-height:1.33}
+ #home.hero-hello .hello-welcome-description{font-size:14px;line-height:1.75}
+}
+@media(max-width:360px){
+ #home.hero-hello .hello-cover{min-height:620px}
+ #home.hero-hello .hello-greeting{font-size:65px}
+ #home.hero-hello .hello-title{font-size:32px}
+}
+
+
 </style>
 
 </head>
@@ -2695,24 +2800,27 @@ html body :is(
   <main id="main">
     <section id="home" class="hero hero-saas hero-hello anchor" aria-labelledby="heroMainTitle">
       <div class="hello-cover">
-        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" aria-hidden="true" focusable="false">
-  <path fill="#115AF5" d="M-180 465 672 235 720 375 -180 615Z"/>
-  <path fill="#115AF5" d="M640 291 C660 349 681 411 690 490 C705 606 744 693 829 737 C930 790 1026 737 1152 638 L1152 479 C1086 559 1012 613 950 608 C879 603 825 543 810 449 L801 291Z"/>
-  <path fill="#115AF5" d="M616 391 L617 154 Q617 138 631 136 Q645 134 649 150 L653 217 L655 88 Q655 69 669 67 Q685 66 690 84 L691 207 L698 52 Q699 31 715 30 Q732 30 733 51 L734 198 L742 69 Q743 51 759 50 Q774 52 773 70 L773 228 Q792 215 815 199 Q831 190 841 201 Q852 217 835 239 L804 282 Q791 310 793 346 L797 427 Q746 483 672 459Z"/>
-  <path d="M805 246 Q815 231 828 226" fill="none" stroke="#F1F1F3" stroke-width="8" stroke-linecap="round"/>
+        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+<g fill="#1459F5">
+<!-- flowing sleeve drawn from the lower left across the canvas -->
+<path d="M-150 503 L476 297 L531 449 L-150 671Z"/>
+<!-- arm bending downward on the right -->
+<path d="M465 305 C510 295 562 319 594 363 C621 404 630 478 639 540 C656 650 714 718 802 715 C853 713 906 686 951 652 L965 814 C850 860 727 852 647 792 C548 718 510 611 490 512 L461 421Z"/>
+<!-- open upright hand with fingers and thumb -->
+<path d="M468 386 L469 188 C469 173 476 164 488 164 C502 164 506 174 507 186 L512 264 L515 111 C515 96 522 86 535 86 C549 86 555 97 555 112 L557 257 L565 75 C565 58 573 49 586 49 C601 49 608 60 607 76 L605 257 L617 98 C619 82 628 74 641 76 C654 78 659 91 657 106 L648 280 C666 267 681 254 699 244 C715 235 728 242 732 255 C736 267 727 279 717 291 L680 338 C667 356 665 384 665 407 C662 463 622 503 556 500 C509 497 481 460 468 386Z"/>
+</g>
+<path d="M676 313 Q691 289 712 285" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
 </svg>
-        <span class="hello-greeting" lang="en" aria-hidden="true">Hello!</span>
+        <span class="hello-greeting" lang="en" aria-label="Hello!">Hello!</span>
         <a class="hello-next" href="#cv" aria-label="انتقل إلى قسم السيرة الذاتية" title="السيرة الذاتية">
           <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 16h21m-9-9 9 9-9 9" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
         <div class="hello-copy">
-          <p class="hello-intro" data-i18n="saasIntro">أهلًا، أنا منة الله أحمد</p>
-          <h1 id="heroMainTitle" class="hello-title">
-            <span data-i18n="saasTitleOne">أحلّل الفكرة.</span>
-            <span data-i18n="saasTitleTwo">أصمّمها وأبنيها.</span>
-          </h1>
+          <p class="hello-intro">أهلًا وسهلًا! ✳ أنا منة الله أحمد</p>
+          <h1 id="heroMainTitle" class="hello-title"><span>مرحبًا بك في</span><span>مدونتي الرقمية.</span></h1>
+          <p class="hello-welcome-description">مساحتي الصغيرة للأفكار والتصميم والبرمجة؛ هنا أشارك مشاريعي وما أتعلّمه في رحلتي التقنية.</p>
           <a class="hello-project-link" href="#projects"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
