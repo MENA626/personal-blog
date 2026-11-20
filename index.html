@@ -4298,6 +4298,122 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #home.hero-poster .poster-intro{top:-16px!important}
 }
 
+
+/* HERO COPY IN ONE FLOW BELOW HELLO + PARTICIPATIONS NAV/SECTION 20261121 */
+@media (min-width:701px){
+  #home.hero-poster .poster-shell{
+    align-items:flex-start!important;
+  }
+  #home.hero-poster .poster-copy{
+    align-self:flex-start!important;
+    padding-top:18px!important;
+    margin-top:0!important;
+  }
+  #home.hero-poster .poster-english{
+    position:static!important;
+    top:auto!important;
+    transform:none!important;
+    margin-top:0!important;
+    margin-bottom:24px!important;
+  }
+  #home.hero-poster .poster-intro{
+    position:static!important;
+    top:auto!important;
+    transform:none!important;
+    margin-top:0!important;
+    margin-bottom:18px!important;
+  }
+  #home.hero-poster .poster-title{
+    margin-top:0!important;
+    margin-bottom:20px!important;
+  }
+  #home.hero-poster .poster-description{
+    margin-top:0!important;
+    margin-bottom:16px!important;
+  }
+  #home.hero-poster .poster-followup{
+    margin-top:0!important;
+    margin-bottom:18px!important;
+  }
+  #home.hero-poster .poster-tagline{
+    margin-top:0!important;
+    margin-bottom:24px!important;
+  }
+}
+.site-header .nav-links{
+  gap:clamp(8px,1.25vw,19px)!important;
+}
+.site-header .nav-links a{font-size:clamp(11px,.9vw,13px)!important}
+#participations.participations{
+  background:#F2E7E1!important;
+  color:#2329A8;
+  border-top:1px solid rgba(35,41,168,.13);
+  border-bottom:1px solid rgba(35,41,168,.13);
+}
+#participations .participations-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(240px,.95fr);
+  gap:clamp(25px,5vw,72px);
+  align-items:center;
+  padding-block:clamp(66px,8vw,105px);
+}
+#participations .participations-kicker{
+  display:block;
+  color:#355CF5;
+  font-size:13px;
+  font-weight:850;
+  margin-bottom:15px;
+}
+#participations .participations-title{
+  font-family:var(--display),var(--ui),sans-serif;
+  font-size:clamp(38px,5vw,65px);
+  line-height:1.26;
+  letter-spacing:-.025em;
+  color:#2329A8;
+  margin:0 0 22px;
+}
+#participations .participations-desc{
+  max-width:570px;
+  margin:0;
+  font-size:clamp(16px,1.35vw,19px);
+  line-height:1.95;
+  color:#2329A8;
+}
+#participations .participations-aside{
+  min-height:205px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:32px;
+  background:#FF9B29;
+  color:#2329A8;
+  border-radius:20px;
+  transform:rotate(-2deg);
+}
+#participations .participations-status{
+  font-size:clamp(17px,2.1vw,25px);
+  line-height:1.8;
+  font-weight:850;
+}
+@media(max-width:920px){
+  .site-header .nav-links a{font-size:14px!important}
+}
+@media(max-width:700px){
+  #participations .participations-inner{
+    grid-template-columns:1fr;
+    padding-block:58px;
+    gap:22px;
+  }
+  #participations .participations-aside{
+    min-height:110px;
+    transform:none;
+    border-radius:14px;
+  }
+  #participations .participations-title{font-size:38px}
+  #participations .participations-desc{font-size:15px}
+}
+
 </style>
 
 </head>
@@ -4315,6 +4431,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
         <a href="#videos" data-i18n="navVideos">الأعمال المرئية</a>
         <a href="#stack" data-i18n="navStack">التقنيات</a>
         <a href="#notes" data-i18n="navNotes">المقالات</a>
+        <a href="#participations" data-i18n="navParticipations">مشاركاتي</a>
         <a href="#contact" data-i18n="navContact">التواصل</a>
       </nav>
       <div class="nav-actions">
@@ -4505,9 +4622,22 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
       </div>
     </section>
 
+    <section id="participations" class="section participations anchor" aria-labelledby="participationsTitle">
+      <div class="shell participations-inner">
+        <div class="reveal">
+          <span class="participations-kicker" data-i18n="participationsKicker">07 / مشاركاتي</span>
+          <h2 id="participationsTitle" class="participations-title" data-i18n="participationsTitle">مشاركاتي.</h2>
+          <p class="participations-desc" data-i18n="participationsDesc">هنا سأجمع مشاركاتي في الفعاليات والمبادرات والتجارب المشتركة، وأضيف تفاصيل كل مشاركة وروابطها عند توثيقها.</p>
+        </div>
+        <div class="participations-aside reveal" aria-label="قسم مشاركاتي">
+          <span class="participations-status" data-i18n="participationsStatus">مساحة لتوثيق المشاركات والتجارب القادمة.</span>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section contact anchor">
       <div class="shell contact-layout">
-        <div class="reveal"><div class="section-kicker"><span>07 /</span> <span data-i18n="contactKicker">للتواصل معي</span></div><h2 class="contact-title"><span data-i18n="contactHeadOne">عندك فكرة</span><br><em data-i18n="contactHeadTwo">تستحق أن نناقشها؟</em></h2><p data-i18n="contactDesc">أحب النقاشات التقنية وتبادل الأفكار والتعرّف على أشخاص يهتمون ببناء أشياء مفيدة. يمكن التواصل معي عبر GitHub حاليًا، وسأضيف وسائل أخرى عندما تصبح متاحة.</p><a href="https://github.com/MENA626" class="contact-button magnetic" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">التواصل عبر GitHub</span><span aria-hidden="true">↗</span></a></div>
+        <div class="reveal"><div class="section-kicker"><span>08 /</span> <span data-i18n="contactKicker">للتواصل معي</span></div><h2 class="contact-title"><span data-i18n="contactHeadOne">عندك فكرة</span><br><em data-i18n="contactHeadTwo">تستحق أن نناقشها؟</em></h2><p data-i18n="contactDesc">أحب النقاشات التقنية وتبادل الأفكار والتعرّف على أشخاص يهتمون ببناء أشياء مفيدة. يمكن التواصل معي عبر GitHub حاليًا، وسأضيف وسائل أخرى عندما تصبح متاحة.</p><a href="https://github.com/MENA626" class="contact-button magnetic" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">التواصل عبر GitHub</span><span aria-hidden="true">↗</span></a></div>
         <div class="contact-decoration reveal"><div class="contact-symbol">✳</div><span>LET'S BUILD SOMETHING MEANINGFUL.</span></div>
       </div>
     </section>
@@ -4535,6 +4665,11 @@ const english = {
   navProjects: "Projects",
   navStack: "Expertise",
   navNotes: "Journal",
+  navParticipations: "My Contributions",
+  participationsKicker: "07 / My Contributions",
+  participationsTitle: "My Contributions.",
+  participationsDesc: "A place for my participation in events, initiatives, and shared experiences. I’ll add the details and links as they’re documented.",
+  participationsStatus: "A space to document future contributions and experiences.",
   navContact: "Contact",
   navCta: "Start a conversation",
   heroEyebrow: "Menat Allah Ahmed / Internet Technologies · Web & AI",
@@ -5030,24 +5165,6 @@ if(showcase && !reduceMotion && window.matchMedia("(hover:hover) and (pointer:fi
       }
     });
   </script>
-  <script>
-  /* Align the greeting just beneath the header rule without moving the blue hand. */
-  (function(){
-    const hero=document.getElementById("home");
-    const hello=hero?.querySelector(".poster-english");
-    if(!hero || !hello) return;
-    const alignHello=()=>{
-      hello.style.setProperty("top","0px","important");
-      const offset=hello.getBoundingClientRect().top-hero.getBoundingClientRect().top;
-      const desiredGap=18;
-      hello.style.setProperty("top",Math.round(desiredGap-offset)+"px","important");
-    };
-    if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",alignHello,{once:true});
-    else alignHello();
-    window.addEventListener("load",alignHello,{once:true});
-    window.addEventListener("resize",alignHello,{passive:true});
-    if(document.fonts?.ready)document.fonts.ready.then(alignHello).catch(()=>{});
-  })();
-  </script>
+
 </body>
 </html>
