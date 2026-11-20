@@ -146,9 +146,9 @@ const stackGroups = [
     ar: "الذكاء الاصطناعي والبحث", en: "AI & Semantic Search", mark: "✳",
     tech: [
       ["OpenAI","openai/openai-original.svg","AI"],
-      ["Gemini",null,"✧"],
-      ["RAG",null,"◈"],
-      ["Embeddings",null,"∞"]
+      ["Gemini","https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/googlegemini.svg","✧"],
+      ["RAG","assets/icons/rag.svg","RAG"],
+      ["Embeddings","assets/icons/embeddings.svg","∞"]
     ]
   },
   {
@@ -240,14 +240,18 @@ function renderStack() {
     const grid = el("div","tech-items");
     group.tech.forEach(([name,path,glyph]) => {
       const item = el("div","tech-item");
+      item.dataset.tech = name;
       const holder = el("span","tech-graphic");
       if (path) {
         const img = document.createElement("img");
-        img.src = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" + path;
+        img.src = path.startsWith("https://") || path.startsWith("assets/")
+          ? path
+          : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" + path;
         img.alt = "";
-        img.width = 36;
-        img.height = 36;
-        img.loading = "lazy";
+        img.width = 50;
+        img.height = 50;
+        img.loading = "eager";
+        img.decoding = "async";
         img.addEventListener("error", () => {
           holder.replaceChildren(el("span","tech-fallback",glyph));
         }, {once:true});
