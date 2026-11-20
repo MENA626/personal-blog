@@ -2951,6 +2951,63 @@ html body :is(
  #home.hero-hello .hello-welcome-description{font-size:13px!important;line-height:1.7!important;margin-bottom:12px!important}
 }
 
+
+/* FINAL NAV & WAVE REFINEMENT — a clear header and full-length thin sleeve. */
+.site-header,
+.site-header.is-scrolled{
+  position:sticky!important;top:0!important;z-index:95!important;
+  background:#FFFFFF!important;
+  border-bottom:2px solid #DCE9F7!important;
+  box-shadow:0 7px 22px rgba(26,73,175,.075)!important;
+  backdrop-filter:blur(16px);
+}
+.site-header .nav-shell{min-height:76px!important;gap:20px}
+.site-header .site-name .brand-monogram,
+.site-header.is-scrolled .site-name .brand-monogram{color:#1A49AF!important}
+.site-header .nav-links a,
+.site-header.is-scrolled .nav-links a{color:#173D91!important;font-weight:800}
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active{color:#009EFF!important}
+.site-header .language-toggle{border:1px solid #B7D8F7!important;color:#1A49AF!important;background:#F5FAFF!important}
+.site-header .nav-cta{background:#1A49AF!important;border:1px solid #1A49AF!important;color:#FFF!important}
+.site-header .menu-toggle{
+  width:auto;min-width:83px;height:44px;padding:0 12px;gap:9px;
+  border:1.5px solid #B6D8F7;border-radius:11px;background:#F4FAFF;
+  color:#173D91;flex-direction:row;align-items:center;justify-content:center;
+}
+.site-header .menu-toggle .menu-icon-bars{
+  display:flex;flex-direction:column;justify-content:center;gap:4px;
+  width:21px;height:auto;background:none;
+}
+.site-header .menu-toggle .menu-icon-bars i{display:block;background:#1A49AF;width:20px;height:2px;border-radius:2px}
+.site-header .menu-toggle .menu-label{height:auto;width:auto;display:inline;background:none;color:#173D91;font-size:12px;font-weight:800}
+#home.hero-hello .hello-next{display:none!important}
+#home.hero-hello .hello-greeting{
+  top:28%!important;left:5.8%!important;color:#173D91!important;
+  font-size:clamp(90px,11vw,174px)!important;
+}
+#home.hero-hello .hello-cover-graphic{
+  width:min(79vw,1050px)!important;left:16%!important;top:-1%!important;
+}
+#home.hero-hello .hello-title{color:#173D91!important}
+#home.hero-hello .hello-intro{color:#1A49AF!important}
+#home.hero-hello .hello-project-link{color:#173D91!important;border-color:#009EFF!important}
+@media(max-width:920px){
+  .site-header .nav-shell{min-height:65px!important}
+  .site-header .nav-links{background:#FFF!important;border:1px solid #DCE9F7!important;box-shadow:0 16px 24px rgba(26,73,175,.12)}
+}
+@media(max-width:600px){
+  .site-header .nav-shell{min-height:64px!important}
+  .site-header .menu-toggle{min-width:80px}
+  #home.hero-hello .hello-greeting{
+    top:26%!important;left:5.5%!important;font-size:clamp(72px,18vw,108px)!important;
+  }
+  #home.hero-hello .hello-cover-graphic{
+    top:0!important;left:-39%!important;width:188%!important;
+  }
+  #home.hero-hello .hello-copy{width:87%!important;bottom:4%!important}
+}
+
 </style>
 
 </head>
@@ -2963,7 +3020,6 @@ html body :is(
     <div class="shell nav-shell">
       <a href="#home" class="site-name" aria-label="منة الله أحمد — الرئيسية" id="homeBrand"><svg class="brand-monogram" viewBox="0 0 205 193" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شعار منة الله أحمد"><path d="M13,23 L9,30 L6,40 L6,142 L36,142 L36,42 L40,36 L46,33 L54,35 L58,39 L60,44 L60,113 L67,129 L77,138 L91,144 L107,145 L124,139 L136,128 L141,119 L143,111 L143,43 L149,35 L157,33 L164,37 L167,44 L167,142 L197,142 L197,42 L192,27 L186,19 L180,14 L167,8 L149,7 L140,9 L132,13 L120,24 L116,31 L113,44 L113,110 L105,118 L98,118 L90,111 L90,46 L86,29 L82,23 L71,13 L54,7 L41,7 L30,10 L20,16Z" fill="currentColor"/><path d="M173,158 L169,162 L166,170 L168,179 L175,186 L185,187 L191,185 L197,177 L197,165 L191,158 L186,156 L178,156Z" fill="currentColor"/></svg></a>
       <nav class="nav-links" id="mainNav" aria-label="القائمة الرئيسية">
-        <a href="#cv" data-i18n="navAbout">التعريف</a>
         <a href="#cv" data-i18n="navCV">السيرة الذاتية</a>
         <a href="#projects" data-i18n="navProjects">المشاريع</a>
         <a href="#videos" data-i18n="navVideos">الأعمال المرئية</a>
@@ -2974,7 +3030,7 @@ html body :is(
       <div class="nav-actions">
         <button class="language-toggle" id="langToggle" type="button" aria-label="Switch to English" title="Switch language"><span class="lang-icon" aria-hidden="true">文</span><span id="langLabel">EN</span></button>
         <a href="#contact" class="nav-cta"><span data-i18n="navCta">بدء التواصل</span><span aria-hidden="true">↗</span></a>
-        <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-controls="mainNav" aria-expanded="false"><span class="menu-icon-bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">القائمة</span></button>
       </div>
     </div>
   </header>
@@ -2982,21 +3038,18 @@ html body :is(
   <main id="main">
     <section id="home" class="hero hero-saas hero-hello anchor" aria-labelledby="heroMainTitle">
       <div class="hello-cover">
-        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 900" aria-hidden="true" focusable="false">
-  <g fill="#115AF5">
-    <path d="M-75 490 L471 321 L522 428 L-75 618Z"/>
-    <path d="M480 388 L577 354 C573 446 586 559 634 625 C674 683 740 691 793 660 C822 645 848 626 877 604 L885 729 C805 777 697 781 627 738 C544 686 514 588 497 489Z"/>
-    <path d="M457 341 L456 138 Q456 120 470 119 Q484 119 485 135 L490 174 L490 105 Q490 89 504 89 Q519 89 519 106 L521 172 L522 84 Q522 69 536 69 Q551 69 552 84 L553 169 L557 103 Q557 89 570 89 Q584 89 583 106 L583 194 L594 174 Q609 150 627 151 Q644 152 648 167 Q651 180 638 196 L617 228 Q606 251 602 289 L603 352 Q601 411 559 435 L507 443 Q460 419 457 341Z"/>
-    <path d="M583 304 C620 299 660 286 706 285 L765 291 L765 404 L575 451Z"/>
+        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 900" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
+  <g fill="#1A49AF">
+    <!-- Slim diagonal sleeve sweeps fully across the cover -->
+    <path d="M-115 491 L475 299 L507 398 L-115 606Z"/>
+    <!-- Taller, clearly separated rounded fingers and open palm -->
+    <path d="M446 340 L447 121 Q447 102 461 102 Q475 102 475 121 L480 183 L481 81 Q481 63 495 63 Q511 63 511 82 L514 183 L515 47 Q515 27 532 27 Q549 27 549 47 L550 183 L557 84 Q559 65 575 67 Q589 69 588 88 L586 219 Q603 191 619 183 Q637 176 648 186 Q659 198 647 215 L618 256 Q600 288 601 325 L602 385 Q600 446 555 464 L497 460 Q453 435 446 340Z"/>
+    <!-- Narrow descending continuation stays visible all the way down -->
+    <path d="M480 385 C511 445 506 563 540 681 C575 801 652 896 741 904 L741 1000 C622 996 524 927 475 810 C435 716 425 570 421 468Z"/>
   </g>
-  <path d="M539 189 Q548 175 563 174" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <path d="M604 250 Q614 236 630 230" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
 </svg>
         <span class="hello-greeting" lang="en" aria-label="Hello!">Hello!</span>
-        <a class="hello-next" href="#cv" aria-label="انتقل إلى قسم السيرة الذاتية" title="السيرة الذاتية">
-          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 16h21m-9-9 9 9-9 9" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
         <div class="hello-copy">
           <p class="hello-intro" data-i18n="saasIntro">أهلًا، أنا منة الله أحمد ✳</p>
           <h1 id="heroMainTitle" class="hello-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span><span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
@@ -3494,6 +3547,8 @@ function updateLanguage(next) {
       else node.textContent = english[key];
     }
   });
+  const menuLabel = document.querySelector("#menuToggle .menu-label");
+  if(menuLabel) menuLabel.textContent = language==="ar" ? "القائمة" : "Menu";
   langLabel.textContent = language==="ar" ? "EN" : "عربي";
   langToggle.setAttribute("aria-label",language==="ar" ? "Switch to English" : "التبديل إلى العربية");
   langToggle.title = language==="ar" ? "Switch to English" : "التحويل للعربية";
