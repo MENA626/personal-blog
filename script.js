@@ -21,7 +21,6 @@ const english = {
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hello, I’m Menat Allah Ahmed",
   heroPanelText: "Clear thinking.<br>Smarter systems.<br>Real impact.",
-  heroEngineState: "AI system concept",
   aboutKicker: "Behind the screen",
   aboutHeadOne: "Understand the problem.",
   aboutHeadTwo: "Then build the solution.",
@@ -153,7 +152,7 @@ const langToggle = document.getElementById("langToggle");
 const langLabel = document.getElementById("langLabel");
 const translated = [...document.querySelectorAll("[data-i18n]")];
 const originals = new Map(translated.map(el => [el.dataset.i18n, el.innerHTML]));
-const richKeys = new Set(["approachLabel", "footerAbout"]);
+const richKeys = new Set(["approachLabel", "footerAbout", "heroPanelText"]);
 const stackContainer = document.getElementById("stackGroups");
 const noteContainer = document.getElementById("notesGrid");
 const dialog = document.getElementById("noteDialog");
