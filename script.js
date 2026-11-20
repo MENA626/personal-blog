@@ -313,11 +313,11 @@ function updateLanguage(next) {
   closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
   const heroDiagram = document.getElementById("heroBoard");
   if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar" ? "لوحة هندسية تجريدية لمراحل تحليل وتصميم وبناء الأنظمة" : "Abstract software engineering blueprint showing analysis, design, build and evolution");
-  document.title = language==="ar"?"منة الله أحمد | هندسة البرمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
+  document.title = language==="ar"?"منة الله أحمد | رحلتي ومشاريعي في هندسة البرمجيات":"Menat Allah Ahmed | My Projects, Design & Engineering";
   const description = document.querySelector('meta[name="description"]');
   description.content = language==="ar"
-    ? "ملف منة الله أحمد المهني: هندسة البرمجيات، تطوير الويب والموبايل، والذكاء الاصطناعي، مع مشروع ميزان للتقنيات القانونية."
-    : "Menat Allah Ahmed — Software Engineer, University of Tripoli graduate, web/mobile developer exploring AI, LLMs, RAG and Mizan LegalTech.";
+    ? "أنا منة الله أحمد. أحلّل الأفكار، أصمّم تجارب الويب والموبايل، وأشارك مشاريعي في البرمجة والذكاء الاصطناعي."
+    : "I’m Menat Allah Ahmed. I analyze ideas, design web and mobile experiences, build software solutions and share projects exploring AI and LegalTech.";
   const cvLink=document.getElementById("cvPageLink");
   if(cvLink) cvLink.href="cv.html?lang="+language;
   renderStack();
