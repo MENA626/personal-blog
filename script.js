@@ -11,15 +11,15 @@ const english = {
   navContact: "Contact",
   navCta: "Let's collaborate",
   heroEyebrow: "Menat Allah Ahmed / Software Engineer in Tripoli",
-  heroTitleOne: "I understand the idea.",
-  heroTitleTwo: "I engineer the solution.",
-  heroTitleThree: "I build what’s next.",
+  heroTitleOne: "I turn ideas"
+  heroTitleTwo: "into intelligent"
+  heroTitleThree: "systems!"
   heroDescription: "I'm Menat Allah Ahmed, a Software Engineer and Faculty of Information Technology graduate from the University of Tripoli. I build web and mobile experiences and explore how AI can solve real problems for real people.",
   heroProjectButton: "Explore my projects",
   heroLearnMore: "About me",
   heroCaption: "I don't just write code. I build systems that solve real problems.",
   heroScroll: "Explore my work and experience ↓",
-  heroIntro: "Hello, I’m Menat Allah Ahmed",
+  heroIntro: "Hello, I’m Menat Allah Ahmed"
   heroPanelText: "Clear thinking.<br>Smarter systems.<br>Real impact.",
   posterHello: "Hello!",
   posterTagline: "MENAT ALLAH AHMED • SOFTWARE ENGINEER",
