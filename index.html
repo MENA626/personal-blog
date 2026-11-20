@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#F5F5F0">
+  <meta name="theme-color" content="#F97316">
   <meta name="description" content="منة الله أحمد — مهندسة برمجيات، خريجة كلية تقنية المعلومات بجامعة طرابلس. أعمل على حلول ويب وموبايل وذكاء اصطناعي، ومشروع ميزان للتقنيات القانونية.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="منة الله أحمد | مهندسة برمجيات">
@@ -409,11 +409,22 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
   <main id="main">
     <section id="home" class="hero anchor" aria-labelledby="heroMainTitle">
       <div class="shell">
-        <div class="hero-card">
-          <div class="hero-left">
-            <div class="hero-kicker reveal"><span class="kicker-rule"></span><span data-i18n="heroEyebrow">منة الله أحمد / مهندسة برمجيات من طرابلس</span></div>
-            <p class="hero-mini reveal" data-i18n="heroIntro">مرحباً، أنا منة الله أحمد</p>
-            <h1 id="heroMainTitle" class="hero-title reveal">
+        <div class="hero-card cat-cover" id="heroBoard">
+          <div class="cat-cover-shine" aria-hidden="true"></div>
+          <div class="cat-cover-fold" aria-hidden="true">
+            <svg viewBox="0 0 600 380" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="foldUnderside" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFB462"/><stop offset=".5" stop-color="#F97316"/><stop offset="1" stop-color="#AF3E0D"/></linearGradient><linearGradient id="foldShading" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F97316" stop-opacity="0"/><stop offset="1" stop-color="#793010" stop-opacity=".5"/></linearGradient></defs>
+              <path d="M70 0H600V293C548 262 511 260 462 270C382 290 347 217 327 168C290 79 192 12 70 0Z" fill="#F5F5F0"/>
+              <path d="M70 0C191 3 286 72 328 168C369 266 401 291 461 271C509 256 551 263 600 293C564 218 443 89 289 33C197 0 124 0 70 0Z" fill="url(#foldUnderside)"/>
+              <path d="M326 166C366 263 403 290 461 271C511 258 552 263 600 293C530 255 497 334 421 295C371 267 344 225 326 166Z" fill="url(#foldShading)"/>
+              <path d="M330 178C365 266 399 289 454 282" stroke="#FFD39C" stroke-width="4" fill="none" opacity=".75"/>
+            </svg>
+          </div>
+          <div class="cat-cover-brand" aria-hidden="true"><strong>MENAT ALLAH</strong><small>SOFTWARE • STORIES • AI</small></div>
+          <div class="cat-cover-copy">
+            <p class="hero-kicker reveal"><span class="kicker-rule"></span><span data-i18n="heroEyebrow">منة الله أحمد / مهندسة برمجيات من طرابلس</span></p>
+            <p class="hero-mini reveal" data-i18n="heroIntro">أهلًا، أنا منة الله أحمد!</p>
+            <h1 class="hero-title reveal" id="heroMainTitle">
               <span data-i18n="heroTitleOne">أفهم الفكرة.</span>
               <span data-i18n="heroTitleTwo">وأهندس الحل.</span>
               <span class="hero-title-accent" data-i18n="heroTitleThree">وأبني المستقبل.</span>
@@ -424,25 +435,19 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
               <a href="#projects" class="hero-btn-primary magnetic"><span data-i18n="heroProjectButton">استكشف مشاريعي</span><span aria-hidden="true">↗</span></a>
               <a href="#about" class="hero-btn-secondary"><span data-i18n="heroLearnMore">تعرّف عليّ</span><span aria-hidden="true">←</span></a>
             </div>
-            <div class="hero-footnote reveal"><span class="hero-footnote-mark" aria-hidden="true">✳</span><span data-i18n="heroCaption">لا أكتب الكود فقط؛ أبني أنظمة تحلّ مشكلات حقيقية.</span></div>
           </div>
-          <div class="hero-right" id="heroBoard" aria-label="تصميم تجريدي لهندسة الأنظمة والذكاء الاصطناعي">
-            <div class="hero-panel-top"><span>01 / ENGINEERING</span><span class="hero-panel-asterisk" aria-hidden="true">✳</span></div>
-            <span class="hero-panel-index" aria-hidden="true">01</span>
-            <div class="hero-panel-visual" aria-hidden="true">
-              <div class="blueprint-grid"></div>
-              <div class="blueprint-orbit orbit-one"></div>
-              <div class="blueprint-orbit orbit-two"></div>
-              <div class="blueprint-center"><span class="blueprint-code">&lt;/&gt;</span><span class="blueprint-center-label">DESIGN · CODE · AI</span></div>
-              <span class="blueprint-node node-one">01 <b>ANALYZE</b></span>
-              <span class="blueprint-node node-two">02 <b>DESIGN</b></span>
-              <span class="blueprint-node node-three">03 <b>BUILD</b></span>
-              <span class="blueprint-node node-four">04 <b>EVOLVE</b></span>
-            </div>
-            <div class="hero-panel-bottom"><span class="hero-panel-eyebrow">SOFTWARE ENGINEER / AI & LEGALTECH</span><strong data-i18n="heroPanelText">أفكار واضحة.<br>أنظمة أذكى.<br>أثر حقيقي.</strong><span class="panel-accent-line" aria-hidden="true"></span></div>
+          <div class="cat-cover-character" aria-label="قطة المدونة السوداء ترفع طرف الورقة المطوية وتقدّم محتوى منة الله">
+            <div class="cat-cover-halo" aria-hidden="true"></div>
+            <svg class="cat-art cat-art-hero" role="img" aria-label="قطة سوداء بنظارة شمسية دائرية تلوّح وترفع مخلبها نحو الورقة البرتقالية وتحمل مشروبًا ورديًا" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#hello"></use></svg>
+            <div class="cat-speech cat-speech-hero"><span class="speech-punctuation" aria-hidden="true">✦</span><span data-i18n="catWelcome">يا هلا! أنا رفيقة المدونة، بنعرّفك على عالم منة الله!</span></div>
+          </div>
+          <div class="cat-cover-bottom">
+            <span>✳ <span data-i18n="catCoverLabel">كل فكرة لها حكاية، وكل حكاية تبدأ بكود.</span></span>
+            <a href="https://github.com/MENA626" target="_blank" rel="noopener noreferrer">GITHUB · @MENA626 ↗</a>
+            <span>TRIPOLI · LIBYA</span>
           </div>
         </div>
-        <div class="hero-bottom"><span data-i18n="heroScroll">تصفّح أعمالي وخبراتي ↓</span><span class="tiny-cross">✳</span><span>TRIPOLI, LIBYA · SOFTWARE & AI</span></div>
+        <div class="hero-bottom"><span data-i18n="heroScroll">تصفّح أعمالي وخبراتي ↓</span><span class="tiny-cross" aria-hidden="true">✳</span><span>MENAT ALLAH · SOFTWARE ENGINEER</span></div>
       </div>
     </section>
 
@@ -462,7 +467,7 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
             <a class="underlined-link" href="https://github.com/MENA626" target="_blank" rel="noopener noreferrer"><span data-i18n="aboutGithub">استكشفي أعمالي على GitHub</span><span aria-hidden="true">↗</span></a>
           </div>
           <div class="about-aside reveal">
-            <div class="bio-panel"><span class="panel-index">01 — EDUCATION</span><span class="panel-illustration" aria-hidden="true">✺</span><h3 data-i18n="eduTitle">جامعة طرابلس</h3><p data-i18n="eduDesc">خريجة كلية تقنية المعلومات، تخصص هندسة البرمجيات.</p><span class="panel-meta">TRIPOLI · LIBYA</span></div>
+            <div class="bio-panel"><span class="panel-index">01 — EDUCATION</span><div class="cat-presenter cat-presenter-about"><svg class="cat-art" role="img" aria-label="القطة تقدم التعريف عن منة الله وتحمل مشروب فراولة" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#about"></use></svg><span class="cat-section-quote" data-i18n="catAbout">خلّيني أعرّفك على صاحبة الأفكار!</span></div><h3 data-i18n="eduTitle">جامعة طرابلس</h3><p data-i18n="eduDesc">خريجة كلية تقنية المعلومات، تخصص هندسة البرمجيات.</p><span class="panel-meta">TRIPOLI · LIBYA</span></div>
             <div class="bio-tiles">
               <div class="bio-tile neon-tile"><span class="panel-index">02 — FOCUS</span><strong>AI<span class="tile-plus">+</span></strong><span data-i18n="focusLabel">ذكاء اصطناعي ذو أثر</span></div>
               <div class="bio-tile dark-tile"><span class="panel-index">03 — APPROACH</span><strong data-i18n="approachLabel">أفهم.<br>أبتكر.<br>أطوّر.</strong><span class="tile-arrow">↗</span></div>
@@ -480,7 +485,7 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
             <div class="project-demo" aria-hidden="true">
               <div class="demo-orbit demo-orbit-one"></div><div class="demo-orbit demo-orbit-two"></div>
               <div class="demo-panel"><div class="demo-panel-head"><span>◉</span><span>MIZAN / LEGALTECH</span><span>↗</span></div><div class="demo-glyph">ميزان</div><div class="demo-rows"><span>SMART VAULT</span><span>AI ASSISTANT</span><span>LAWYER DIRECTORY</span></div></div>
-              <div class="demo-note">AI + LAW + TECHNOLOGY</div>
+              <div class="demo-note">AI + LAW + TECHNOLOGY</div><div class="cat-project-presenter"><svg class="cat-art" role="img" aria-label="القطة تشرح مشروع ميزان خلف لابتوب" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#coding"></use></svg><span class="cat-section-quote" data-i18n="catProjects">هنا الأفكار تتحوّل لمشاريع!</span></div>
             </div>
             <div class="project-details">
               <div class="project-meta"><span class="project-status"><span class="status-point"></span><span data-i18n="mizanStatus">قيد التطوير</span></span><span>01 / FEATURED PROJECT</span></div>
@@ -513,13 +518,13 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
           <section class="tech-group"><div class="tech-group-head"><span class="tech-group-mark">✳</span><h3>الذكاء الاصطناعي والبحث</h3></div><div class="tech-items"><div class="tech-item"><span class="tech-fallback">AI</span><strong>OpenAI</strong></div><div class="tech-item"><span class="tech-fallback">✧</span><strong>Gemini</strong></div><div class="tech-item"><span class="tech-fallback">◈</span><strong>RAG</strong></div><div class="tech-item"><span class="tech-fallback">∞</span><strong>Embeddings</strong></div></div></section>
           <section class="tech-group"><div class="tech-group-head"><span class="tech-group-mark">⌘</span><h3>البيانات والبنية والأدوات</h3></div><div class="tech-items"><div class="tech-item"><span class="tech-fallback">PG</span><strong>PostgreSQL</strong></div><div class="tech-item"><span class="tech-fallback">S</span><strong>Supabase</strong></div><div class="tech-item"><span class="tech-fallback">DB</span><strong>MySQL</strong></div><div class="tech-item"><span class="tech-fallback">D</span><strong>Docker</strong></div><div class="tech-item"><span class="tech-fallback">G</span><strong>Git</strong></div><div class="tech-item"><span class="tech-fallback">L</span><strong>Linux</strong></div></div></section>
         </div>
-        <div class="ai-banner reveal"><span class="ai-banner-star">✳</span><div><span class="ai-banner-label">CURRENT EXPLORATION</span><h3 data-i18n="aiTitle">من البيانات إلى إجابة ذكية.</h3><p data-i18n="aiDesc">أستكشف نماذج اللغة الكبيرة (LLMs)، وأنظمة RAG، والبحث الدلالي، وتقنيات Embeddings لبناء تجارب ذكاء اصطناعي مرتبطة بمصادر معرفة حقيقية.</p></div><span class="ai-banner-mark" aria-hidden="true">∞</span></div>
+        <div class="ai-banner reveal"><span class="ai-banner-star">✳</span><div><span class="ai-banner-label">CURRENT EXPLORATION</span><h3 data-i18n="aiTitle">من البيانات إلى إجابة ذكية.</h3><p data-i18n="aiDesc">أستكشف نماذج اللغة الكبيرة (LLMs)، وأنظمة RAG، والبحث الدلالي، وتقنيات Embeddings لبناء تجارب ذكاء اصطناعي مرتبطة بمصادر معرفة حقيقية.</p></div><div class="cat-skills-presenter"><svg class="cat-art" role="img" aria-label="القطة تحمل شريحة إلكترونية وتعرض مهارات منة الله" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#skills"></use></svg><span class="cat-section-quote" data-i18n="catSkills">تعالوا نشوف الأدوات اللي نستخدمها!</span></div></div>
       </div>
     </section>
 
     <section id="notes" class="section notes anchor">
       <div class="shell">
-        <div class="section-header reveal"><div><div class="section-kicker"><span>04 /</span> <span data-i18n="notesKicker">المدونة التقنية</span></div><h2 class="editorial-heading"><span data-i18n="notesHeadOne">أفكـار لا تبقـى</span><br><em data-i18n="notesHeadTwo">في رأسـي فقـط.</em></h2><p class="section-deck" data-i18n="notesDesc">مواضيع أجهّز للكتابة عنها، من هندسة البرمجيات إلى الذكاء الاصطناعي. هذه معاينات لمقالات مستقبلية وليست مقالات منشورة بالفعل.</p></div><span class="section-stamp" aria-hidden="true">✳</span></div>
+        <div class="section-header reveal"><div><div class="section-kicker"><span>04 /</span> <span data-i18n="notesKicker">المدونة التقنية</span></div><h2 class="editorial-heading"><span data-i18n="notesHeadOne">أفكـار لا تبقـى</span><br><em data-i18n="notesHeadTwo">في رأسـي فقـط.</em></h2><p class="section-deck" data-i18n="notesDesc">مواضيع أجهّز للكتابة عنها، من هندسة البرمجيات إلى الذكاء الاصطناعي. هذه معاينات لمقالات مستقبلية وليست مقالات منشورة بالفعل.</p></div><div class="cat-notes-presenter"><svg class="cat-art" role="img" aria-label="القطة تقرأ كتابًا وتقدم مقالات المدونة" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#reading"></use></svg><span data-i18n="catNotes">حكايات تقنية تستحق القراءة.</span></div></div>
         <div class="notes-grid" id="notesGrid">
           <article class="note-card"><div class="note-cover"><span>AI</span></div><div class="note-card-body"><span class="note-category">الذكاء الاصطناعي · فكرة مقال</span><h3>حين تتعلّم الآلة أن تبحث قبل أن تجيب.</h3><p>عن أنظمة RAG: كيف نربط النماذج اللغوية بمصادر معرفة؟</p></div></article>
           <article class="note-card"><div class="note-cover"><span>◈</span></div><div class="note-card-body"><span class="note-category">LegalTech · فكرة مقال</span><h3>عندما تلتقي العدالة بالتقنية.</h3><p>لماذا يستحق القطاع القانوني أدوات أذكى لتنظيم المستندات؟</p></div></article>
@@ -531,10 +536,28 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
     <section id="contact" class="section contact anchor">
       <div class="shell contact-layout">
         <div class="reveal"><div class="section-kicker"><span>05 /</span> <span data-i18n="contactKicker">لنبدأ حوارًا</span></div><h2 class="contact-title"><span data-i18n="contactHeadOne">هل لديـك فكـرة</span><br><em data-i18n="contactHeadTwo">تستحـق أن تُبنـى؟</em></h2><p data-i18n="contactDesc">أهتم بالمشاريع التقنية والتعاون وتبادل المعرفة. يسعدني التواصل معك عبر GitHub، ويمكن إضافة البريد المهني وبقية الروابط عندما تكون متاحة للنشر.</p><a href="https://github.com/MENA626" class="contact-button magnetic" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">تواصلي معي عبر GitHub</span><span aria-hidden="true">↗</span></a></div>
-        <div class="contact-decoration reveal"><div class="contact-symbol">✳</div><span>LET'S BUILD SOMETHING MEANINGFUL.</span></div>
+        <div class="contact-decoration reveal cat-contact-presenter"><svg class="cat-art" role="img" aria-label="القطة تلوّح للزوار وتشجعهم على التواصل" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#welcome"></use></svg><span data-i18n="catContact">جاهزين لفكرة جديدة؟ خلّونا نتواصل!</span></div>
       </div>
     </section>
   </main>
+
+  <aside class="cat-guide" id="catGuide" aria-label="دليلة المدونة">
+    <div class="cat-guide-panel" id="catGuidePanel" hidden>
+      <strong data-i18n="catGuideTitle">أهلًا، أنا رفيقة المدونة! 🐾</strong>
+      <p id="catGuideMessage" data-i18n="catGuideWelcome">بنساعدك تتعرف على منة الله ومشاريعها. وين تحب تبدأ؟</p>
+      <nav aria-label="تنقّل سريع">
+        <a href="#about"><span data-i18n="navAbout">عنّي</span><span aria-hidden="true">↗</span></a>
+        <a href="#projects"><span data-i18n="navProjects">مشاريعي</span><span aria-hidden="true">↗</span></a>
+        <a href="#stack"><span data-i18n="navStack">مهاراتي</span><span aria-hidden="true">↗</span></a>
+        <a href="#notes"><span data-i18n="navNotes">أفكاري</span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <button type="button" class="cat-guide-trigger" id="catGuideTrigger" aria-controls="catGuidePanel" aria-expanded="false" aria-label="افتح دليل القطة">
+      <svg class="cat-art" role="img" aria-label="" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg"><use href="assets/menat-cat-characters.svg#welcome"></use></svg>
+      <span data-i18n="catGuideButton">دليل المدونة</span>
+      <span class="cat-guide-live" aria-hidden="true"></span>
+    </button>
+  </aside>
 
   <footer class="site-footer">
     <div class="shell footer-top"><a href="#home" class="footer-name" aria-label="عودة للأعلى"><svg class="name-ar" xmlns="http://www.w3.org/2000/svg" width="462" height="216" viewBox="379 13 462 216" role="img" aria-label="منة الله"><g fill="#1E40AF"><path d="m 770.56003,193.12 h -0.16 c -2.56,0.48 -5.6,0.64 -10.56,0.64 -5.12,0 -7.68,2.56 -7.68,7.68 V 220 c 4.64,0 9.12,-0.64 11.68,-1.92 l 7.68,-16.32 9.6,5.12 c 11.68,6.4 22.72,10.08 38.4,12.32 4.96,-7.84 9.28,-15.52 12,-23.52 l 0.48,-1.28 c 7.2,-21.28 -4.16,-44 -21.28,-44 -11.36,0 -22.24,9.92 -32.64,28.8 z m 8.48,-11.36 0.48,-0.48 c 3.68,-6.88 9.44,-11.04 16.32,-11.04 12.16,0 25.6,11.52 29.28,25.92 -10.88,-2.08 -29.12,-7.04 -46.08,-14.4 z m -71.51994,12 c -5.12,0 -7.68,2.56 -7.68,7.68 V 220 c 8,0 17.76,-2.08 24,-6.24 l 4.8,-18.08 c -0.32,18.72 10.56,24.32 23.36,24.32 5.12,0 7.84,-2.72 7.84,-7.84 v -18.4 c -12.64,0 -22.24,-3.84 -22.88,-16.48 l -0.48,-10.4 h -2.88 l -3.04,14.4 c -0.96,3.84 -1.44,7.36 -1.76,10.56 -4.64,0.8 -13.92,1.92 -21.28,1.92 z m 36,-54.72 c 0.16,-0.16 0.16,-2.24 0,-2.4 l -13.92,-13.92 -14.08,14.08 v 2.08 l 14.08,14.08 z m -72.15989,70.24 7.36,-21.12 c 3.84,20.16 8.16,31.84 21.12,31.84 5.12,0 7.68,-2.56 7.68,-7.68 v -18.56 c -11.52,0 -16,-1.44 -17.6,-13.12 l -7.36,-52.64 h -2.72 l -8.16,18.88 -16.16,8.64 c -20,10.24 -26.24,24.48 -26.24,36.48 0,13.6 8.32,21.76 21.28,21.76 6.24,0 13.44,-1.6 20.8,-4.48 z m 8.32,-99.52 c 0.16,0 0.16,-1.92 0,-2.08 l -12.48,-12.48 -11.2,11.2 -11.2,-11.2 -12.64,12.64 v 1.76 l 12.64,12.8 11.2,-11.2 11.2,11.2 z m -24.48,79.68 c -10.56,0 -18.08,-3.2 -21.76,-9.12 v -0.16 l 41.12,-15.68 3.68,20.8 c 0,0.32 0.16,0.8 0.16,1.12 -7.36,1.92 -15.84,3.04 -23.2,3.04 z M 569.60007,99.36 h -2.72 v 0.16 l -12.16,15.36 4.8,107.68 h 2.88 l 7.36,-25.28 c 1.6,-5.44 2.4,-10.88 2.4,-16.48 v -44.32 l 4.96,-6.24 z m -39.67981,0 h -2.72 v 0.16 -0.16 l -12,15.68 4.16,77.92 c -3.52,0.48 -7.84,0.8 -11.04,0.8 -4,0 -7.68,3.68 -7.68,7.68 V 220 c 7.68,0 15.04,-4 18.24,-6.4 5.76,-14.4 13.44,-44.8 13.44,-62.72 v -14.24 l 5.12,-6.4 z M 500.48019,220 c 5.12,0 7.84,-2.72 7.84,-7.84 v -18.4 c -12.8,0 -17.44,-1.28 -17.44,-9.12 v -84.8 h -2.88 l -14.24,20 3.84,64.8 c 0.16,2.72 0.48,5.28 0.8,7.68 -4.48,1.12 -8.64,1.44 -14.24,1.44 -5.12,0 -7.84,2.72 -7.84,7.84 V 220 c 6.4,0 12.48,-1.44 16,-5.12 l 6.72,-18.24 c 2.88,16.16 9.6,23.36 21.44,23.36 z m -5.28,-159.2 -4,7.68 c 2.72,3.04 5.6,6.88 6.72,9.92 -1.6,0 -5.92,-0.16 -6.88,-0.32 -6.56,-0.32 -7.52,-4.32 -7.04,-11.2 h -1.44 c -1.76,5.6 -4.96,12.32 -12.16,12.32 -4.64,0 -7.2,-2.88 -5.92,-10.72 h -1.6 l -1.6,5.6 c -2.56,9.6 0.32,15.52 6.72,15.52 6.56,0 10.56,-6.24 11.84,-11.68 -0.32,4.32 3.04,10.08 8.48,10.08 6.08,0 12,-6.88 12,-15.04 0,-4.32 -1.6,-9.12 -3.68,-12.16 z m -12.64,0 c 2.56,-8.64 4,-16.96 4,-24 0,-7.84 -1.76,-13.28 -3.68,-17.6 h -1.44 l -7.2,10.08 c 5.12,9.12 7.52,22.72 7.36,31.2 z m -54.71988,148.48 7.36,-21.12 c 3.84,20.16 8.16,31.84 21.12,31.84 5.12,0 7.68,-2.56 7.68,-7.68 v -18.56 c -11.52,0 -16,-1.44 -17.6,-13.12 l -7.36,-52.64 h -2.72 l -8.16,18.88 -16.16,8.64 c -20,10.24 -26.24,24.48 -26.24,36.48 0,13.6 8.32,21.76 21.28,21.76 6.24,0 13.44,-1.6 20.8,-4.48 z m -16.16,-19.84 c -10.56,0 -18.08,-3.2 -21.76,-9.12 v -0.16 l 41.12,-15.68 3.68,20.8 c 0,0.32 0.16,0.8 0.16,1.12 -7.36,1.92 -15.84,3.04 -23.2,3.04 z"/></g></svg><span class="name-en" lang="en">Menat Allah Ahmed</span></a><p data-i18n="footerAbout">هندسة برمجيات · تطوير ويب وموبايل · ذكاء اصطناعي<br>طرابلس، ليبيا</p><a href="#home" class="top-link"><span data-i18n="topLink">للأعلى</span><span aria-hidden="true">↑</span></a></div>
