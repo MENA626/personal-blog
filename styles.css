@@ -2962,3 +2962,49 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 .top-link{border-color:#FF9B29!important}
 .dialog-share{background:#FF6624!important;color:#2329A8!important}
 :focus-visible{outline-color:#FF6624!important}
+
+/* REFERENCE-MATCHING WAVING POSTER COVER — navy/cyan hero, left hand, right copy */
+#home.hero-poster{display:block!important;position:relative;isolation:isolate;overflow:hidden;background:#010554!important;color:#F2E7E1!important;padding:0!important;margin:0!important;border:0!important;min-height:0!important}
+#home.hero-poster .poster-shell{position:relative;width:100%;max-width:1650px;min-height:920px;margin-inline:auto;overflow:hidden}
+#home.hero-poster .poster-art{position:absolute;z-index:1;top:4%;bottom:-4%;left:-5%;width:56%;pointer-events:none}
+#home.hero-poster .poster-art svg{display:block;width:100%;height:100%;overflow:visible}
+#home.hero-poster .poster-arm,#home.hero-poster .poster-wave-hand,#home.hero-poster .poster-motion{stroke:#23CDFF;stroke-linecap:round;stroke-linejoin:round;fill:none}
+#home.hero-poster .poster-arm,#home.hero-poster .poster-wave-hand{stroke-width:26}
+#home.hero-poster .poster-motion{stroke-width:26}
+#home.hero-poster .poster-wave-hand{transform-box:fill-box;transform-origin:67% 94%;animation:menatPosterWave 3.1s ease-in-out infinite;will-change:transform}
+#home.hero-poster .poster-motion{animation:menatPosterWaveMarks 3.1s ease-in-out infinite}
+@keyframes menatPosterWave{0%,12%,77%,100%{transform:rotate(0deg)}22%{transform:rotate(-10deg)}36%{transform:rotate(8deg)}50%{transform:rotate(-7deg)}65%{transform:rotate(5deg)}}
+@keyframes menatPosterWaveMarks{0%,12%,77%,100%{opacity:.95}23%,51%{opacity:.4}36%,65%{opacity:1}}
+#home.hero-poster .poster-copy{position:relative;z-index:3;width:52%;margin-right:0;margin-left:auto;padding:76px 6% 80px 16px;text-align:right;direction:rtl;color:#F2E7E1}
+#home.hero-poster .poster-english{display:block;margin:0 0 50px;font-family:"DM Sans",Arial,sans-serif!important;direction:ltr;text-align:right;font-weight:900;font-size:clamp(72px,8.7vw,138px);letter-spacing:-.055em;line-height:.98;color:#23CDFF!important}
+#home.hero-poster .poster-english span{display:block}
+#home.hero-poster .poster-intro{font-size:clamp(18px,2.2vw,30px);line-height:1.65;margin:0 0 35px;color:#F2E7E1!important;font-weight:800}
+#home.hero-poster .poster-title{font-weight:900;font-size:clamp(49px,5.7vw,78px);line-height:1.38;color:#23CDFF!important;margin:0 0 32px;letter-spacing:0}
+#home.hero-poster .poster-title span{display:block;color:#23CDFF!important}
+#home.hero-poster .poster-description{font-size:clamp(17px,1.55vw,23px);line-height:1.85;font-weight:600;color:#F2E7E1!important;max-width:620px;margin:0 0 16px}
+#home.hero-poster .poster-tagline{font-size:16px;line-height:1.75;color:#F2E7E1!important;margin:0 0 22px;font-weight:700}
+#home.hero-poster .poster-link{display:inline-flex;gap:12px;direction:rtl;align-items:center;border-bottom:2px solid #23CDFF;color:#F2E7E1!important;font-weight:800;padding:8px 0;font-size:15px}
+#home.hero-poster .poster-link span{color:#F2E7E1!important}
+#home.hero-poster .poster-link:hover{color:#23CDFF!important}
+@media(max-width:700px){
+ #home.hero-poster .poster-shell{min-height:1120px}
+ #home.hero-poster .poster-art{top:15%;bottom:auto;left:-16%;width:100%;height:auto}
+ #home.hero-poster .poster-art svg{height:auto}
+ #home.hero-poster .poster-copy{width:66%;padding:60px 5% 40px 2%}
+ #home.hero-poster .poster-english{font-size:clamp(49px,11vw,75px);margin-bottom:315px}
+ #home.hero-poster .poster-intro{font-size:clamp(16px,4.2vw,20px);margin-bottom:20px}
+ #home.hero-poster .poster-title{font-size:clamp(28px,6.4vw,42px);margin-bottom:22px}
+ #home.hero-poster .poster-description{font-size:clamp(13px,3.2vw,17px);line-height:1.85}
+ #home.hero-poster .poster-tagline{font-size:13px}
+ #home.hero-poster .poster-link{font-size:13px}
+}
+@media(max-width:365px){
+ #home.hero-poster .poster-shell{min-height:1170px}
+ #home.hero-poster .poster-copy{width:69%}
+ #home.hero-poster .poster-english{font-size:49px}
+ #home.hero-poster .poster-title{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){
+ #home.hero-poster .poster-wave-hand,#home.hero-poster .poster-motion{animation:none!important;transform:none!important;will-change:auto}
+}
+
