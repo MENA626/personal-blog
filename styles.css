@@ -1047,3 +1047,149 @@ html,body{background:#FFFFFF}
  .nav-links a::after{background:#FE5000}
 }
 @media(prefers-reduced-motion:reduce){.hero-identity{animation:none!important}}
+
+
+/* ================================================================
+   ALTERNATING EDITORIAL RHYTHM — PURPLE → ORANGE → PURPLE
+   Each content section uses one leading hue and its opposite
+   as an intentional accent; white cards keep long content legible.
+   No mascots, decorative crowding, or heavy gradients in text.
+   ================================================================ */
+.about,.projects,.videos,.contact{
+  --section-primary:#3F0B78;
+  --section-secondary:#FE5000;
+}
+.cv,.stack,.notes{
+  --section-primary:#FE5000;
+  --section-secondary:#3F0B78;
+}
+.section:not(.hero) .section-kicker>span:first-child{color:var(--section-primary)}
+.section:not(.hero) .section-kicker{color:var(--section-primary)}
+.section:not(.hero) .editorial-heading{color:#261A66}
+.section:not(.hero) .editorial-heading em{color:var(--section-primary)}
+.section:not(.hero) .section-deck{color:#544B5D}
+.section:not(.hero) .underlined-link{color:var(--section-primary);border-color:var(--section-secondary)}
+.section:not(.hero) .underlined-link:hover{color:var(--section-secondary)}
+.section:not(.hero){border-bottom:1px solid rgba(38,26,102,.075)}
+
+/* 01 — Violet-forward introduction, fine orange details */
+.about{
+ background:linear-gradient(145deg,#F1E1FD 0%,#F9F3FF 48%,#FFFFFF 100%);
+}
+.about .bio-panel{background:#3F0B78;color:#FFFFFF;border:1px solid rgba(189,75,248,.28)}
+.about .panel-index{color:#FE5000}
+.about .neon-tile{background:#EEDCFA;border-color:#D9B8EE}
+.about .neon-tile .tile-plus{color:#FE5000}
+.about .dark-tile{background:#E8D3FA;border-color:#D9B8EE}
+.about .about-lead>.underlined-link{border-bottom-color:#FE5000}
+
+/* 02 — Orange-forward professional résumé; purple details */
+.cv{
+ background:linear-gradient(130deg,#FFE2CA 0%,#FFF0E5 37%,#FFF8F3 80%,#FFFFFF 100%);
+}
+.cv-summary{
+ background:linear-gradient(145deg,#FF833D 0%,#FE5000 100%);
+ border:1px solid #F2631B;box-shadow:0 14px 31px rgba(169,55,4,.08);
+}
+.cv-summary .section-kicker,.cv-summary .section-kicker>span:first-child{color:#261A66}
+.cv-summary .editorial-heading,.cv-summary .editorial-heading em,
+.cv-summary p,.cv-summary .cv-note{color:#261A66}
+.cv-summary .cv-note{opacity:.88}
+.cv-summary .cv-view{background:#261A66;color:#FFFFFF;border:1px solid rgba(255,255,255,.12)}
+.cv-summary .cv-view:hover{background:#3F0B78}
+.cv-record{
+ background:#FFFDFB;border-color:#F4D8CA;
+}
+.cv-record:hover{border-color:#FE8A52;box-shadow:0 12px 28px rgba(160,64,25,.09)}
+.cv-icon,.cv-record:nth-child(2) .cv-icon,.cv-record:nth-child(3) .cv-icon{
+ background:#FFE1D0;color:#9C3300;
+}
+.cv-record:nth-child(2) .cv-icon{background:#EEE0FA;color:#3F0B78}
+.cv-record h3{color:#261A66}
+.cv-label{color:#A34410}
+.cv-summary::before{display:none}
+
+/* 03 — Purple-forward projects, orange for purposeful actions */
+.projects{
+ background:linear-gradient(142deg,#EAD2FB 0%,#F5EAFF 48%,#FCFAFF 100%);
+}
+.projects .project-card{background:#FFFFFF;border-color:#E0CAE9}
+.projects .project-card:hover{border-color:#BD4BF8;box-shadow:0 16px 34px rgba(63,11,120,.11)}
+.projects .project-status,.projects .project-meta{color:#4C2B79}
+.projects .status-point{background:#FE5000;box-shadow:0 0 0 4px rgba(254,80,0,.12)}
+.projects .project-demo{background:linear-gradient(140deg,#3F0B78,#261A66)}
+.projects .site-project-art{background:linear-gradient(145deg,#C47FF1,#8E35D6)}
+.projects .site-art-type,.projects .site-art-type span{color:#FFFFFF}
+.projects .project-chips span{background:#F5EBFD;border-color:#E4D4F1;color:#3F0B78}
+
+/* 04 — Orange-forward tech, with structured violet information */
+.stack{
+ background:linear-gradient(143deg,#FFDEC7 0%,#FFF0E5 36%,#FFF9F4 100%);
+}
+.stack .tech-group,.stack .stack-use-card{background:#FFFEFD;border-color:#F4DCCB}
+.stack .tech-group:hover,.stack .stack-use-card:hover{border-color:#FE9460;box-shadow:0 13px 27px rgba(165,68,17,.08)}
+.stack .tech-group-mark,.stack .stack-use-symbol,
+.stack .stack-use-card:nth-child(2) .stack-use-symbol,
+.stack .stack-use-card:nth-child(3) .stack-use-symbol,
+.stack .stack-use-card:nth-child(4) .stack-use-symbol{
+ background:#FFE2D0!important;color:#872C06;
+}
+.stack .tech-item{background:#FFF7F1;border-color:#F5E2D5}
+.stack .tech-item:hover{background:#F3E8FC;border-color:#D8BAEA}
+.stack .stack-use-card::before{background:#FE5000!important}
+.stack .stack-use-card:nth-child(2)::before,.stack .stack-use-card:nth-child(4)::before{background:#3F0B78!important}
+.stack .ai-banner{background:#3F0B78;border:1px solid #5E259B}
+.stack .ai-banner-star{color:#FE5000}
+.stack .stack-use-heading{color:#9C3C08}
+
+/* 05 — Violet-forward motion design; orange play controls */
+.videos{
+ background:linear-gradient(145deg,#EDD9FC 0%,#F6EDFF 55%,#FFFCFF 100%);
+}
+.videos .video-card{background:#FFFFFF;border-color:#E1C9EF}
+.videos .video-card:hover{border-color:#B866E5;box-shadow:0 15px 31px rgba(63,11,120,.1)}
+.videos .video-frame{background:#261A66}
+.videos .video-play{background:#FE5000;color:#FFFFFF;border:2px solid rgba(255,255,255,.95)}
+.videos .video-play:hover{background:#D94400}
+.videos .video-kicker{color:#3F0B78}
+
+/* 06 — Orange-forward journal, violet article accents */
+.notes{
+ background:linear-gradient(144deg,#FFE0C9 0%,#FFF0E4 46%,#FFF9F3 100%);
+}
+.notes .note-card{background:#FFFFFF;border-color:#F0D8C8}
+.notes .note-card:hover{border-color:#FE9A67;box-shadow:0 15px 28px rgba(141,51,14,.09)}
+.notes .note-cover{background:#FE5000}
+.notes .note-card:nth-child(2) .note-cover{background:#3F0B78;color:#FFFFFF}
+.notes .note-card:nth-child(3) .note-cover{background:#F5B28C;color:#261A66}
+.notes .note-category{color:#A84108}
+.notes .note-read b{background:#3F0B78;color:#FFFFFF}
+
+/* 07 — Deep violet finale, high-contrast orange action */
+.contact{
+ background:linear-gradient(137deg,#3F0B78 0%,#321064 44%,#261A66 100%);
+}
+.contact .section-kicker,.contact .section-kicker>span:first-child{color:#FFAA75}
+.contact .contact-title{color:#FFFFFF}
+.contact .contact-title em{color:#FFA16D;border-bottom-color:#FE5000}
+.contact .contact-content p,.contact .contact-layout p{color:#F1E7FB}
+.contact .contact-button{background:#FE5000;color:#FFFFFF;border:1px solid #FE5000}
+.contact .contact-button:hover{background:#D94500}
+.contact .contact-button span:last-child{color:#FFFFFF}
+.contact .contact-decoration{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.20)}
+.contact .contact-symbol{color:#FFFFFF;opacity:.34}
+.contact .contact-decoration>span{color:#EFE5FC}
+.contact .section::before{display:none}
+
+/* Clean dividers and strong type in both languages */
+html[lang="en"] .cv-summary .editorial-heading,
+html[lang="en"] .contact-title{font-family:"DM Sans",Arial,sans-serif}
+@media(max-width:720px){
+ .about{background:linear-gradient(155deg,#F0DDFB,#FCF8FF)}
+ .cv{background:linear-gradient(155deg,#FFE5D3,#FFF8F3)}
+ .projects{background:linear-gradient(155deg,#EFDEFC,#FAF5FF)}
+ .stack{background:linear-gradient(155deg,#FFE5D3,#FFF9F5)}
+ .videos{background:linear-gradient(155deg,#EDD9FC,#FBF8FF)}
+ .notes{background:linear-gradient(155deg,#FFE6D6,#FFF9F5)}
+ .contact{background:linear-gradient(155deg,#3F0B78,#261A66)}
+}
