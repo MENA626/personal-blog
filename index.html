@@ -1065,6 +1065,166 @@ html,body{background:#FFFFFF}
 }
 @media(prefers-reduced-motion:reduce){.hero-identity{animation:none!important}}
 
+
+/* ================================================================
+   ALTERNATING EDITORIAL RHYTHM — PURPLE → ORANGE → PURPLE
+   Each content section uses one leading hue and its opposite
+   as an intentional accent; white cards keep long content legible.
+   No mascots, decorative crowding, or heavy gradients in text.
+   ================================================================ */
+.about,.projects,.videos,.contact{
+  --section-primary:#3F0B78;
+  --section-secondary:#FE5000;
+}
+.cv,.stack,.notes{
+  --section-primary:#FE5000;
+  --section-secondary:#3F0B78;
+}
+.section:not(.hero) .section-kicker>span:first-child{color:var(--section-primary)}
+.section:not(.hero) .section-kicker{color:var(--section-primary)}
+.section:not(.hero) .editorial-heading{color:#261A66}
+.section:not(.hero) .editorial-heading em{color:var(--section-primary)}
+.section:not(.hero) .section-deck{color:#544B5D}
+.section:not(.hero) .underlined-link{color:var(--section-primary);border-color:var(--section-secondary)}
+.section:not(.hero) .underlined-link:hover{color:var(--section-secondary)}
+.section:not(.hero){border-bottom:1px solid rgba(38,26,102,.075)}
+
+/* 01 — Violet-forward introduction, fine orange details */
+.about{
+ background:linear-gradient(145deg,#F1E1FD 0%,#F9F3FF 48%,#FFFFFF 100%);
+}
+.about .bio-panel{background:#3F0B78;color:#FFFFFF;border:1px solid rgba(189,75,248,.28)}
+.about .panel-index{color:#FE5000}
+.about .neon-tile{background:#EEDCFA;border-color:#D9B8EE}
+.about .neon-tile .tile-plus{color:#FE5000}
+.about .dark-tile{background:#E8D3FA;border-color:#D9B8EE}
+.about .about-lead>.underlined-link{border-bottom-color:#FE5000}
+
+/* 02 — Orange-forward professional résumé; purple details */
+.cv{
+ background:linear-gradient(130deg,#FFE2CA 0%,#FFF0E5 37%,#FFF8F3 80%,#FFFFFF 100%);
+}
+.cv-summary{
+ background:linear-gradient(145deg,#FF833D 0%,#FE5000 100%);
+ border:1px solid #F2631B;box-shadow:0 14px 31px rgba(169,55,4,.08);
+}
+.cv-summary .section-kicker,.cv-summary .section-kicker>span:first-child{color:#261A66}
+.cv-summary .editorial-heading,.cv-summary .editorial-heading em,
+.cv-summary p,.cv-summary .cv-note{color:#261A66}
+.cv-summary .cv-note{opacity:.88}
+.cv-summary .cv-view{background:#261A66;color:#FFFFFF;border:1px solid rgba(255,255,255,.12)}
+.cv-summary .cv-view:hover{background:#3F0B78}
+.cv-record{
+ background:#FFFDFB;border-color:#F4D8CA;
+}
+.cv-record:hover{border-color:#FE8A52;box-shadow:0 12px 28px rgba(160,64,25,.09)}
+.cv-icon,.cv-record:nth-child(2) .cv-icon,.cv-record:nth-child(3) .cv-icon{
+ background:#FFE1D0;color:#9C3300;
+}
+.cv-record:nth-child(2) .cv-icon{background:#EEE0FA;color:#3F0B78}
+.cv-record h3{color:#261A66}
+.cv-label{color:#A34410}
+.cv-summary::before{display:none}
+
+/* 03 — Purple-forward projects, orange for purposeful actions */
+.projects{
+ background:linear-gradient(142deg,#EAD2FB 0%,#F5EAFF 48%,#FCFAFF 100%);
+}
+.projects .project-card{background:#FFFFFF;border-color:#E0CAE9}
+.projects .project-card:hover{border-color:#BD4BF8;box-shadow:0 16px 34px rgba(63,11,120,.11)}
+.projects .project-status,.projects .project-meta{color:#4C2B79}
+.projects .status-point{background:#FE5000;box-shadow:0 0 0 4px rgba(254,80,0,.12)}
+.projects .project-demo{background:linear-gradient(140deg,#3F0B78,#261A66)}
+.projects .site-project-art{background:linear-gradient(145deg,#C47FF1,#8E35D6)}
+.projects .site-art-type,.projects .site-art-type span{color:#FFFFFF}
+.projects .project-chips span{background:#F5EBFD;border-color:#E4D4F1;color:#3F0B78}
+
+/* 04 — Orange-forward tech, with structured violet information */
+.stack{
+ background:linear-gradient(143deg,#FFDEC7 0%,#FFF0E5 36%,#FFF9F4 100%);
+}
+.stack .tech-group,.stack .stack-use-card{background:#FFFEFD;border-color:#F4DCCB}
+.stack .tech-group:hover,.stack .stack-use-card:hover{border-color:#FE9460;box-shadow:0 13px 27px rgba(165,68,17,.08)}
+.stack .tech-group-mark,.stack .stack-use-symbol,
+.stack .stack-use-card:nth-child(2) .stack-use-symbol,
+.stack .stack-use-card:nth-child(3) .stack-use-symbol,
+.stack .stack-use-card:nth-child(4) .stack-use-symbol{
+ background:#FFE2D0!important;color:#872C06;
+}
+.stack .tech-item{background:#FFF7F1;border-color:#F5E2D5}
+.stack .tech-item:hover{background:#F3E8FC;border-color:#D8BAEA}
+.stack .stack-use-card::before{background:#FE5000!important}
+.stack .stack-use-card:nth-child(2)::before,.stack .stack-use-card:nth-child(4)::before{background:#3F0B78!important}
+.stack .ai-banner{background:#3F0B78;border:1px solid #5E259B}
+.stack .ai-banner-star{color:#FE5000}
+.stack .stack-use-heading{color:#9C3C08}
+
+/* 05 — Violet-forward motion design; orange play controls */
+.videos{
+ background:linear-gradient(145deg,#EDD9FC 0%,#F6EDFF 55%,#FFFCFF 100%);
+}
+.videos .video-card{background:#FFFFFF;border-color:#E1C9EF}
+.videos .video-card:hover{border-color:#B866E5;box-shadow:0 15px 31px rgba(63,11,120,.1)}
+.videos .video-frame{background:#261A66}
+.videos .video-play{background:#FE5000;color:#FFFFFF;border:2px solid rgba(255,255,255,.95)}
+.videos .video-play:hover{background:#D94400}
+.videos .video-kicker{color:#3F0B78}
+
+/* 06 — Orange-forward journal, violet article accents */
+.notes{
+ background:linear-gradient(144deg,#FFE0C9 0%,#FFF0E4 46%,#FFF9F3 100%);
+}
+.notes .note-card{background:#FFFFFF;border-color:#F0D8C8}
+.notes .note-card:hover{border-color:#FE9A67;box-shadow:0 15px 28px rgba(141,51,14,.09)}
+.notes .note-cover{background:#FE5000}
+.notes .note-card:nth-child(2) .note-cover{background:#3F0B78;color:#FFFFFF}
+.notes .note-card:nth-child(3) .note-cover{background:#F5B28C;color:#261A66}
+.notes .note-category{color:#A84108}
+.notes .note-read b{background:#3F0B78;color:#FFFFFF}
+
+/* 07 — Deep violet finale, high-contrast orange action */
+.contact{
+ background:linear-gradient(137deg,#3F0B78 0%,#321064 44%,#261A66 100%);
+}
+.contact .section-kicker,.contact .section-kicker>span:first-child{color:#FFAA75}
+.contact .contact-title{color:#FFFFFF}
+.contact .contact-title em{color:#FFA16D;border-bottom-color:#FE5000}
+.contact .contact-content p,.contact .contact-layout p{color:#F1E7FB}
+.contact .contact-button{background:#FE5000;color:#FFFFFF;border:1px solid #FE5000}
+.contact .contact-button:hover{background:#D94500}
+.contact .contact-button span:last-child{color:#FFFFFF}
+.contact .contact-decoration{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.20)}
+.contact .contact-symbol{color:#FFFFFF;opacity:.34}
+.contact .contact-decoration>span{color:#EFE5FC}
+.contact .section::before{display:none}
+
+/* Clean dividers and strong type in both languages */
+html[lang="en"] .cv-summary .editorial-heading,
+html[lang="en"] .contact-title{font-family:"DM Sans",Arial,sans-serif}
+@media(max-width:720px){
+ .about{background:linear-gradient(155deg,#F0DDFB,#FCF8FF)}
+ .cv{background:linear-gradient(155deg,#FFE5D3,#FFF8F3)}
+ .projects{background:linear-gradient(155deg,#EFDEFC,#FAF5FF)}
+ .stack{background:linear-gradient(155deg,#FFE5D3,#FFF9F5)}
+ .videos{background:linear-gradient(155deg,#EDD9FC,#FBF8FF)}
+ .notes{background:linear-gradient(155deg,#FFE6D6,#FFF9F5)}
+ .contact{background:linear-gradient(155deg,#3F0B78,#261A66)}
+}
+
+
+/* Precision: the smaller opposite-color accents remain legible on each lead color. */
+.section:not(.hero) .section-kicker>span:first-child{color:var(--section-secondary)}
+.cv .cv-summary .section-kicker,
+.cv .cv-summary .section-kicker>span:first-child,
+.cv .cv-summary .editorial-heading,
+.cv .cv-summary .editorial-heading em{color:#261A66}
+.section.contact .section-kicker,
+.section.contact .section-kicker>span:first-child{color:#FFAD81}
+.section.contact .contact-title,
+.section.contact .contact-title em{color:#FFFFFF}
+.section.contact .contact-title em{border-bottom-color:#FE5000}
+.section.contact .contact-content p{color:#EFE7F9}
+
   </style>
 
 </head>
@@ -1296,7 +1456,7 @@ const english = {
   navStack: "Expertise",
   navNotes: "Journal",
   navContact: "Contact",
-  navCta: "Let's collaborate",
+  navCta: "Start a conversation",
   heroEyebrow: "Menat Allah Ahmed / Software Engineer in Tripoli",
   heroTitleOne: "I unpack complexity.",
   heroTitleTwo: "I design possibilities.",
@@ -1308,60 +1468,60 @@ const english = {
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
   heroIdentity: "MENAT ALLAH AHMED",
-  heroRole: "SOFTWARE ENGINEER",
-  heroExplore: "Explore my work",
+  heroRole: "SOFTWARE ENGINEERING",
+  heroExplore: "View the portfolio",
   heroPanelText: "A sharper question.<br>A smarter design.<br>Lasting impact.",
-  aboutKicker: "Behind the screen",
-  aboutHeadOne: "Beyond the interface.",
-  aboutHeadTwo: "Engineering that matters.",
-  aboutBio: "I’m Menat Allah Ahmed, a Software Engineer from Tripoli and a Faculty of Information Technology graduate from the University of Tripoli. I'm interested in the complete journey from understanding requirements to designing maintainable systems and thoughtful user experiences.",
-  aboutPhilosophy: "My focus connects backend engineering, web and mobile development, and AI-powered knowledge retrieval. I care about clear architecture, intentional design, and technology whose value extends beyond the screen.",
-  aboutGithub: "Explore my work on GitHub",
+  aboutKicker: "Professional overview",
+  aboutHeadOne: "Challenges are analyzed.",
+  aboutHeadTwo: "Solutions are engineered.",
+  aboutBio: "This portfolio presents Menat Allah Ahmed’s software engineering background following graduation from the Faculty of Information Technology at the University of Tripoli. The work focuses on requirements, system design, web and mobile applications, and maintainable solutions.",
+  aboutPhilosophy: "The approach combines backend development, user experience, and AI-assisted retrieval. Clear architecture, maintainability, and practical value guide the process.",
+  aboutGithub: "View work on GitHub",
   eduTitle: "University of Tripoli",
-  eduDesc: "Faculty of Information Technology graduate, specializing in Software Engineering.",
+  eduDesc: "Completed studies at the Faculty of Information Technology, in Software Engineering.",
   focusLabel: "AI with real impact",
   approachLabel: "Understand.<br>Design.<br>Build.",
   projectsKicker: "Selected projects",
-  projectsHeadOne: "From a bold idea",
-  projectsHeadTwo: "to a meaningful build.",
-  projectsDesc: "Every project starts with a problem worth understanding. Here are the solutions I'm shaping, with transparent development status and no inflated claims.",
+  projectsHeadOne: "From a defined problem",
+  projectsHeadTwo: "to an engineered solution.",
+  projectsDesc: "Real projects are presented with their development status and available demonstrations. Each project is grounded in a particular need and an evolving implementation.",
   mizanStatus: "In development",
   mizanTitle: "Mizan",
   mizanDesc: "Mizan is a LegalTech system in development: an AI legal assistant, a Smart Vault document library with OCR, and a lawyer directory. The goal is to make legal information more organized and accessible through responsible technology.",
   mizanNote: "Mizan is in development. Its live demo is available, and functionality may change as work continues.",
-  mizanDemoLink: "Try the Mizan demo",
+  mizanDemoLink: "View the Mizan demo",
   videosKicker: "Video design & editing",
-  videosHeadOne: "Stories aren't only told.",
-  videosHeadTwo: "They're seen and felt.",
-  videosDesc: "Beyond software engineering, I enjoy translating ideas into visual narratives through rhythm, images and detail. Here are two examples of my video design and editing work.",
-  videoOneTitle: "My visual work — 01",
-  videoOneDesc: "One of my video design and editing projects. Watch the original piece on YouTube.",
-  videoTwoTitle: "My visual work — 02",
-  videoTwoDesc: "Another creative video project that complements my interests in technology and visual storytelling.",
-  videoWatch: "Watch on YouTube",
+  videosHeadOne: "Ideas become visuals.",
+  videosHeadTwo: "Messages gain impact.",
+  videosDesc: "Selected examples of video design and editing, where pacing, footage, and visual storytelling are brought together to communicate a message.",
+  videoOneTitle: "Video design & editing — 01",
+  videoOneDesc: "A published visual design and editing sample, available in full on YouTube.",
+  videoTwoTitle: "Video design & editing — 02",
+  videoTwoDesc: "A second visual project demonstrating another presentation approach.",
+  videoWatch: "Watch video on YouTube",
   cosmosStatus: "Published project",
   cosmosTitle: "COSMOS — A Journey Through Space",
   cosmosDesc: "A visually driven web experience inspired by the cosmos, with a distinctive collection of space imagery and a bold, immersive presentation. An exploration of how digital design can tell a story.",
   cosmosLink: "Open the COSMOS experience",
   cosmosNote: "Independent visual web project · Open the published version",
   siteStatus: "Live website",
-  siteTitle: "My personal site & tech journal",
-  siteDesc: "An independent bilingual portfolio where I present my story, share work in progress, explore AI, and translate complex engineering into a clear, responsive digital experience.",
+  siteTitle: "Personal website & technical journal",
+  siteDesc: "A bilingual website for projects, technologies, and upcoming articles, designed for clarity and responsive navigation.",
   viewSource: "Explore the source code",
   stackKicker: "Technology & tools",
-  stackHeadOne: "I choose the tools.",
-  stackHeadTwo: "The problem leads.",
-  stackDesc: "From Laravel and Flutter to PostgreSQL and retrieval-based AI, I connect the right technologies to design dependable backends, intuitive mobile experiences, and knowledge-aware solutions.",
+  stackHeadOne: "Tools are selected.",
+  stackHeadTwo: "Requirements lead.",
+  stackDesc: "Laravel, Flutter, PostgreSQL, and retrieval systems are applied to structured backends, cross-platform apps, and knowledge-aware software.",
   aiTitle: "From scattered documents to useful knowledge.",
-  aiDesc: "I'm exploring LLMs, Retrieval-Augmented Generation, embeddings and semantic search to connect intelligent responses to relevant information rather than relying on generation alone.",
+  aiDesc: "LLMs, Retrieval-Augmented Generation, embeddings, and semantic search are explored to ground generated answers in relevant sources.",
   notesKicker: "Technical journal",
-  notesHeadOne: "Ideas shouldn't stay",
-  notesHeadTwo: "in my head.",
-  notesDesc: "Writing ideas I'm preparing on software architecture, RAG and LegalTech. These are upcoming article concepts, clearly distinguished from published work.",
+  notesHeadOne: "Ideas are explored.",
+  notesHeadTwo: "Knowledge is shared.",
+  notesDesc: "Upcoming article concepts on software architecture, RAG, and LegalTech. These are previews, not published articles.",
   contactKicker: "Start a conversation",
   contactHeadOne: "Have an idea",
   contactHeadTwo: "worth building?",
-  contactDesc: "I'm interested in meaningful technical projects, collaboration, and exchanging knowledge. Connect with me through GitHub; professional email and other channels can be added when ready for public sharing.",
+  contactDesc: "For technical inquiries, collaboration, and knowledge exchange, the available contact channel is GitHub. Additional professional channels may be added when available.",
   contactButton: "Connect on GitHub",
   footerAbout: "Software Engineering · Web & Mobile · AI<br>Tripoli, Libya",
   topLink: "Back to top",
@@ -1369,15 +1529,15 @@ const english = {
   draftDisclaimer: "This article idea is being prepared.",
   copyLink: "Copy link ↗",
   heroVisualNote: "THINK · DESIGN · BUILD",
-  cvKicker: "Professional profile · CV",
-  cvHeadOne: "A clear direction.",
-  cvHeadTwo: "A growing toolkit.",
-  cvSummary: "I’m a Software Engineer from Tripoli, educated at the University of Tripoli’s Faculty of Information Technology. My profile brings together backend and web development, cross-platform mobile applications, data systems and a growing focus on practical AI.",
-  cvView: "Open my CV / Save as PDF",
+  cvKicker: "Professional résumé · CV",
+  cvHeadOne: "Focused expertise.",
+  cvHeadTwo: "Continuous development.",
+  cvSummary: "A software engineering profile built on completed studies at the University of Tripoli's Faculty of Information Technology, spanning backend and web development, mobile applications, data systems, and practical AI interests.",
+  cvView: "View CV · Save as PDF",
   cvFootnote: "This profile highlights my confirmed background and technical focus. Additional formal experience and certifications can be added when provided.",
   cvEducationLabel: "EDUCATION",
   cvEducationTitle: "University of Tripoli · Faculty of Information Technology",
-  cvEducationDesc: "Graduate of the Faculty of Information Technology, working in Software Engineering and interested in building end-to-end solutions.",
+  cvEducationDesc: "Completed studies at the University of Tripoli’s Faculty of Information Technology with a software engineering focus.",
   cvDevelopmentLabel: "DEVELOPMENT",
   cvDevelopmentTitle: "Web systems and mobile applications",
   cvDevelopmentDesc: "PHP, Laravel, Java and JavaScript for web/backend foundations; Flutter and Dart for cross-platform mobile experiences.",
@@ -1387,7 +1547,7 @@ const english = {
   cvDataLabel: "DATA & WORKFLOW",
   cvDataTitle: "Databases and engineering tools",
   cvDataDesc: "PostgreSQL, MySQL, Supabase and pgvector, alongside Docker, Git and Linux.",
-  stackUseKicker: "WHAT I LIKE BUILDING",
+  stackUseKicker: "AREAS OF DELIVERY",
   stackUse1Title: "Backend systems",
   stackUse1Desc: "APIs, business logic, maintainable structure and clear boundaries.",
   stackUse2Title: "Cross-platform mobile",
@@ -1541,14 +1701,14 @@ function renderNotes() {
     const article = el("article","note-card reveal is-visible");
     const trigger = el("button","note-open");
     trigger.type = "button";
-    trigger.setAttribute("aria-label",(language==="ar"?"افتحي معاينة: ":"Open preview: ")+t.title);
+    trigger.setAttribute("aria-label",(language==="ar"?"معاينة المقال: ":"Open preview: ")+t.title);
     const cover = el("div","note-cover");
     cover.setAttribute("aria-hidden","true");
     cover.append(el("span","",note.motif));
     const inner = el("div","note-card-body");
     inner.append(el("span","note-category",t.category),el("h3","",t.title),el("p","",t.description));
     const read = el("div","note-read");
-    read.append(el("span","",language==="ar"?"استكشفي الفكرة":"Explore concept"),el("b","","↗"));
+    read.append(el("span","",language==="ar"?"استعراض الفكرة":"Explore concept"),el("b","","↗"));
     inner.append(read);
     trigger.append(cover,inner);
     trigger.addEventListener("click",()=>openNote(note.id));
@@ -1586,10 +1746,10 @@ function updateLanguage(next) {
   closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
   const heroDiagram = document.getElementById("heroBoard");
   if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar" ? "لوحة هندسية تجريدية لمراحل تحليل وتصميم وبناء الأنظمة" : "Abstract software engineering blueprint showing analysis, design, build and evolution");
-  document.title = language==="ar"?"منة الله أحمد | مهندسة برمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
+  document.title = language==="ar"?"منة الله أحمد | هندسة البرمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
   const description = document.querySelector('meta[name="description"]');
   description.content = language==="ar"
-    ? "منة الله أحمد — مهندسة برمجيات، خريجة جامعة طرابلس. تطوير ويب وموبايل وذكاء اصطناعي، ومشروع ميزان للتقنيات القانونية."
+    ? "ملف منة الله أحمد المهني: هندسة البرمجيات، تطوير الويب والموبايل، والذكاء الاصطناعي، مع مشروع ميزان للتقنيات القانونية."
     : "Menat Allah Ahmed — Software Engineer, University of Tripoli graduate, web/mobile developer exploring AI, LLMs, RAG and Mizan LegalTech.";
   const cvLink=document.getElementById("cvPageLink");
   if(cvLink) cvLink.href="cv.html?lang="+language;
@@ -1631,8 +1791,8 @@ shareBtn.addEventListener("click",async()=>{
   try {
     await navigator.clipboard.writeText(shareUrl);
     shareBtn.textContent=language==="ar"?"تم النسخ ✓":"Copied ✓";
-  } catch { shareBtn.textContent=language==="ar"?"انسخي الرابط من شريط العنوان":"Copy from address bar"; }
-  window.setTimeout(()=>{shareBtn.textContent=language==="ar"?"انسخي الرابط ↗":"Copy link ↗";},2300);
+  } catch { shareBtn.textContent=language==="ar"?"يمكن نسخ الرابط من شريط العنوان":"Copy from address bar"; }
+  window.setTimeout(()=>{shareBtn.textContent=language==="ar"?"نسخ الرابط ↗":"Copy link ↗";},2300);
 });
 
 const nav = document.getElementById("mainNav");
