@@ -3302,3 +3302,163 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #home.hero-poster .poster-english {margin-bottom:355px!important}
 }
 
+/* RIGHT-EDGE HAND / PALM-ONLY WAVE / SEAMLESS CV TRANSITION */
+#home.hero-poster {
+  position:relative!important;
+  overflow:hidden!important;
+  background:#F2E7E1!important;
+  color:#2329A8!important;
+  border:0!important;
+  margin:0!important;
+  padding:0!important;
+}
+#home.hero-poster .poster-shell {
+  position:relative!important;
+  overflow:hidden!important;
+  width:100%!important;
+  max-width:1650px!important;
+  min-height:0!important;
+  height:auto!important;
+  margin:0 auto!important;
+  padding:0!important;
+  background:#F2E7E1!important;
+}
+#home.hero-poster .poster-art {
+  position:absolute!important;
+  z-index:1!important;
+  right:0!important;
+  left:auto!important;
+  top:0!important;
+  bottom:0!important;
+  width:58%!important;
+  height:100%!important;
+  pointer-events:none!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-art svg {
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:visible!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-static-ribbon {
+  animation:none!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-wave-entire {
+  animation:none!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-waving-palm {
+  transform-box:view-box;
+  transform-origin:410px 321px;
+  animation:menatPalmOnly 3s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes menatPalmOnly {
+  0%,10%,76%,100% {transform:rotate(0deg)}
+  21% {transform:rotate(-5deg)}
+  34% {transform:rotate(5deg)}
+  47% {transform:rotate(-4.5deg)}
+  60% {transform:rotate(3.5deg)}
+  70% {transform:rotate(0deg)}
+}
+#home.hero-poster .poster-copy {
+  position:relative!important;
+  z-index:3!important;
+  width:51%!important;
+  max-width:none!important;
+  margin:0 auto 0 0!important;
+  padding:50px 18px 56px 5%!important;
+  direction:rtl!important;
+  text-align:right!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+#home.hero-poster .poster-english {
+  text-align:left!important;
+  margin-bottom:22px!important;
+}
+#home.hero-poster .poster-title {margin-bottom:14px!important}
+#home.hero-poster .poster-description {margin-bottom:9px!important}
+#home.hero-poster .poster-tagline {margin-bottom:11px!important}
+#home.hero-poster::after {
+  content:"";
+  position:absolute;
+  z-index:2;
+  bottom:-1px;
+  left:0;
+  right:0;
+  height:clamp(28px,5vw,70px);
+  background:#355CF5;
+  clip-path:polygon(100% 0%,100% 100%,0% 100%);
+  pointer-events:none;
+}
+#cv.cv.cv-featured {
+  margin-top:0!important;
+  border-top:0!important;
+  background:#355CF5!important;
+}
+@media(max-width:900px){
+  #home.hero-poster .poster-art {
+    right:0!important;
+    left:auto!important;
+    width:68%!important;
+  }
+  #home.hero-poster .poster-copy {
+    width:56%!important;
+    margin:0 auto 0 0!important;
+    padding:46px 12px 48px 5%!important;
+  }
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-shell {
+    min-height:0!important;
+    height:auto!important;
+  }
+  #home.hero-poster .poster-art {
+    top:86px!important;
+    right:0!important;
+    left:auto!important;
+    bottom:auto!important;
+    width:132%!important;
+    height:410px!important;
+  }
+  #home.hero-poster .poster-copy {
+    width:100%!important;
+    margin:0!important;
+    padding:28px 5.5% 44px!important;
+  }
+  #home.hero-poster .poster-english {
+    text-align:left!important;
+    margin:0 0 clamp(300px,83vw,365px)!important;
+  }
+  #home.hero-poster .poster-title {
+    margin-bottom:13px!important;
+  }
+  #home.hero-poster::after {
+    height:35px;
+  }
+}
+@media(max-width:365px){
+  #home.hero-poster .poster-art {
+    top:75px!important;
+    right:0!important;
+    width:140%!important;
+    height:380px!important;
+  }
+  #home.hero-poster .poster-english {
+    margin-bottom:300px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #home.hero-poster .poster-waving-palm {
+    animation:none!important;
+    transform:none!important;
+    will-change:auto!important;
+  }
+}
+
