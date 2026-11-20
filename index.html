@@ -364,6 +364,21 @@ html[dir="ltr"] .scroll-progress{transform-origin:left}
  *,*::before,*::after{animation:none!important;transition:none!important}
  .motion-on .reveal:not(.visible){opacity:1!important;transform:none!important}
 }
+
+/* Directional composition: illustration on the left, story on the right. */
+.hero-content,.about-layout,.projects-layout,.contact-layout{direction:ltr}
+.hero-text,.about-copy,.projects-side,.project-cards,.contact-content{direction:rtl}
+html[lang="en"] .hero-text,
+html[lang="en"] .about-copy,
+html[lang="en"] .projects-side,
+html[lang="en"] .project-cards,
+html[lang="en"] .contact-content{direction:ltr}
+@media(max-width:700px){
+ .hero-content{flex-direction:column-reverse}
+ .hero-text{order:2}
+ .hero-illustration{order:1}
+}
+
 </style>
 </head>
 <body>
@@ -748,6 +763,7 @@ const menuBtn = document.getElementById("menuToggle");
 const elements = [...document.querySelectorAll("[data-i18n]")];
 const arabic = new Map(elements.map(e=>[e.dataset.i18n,e.textContent]));
 let lang = "ar";
+let catGuideReady = false;
 function setLanguage(next) {
   lang = next === "en" ? "en" : "ar";
   html.lang = lang;
@@ -762,7 +778,7 @@ function setLanguage(next) {
     b.classList.toggle("is-active",selected);
     b.setAttribute("aria-pressed",String(selected));
   });
-  if(guideMessage && currentSection)updateGuideMessage();
+  if(catGuideReady)updateGuideMessage();
   try{localStorage.setItem("menat-matcha-blog-language",lang)}catch{}
 }
 document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>setLanguage(btn.dataset.lang)));
@@ -863,7 +879,7 @@ function scrollGuide(){
   }
   if(currentSection!==section){currentSection=section;updateGuideMessage()}
 }
-window.addEventListener("scroll",scrollGuide,{passive:true});scrollGuide();updateGuideMessage();
+window.addEventListener("scroll",scrollGuide,{passive:true});scrollGuide();updateGuideMessage();catGuideReady=true;
 document.addEventListener("pointerdown",e=>{if(guide&&!guide.contains(e.target))closeGuide()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeNav();closeGuide()}});
 
