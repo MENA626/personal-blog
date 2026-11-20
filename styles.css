@@ -4069,3 +4069,13 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 @media(max-width:700px){
   #home.hero-poster .poster-english{top:-14px!important}
 }
+
+/* Raise only the Arabic welcome eyebrow slightly; keep the remaining hero unchanged. */
+#home.hero-poster .poster-intro{
+  position:relative!important;
+  top:-24px!important;
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-intro{top:-16px!important}
+}
+
