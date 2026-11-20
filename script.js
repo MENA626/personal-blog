@@ -6,6 +6,7 @@ const english = {
   skip: "Skip to content",
   navAbout: "About",
   navCV: "CV & Experience",
+  navVideos: "Video Design",
   navProjects: "Projects",
   navStack: "Expertise",
   navNotes: "Journal",
@@ -41,6 +42,15 @@ const english = {
   mizanDesc: "Mizan is a LegalTech system in development: an AI legal assistant, a Smart Vault document library with OCR, and a lawyer directory. The goal is to make legal information more organized and accessible through responsible technology.",
   mizanNote: "Mizan is in development. Its live demo is available, and functionality may change as work continues.",
   mizanDemoLink: "Try the Mizan demo",
+  videosKicker: "Video design & editing",
+  videosHeadOne: "Stories aren't only told.",
+  videosHeadTwo: "They're seen and felt.",
+  videosDesc: "Beyond software engineering, I enjoy translating ideas into visual narratives through rhythm, images and detail. Here are two examples of my video design and editing work.",
+  videoOneTitle: "My visual work — 01",
+  videoOneDesc: "One of my video design and editing projects. Watch the original piece on YouTube.",
+  videoTwoTitle: "My visual work — 02",
+  videoTwoDesc: "Another creative video project that complements my interests in technology and visual storytelling.",
+  videoWatch: "Watch on YouTube",
   cosmosStatus: "Published project",
   cosmosTitle: "COSMOS — A Journey Through Space",
   cosmosDesc: "A visually driven web experience inspired by the cosmos, with a distinctive collection of space imagery and a bold, immersive presentation. An exploration of how digital design can tell a story.",
@@ -411,3 +421,23 @@ if (!reduceMotion) {
     item.style.transitionDelay=Math.min(index,5)*75+"ms";
   });
 }
+
+
+/* Privacy-conscious YouTube previews: only embed the player on deliberate click.
+   Videos and titles are the user's supplied works, not inferred metadata. */
+document.querySelectorAll("[data-play-video]").forEach(button => {
+  button.addEventListener("click",()=>{
+    const frame = button.closest(".video-frame");
+    const id = button.getAttribute("data-play-video") || "";
+    if (!frame || !/^[a-zA-Z0-9_-]{11}$/.test(id) || frame.classList.contains("is-playing")) return;
+    const player = document.createElement("iframe");
+    player.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+    player.title = language === "ar" ? "تشغيل أحد أعمال منة الله المرئية" : "Play one of Menat Allah's visual projects";
+    player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    player.setAttribute("allowfullscreen","");
+    player.setAttribute("referrerpolicy","strict-origin-when-cross-origin");
+    frame.classList.add("is-playing");
+    frame.appendChild(player);
+    button.hidden = true;
+  });
+});
