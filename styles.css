@@ -2133,3 +2133,143 @@ html,body {background:#FFFFFF;color:#153A85}
 @media(prefers-reduced-motion:reduce){
  .hero-flat-spark{animation:none!important}
 }
+
+
+/* ================================================================
+   WHITE-SCREEN HERO + A LITTLE MORE PASTEL YELLOW
+   Keep vivid royal/cyan blues for the identity. Pale yellow gives
+   sections warmth without overpowering typography or the artwork.
+   ================================================================ */
+:root{
+ --yellow-pastel:#FFF2B8;
+ --yellow-light:#FFF8DC;
+ --yellow-cream:#FFFCF0;
+ --yellow-primary:#FFD850;
+}
+/* A white screen from which the original WEB mark seems to float. */
+.hero-flat-art{
+ overflow:visible;
+ isolation:isolate;
+ background:#FFFFFF;
+ border:7px solid #F5FAFF;
+ box-shadow:0 25px 67px rgba(8,49,137,.25),
+            0 0 0 12px rgba(255,242,184,.13);
+ transform-style:preserve-3d;
+ perspective:780px;
+}
+.hero-flat-art::before{
+ inset:0;
+ border-radius:inherit;
+ opacity:1;
+ background:
+  radial-gradient(circle at 76% 30%,rgba(255,242,184,.55),transparent 41%),
+  radial-gradient(circle at 24% 77%,rgba(0,158,255,.10),transparent 49%);
+}
+.hero-flat-ring{
+ border-color:rgba(26,73,175,.19);
+}
+.hero-flat-ring-two{border-color:rgba(227,176,38,.35)}
+.hero-flat-word{
+ z-index:4;
+ color:#1A49AF;
+ text-shadow:none;
+ filter:drop-shadow(0 18px 13px rgba(26,73,175,.15));
+ animation:floatFromScreen 6s ease-in-out infinite;
+}
+.hero-flat-word span{color:#E3AF15}
+.hero-flat-sub{
+ z-index:3;
+ margin-top:0;
+ color:#4A7FBE;
+}
+.hero-flat-spark{
+ color:#E6B327;
+}
+.hero-flat-dot{background:#009EFF}
+.hero-flat-bottom{
+ color:#315C9A;
+ border-top-color:rgba(26,73,175,.19);
+}
+@keyframes floatFromScreen{
+ 0%,100%{transform:translate3d(0,-11px,26px)}
+ 50%{transform:translate3d(0,-20px,50px)}
+}
+.hero-saas-glow{
+ background:radial-gradient(circle,rgba(255,242,184,.32),rgba(255,242,184,.08) 49%,transparent 75%);
+ opacity:.65;
+}
+.hero-saas-eyebrow .signal-led{
+ background:#FFF2B8;
+ box-shadow:0 0 0 6px rgba(255,242,184,.18);
+}
+.saas-btn-primary{background:#FFE386;color:#153A85;box-shadow:0 8px 25px rgba(255,216,80,.2)}
+.saas-btn-primary:hover{background:#FFF2B8}
+.saas-btn-ghost:hover{border-color:#FFF2B8;background:rgba(255,242,184,.1)}
+/* The yellow returns as a quiet background and small editorial details. */
+.about{
+ background:linear-gradient(156deg,#FFFFFF 0%,#FFFFFF 61%,#FFFCF0 100%);
+}
+.about .dark-tile{
+ background:#FFF2B8;
+ border-color:#F2DC88;
+}
+.about .neon-tile{
+ background:#EEF8FF;
+}
+.cv{
+ background:linear-gradient(145deg,#FFF2C9 0%,#FFF8E3 36%,#FFFFFF 86%);
+}
+.cv .cv-summary .cv-view{background:#FFF2B8;border-color:#FFF2B8}
+.cv .cv-summary .cv-view:hover{background:#FFE386}
+.projects{
+ background:linear-gradient(145deg,#EAF6FF 0%,#F5FAFF 65%,#FFF9E6 100%);
+}
+.projects .project-card:nth-child(even){
+ border-color:#F1E3AE;
+}
+.projects .project-chips span:last-child{
+ background:#FFF5CB;
+ border-color:#F3E4AD;
+ color:#765617;
+}
+.stack{
+ background:linear-gradient(140deg,#FFFFFF 0%,#FFFFFF 74%,#FFF9E7 100%);
+}
+#stack .tech-group:nth-child(even){
+ background:#FFFCF2;
+}
+#stack .tech-item:hover{
+ background:#FFF8E2;
+ border-color:#EBD894;
+}
+.videos{
+ background:linear-gradient(135deg,#DFF2FF 0%,#F6FAFF 69%,#FFF5D0 100%);
+}
+.video-card:nth-child(2) .video-kicker{color:#A57D1C}
+.video-play{background:#FFF2B8;border-color:#FFFFFF;color:#153A85}
+.video-play:hover{background:#FFD850}
+.notes{
+ background:linear-gradient(155deg,#FFF2C8 0%,#FFF9E5 52%,#FFFFFF 100%);
+}
+.notes .note-card:nth-child(3) .note-cover{
+ background:#FFF2B8;
+ color:#153A85;
+}
+.contact .contact-button{background:#FFF2B8;border-color:#FFF2B8;color:#153A85}
+.contact .contact-button:hover{background:#FFD850}
+.contact .contact-button span:last-child{color:#153A85}
+@media(max-width:840px){
+ .hero-flat-art{
+  box-shadow:0 16px 43px rgba(8,49,137,.19),
+             0 0 0 9px rgba(255,242,184,.12);
+ }
+}
+@media(max-width:570px){
+ .hero-flat-art{border-width:5px;border-radius:20px}
+ .cv{background:linear-gradient(160deg,#FFF3D5,#FFFFFF)}
+ .videos{background:linear-gradient(158deg,#E7F5FF,#FFF8DE)}
+ .projects{background:linear-gradient(158deg,#EAF6FF,#FFF9E6)}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-flat-word{animation:none!important;transform:none!important}
+}
