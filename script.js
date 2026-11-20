@@ -11,7 +11,7 @@ const english = {
   navStack: "Expertise",
   navNotes: "Journal",
   navContact: "Contact",
-  navCta: "Let's collaborate",
+  navCta: "Start a conversation",
   heroEyebrow: "Menat Allah Ahmed / Software Engineer in Tripoli",
   heroTitleOne: "I unpack complexity.",
   heroTitleTwo: "I design possibilities.",
@@ -23,60 +23,60 @@ const english = {
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
   heroIdentity: "MENAT ALLAH AHMED",
-  heroRole: "SOFTWARE ENGINEER",
-  heroExplore: "Explore my work",
+  heroRole: "SOFTWARE ENGINEERING",
+  heroExplore: "View the portfolio",
   heroPanelText: "A sharper question.<br>A smarter design.<br>Lasting impact.",
-  aboutKicker: "Behind the screen",
-  aboutHeadOne: "Beyond the interface.",
-  aboutHeadTwo: "Engineering that matters.",
-  aboutBio: "I’m Menat Allah Ahmed, a Software Engineer from Tripoli and a Faculty of Information Technology graduate from the University of Tripoli. I'm interested in the complete journey from understanding requirements to designing maintainable systems and thoughtful user experiences.",
-  aboutPhilosophy: "My focus connects backend engineering, web and mobile development, and AI-powered knowledge retrieval. I care about clear architecture, intentional design, and technology whose value extends beyond the screen.",
-  aboutGithub: "Explore my work on GitHub",
+  aboutKicker: "Professional overview",
+  aboutHeadOne: "Challenges are analyzed.",
+  aboutHeadTwo: "Solutions are engineered.",
+  aboutBio: "This portfolio presents Menat Allah Ahmed’s software engineering background following graduation from the Faculty of Information Technology at the University of Tripoli. The work focuses on requirements, system design, web and mobile applications, and maintainable solutions.",
+  aboutPhilosophy: "The approach combines backend development, user experience, and AI-assisted retrieval. Clear architecture, maintainability, and practical value guide the process.",
+  aboutGithub: "View work on GitHub",
   eduTitle: "University of Tripoli",
-  eduDesc: "Faculty of Information Technology graduate, specializing in Software Engineering.",
+  eduDesc: "Completed studies at the Faculty of Information Technology, in Software Engineering.",
   focusLabel: "AI with real impact",
   approachLabel: "Understand.<br>Design.<br>Build.",
   projectsKicker: "Selected projects",
-  projectsHeadOne: "From a bold idea",
-  projectsHeadTwo: "to a meaningful build.",
-  projectsDesc: "Every project starts with a problem worth understanding. Here are the solutions I'm shaping, with transparent development status and no inflated claims.",
+  projectsHeadOne: "From a defined problem",
+  projectsHeadTwo: "to an engineered solution.",
+  projectsDesc: "Real projects are presented with their development status and available demonstrations. Each project is grounded in a particular need and an evolving implementation.",
   mizanStatus: "In development",
   mizanTitle: "Mizan",
   mizanDesc: "Mizan is a LegalTech system in development: an AI legal assistant, a Smart Vault document library with OCR, and a lawyer directory. The goal is to make legal information more organized and accessible through responsible technology.",
   mizanNote: "Mizan is in development. Its live demo is available, and functionality may change as work continues.",
-  mizanDemoLink: "Try the Mizan demo",
+  mizanDemoLink: "View the Mizan demo",
   videosKicker: "Video design & editing",
-  videosHeadOne: "Stories aren't only told.",
-  videosHeadTwo: "They're seen and felt.",
-  videosDesc: "Beyond software engineering, I enjoy translating ideas into visual narratives through rhythm, images and detail. Here are two examples of my video design and editing work.",
-  videoOneTitle: "My visual work — 01",
-  videoOneDesc: "One of my video design and editing projects. Watch the original piece on YouTube.",
-  videoTwoTitle: "My visual work — 02",
-  videoTwoDesc: "Another creative video project that complements my interests in technology and visual storytelling.",
-  videoWatch: "Watch on YouTube",
+  videosHeadOne: "Ideas become visuals.",
+  videosHeadTwo: "Messages gain impact.",
+  videosDesc: "Selected examples of video design and editing, where pacing, footage, and visual storytelling are brought together to communicate a message.",
+  videoOneTitle: "Video design & editing — 01",
+  videoOneDesc: "A published visual design and editing sample, available in full on YouTube.",
+  videoTwoTitle: "Video design & editing — 02",
+  videoTwoDesc: "A second visual project demonstrating another presentation approach.",
+  videoWatch: "Watch video on YouTube",
   cosmosStatus: "Published project",
   cosmosTitle: "COSMOS — A Journey Through Space",
   cosmosDesc: "A visually driven web experience inspired by the cosmos, with a distinctive collection of space imagery and a bold, immersive presentation. An exploration of how digital design can tell a story.",
   cosmosLink: "Open the COSMOS experience",
   cosmosNote: "Independent visual web project · Open the published version",
   siteStatus: "Live website",
-  siteTitle: "My personal site & tech journal",
-  siteDesc: "An independent bilingual portfolio where I present my story, share work in progress, explore AI, and translate complex engineering into a clear, responsive digital experience.",
+  siteTitle: "Personal website & technical journal",
+  siteDesc: "A bilingual website for projects, technologies, and upcoming articles, designed for clarity and responsive navigation.",
   viewSource: "Explore the source code",
   stackKicker: "Technology & tools",
-  stackHeadOne: "I choose the tools.",
-  stackHeadTwo: "The problem leads.",
-  stackDesc: "From Laravel and Flutter to PostgreSQL and retrieval-based AI, I connect the right technologies to design dependable backends, intuitive mobile experiences, and knowledge-aware solutions.",
+  stackHeadOne: "Tools are selected.",
+  stackHeadTwo: "Requirements lead.",
+  stackDesc: "Laravel, Flutter, PostgreSQL, and retrieval systems are applied to structured backends, cross-platform apps, and knowledge-aware software.",
   aiTitle: "From scattered documents to useful knowledge.",
-  aiDesc: "I'm exploring LLMs, Retrieval-Augmented Generation, embeddings and semantic search to connect intelligent responses to relevant information rather than relying on generation alone.",
+  aiDesc: "LLMs, Retrieval-Augmented Generation, embeddings, and semantic search are explored to ground generated answers in relevant sources.",
   notesKicker: "Technical journal",
-  notesHeadOne: "Ideas shouldn't stay",
-  notesHeadTwo: "in my head.",
-  notesDesc: "Writing ideas I'm preparing on software architecture, RAG and LegalTech. These are upcoming article concepts, clearly distinguished from published work.",
+  notesHeadOne: "Ideas are explored.",
+  notesHeadTwo: "Knowledge is shared.",
+  notesDesc: "Upcoming article concepts on software architecture, RAG, and LegalTech. These are previews, not published articles.",
   contactKicker: "Start a conversation",
   contactHeadOne: "Have an idea",
   contactHeadTwo: "worth building?",
-  contactDesc: "I'm interested in meaningful technical projects, collaboration, and exchanging knowledge. Connect with me through GitHub; professional email and other channels can be added when ready for public sharing.",
+  contactDesc: "For technical inquiries, collaboration, and knowledge exchange, the available contact channel is GitHub. Additional professional channels may be added when available.",
   contactButton: "Connect on GitHub",
   footerAbout: "Software Engineering · Web & Mobile · AI<br>Tripoli, Libya",
   topLink: "Back to top",
@@ -84,15 +84,15 @@ const english = {
   draftDisclaimer: "This article idea is being prepared.",
   copyLink: "Copy link ↗",
   heroVisualNote: "THINK · DESIGN · BUILD",
-  cvKicker: "Professional profile · CV",
-  cvHeadOne: "A clear direction.",
-  cvHeadTwo: "A growing toolkit.",
-  cvSummary: "I’m a Software Engineer from Tripoli, educated at the University of Tripoli’s Faculty of Information Technology. My profile brings together backend and web development, cross-platform mobile applications, data systems and a growing focus on practical AI.",
-  cvView: "Open my CV / Save as PDF",
+  cvKicker: "Professional résumé · CV",
+  cvHeadOne: "Focused expertise.",
+  cvHeadTwo: "Continuous development.",
+  cvSummary: "A software engineering profile built on completed studies at the University of Tripoli's Faculty of Information Technology, spanning backend and web development, mobile applications, data systems, and practical AI interests.",
+  cvView: "View CV · Save as PDF",
   cvFootnote: "This profile highlights my confirmed background and technical focus. Additional formal experience and certifications can be added when provided.",
   cvEducationLabel: "EDUCATION",
   cvEducationTitle: "University of Tripoli · Faculty of Information Technology",
-  cvEducationDesc: "Graduate of the Faculty of Information Technology, working in Software Engineering and interested in building end-to-end solutions.",
+  cvEducationDesc: "Completed studies at the University of Tripoli’s Faculty of Information Technology with a software engineering focus.",
   cvDevelopmentLabel: "DEVELOPMENT",
   cvDevelopmentTitle: "Web systems and mobile applications",
   cvDevelopmentDesc: "PHP, Laravel, Java and JavaScript for web/backend foundations; Flutter and Dart for cross-platform mobile experiences.",
@@ -102,7 +102,7 @@ const english = {
   cvDataLabel: "DATA & WORKFLOW",
   cvDataTitle: "Databases and engineering tools",
   cvDataDesc: "PostgreSQL, MySQL, Supabase and pgvector, alongside Docker, Git and Linux.",
-  stackUseKicker: "WHAT I LIKE BUILDING",
+  stackUseKicker: "AREAS OF DELIVERY",
   stackUse1Title: "Backend systems",
   stackUse1Desc: "APIs, business logic, maintainable structure and clear boundaries.",
   stackUse2Title: "Cross-platform mobile",
@@ -256,14 +256,14 @@ function renderNotes() {
     const article = el("article","note-card reveal is-visible");
     const trigger = el("button","note-open");
     trigger.type = "button";
-    trigger.setAttribute("aria-label",(language==="ar"?"افتحي معاينة: ":"Open preview: ")+t.title);
+    trigger.setAttribute("aria-label",(language==="ar"?"معاينة المقال: ":"Open preview: ")+t.title);
     const cover = el("div","note-cover");
     cover.setAttribute("aria-hidden","true");
     cover.append(el("span","",note.motif));
     const inner = el("div","note-card-body");
     inner.append(el("span","note-category",t.category),el("h3","",t.title),el("p","",t.description));
     const read = el("div","note-read");
-    read.append(el("span","",language==="ar"?"استكشفي الفكرة":"Explore concept"),el("b","","↗"));
+    read.append(el("span","",language==="ar"?"استعراض الفكرة":"Explore concept"),el("b","","↗"));
     inner.append(read);
     trigger.append(cover,inner);
     trigger.addEventListener("click",()=>openNote(note.id));
@@ -301,10 +301,10 @@ function updateLanguage(next) {
   closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
   const heroDiagram = document.getElementById("heroBoard");
   if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar" ? "لوحة هندسية تجريدية لمراحل تحليل وتصميم وبناء الأنظمة" : "Abstract software engineering blueprint showing analysis, design, build and evolution");
-  document.title = language==="ar"?"منة الله أحمد | مهندسة برمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
+  document.title = language==="ar"?"منة الله أحمد | هندسة البرمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
   const description = document.querySelector('meta[name="description"]');
   description.content = language==="ar"
-    ? "منة الله أحمد — مهندسة برمجيات، خريجة جامعة طرابلس. تطوير ويب وموبايل وذكاء اصطناعي، ومشروع ميزان للتقنيات القانونية."
+    ? "ملف منة الله أحمد المهني: هندسة البرمجيات، تطوير الويب والموبايل، والذكاء الاصطناعي، مع مشروع ميزان للتقنيات القانونية."
     : "Menat Allah Ahmed — Software Engineer, University of Tripoli graduate, web/mobile developer exploring AI, LLMs, RAG and Mizan LegalTech.";
   const cvLink=document.getElementById("cvPageLink");
   if(cvLink) cvLink.href="cv.html?lang="+language;
@@ -346,8 +346,8 @@ shareBtn.addEventListener("click",async()=>{
   try {
     await navigator.clipboard.writeText(shareUrl);
     shareBtn.textContent=language==="ar"?"تم النسخ ✓":"Copied ✓";
-  } catch { shareBtn.textContent=language==="ar"?"انسخي الرابط من شريط العنوان":"Copy from address bar"; }
-  window.setTimeout(()=>{shareBtn.textContent=language==="ar"?"انسخي الرابط ↗":"Copy link ↗";},2300);
+  } catch { shareBtn.textContent=language==="ar"?"يمكن نسخ الرابط من شريط العنوان":"Copy from address bar"; }
+  window.setTimeout(()=>{shareBtn.textContent=language==="ar"?"نسخ الرابط ↗":"Copy link ↗";},2300);
 });
 
 const nav = document.getElementById("mainNav");
