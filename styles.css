@@ -3461,27 +3461,22 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     will-change:auto!important;
   }
 }
-
-/* RIBBON FLOWS INTO CV — continuous blue curve from the fixed arm into the blue section. */
+/* ORIGINAL HAND RIBBON EXTENSION — no extra bridge or blue wedge. */
 #home.hero-poster .poster-shell{
   max-width:none!important;
-  position:relative!important;
   overflow:hidden!important;
 }
-#home.hero-poster .poster-ribbon-to-cv{
-  display:block;
-  position:absolute;
-  z-index:2;
-  left:0;
-  right:0;
-  bottom:-1px;
-  width:100%;
-  height:clamp(260px,29vw,420px);
-  pointer-events:none;
-  overflow:visible;
+#home.hero-poster .poster-art{
+  right:0!important;
+  left:auto!important;
+  top:0!important;
+  bottom:0!important;
+  height:100%!important;
 }
-#home.hero-poster .poster-art{z-index:2!important}
-#home.hero-poster .poster-copy{z-index:3!important}
+#home.hero-poster .poster-art svg{
+  width:100%!important;
+  height:100%!important;
+}
 #home.hero-poster::after{
   content:none!important;
   display:none!important;
@@ -3492,11 +3487,21 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   background:#355CF5!important;
 }
 @media(max-width:700px){
-  #home.hero-poster .poster-ribbon-to-cv{
-    height:clamp(210px,61vw,300px);
+  #home.hero-poster .poster-art{
+    top:86px!important;
+    bottom:0!important;
+    height:auto!important;
+    right:0!important;
+    width:132%!important;
   }
-  #home.hero-poster .poster-copy{
-    padding-bottom:55px!important;
+}
+@media(max-width:365px){
+  #home.hero-poster .poster-art{
+    top:75px!important;
+    bottom:0!important;
+    height:auto!important;
+    right:0!important;
+    width:140%!important;
   }
 }
 
