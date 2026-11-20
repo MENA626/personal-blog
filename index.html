@@ -3152,49 +3152,101 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 }
 
 
-/* REFERENCE-MATCHING WAVING POSTER COVER — navy/cyan hero, left hand, right copy */
-#home.hero-poster{display:block!important;position:relative;isolation:isolate;overflow:hidden;background:#010554!important;color:#F2E7E1!important;padding:0!important;margin:0!important;border:0!important;min-height:0!important}
-#home.hero-poster .poster-shell{position:relative;width:100%;max-width:1650px;min-height:920px;margin-inline:auto;overflow:hidden}
-#home.hero-poster .poster-art{position:absolute;z-index:1;top:4%;bottom:-4%;left:-5%;width:56%;pointer-events:none}
+/* Screenshot-accurate cream/blue greeting. Whole illustrated arm waves from the left. */
+#home.hero-poster{
+  display:block!important;position:relative;isolation:isolate;overflow:hidden;
+  background:#F2E7E1!important;color:#2329A8!important;
+  padding:0!important;margin:0!important;border:0!important;min-height:0!important;
+}
+#home.hero-poster .poster-shell{
+  position:relative;min-height:850px;width:100%;max-width:1650px;
+  margin-inline:auto;overflow:hidden;background:#F2E7E1!important;
+}
+#home.hero-poster .poster-art{
+  position:absolute;z-index:1;top:-2%;bottom:-5%;left:-4%;width:61%;
+  pointer-events:none;
+}
 #home.hero-poster .poster-art svg{display:block;width:100%;height:100%;overflow:visible}
-#home.hero-poster .poster-arm,#home.hero-poster .poster-wave-hand,#home.hero-poster .poster-motion{stroke:#23CDFF;stroke-linecap:round;stroke-linejoin:round;fill:none}
-#home.hero-poster .poster-arm,#home.hero-poster .poster-wave-hand{stroke-width:26}
-#home.hero-poster .poster-motion{stroke-width:26}
-#home.hero-poster .poster-wave-hand{transform-box:fill-box;transform-origin:67% 94%;animation:menatPosterWave 3.1s ease-in-out infinite;will-change:transform}
-#home.hero-poster .poster-motion{animation:menatPosterWaveMarks 3.1s ease-in-out infinite}
-@keyframes menatPosterWave{0%,12%,77%,100%{transform:rotate(0deg)}22%{transform:rotate(-10deg)}36%{transform:rotate(8deg)}50%{transform:rotate(-7deg)}65%{transform:rotate(5deg)}}
-@keyframes menatPosterWaveMarks{0%,12%,77%,100%{opacity:.95}23%,51%{opacity:.4}36%,65%{opacity:1}}
-#home.hero-poster .poster-copy{position:relative;z-index:3;width:52%;margin-right:0;margin-left:auto;padding:76px 6% 80px 16px;text-align:right;direction:rtl;color:#F2E7E1}
-#home.hero-poster .poster-english{display:block;margin:0 0 50px;font-family:"DM Sans",Arial,sans-serif!important;direction:ltr;text-align:right;font-weight:900;font-size:clamp(72px,8.7vw,138px);letter-spacing:-.055em;line-height:.98;color:#23CDFF!important}
-#home.hero-poster .poster-english span{display:block}
-#home.hero-poster .poster-intro{font-size:clamp(18px,2.2vw,30px);line-height:1.65;margin:0 0 35px;color:#F2E7E1!important;font-weight:800}
-#home.hero-poster .poster-title{font-weight:900;font-size:clamp(49px,5.7vw,78px);line-height:1.38;color:#23CDFF!important;margin:0 0 32px;letter-spacing:0}
-#home.hero-poster .poster-title span{display:block;color:#23CDFF!important}
-#home.hero-poster .poster-description{font-size:clamp(17px,1.55vw,23px);line-height:1.85;font-weight:600;color:#F2E7E1!important;max-width:620px;margin:0 0 16px}
-#home.hero-poster .poster-tagline{font-size:16px;line-height:1.75;color:#F2E7E1!important;margin:0 0 22px;font-weight:700}
-#home.hero-poster .poster-link{display:inline-flex;gap:12px;direction:rtl;align-items:center;border-bottom:2px solid #23CDFF;color:#F2E7E1!important;font-weight:800;padding:8px 0;font-size:15px}
-#home.hero-poster .poster-link span{color:#F2E7E1!important}
-#home.hero-poster .poster-link:hover{color:#23CDFF!important}
+#home.hero-poster .poster-wave-entire{
+  transform-box:view-box;transform-origin:0px 700px;
+  animation:waveWholeArm 3.2s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes waveWholeArm{
+  0%,12%,83%,100%{transform:rotate(0deg)}
+  25%{transform:rotate(-4.5deg)}
+  42%{transform:rotate(4deg)}
+  58%{transform:rotate(-3.5deg)}
+  72%{transform:rotate(2deg)}
+}
+#home.hero-poster .poster-copy{
+  position:relative;z-index:3;width:51%;margin:0 0 0 auto;
+  padding:64px 5% 45px 10px;text-align:right;direction:rtl;
+  color:#2329A8!important;background:none!important;box-shadow:none!important;
+}
+#home.hero-poster .poster-english{
+  display:block;margin:0 0 34px;font-family:"DM Sans",Arial,sans-serif!important;
+  font-size:clamp(70px,7.4vw,132px);line-height:.93;font-weight:900;
+  letter-spacing:-.06em;color:#2329A8!important;text-align:right;direction:ltr;
+}
+#home.hero-poster .poster-english span{display:block;color:#2329A8!important}
+#home.hero-poster .poster-intro{
+  font-size:clamp(16px,2vw,27px);line-height:1.6;font-weight:800;
+  margin:0 0 27px;color:#2329A8!important;
+}
+#home.hero-poster .poster-title{
+  font-size:clamp(45px,5.2vw,75px);line-height:1.28;font-weight:900;
+  color:#2329A8!important;margin:0 0 25px;
+}
+#home.hero-poster .poster-title span{display:block;color:#2329A8!important}
+#home.hero-poster .poster-description{
+  font-size:clamp(17px,1.45vw,22px);line-height:1.85;font-weight:600;
+  margin:0 0 14px;color:#2329A8!important;
+}
+#home.hero-poster .poster-tagline{
+  font-size:15px;line-height:1.7;font-weight:700;margin:0 0 17px;
+  color:#2329A8!important;
+}
+#home.hero-poster .poster-link{
+  display:inline-flex;gap:12px;align-items:center;padding:8px 0;
+  border-bottom:2px solid #FF6624;color:#2329A8!important;
+  font-size:15px;font-weight:800;
+}
+#home.hero-poster .poster-link span{color:#2329A8!important}
+#home.hero-poster .poster-link:hover{border-color:#355CF5}
 @media(max-width:700px){
- #home.hero-poster .poster-shell{min-height:1120px}
- #home.hero-poster .poster-art{top:15%;bottom:auto;left:-16%;width:100%;height:auto}
- #home.hero-poster .poster-art svg{height:auto}
- #home.hero-poster .poster-copy{width:66%;padding:60px 5% 40px 2%}
- #home.hero-poster .poster-english{font-size:clamp(49px,11vw,75px);margin-bottom:315px}
- #home.hero-poster .poster-intro{font-size:clamp(16px,4.2vw,20px);margin-bottom:20px}
- #home.hero-poster .poster-title{font-size:clamp(28px,6.4vw,42px);margin-bottom:22px}
- #home.hero-poster .poster-description{font-size:clamp(13px,3.2vw,17px);line-height:1.85}
- #home.hero-poster .poster-tagline{font-size:13px}
- #home.hero-poster .poster-link{font-size:13px}
+  #home.hero-poster .poster-shell{min-height:1160px}
+  #home.hero-poster .poster-art{
+    top:14%;bottom:auto;left:-32%;width:104%;height:700px;
+  }
+  #home.hero-poster .poster-art svg{height:100%}
+  #home.hero-poster .poster-copy{
+    width:70%;padding:50px 5% 34px 0;
+  }
+  #home.hero-poster .poster-english{
+    font-size:clamp(47px,11vw,68px);margin-bottom:490px;
+  }
+  #home.hero-poster .poster-intro{
+    font-size:clamp(15px,4vw,19px);margin-bottom:17px;
+  }
+  #home.hero-poster .poster-title{
+    font-size:clamp(29px,7.3vw,45px);line-height:1.3;margin-bottom:18px;
+  }
+  #home.hero-poster .poster-description{
+    font-size:clamp(13px,3.2vw,17px);line-height:1.75;
+  }
+  #home.hero-poster .poster-tagline{font-size:12px}
 }
 @media(max-width:365px){
- #home.hero-poster .poster-shell{min-height:1170px}
- #home.hero-poster .poster-copy{width:69%}
- #home.hero-poster .poster-english{font-size:49px}
- #home.hero-poster .poster-title{font-size:28px}
+  #home.hero-poster .poster-shell{min-height:1190px}
+  #home.hero-poster .poster-copy{width:71%}
+  #home.hero-poster .poster-english{font-size:47px}
+  #home.hero-poster .poster-title{font-size:28px}
 }
 @media(prefers-reduced-motion:reduce){
- #home.hero-poster .poster-wave-hand,#home.hero-poster .poster-motion{animation:none!important;transform:none!important;will-change:auto}
+  #home.hero-poster .poster-wave-entire{
+    animation:none!important;transform:none!important;will-change:auto;
+  }
 }
 
 </style>
@@ -3228,19 +3280,10 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
   <div class="poster-shell">
     <div class="poster-art" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1050" focusable="false" aria-hidden="true">
-        <g class="poster-arm">
-          <path d="M-180 814 C57 806 170 720 202 582 C216 535 221 497 228 456"/>
-          <path d="M-180 983 C135 976 299 822 317 632 C323 575 325 531 329 488"/>
-        </g>
-        <g class="poster-wave-hand">
-          <path d="M227 476 L225 359 Q225 333 242 333 Q259 333 259 352 L259 399 L259 307 Q259 286 275 286 Q292 286 292 306 L292 397 L292 334 Q292 316 310 316 Q326 316 326 334 L326 410 L326 365 Q326 348 341 348 Q358 348 358 366 L358 480 C357 514 344 546 319 571"/>
-          <path d="M227 461 L170 410 Q156 394 145 406 Q135 418 150 434 L219 502"/>
-          <path d="M238 449 Q287 449 310 491"/>
-        </g>
-        <g class="poster-motion">
-          <path d="M401 451 L400 558"/>
-          <path d="M461 478 L457 555"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 0 1000 960" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <g class="poster-wave-entire" fill="#355CF5">
+          <path d="M313 521 L273 172 C269 155 276 145 292 143 C310 141 318 151 322 170 L341 276 L322 100 C320 85 328 78 342 77 C356 76 363 85 364 101 L400 241 L374 31 C373 18 381 9 396 8 C413 5 421 15 423 31 L459 259 L459 86 C459 72 468 63 481 62 C495 61 504 70 505 83 L539 330 C562 285 585 256 610 255 C640 251 658 276 647 301 L605 392 C589 430 586 456 590 485 L609 638 C618 698 597 748 548 776 L440 782 L463 960 L304 960 L296 796 L347 721 L342 704 L-500 981 L-500 770 Z"/>
+          <path d="M583 382 Q606 346 630 339" fill="none" stroke="#F2E7E1" stroke-width="10" stroke-linecap="round"/>
         </g>
       </svg>
     </div>
