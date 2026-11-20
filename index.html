@@ -2432,7 +2432,7 @@ html body :is(
 
 
 
-/* HELLO COVER 2026 — original, responsive flat-blue greeting illustration. */
+/* HELLO COVER 2026 — original, responsive flat-blue greeting illustration. Inline SVG mobile reliability revision. */
 .hero.hero-saas.hero-hello{
   background:#F1F1F3!important;
   padding:0!important;
@@ -2596,7 +2596,12 @@ html body :is(
   <main id="main">
     <section id="home" class="hero hero-saas hero-hello anchor" aria-labelledby="heroMainTitle">
       <div class="hello-cover">
-        <img class="hello-cover-graphic" src="assets/hello-wave.svg" alt="" aria-hidden="true" width="1000" height="900" fetchpriority="high">
+        <svg class="hello-cover-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" aria-hidden="true" focusable="false">
+  <path fill="#115AF5" d="M-180 465 672 235 720 375 -180 615Z"/>
+  <path fill="#115AF5" d="M640 291 C660 349 681 411 690 490 C705 606 744 693 829 737 C930 790 1026 737 1152 638 L1152 479 C1086 559 1012 613 950 608 C879 603 825 543 810 449 L801 291Z"/>
+  <path fill="#115AF5" d="M616 391 L617 154 Q617 138 631 136 Q645 134 649 150 L653 217 L655 88 Q655 69 669 67 Q685 66 690 84 L691 207 L698 52 Q699 31 715 30 Q732 30 733 51 L734 198 L742 69 Q743 51 759 50 Q774 52 773 70 L773 228 Q792 215 815 199 Q831 190 841 201 Q852 217 835 239 L804 282 Q791 310 793 346 L797 427 Q746 483 672 459Z"/>
+  <path d="M805 246 Q815 231 828 226" fill="none" stroke="#F1F1F3" stroke-width="8" stroke-linecap="round"/>
+</svg>
         <span class="hello-greeting" lang="en" aria-hidden="true">Hello!</span>
         <a class="hello-next" href="#about" aria-label="انتقل إلى قسم التعريف" title="تعرّف عليّ">
           <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
