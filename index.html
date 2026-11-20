@@ -3495,6 +3495,167 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #home.hero-poster .poster-english {margin-bottom:355px!important}
 }
 
+
+/* RIGHT-EDGE HAND / PALM-ONLY WAVE / SEAMLESS CV TRANSITION */
+#home.hero-poster {
+  position:relative!important;
+  overflow:hidden!important;
+  background:#F2E7E1!important;
+  color:#2329A8!important;
+  border:0!important;
+  margin:0!important;
+  padding:0!important;
+}
+#home.hero-poster .poster-shell {
+  position:relative!important;
+  overflow:hidden!important;
+  width:100%!important;
+  max-width:1650px!important;
+  min-height:0!important;
+  height:auto!important;
+  margin:0 auto!important;
+  padding:0!important;
+  background:#F2E7E1!important;
+}
+#home.hero-poster .poster-art {
+  position:absolute!important;
+  z-index:1!important;
+  right:0!important;
+  left:auto!important;
+  top:0!important;
+  bottom:0!important;
+  width:58%!important;
+  height:100%!important;
+  pointer-events:none!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-art svg {
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:visible!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-static-ribbon {
+  animation:none!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-wave-entire {
+  animation:none!important;
+  transform:none!important;
+}
+#home.hero-poster .poster-waving-palm {
+  transform-box:view-box;
+  transform-origin:410px 321px;
+  animation:menatPalmOnly 3s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes menatPalmOnly {
+  0%,10%,76%,100% {transform:rotate(0deg)}
+  21% {transform:rotate(-5deg)}
+  34% {transform:rotate(5deg)}
+  47% {transform:rotate(-4.5deg)}
+  60% {transform:rotate(3.5deg)}
+  70% {transform:rotate(0deg)}
+}
+#home.hero-poster .poster-copy {
+  position:relative!important;
+  z-index:3!important;
+  width:51%!important;
+  max-width:none!important;
+  margin:0 auto 0 0!important;
+  padding:50px 18px 56px 5%!important;
+  direction:rtl!important;
+  text-align:right!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+#home.hero-poster .poster-english {
+  text-align:left!important;
+  margin-bottom:22px!important;
+}
+#home.hero-poster .poster-title {margin-bottom:14px!important}
+#home.hero-poster .poster-description {margin-bottom:9px!important}
+#home.hero-poster .poster-tagline {margin-bottom:11px!important}
+#home.hero-poster::after {
+  content:"";
+  position:absolute;
+  z-index:2;
+  bottom:-1px;
+  left:0;
+  right:0;
+  height:clamp(28px,5vw,70px);
+  background:#355CF5;
+  clip-path:polygon(100% 0%,100% 100%,0% 100%);
+  pointer-events:none;
+}
+#cv.cv.cv-featured {
+  margin-top:0!important;
+  border-top:0!important;
+  background:#355CF5!important;
+}
+@media(max-width:900px){
+  #home.hero-poster .poster-art {
+    right:0!important;
+    left:auto!important;
+    width:68%!important;
+  }
+  #home.hero-poster .poster-copy {
+    width:56%!important;
+    margin:0 auto 0 0!important;
+    padding:46px 12px 48px 5%!important;
+  }
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-shell {
+    min-height:0!important;
+    height:auto!important;
+  }
+  #home.hero-poster .poster-art {
+    top:86px!important;
+    right:0!important;
+    left:auto!important;
+    bottom:auto!important;
+    width:132%!important;
+    height:410px!important;
+  }
+  #home.hero-poster .poster-copy {
+    width:100%!important;
+    margin:0!important;
+    padding:28px 5.5% 44px!important;
+  }
+  #home.hero-poster .poster-english {
+    text-align:left!important;
+    margin:0 0 clamp(300px,83vw,365px)!important;
+  }
+  #home.hero-poster .poster-title {
+    margin-bottom:13px!important;
+  }
+  #home.hero-poster::after {
+    height:35px;
+  }
+}
+@media(max-width:365px){
+  #home.hero-poster .poster-art {
+    top:75px!important;
+    right:0!important;
+    width:140%!important;
+    height:380px!important;
+  }
+  #home.hero-poster .poster-english {
+    margin-bottom:300px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #home.hero-poster .poster-waving-palm {
+    animation:none!important;
+    transform:none!important;
+    will-change:auto!important;
+  }
+}
+
 </style>
 
 </head>
@@ -3526,9 +3687,17 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
   <div class="poster-shell">
     <div class="poster-art" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 647" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
-        <g class="poster-wave-entire">
-          <path fill="#355CF5" d="M584 224 L565 221 L521 221 L489 225 L455 233 L452 232 L453 198 L456 173 L465 151 L475 117 L471 112 L466 111 L461 114 L450 127 L440 129 L430 139 L425 136 L433 126 L442 123 L445 120 L446 63 L442 59 L436 59 L432 64 L431 105 L425 106 L424 57 L422 53 L418 51 L413 52 L410 56 L409 94 L407 106 L402 105 L402 68 L398 63 L392 63 L389 66 L387 104 L385 106 L380 105 L380 76 L378 74 L373 74 L369 79 L365 165 L364 260 L7 368 L7 457 L373 347 L387 413 L401 454 L423 495 L446 523 L475 546 L507 562 L548 572 L584 572 L584 486 L563 488 L539 483 L515 470 L498 453 L481 424 L471 397 L462 359 L457 324 L458 321 L469 317 L498 310 L525 306 L560 306 L584 311 Z"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 647" preserveAspectRatio="xMaxYMid meet" focusable="false" aria-hidden="true">
+        <g class="poster-static-ribbon" fill="#355CF5">
+          <!-- The diagonal blue band stays completely still and runs off the edge. -->
+          <path d="M-30 377 L365 259 L391 342 L-30 470 Z"/>
+          <!-- The sweeping right-hand ribbon continues down into the following blue section. -->
+          <path d="M451 238 C493 223 550 215 586 224 L586 311 C540 297 488 309 457 323 L461 357 C467 401 488 451 515 470 C539 488 562 490 586 485 L586 647 L551 647 C467 635 410 546 392 460 L378 352 Z"/>
+          <!-- Fixed wrist overlap keeps the moving palm visually attached. -->
+          <path d="M366 255 L455 239 L465 337 L385 361 L367 338 Z"/>
+        </g>
+        <g class="poster-waving-palm" fill="#355CF5">
+          <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
           <path d="M428 136 Q434 126 443 123" fill="none" stroke="#F2E7E1" stroke-width="5" stroke-linecap="round"/>
         </g>
       </svg>
@@ -3543,12 +3712,6 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     </div>
   </div>
 </section>
-
-    <div class="journey-indicator" aria-hidden="true"><span>01 / INTRO</span><span class="journey-line"></span><span class="journey-bullet">✳</span><span>08 / LET’S CONNECT</span></div>
-    <div class="marquee" aria-hidden="true"><div class="marquee-track">
-      <span>SOFTWARE ENGINEERING</span><i>✳</i><span>FULL‑STACK DEVELOPMENT</span><i>✳</i><span>AI • LLMs • RAG</span><i>✳</i><span>LEGALTECH</span><i>✳</i>
-      <span>SOFTWARE ENGINEERING</span><i>✳</i><span>FULL‑STACK DEVELOPMENT</span><i>✳</i><span>AI • LLMs • RAG</span><i>✳</i><span>LEGALTECH</span><i>✳</i>
-    </div></div>
 
     <section id="cv" class="section cv cv-featured anchor" aria-labelledby="cvHeading">
       <div class="shell cv-grid">
