@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">ميزان — غلاف الفيديو الترويجي</title>
+<desc id="desc">تصميم أزرق ملكي وسماوي مع موازين العدالة الهندسية ولمسات صفراء، خاص بالفيديو الترويجي لمنصة ميزان</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071E55"/><stop offset=".46" stop-color="#0D55B4"/><stop offset="1" stop-color="#009EFF"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#38C9FF" stop-opacity=".55"/><stop offset=".48" stop-color="#009EFF" stop-opacity=".16"/><stop offset="1" stop-color="#009EFF" stop-opacity="0"/></radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".42" stop-color="#66CBFF"/><stop offset=".77" stop-color="#E7F7FF"/><stop offset="1" stop-color="#2A76E7"/></linearGradient>
+<linearGradient id="yellow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFE47C"/><stop offset=".5" stop-color="#FFD850"/><stop offset="1" stop-color="#EAAF28"/></linearGradient>
+<linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B8EFFF" stop-opacity=".25"/><stop offset="1" stop-color="#64A9F9" stop-opacity=".055"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="35"/></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="9"/></filter>
+<pattern id="grid" width="61" height="61" patternUnits="userSpaceOnUse"><path d="M61 0H0V61" fill="none" stroke="#A9DBFF" stroke-width="1" opacity=".13"/></pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<rect width="1200" height="675" fill="url(#grid)"/>
+<ellipse cx="835" cy="332" rx="470" ry="383" fill="url(#glow)"/>
+<ellipse cx="1080" cy="115" rx="380" ry="230" fill="#58D9FF" opacity=".16" filter="url(#blur)"/>
+<path d="M0 546C240 464 416 651 692 570S1042 476 1200 547V675H0Z" fill="#069BFF" opacity=".35"/>
+<path d="M0 592C241 520 362 670 663 607S997 551 1200 601V675H0Z" fill="#107AFF" opacity=".4"/>
+<path d="M0 629C204 581 373 685 589 652S1003 612 1200 650V675H0Z" fill="url(#yellow)" opacity=".78"/>
+<path d="M-35 632C186 567 314 649 568 624" stroke="#B9EEFF" stroke-opacity=".3" stroke-width="2" fill="none"/>
+<g opacity=".5" fill="none" stroke="#BCEBFF" stroke-width="1.6">
+<circle cx="815" cy="328" r="278" opacity=".2"/><circle cx="815" cy="328" r="223" opacity=".24"/>
+<path d="M725 100h210m-218 436h222M1030 198v270"/>
+</g>
+<!-- translucent legal document panels -->
+<g transform="translate(828 69) rotate(10)" opacity=".78">
+<rect x="0" y="0" width="222" height="341" rx="25" fill="url(#panel)" stroke="#7FD9FF" stroke-width="2"/>
+<rect x="48" y="72" width="137" height="8" rx="4" fill="#CCF3FF" opacity=".43"/>
+<rect x="48" y="102" width="137" height="8" rx="4" fill="#CCF3FF" opacity=".38"/>
+<rect x="48" y="132" width="104" height="8" rx="4" fill="#CCF3FF" opacity=".38"/>
+<rect x="48" y="185" width="137" height="8" rx="4" fill="#CCF3FF" opacity=".28"/>
+<rect x="48" y="215" width="120" height="8" rx="4" fill="#CCF3FF" opacity=".28"/>
+</g>
+<g transform="translate(666 107) rotate(-9)" opacity=".55">
+<rect x="0" y="0" width="160" height="261" rx="20" fill="url(#panel)" stroke="#8CDAFF" stroke-width="2"/>
+<path d="M35 69h92M35 92h92M35 115h64" stroke="#BCEAFF" stroke-width="7" stroke-linecap="round" opacity=".5"/>
+</g>
+<!-- judicial scales: symmetrical geometric iconic construction -->
+<g transform="translate(845 348)">
+<ellipse cx="0" cy="198" rx="222" ry="28" fill="#091A5B" opacity=".52" filter="url(#soft)"/>
+<path d="M-134 202H134" stroke="#163C95" stroke-width="31" stroke-linecap="round"/>
+<rect x="-126" y="178" width="252" height="28" rx="14" fill="url(#metal)"/>
+<rect x="-31" y="-142" width="62" height="322" rx="22" fill="url(#metal)"/>
+<path d="M0-139v319" stroke="#ECFAFF" stroke-width="5" stroke-opacity=".75"/>
+<path d="M-178-123Q0-73 178-123" stroke="url(#yellow)" stroke-width="26" fill="none" stroke-linecap="round"/>
+<path d="M-178-123L-240 16M-178-123L-120 16M178-123L120 16M178-123L240 16" stroke="#FFE17D" stroke-width="4" fill="none"/>
+<g fill="url(#metal)" stroke="#FFD850" stroke-width="3"><path d="M-259 12Q-178 119-101 12Z"/><path d="M101 12Q178 119 259 12Z"/></g>
+<ellipse cx="-179" cy="14" rx="79" ry="13" fill="#E5F8FF"/><ellipse cx="179" cy="14" rx="79" ry="13" fill="#E5F8FF"/>
+<circle cx="0" cy="-143" r="17" fill="url(#yellow)"/>
+</g>
+<!-- Editorial typography on left -->
+<path d="M70 168h84" stroke="#FFD850" stroke-width="7" stroke-linecap="round"/>
+<text x="69" y="232" fill="#E5F5FF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="3.4">LEGALTECH  /  PROMO  01</text>
+<text x="66" y="377" fill="#FFFFFF" font-family="Cairo,Arial,sans-serif" font-size="144" font-weight="900" direction="rtl" text-anchor="start">ميزان</text>
+<text x="70" y="432" fill="#DDF0FF" font-family="Cairo,Arial,sans-serif" font-size="32" font-weight="700">فيديو ترويجي لمنصة ميزان</text>
+<path d="M70 468h349" stroke="#FFD850" stroke-width="5" stroke-linecap="round"/>
+<text x="71" y="541" fill="#CDEBFF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">MIZAN  ·  SMARTER LEGAL TOOLS</text>
+<circle cx="1117" cy="74" r="8" fill="#FFD850"/>
+<circle cx="1087" cy="74" r="8" fill="#EFFAFF" opacity=".76"/>
+</svg>
