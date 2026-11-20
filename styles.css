@@ -4061,13 +4061,13 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
-/* Raise only the Hello world greeting slightly without shifting the hand or other copy. */
+/* Keep Hello world close below the navigation divider; no other hero element moves. */
 #home.hero-poster .poster-english{
   position:relative!important;
-  top:-22px!important;
+  top:-50px!important;
 }
 @media(max-width:700px){
-  #home.hero-poster .poster-english{top:-14px!important}
+  #home.hero-poster .poster-english{top:-24px!important}
 }
 
 /* Raise only the Arabic welcome eyebrow slightly; keep the remaining hero unchanged. */
