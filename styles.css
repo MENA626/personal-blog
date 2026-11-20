@@ -586,3 +586,170 @@ html[lang="ar"] .contact-title em { border-bottom-color:#FFA62B; }
  html[lang="ar"] .contact-title > span:hover,
  html[lang="ar"] .contact-title > em:hover { transform:none; }
 }
+
+
+
+/* =========================================================
+   MENAT ALLAH · ORANGE PAPER-CURL HERO + SPARK MASCOT
+   Reference-inspired original composition, actual live HTML.
+   ========================================================= */
+.hero { padding:24px 0 25px; background:#FFFFFF; overflow:visible; }
+.orange-poster {
+ position:relative; width:100%; min-height:770px; overflow:hidden;
+ isolation:isolate; border-radius:32px;
+ background:linear-gradient(133deg,#FF9D26 0%,#FF8513 29%,#FF7509 69%,#F86409 100%);
+ box-shadow:0 22px 55px rgba(223,100,17,.16);
+ transform-style:preserve-3d; transition:transform .35s ease;
+}
+.poster-orange-light { position:absolute; inset:0; z-index:0; pointer-events:none;
+ background:radial-gradient(ellipse at 23% 5%,rgba(255,242,198,.32) 0%,transparent 44%),
+ radial-gradient(ellipse at 92% 56%,rgba(255,171,46,.43) 0%,transparent 46%); }
+.poster-paper-curl { position:absolute; top:0; right:0; z-index:3; width:59%; height:47%; pointer-events:none; filter:drop-shadow(-8px 18px 22px rgba(112,48,19,.18)); transform-origin:top right; animation:posterFoldBreathe 8s ease-in-out infinite; }
+.poster-paper-curl .curl-svg { display:block; height:100%; width:100%; }
+@keyframes posterFoldBreathe { 50% { transform:rotate(-.8deg) translateY(-4px); } }
+.poster-corner-brand { position:absolute; z-index:7; top:4.3%; right:3.5%; width:190px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:3px; }
+.poster-corner-brand img { width:156px; height:auto; display:block; filter:drop-shadow(0 1px 1px rgba(37,56,97,.06)); }
+.poster-corner-brand small { color:#2E5AA7; font:800 8px var(--english); letter-spacing:.08em; white-space:nowrap; }
+.poster-content { position:absolute; z-index:11; left:6.5%; top:13%; width:55%; max-width:650px; display:flex; align-items:flex-start; flex-direction:column; text-align:start; color:#FFFFFF; pointer-events:auto; }
+.poster-overline { display:inline-flex; align-items:center; gap:10px; color:#FFFFFF; font:700 12px var(--ui); margin:0 0 23px; }
+.poster-dot { width:9px; height:9px; background:#FFFFFF; border-radius:50%; box-shadow:0 0 0 5px rgba(255,255,255,.20); animation:posterDot 2.7s ease-in-out infinite; flex:none; }
+@keyframes posterDot { 50% { box-shadow:0 0 0 11px rgba(255,255,255,0); } }
+.poster-greeting { font:700 clamp(23px,2.6vw,32px)/1.5 var(--display); color:#FFF6E8; margin:0; transform:rotate(-2deg); text-shadow:0 3px 10px rgba(120,50,7,.1); }
+.poster-headline { color:#FFFFFF; font:800 clamp(52px,6.3vw,94px)/1.22 var(--display); margin:13px 0 18px; letter-spacing:-.04em; display:flex; flex-direction:column; align-items:flex-start; text-shadow:0 4px 12px rgba(117,52,12,.10); }
+.poster-headline > span { display:block; white-space:nowrap; transform-origin:center; animation:posterTitleRise 1.2s both cubic-bezier(.18,.82,.19,1); }
+.poster-headline > span:nth-child(2) { animation-delay:.12s; }
+.poster-headline > span:nth-child(3) { animation-delay:.24s; }
+@keyframes posterTitleRise { from {opacity:0; transform:translateY(29px)} to {opacity:1; transform:translateY(0)} }
+.poster-headline .poster-headline-contrast { color:#193B72; text-shadow:0 2px 0 rgba(255,255,255,.08); }
+.poster-role { margin:4px 0 17px; padding-inline-start:15px; border-inline-start:4px solid #F8E6A0; font:800 clamp(14px,1.5vw,20px)/1.65 var(--ui); color:#FFFFFF; }
+.poster-lede { max-width:565px; font:500 clamp(14px,1.3vw,16px)/1.9 var(--ui); color:#FFF9E9; margin:0 0 17px; text-wrap:pretty; }
+.poster-chips { display:flex; flex-wrap:wrap; gap:8px; direction:ltr; justify-content:flex-end; margin-bottom:22px; }
+.poster-chips span { color:#193B72; background:rgba(255,255,255,.92); border:1px solid rgba(255,255,255,.4); border-radius:99px; padding:8px 13px; font:800 10px var(--english); letter-spacing:.05em; box-shadow:0 3px 8px rgba(183,70,8,.06); }
+.poster-actions { display:flex; align-items:center; gap:15px; flex-wrap:wrap; }
+.poster-main-button { display:inline-flex; align-items:center; justify-content:center; gap:20px; border-radius:99px; padding:15px 23px; color:#FFFFFF; background:#193B72; border:2px solid rgba(255,255,255,.68); font:800 14px var(--ui); transition:transform .2s,box-shadow .2s,background .2s; box-shadow:0 8px 20px rgba(31,58,107,.17); }
+.poster-main-button:hover { background:#2E5AA7; transform:translateY(-4px); box-shadow:0 12px 24px rgba(31,58,107,.27); }
+.poster-main-button span:last-child { font:26px var(--english); color:#FFA62B; line-height:.7; }
+.poster-quiet-link { color:#FFFFFF; border-bottom:2px solid #F8E6A0; padding:9px 5px; display:inline-flex; align-items:center; gap:12px; font:700 13px var(--ui); }
+.poster-character.hero-art { position:absolute; z-index:9; width:46%; height:auto; max-height:78%; right:0; bottom:55px; aspect-ratio:auto; pointer-events:none; perspective:none; animation:posterCharacterFloat 5.5s ease-in-out infinite; }
+.poster-character > img { width:100%; max-height:580px; height:auto; display:block; object-fit:contain; position:relative; filter:drop-shadow(0 17px 15px rgba(149,62,22,.16)); }
+.poster-character-halo { position:absolute; z-index:-1; width:100%; aspect-ratio:1/1; left:4%; bottom:4%; border-radius:50%; background:radial-gradient(circle,rgba(255,224,133,.77),rgba(255,186,60,.26) 54%,transparent 74%); filter:blur(6px); }
+@keyframes posterCharacterFloat { 50% { transform:translateY(-10px) rotate(1deg); } }
+.poster-hi-bubble { position:absolute; z-index:2; left:-22%; top:5%; width:min(275px,62%); display:flex; flex-direction:column; align-items:flex-start; gap:4px; background:#FFFFFF; color:#193B72; border:2px solid #F8E6A0; border-radius:24px 24px 10px 24px; padding:12px 17px; box-shadow:0 8px 15px rgba(31,58,107,.14); font:800 13px/1.6 var(--ui); direction:rtl; text-align:right; animation:bubbleHop 5s ease-in-out infinite; }
+.poster-hi-bubble::after { content:""; width:15px; height:15px; background:white; border-right:2px solid #F8E6A0; border-bottom:2px solid #F8E6A0; position:absolute; bottom:-9px; right:21px; transform:rotate(45deg); }
+.bubble-wave { font-size:21px; }
+@keyframes bubbleHop { 50% { transform:translateY(7px); } }
+.poster-bottom-strip { position:absolute; z-index:16; inset-inline:0; bottom:0; min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:13px; padding:15px 34px; border-radius:29px 29px 0 0; background:#FFFFFF; color:#193B72; box-shadow:0 -8px 30px rgba(140,62,19,.10); direction:rtl; }
+.poster-bottom-item { display:inline-flex; align-items:center; gap:9px; font:800 12px var(--ui); color:#193B72; white-space:nowrap; }
+a.poster-bottom-item:hover { color:#2E5AA7; text-decoration:underline; }
+.poster-stripe-icon { font:900 23px var(--english); color:#FF8310; }
+.poster-foot-en { font:700 10px var(--english); letter-spacing:.1em; }
+.poster-sunmark { position:absolute; font-size:75px; color:#FFF2D8; opacity:.28; animation:spin 24s linear infinite; pointer-events:none; }
+.poster-sunmark-a { left:45%; top:8%; }
+.poster-sunmark-b { left:2%; bottom:20%; font-size:43px; animation-direction:reverse; }
+.hero .hero-bottom { margin-top:11px; padding-top:14px; border:0; }
+.hero .tiny-cross { color:#FFA62B; }
+
+/* Spark is a friendly site guide: visible below the cover, never a fake chat service. */
+.spark-guide { position:fixed; z-index:140; bottom:17px; inset-inline-end:19px; display:flex; align-items:flex-end; flex-direction:column; gap:10px; opacity:0; pointer-events:none; transform:translateY(18px); transition:opacity .35s ease,transform .35s ease; }
+.spark-guide.is-active { opacity:1; pointer-events:auto; transform:translateY(0); }
+.spark-guide-trigger { display:flex; align-items:center; gap:5px; background:#FFFFFF; border:2px solid #FFA62B; border-radius:25px; color:#193B72; padding:3px 11px 3px 3px; box-shadow:0 10px 25px rgba(29,64,131,.18); font:800 13px var(--ui); transition:transform .2s,box-shadow .2s; position:relative; }
+.spark-guide-trigger:hover { transform:translateY(-4px); box-shadow:0 13px 26px rgba(29,64,131,.24); }
+.spark-guide-trigger img { width:65px; height:67px; object-fit:contain; }
+.spark-guide-dot { position:absolute; width:10px; height:10px; border-radius:50%; background:#FFA62B; top:6px; left:11px; box-shadow:0 0 0 4px rgba(255,166,43,.21); }
+.spark-guide-bubble { max-width:min(330px,calc(100vw - 35px)); background:#FFFFFF; color:#193B72; border:1px solid #D5E6F5; border-radius:20px; box-shadow:0 14px 55px rgba(24,56,124,.22); padding:19px; direction:rtl; text-align:start; }
+html[dir="ltr"] .spark-guide-bubble { direction:ltr; }
+.spark-guide-bubble strong { display:block; font:800 21px var(--display); margin-bottom:8px; }
+.spark-guide-bubble p { color:#425F89; font:500 13px/1.8 var(--ui); margin:0 0 13px; }
+.spark-guide-links { display:flex; flex-direction:column; gap:4px; }
+.spark-guide-links a { display:flex; justify-content:space-between; gap:17px; color:#193B72; background:#EDF6FF; border-radius:10px; padding:10px 13px; font:700 13px var(--ui); transition:background .2s; }
+.spark-guide-links a:hover { background:#F8E6A0; }
+.spark-guide-bubble[hidden] { display:none!important; }
+
+/* Accessible orange poster on tablets / phones */
+@media(max-width:1150px) {
+ .orange-poster { min-height:750px; }
+ .poster-content { left:5%; width:58%; }
+ .poster-headline { font-size:clamp(48px,6.1vw,78px); }
+ .poster-character.hero-art { width:47%; right:-2%; }
+ .poster-hi-bubble { left:-12%; top:4%; width:62%; font-size:11px; }
+}
+@media(max-width:900px) {
+ .orange-poster { min-height:770px; }
+ .poster-content { top:15%; }
+ .poster-headline { font-size:clamp(48px,6vw,66px); line-height:1.33; }
+ .poster-paper-curl { width:68%; height:37%; }
+ .poster-corner-brand { right:3%; top:3%; width:150px; }
+ .poster-corner-brand img { width:128px; }
+ .poster-character.hero-art { width:47%; bottom:55px; }
+ .poster-hi-bubble { left:-8%; top:0; max-width:200px; }
+ .poster-lede { font-size:13px; }
+ .poster-bottom-strip { padding:13px 20px; }
+}
+@media(max-width:700px) {
+ .hero { padding:12px 0 15px; }
+ .orange-poster { min-height:1130px; border-radius:22px; }
+ .poster-paper-curl { width:100%; height:295px; right:0; }
+ .poster-corner-brand { right:5%; top:2%; width:155px; }
+ .poster-corner-brand img { width:137px; }
+ .poster-content { top:255px; left:22px; right:22px; width:auto; max-width:none; }
+ .poster-overline { font-size:11px; margin-bottom:13px; }
+ .poster-greeting { font-size:25px; }
+ .poster-headline { font-size:clamp(48px,9vw,72px); line-height:1.32; margin:7px 0 14px; }
+ .poster-role { font-size:14px; margin-bottom:12px; }
+ .poster-lede { font-size:14px; max-width:none; line-height:1.75; margin-bottom:12px; }
+ .poster-chips { gap:6px; margin-bottom:15px; }
+ .poster-chips span { font-size:9px; padding:7px 10px; }
+ .poster-actions { gap:11px; }
+ .poster-main-button { padding:12px 16px; font-size:12px; }
+ .poster-quiet-link { font-size:12px; }
+ .poster-character.hero-art { width:60%; max-width:390px; height:auto; bottom:58px; right:5%; }
+ .poster-hi-bubble { font-size:10px; width:67%; left:-31%; top:7%; padding:8px 10px; border-radius:17px; }
+ .bubble-wave { font-size:17px; }
+ .poster-bottom-strip { border-radius:20px 20px 0 0; min-height:56px; padding:11px 15px; gap:8px; }
+ .poster-bottom-item { font-size:10px; }
+ .poster-foot-en { display:none; }
+ .poster-stripe-icon { font-size:17px; }
+ .spark-guide { bottom:12px; inset-inline-end:12px; }
+ .spark-guide-trigger img { width:49px; height:52px; }
+ .spark-guide-trigger { padding:2px 9px 2px 2px; font-size:12px; }
+}
+@media(max-width:460px) {
+ .orange-poster { min-height:1100px; }
+ .poster-content { top:210px; left:17px; right:17px; }
+ .poster-paper-curl { height:244px; }
+ .poster-corner-brand { top:2%; right:4%; width:116px; }
+ .poster-corner-brand img { width:111px; }
+ .poster-corner-brand small { font-size:6px; }
+ .poster-headline { font-size:clamp(41px,10.1vw,54px); line-height:1.36; letter-spacing:-.055em; }
+ .poster-overline { font-size:9px; }
+ .poster-greeting { font-size:22px; }
+ .poster-lede { font-size:13px; }
+ .poster-role { font-size:12px; }
+ .poster-character.hero-art { width:75%; max-width:320px; right:0; bottom:60px; }
+ .poster-hi-bubble { left:-17%; width:64%; }
+ .poster-chips span { font-size:8px; }
+ .poster-bottom-item { font-size:9px; }
+ .poster-bottom-strip { padding:10px; }
+ .poster-main-button { gap:10px; }
+}
+@media(max-width:360px) {
+ .orange-poster { min-height:1110px; }
+ .poster-content { top:188px; }
+ .poster-headline { font-size:40px; }
+ .poster-character.hero-art { width:76%; }
+ .poster-bottom-item { font-size:8px; }
+}
+html[lang="en"] .poster-headline { font:800 clamp(49px,6.5vw,90px)/1.14 Georgia,serif; letter-spacing:-.05em; }
+html[lang="en"] .poster-greeting,html[lang="en"] .poster-role,html[lang="en"] .poster-lede { font-family:var(--english); }
+html[lang="en"] .poster-headline > span { white-space:normal; }
+html[lang="en"] .poster-headline .poster-headline-contrast { font-size:.91em; }
+@media(max-width:700px) {
+ html[lang="en"] .poster-headline { font-size:clamp(41px,9.3vw,66px); }
+}
+@media(max-width:460px) {
+ html[lang="en"] .poster-headline { font-size:clamp(35px,8.5vw,46px); }
+}
+@media(prefers-reduced-motion:reduce) {
+ .poster-paper-curl,.poster-character.hero-art,.poster-headline > span,.poster-hi-bubble,.poster-sunmark,.poster-dot { animation:none!important; }
+ .orange-poster { transform:none!important; }
+}
