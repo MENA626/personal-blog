@@ -2822,3 +2822,59 @@ html body :is(
  #home.hero-hello .hello-welcome-description{font-size:13px!important;line-height:1.7!important;margin-bottom:12px!important}
 }
 
+/* FINAL NAV & WAVE REFINEMENT — a clear header and full-length thin sleeve. */
+.site-header,
+.site-header.is-scrolled{
+  position:sticky!important;top:0!important;z-index:95!important;
+  background:#FFFFFF!important;
+  border-bottom:2px solid #DCE9F7!important;
+  box-shadow:0 7px 22px rgba(26,73,175,.075)!important;
+  backdrop-filter:blur(16px);
+}
+.site-header .nav-shell{min-height:76px!important;gap:20px}
+.site-header .site-name .brand-monogram,
+.site-header.is-scrolled .site-name .brand-monogram{color:#1A49AF!important}
+.site-header .nav-links a,
+.site-header.is-scrolled .nav-links a{color:#173D91!important;font-weight:800}
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active{color:#009EFF!important}
+.site-header .language-toggle{border:1px solid #B7D8F7!important;color:#1A49AF!important;background:#F5FAFF!important}
+.site-header .nav-cta{background:#1A49AF!important;border:1px solid #1A49AF!important;color:#FFF!important}
+.site-header .menu-toggle{
+  width:auto;min-width:83px;height:44px;padding:0 12px;gap:9px;
+  border:1.5px solid #B6D8F7;border-radius:11px;background:#F4FAFF;
+  color:#173D91;flex-direction:row;align-items:center;justify-content:center;
+}
+.site-header .menu-toggle .menu-icon-bars{
+  display:flex;flex-direction:column;justify-content:center;gap:4px;
+  width:21px;height:auto;background:none;
+}
+.site-header .menu-toggle .menu-icon-bars i{display:block;background:#1A49AF;width:20px;height:2px;border-radius:2px}
+.site-header .menu-toggle .menu-label{height:auto;width:auto;display:inline;background:none;color:#173D91;font-size:12px;font-weight:800}
+#home.hero-hello .hello-next{display:none!important}
+#home.hero-hello .hello-greeting{
+  top:28%!important;left:5.8%!important;color:#173D91!important;
+  font-size:clamp(90px,11vw,174px)!important;
+}
+#home.hero-hello .hello-cover-graphic{
+  width:min(79vw,1050px)!important;left:16%!important;top:-1%!important;
+}
+#home.hero-hello .hello-title{color:#173D91!important}
+#home.hero-hello .hello-intro{color:#1A49AF!important}
+#home.hero-hello .hello-project-link{color:#173D91!important;border-color:#009EFF!important}
+@media(max-width:920px){
+  .site-header .nav-shell{min-height:65px!important}
+  .site-header .nav-links{background:#FFF!important;border:1px solid #DCE9F7!important;box-shadow:0 16px 24px rgba(26,73,175,.12)}
+}
+@media(max-width:600px){
+  .site-header .nav-shell{min-height:64px!important}
+  .site-header .menu-toggle{min-width:80px}
+  #home.hero-hello .hello-greeting{
+    top:26%!important;left:5.5%!important;font-size:clamp(72px,18vw,108px)!important;
+  }
+  #home.hero-hello .hello-cover-graphic{
+    top:0!important;left:-39%!important;width:188%!important;
+  }
+  #home.hero-hello .hello-copy{width:87%!important;bottom:4%!important}
+}
+
