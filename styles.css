@@ -564,3 +564,38 @@ html[lang="en"] .cv-summary p,html[lang="en"] .cv-record p,html[lang="en"] .stac
 @media(max-width:1100px){.stack-use-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.stack-use-grid{grid-template-columns:1fr 1fr;gap:11px}.stack-use-card{padding:21px 15px}}
 @media(max-width:420px){.stack-use-grid{grid-template-columns:1fr}}
+
+
+/* COSMOS: a polished, original typographic planetary visual */
+.cosmos-art{position:relative;min-height:360px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 38% 25%,#5A4C93 0%,#272045 50%,#16132D 100%);color:#fff}
+.cosmos-art:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 13% 21%,#fff 1px,transparent 2px),radial-gradient(circle at 81% 18%,#fff 1px,transparent 2px),radial-gradient(circle at 70% 73%,#fff 1px,transparent 2px),radial-gradient(circle at 43% 92%,#fff 1px,transparent 2px);background-size:99px 113px,147px 91px,181px 127px,211px 197px;opacity:.53}
+.cosmos-orbit{position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(178,151,254,.45);transform:rotate(-28deg) scaleY(.48);animation:cosmosOrbit 15s ease-in-out infinite alternate}
+.cosmos-orbit-b{height:390px;width:390px;border-color:rgba(142,222,255,.3);animation-delay:-5s}
+@keyframes cosmosOrbit{to{transform:rotate(35deg) scaleY(.62)}}
+.cosmos-planet{position:absolute;z-index:1;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle at 33% 27%,#FFCD98,#B297FE 50%,#49317D 86%);box-shadow:24px 23px 44px rgba(0,0,0,.3),0 0 50px rgba(178,151,254,.32);animation:cosmosPulse 8s ease-in-out infinite alternate}
+@keyframes cosmosPulse{to{transform:scale(1.12) translateY(-6px)}}
+.cosmos-wordmark{font:800 clamp(42px,6vw,72px)/1 var(--english);letter-spacing:.16em;position:absolute;z-index:3;top:47%;text-shadow:0 4px 23px rgba(14,11,45,.65)}
+.cosmos-submark{position:absolute;bottom:27px;z-index:3;color:#E8DFFF;font:800 10px var(--english);letter-spacing:.17em}
+.cosmos-stars{z-index:3;position:absolute;inset-block-start:25px;inset-inline-start:28px;color:#F9AD5E;font:900 23px var(--english)}
+/* Reel and motion-design projects: player loads only after a click. */
+.videos{background:#FFFFFF}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.video-card{min-width:0;border:1px solid #E6DFF3;background:#FBF9FF;border-radius:19px;overflow:hidden;box-shadow:0 10px 27px rgba(70,45,125,.06);transition:transform .3s ease,box-shadow .3s ease}
+.video-card:hover{transform:translateY(-7px);box-shadow:0 23px 44px rgba(70,45,125,.13)}
+.video-frame{background:radial-gradient(circle at 40% 25%,#B297FE,#392A68);aspect-ratio:16/9;position:relative;isolation:isolate;overflow:hidden}
+.video-frame img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.98);transition:transform .45s,filter .45s}
+.video-frame:hover img{transform:scale(1.045);filter:saturate(1.12)}
+.video-frame iframe{display:block;position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+.video-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(34,21,63,.47));pointer-events:none}
+.video-frame.is-playing:after{display:none}
+.video-play{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;height:79px;width:79px;border:2px solid rgba(255,255,255,.87);border-radius:50%;color:#44316F;background:#F9AD5E;box-shadow:0 9px 37px rgba(19,14,45,.38);transition:transform .2s,background .2s}
+.video-play:hover{transform:translate(-50%,-50%) scale(1.12);background:#FFD4A3}
+.video-play span{font:800 29px var(--english);margin-inline-start:4px}
+.video-watermark{position:absolute;bottom:17px;inset-inline-end:22px;z-index:2;color:#fff;font:800 11px var(--english);letter-spacing:.13em;pointer-events:none}
+.video-card-copy{padding:28px 29px 30px}
+.video-kicker{font:800 11px var(--english);color:#7865B2;letter-spacing:.12em}
+.video-card h3{font:800 clamp(23px,2.5vw,31px)/1.55 var(--display);color:#44316F;margin:13px 0 12px}
+.video-card p{font:500 15px/1.9 var(--ui);color:#625B75;margin:0 0 17px}
+.video-card .underlined-link{margin-top:6px}
+@media(max-width:720px){.video-grid{grid-template-columns:1fr}.video-card-copy{padding:23px}.cosmos-art{min-height:280px}.cosmos-wordmark{font-size:46px}}
+@media(prefers-reduced-motion:reduce){.cosmos-planet,.cosmos-orbit{animation:none!important}.video-card:hover{transform:none!important}.video-frame:hover img{transform:none!important}}
