@@ -182,18 +182,19 @@ shareButton.addEventListener("click", async () => {
 /* Appearance — respect system preference, remember user choice. */
 const themeToggle = document.getElementById("themeToggle");
 let savedTheme = null;
-try { savedTheme = localStorage.getItem("mena-theme"); } catch {}
-const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+// White is the default for the refreshed portfolio, even on dark-mode devices.
+// Keep an explicit visitor choice for future visits.
+try { savedTheme = localStorage.getItem("mena-theme-white-v1"); } catch {}
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   themeToggle.setAttribute("aria-label", theme === "dark" ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن");
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", theme === "dark" ? "#0B2138" : "#EFE8DE");
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", theme === "dark" ? "#0B2138" : "#FFFFFF");
 }
-applyTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : (systemDark ? "dark" : "light"));
+applyTheme(savedTheme === "dark" ? "dark" : "light");
 themeToggle.addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   applyTheme(next);
-  try { localStorage.setItem("mena-theme", next); } catch {}
+  try { localStorage.setItem("mena-theme-white-v1", next); } catch {}
 });
 
 /* Mobile navigation */
