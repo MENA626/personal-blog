@@ -4280,13 +4280,13 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 }
 
 
-/* Raise only the Hello world greeting slightly without shifting the hand or other copy. */
+/* Keep Hello world close below the navigation divider; no other hero element moves. */
 #home.hero-poster .poster-english{
   position:relative!important;
-  top:-22px!important;
+  top:-50px!important;
 }
 @media(max-width:700px){
-  #home.hero-poster .poster-english{top:-14px!important}
+  #home.hero-poster .poster-english{top:-24px!important}
 }
 
 /* Raise only the Arabic welcome eyebrow slightly; keep the remaining hero unchanged. */
@@ -5029,6 +5029,25 @@ if(showcase && !reduceMotion && window.matchMedia("(hover:hover) and (pointer:fi
         });
       }
     });
+  </script>
+  <script>
+  /* Align the greeting just beneath the header rule without moving the blue hand. */
+  (function(){
+    const hero=document.getElementById("home");
+    const hello=hero?.querySelector(".poster-english");
+    if(!hero || !hello) return;
+    const alignHello=()=>{
+      hello.style.setProperty("top","0px","important");
+      const offset=hello.getBoundingClientRect().top-hero.getBoundingClientRect().top;
+      const desiredGap=18;
+      hello.style.setProperty("top",Math.round(desiredGap-offset)+"px","important");
+    };
+    if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",alignHello,{once:true});
+    else alignHello();
+    window.addEventListener("load",alignHello,{once:true});
+    window.addEventListener("resize",alignHello,{passive:true});
+    if(document.fonts?.ready)document.fonts.ready.then(alignHello).catch(()=>{});
+  })();
   </script>
 </body>
 </html>
