@@ -184,7 +184,7 @@ const themeToggle = document.getElementById("themeToggle");
 let savedTheme = null;
 // White is the default for the refreshed portfolio, even on dark-mode devices.
 // Keep an explicit visitor choice for future visits.
-try { savedTheme = localStorage.getItem("mena-theme-white-v1"); } catch {}
+try { savedTheme = localStorage.getItem("mena-theme-white-v2"); } catch {}
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   themeToggle.setAttribute("aria-label", theme === "dark" ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن");
@@ -194,7 +194,7 @@ applyTheme(savedTheme === "dark" ? "dark" : "light");
 themeToggle.addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   applyTheme(next);
-  try { localStorage.setItem("mena-theme-white-v1", next); } catch {}
+  try { localStorage.setItem("mena-theme-white-v2", next); } catch {}
 });
 
 /* Mobile navigation */
