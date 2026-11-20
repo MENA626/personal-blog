@@ -2941,6 +2941,16 @@ html body :is(
 }
 @media(prefers-reduced-motion:reduce){#home.hero-hello .hello-next{transition:none}}
 
+
+/* Photo-reference portrait proportions: keep white text area below the blue arm. */
+@media(max-width:600px){
+ #home.hero-hello .hello-cover{height:max(900px,103svh);min-height:900px;max-height:1050px}
+ #home.hero-hello .hello-cover-graphic{top:0!important}
+ #home.hero-hello .hello-copy{bottom:5%!important}
+ #home.hero-hello .hello-title{font-size:clamp(36px,9.1vw,49px)!important;margin-bottom:11px!important}
+ #home.hero-hello .hello-welcome-description{font-size:13px!important;line-height:1.7!important;margin-bottom:12px!important}
+}
+
 </style>
 
 </head>
@@ -2988,9 +2998,9 @@ html body :is(
           </svg>
         </a>
         <div class="hello-copy">
-          <p class="hello-intro">أهلًا، أنا منة الله أحمد ✳</p>
-          <h1 id="heroMainTitle" class="hello-title"><span>أفكار أصمّمها.</span><span>ومشاريع أبنيها.</span></h1>
-          <p class="hello-welcome-description">من التصميم والبرمجة إلى تجاربي مع الذكاء الاصطناعي… أهلًا بك في مدونتي، حيث أشارك ما أصنعه وما أتعلّمه.</p>
+          <p class="hello-intro" data-i18n="saasIntro">أهلًا، أنا منة الله أحمد ✳</p>
+          <h1 id="heroMainTitle" class="hello-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span><span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
+          <p class="hello-welcome-description" data-i18n="saasDescription">مساحتي لمشاريعي وتجارب التصميم والبرمجة، ولكل فكرة جديدة أتعلم منها.</p>
           <a class="hello-project-link" href="#projects"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -3197,10 +3207,10 @@ const english = {
   heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
-  saasIntro: "HI, I'M MENAT ALLAH AHMED",
-  saasTitleOne: "I analyze the idea.",
-  saasTitleTwo: "I design it. I build it.",
-  saasDescription: "I'm Menat Allah Ahmed. I studied Internet Technologies at the Faculty of Information Technology, University of Tripoli. I analyze ideas, design web and mobile experiences, build software solutions, and explore how AI can make digital products more useful. Here I share my projects and what I learn along the way.",
+  saasIntro: "Hello, I'm Menat Allah Ahmed ✳",
+  saasTitleOne: "Ideas I design.",
+  saasTitleTwo: "Projects I bring to life.",
+  saasDescription: "A space for my projects, design experiments, code, and everything new I learn along the way.",
   saasProjects: "Explore my projects",
   saasCV: "My résumé",
   saasScroll: "Get to know me",
