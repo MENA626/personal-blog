@@ -3656,6 +3656,45 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+
+/* RIBBON FLOWS INTO CV — continuous blue curve from the fixed arm into the blue section. */
+#home.hero-poster .poster-shell{
+  max-width:none!important;
+  position:relative!important;
+  overflow:hidden!important;
+}
+#home.hero-poster .poster-ribbon-to-cv{
+  display:block;
+  position:absolute;
+  z-index:2;
+  left:0;
+  right:0;
+  bottom:-1px;
+  width:100%;
+  height:clamp(260px,29vw,420px);
+  pointer-events:none;
+  overflow:visible;
+}
+#home.hero-poster .poster-art{z-index:2!important}
+#home.hero-poster .poster-copy{z-index:3!important}
+#home.hero-poster::after{
+  content:none!important;
+  display:none!important;
+}
+#cv.cv.cv-featured{
+  margin-top:-1px!important;
+  border-top:0!important;
+  background:#355CF5!important;
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-ribbon-to-cv{
+    height:clamp(210px,61vw,300px);
+  }
+  #home.hero-poster .poster-copy{
+    padding-bottom:55px!important;
+  }
+}
+
 </style>
 
 </head>
@@ -3711,6 +3750,9 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
       <a href="#projects" class="poster-link"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
     </div>
   </div>
+    <svg class="poster-ribbon-to-cv" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path fill="#355CF5" d="M1440 0 C1425 55 1365 111 1270 165 C1180 216 1080 234 994 279 C820 368 425 397 0 420 L1440 420 Z"/>
+    </svg>
 </section>
 
     <section id="cv" class="section cv cv-featured anchor" aria-labelledby="cvHeading">
