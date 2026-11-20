@@ -543,3 +543,125 @@ html[lang="en"] .cat-section-quote{font-family:var(--english)}
  .cat-cover-fold,.cat-art-hero,.cat-speech-hero,.cat-contact-presenter .cat-art,.cat-project-presenter .cat-art,.cat-notes-presenter .cat-art,.cat-presenter-about .cat-art,.cat-guide-trigger .cat-art{animation:none!important}
  .hero-card.cat-cover{transform:none!important}
 }
+
+
+/* ============================================================
+   FINAL USER CHOICE — WHITE SITE, BEIGE ONLY INSIDE CONTENT,
+   MINIMAL ORANGE FOLDED POSTER & BLACK CAT INSTEAD OF MODEL.
+   ============================================================ */
+:root { --page-white:#FFFFFF; --content-ivory:#F5F5F0; }
+html,body { background:#FFFFFF; }
+.site-header { background:rgba(255,255,255,.97); }
+.nav-links { background-color:transparent; }
+.hero { background:#FFFFFF; padding:22px 0 16px; }
+.hero-card.cat-cover.poster-only {
+  display:block; position:relative; min-height:820px;
+  background:linear-gradient(135deg,#FF9E35 0%,#FF861F 28%,#F97316 64%,#E9600D 100%);
+  border-radius:29px; overflow:hidden;
+}
+.cat-cover.poster-only .cat-cover-copy {
+  top:25%; left:6.6%; width:61%;
+  display:flex; flex-direction:column; align-items:flex-start; text-align:right;
+  padding:0; z-index:10;
+}
+.poster-hello {
+  display:block; color:#FFFFFF;
+  font:italic 400 clamp(48px,5.5vw,83px)/1.12 Georgia,"Brush Script MT",cursive;
+  letter-spacing:-.065em; transform:rotate(-7deg);
+  margin:0 0 35px; text-shadow:0 2px 5px rgba(121,53,13,.09);
+  text-align:left; direction:ltr;
+}
+.poster-kicker {
+  color:#142B77; font:800 clamp(16px,1.8vw,23px)/1.55 var(--ui);
+  margin:0 0 15px; max-width:580px;
+}
+.cat-cover.poster-only .hero-title {
+  font:800 clamp(54px,7.1vw,104px)/1.23 var(--display);
+  color:#FFFFFF; margin:0; text-align:right; letter-spacing:-.035em;
+  text-shadow:0 5px 15px rgba(135,65,16,.08);
+}
+.cat-cover.poster-only .hero-title>span { display:block; white-space:nowrap; color:#FFFFFF; }
+.cat-cover.poster-only .hero-title-accent {
+  color:#FFFFFF; font-size:1.1em; text-shadow:0 2px 1px rgba(255,255,255,.09);
+}
+.cat-cover.poster-only .cat-cover-character {
+  width:47%; right:-2%; bottom:49px; z-index:11;
+  filter:drop-shadow(0 9px 15px rgba(99,43,18,.13));
+}
+.cat-cover.poster-only .cat-cover-fold { z-index:7; right:0; width:64%; height:43%; }
+.cat-cover.poster-only .cat-cover-brand { z-index:10; color:#1E40AF; }
+.cat-cover.poster-only .cat-cover-brand strong {font-size:clamp(17px,2.3vw,29px)}
+.cat-cover.poster-only .cat-cover-bottom {
+  min-height:69px; padding:16px 30px; background:#FFFFFF;
+  color:#1E40AF; border-radius:25px 25px 0 0; z-index:18;
+}
+.projects,.notes { background:#F5F5F0; }
+.about,.stack,.contact { background:#FFFFFF; }
+.bio-tiles .neon-tile,.site-project-art,.tech-item,.cat-contact-presenter,
+.project-chips span,.note-dialog,.cat-guide-panel { background-color:#F5F5F0; }
+.project-card,.tech-group,.note-card { background:#FFFFFF; }
+.nav-links.open { background:#FFFFFF; }
+.site-footer { background:#111827; }
+.hero-card.cat-cover.poster-only { transform-style:flat; }
+@media(max-width:1150px) {
+  .cat-cover.poster-only .cat-cover-copy { left:5.5%; width:63%; top:27%; }
+  .cat-cover.poster-only .hero-title { font-size:clamp(49px,6.1vw,80px); }
+  .cat-cover.poster-only .cat-cover-character { width:48%; right:-4%; }
+}
+@media(max-width:900px) {
+  .hero-card.cat-cover.poster-only { min-height:730px; }
+  .cat-cover.poster-only .cat-cover-copy { top:29%; left:5%; width:64%; }
+  .cat-cover.poster-only .hero-title { font-size:clamp(44px,6vw,65px); }
+  .poster-hello { margin-bottom:20px; font-size:clamp(42px,5vw,63px); }
+  .cat-cover.poster-only .cat-cover-character { width:48%; right:-5%; }
+}
+@media(max-width:720px) {
+  .hero { padding:12px 0 15px; }
+  .hero-card.cat-cover.poster-only {
+    min-height:0; display:flex; flex-direction:column;
+    border-radius:24px; position:relative;
+  }
+  .cat-cover.poster-only .cat-cover-copy {
+    position:relative; left:auto; top:auto; right:auto; width:100%;
+    padding:240px 25px 0; z-index:9;
+    display:flex; flex-direction:column; align-items:flex-start; text-align:right;
+  }
+  .poster-hello { font-size:clamp(44px,10vw,64px); margin-bottom:22px; }
+  .poster-kicker { font-size:clamp(14px,3.8vw,20px); }
+  .cat-cover.poster-only .hero-title { font-size:clamp(47px,9.1vw,72px); line-height:1.28; }
+  .cat-cover.poster-only .cat-cover-character {
+    position:relative; bottom:auto; right:auto; width:min(92%,510px);
+    height:auto; align-self:flex-end; margin-top:-4px; margin-bottom:-5px;
+  }
+  .cat-cover.poster-only .cat-cover-fold { width:100%; height:265px; }
+  .cat-cover.poster-only .cat-cover-bottom {
+    position:relative; min-height:60px; padding:12px 20px;
+    background:#FFFFFF; border-radius:20px 20px 0 0;
+  }
+}
+@media(max-width:440px) {
+  .cat-cover.poster-only .cat-cover-copy { padding:190px 16px 0; }
+  .cat-cover.poster-only .cat-cover-fold { height:215px; }
+  .poster-hello { font-size:46px; margin-bottom:15px; }
+  .poster-kicker { font-size:14px; margin-bottom:13px; }
+  .cat-cover.poster-only .hero-title { font-size:clamp(39px,9.5vw,50px); letter-spacing:-.045em; }
+  .cat-cover.poster-only .cat-cover-character { width:99%; }
+  .cat-cover.poster-only .cat-cover-brand strong { font-size:15px; }
+  .cat-cover.poster-only .cat-cover-bottom { padding:11px 10px; }
+}
+html[lang="en"] .cat-cover.poster-only .cat-cover-copy {direction:ltr;text-align:left}
+html[lang="en"] .cat-cover.poster-only .hero-title {
+  font:800 clamp(45px,5.9vw,81px)/1.1 Georgia,serif;
+  text-align:left;
+}
+html[lang="en"] .cat-cover.poster-only .hero-title>span{white-space:normal}
+html[lang="en"] .poster-kicker {font-family:var(--english);}
+@media(max-width:720px){
+  html[lang="en"] .cat-cover.poster-only .hero-title {font-size:clamp(40px,7.7vw,57px)}
+}
+@media(max-width:440px){
+  html[lang="en"] .cat-cover.poster-only .hero-title {font-size:clamp(33px,8.1vw,44px)}
+}
+@media(prefers-reduced-motion:reduce) {
+  .cat-cover.poster-only .cat-cover-fold,.cat-cover.poster-only .cat-art-hero {animation:none!important}
+}
