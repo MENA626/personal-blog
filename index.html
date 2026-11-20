@@ -3112,6 +3112,45 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 .top-link{border-color:#FF9B29!important}
 .dialog-share{background:#FF6624!important;color:#2329A8!important}
 :focus-visible{outline-color:#FF6624!important}
+
+/* Welcoming, readable Hello World cover copy */
+#home.hero-hello .hello-greeting{
+ display:block!important;
+ top:18%!important;
+ left:5.5%!important;
+ font-size:clamp(68px,8.2vw,138px)!important;
+ line-height:.98!important;
+}
+#home.hero-hello .hello-greeting > span{display:block}
+#home.hero-hello .hello-intro{font-weight:800!important}
+#home.hero-hello .hello-copy{bottom:5%!important}
+#home.hero-hello .hello-title{margin-bottom:14px!important}
+#home.hero-hello .hello-welcome-description{
+ font-weight:600!important;
+ max-width:590px;
+ line-height:1.7!important;
+ margin-bottom:9px!important;
+}
+#home.hero-hello .hello-tagline{
+ margin:0 0 19px;
+ color:#2329A8;
+ font-size:clamp(13px,1.1vw,16px);
+ line-height:1.8;
+ font-weight:800;
+ max-width:580px;
+}
+@media(max-width:600px){
+ #home.hero-hello .hello-cover{height:max(980px,113svh);min-height:980px;max-height:1150px}
+ #home.hero-hello .hello-greeting{
+  top:12%!important;left:5.5%!important;
+  font-size:clamp(56px,15vw,87px)!important;
+ }
+ #home.hero-hello .hello-copy{bottom:5%!important}
+ #home.hero-hello .hello-title{font-size:clamp(34px,8.7vw,46px)!important;line-height:1.3!important}
+ #home.hero-hello .hello-welcome-description{font-size:13px!important;line-height:1.7!important}
+ #home.hero-hello .hello-tagline{font-size:12px;line-height:1.65;margin-bottom:16px}
+}
+
 </style>
 
 </head>
@@ -3153,11 +3192,12 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     <path d="M604 250 Q614 236 630 230" fill="none" stroke="#F2E7E1" stroke-width="8" stroke-linecap="round"/>
   </g>
 </svg>
-        <span class="hello-greeting" lang="en" aria-label="Hello!">Hello!</span>
+        <span class="hello-greeting" lang="en" aria-label="Hello world!"><span>Hello</span><span>world!</span></span>
         <div class="hello-copy">
-          <p class="hello-intro" data-i18n="saasIntro">أهلًا، أنا منة الله أحمد ✳</p>
+          <p class="hello-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا مساحتي الصغيرة! ✳</p>
           <h1 id="heroMainTitle" class="hello-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span><span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
-          <p class="hello-welcome-description" data-i18n="saasDescription">مساحتي لمشاريعي وتجارب التصميم والبرمجة، ولكل فكرة جديدة أتعلم منها.</p>
+          <p class="hello-welcome-description" data-i18n="saasDescription">هنا أشارككم مهاراتي وخبراتي وحكاياتي، وأوثّق تجاربي في التصميم والبرمجة، وكل فكرة ألهمتني أو علّمتني شيئًا جديدًا.</p>
+          <p class="hello-tagline" data-i18n="saasTagline">أهلًا بكم في عالمي الرقمي، حيث تتحوّل الأفكار إلى تجارب ومشاريع!</p>
           <a class="hello-project-link" href="#projects"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -3364,10 +3404,11 @@ const english = {
   heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
-  saasIntro: "Hello, I'm Menat Allah Ahmed ✳",
+  saasIntro: "Hello hello… welcome to my little space! ✳",
   saasTitleOne: "Ideas I design.",
   saasTitleTwo: "Projects I bring to life.",
-  saasDescription: "A space for my projects, design experiments, code, and everything new I learn along the way.",
+  saasDescription: "Here I share my skills, experiences, and stories, along with my design and coding experiments and the ideas that inspire me or teach me something new.",
+  saasTagline: "Welcome to my digital world, where ideas become experiences and projects!",
   saasProjects: "Explore my projects",
   saasCV: "My résumé",
   saasScroll: "Get to know me",
