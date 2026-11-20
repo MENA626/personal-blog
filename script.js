@@ -11,25 +11,17 @@ const english = {
   navContact: "Contact",
   navCta: "Let's collaborate",
   heroEyebrow: "Menat Allah Ahmed / Software Engineer in Tripoli",
-  heroTitleOne: "Turning",
-  heroTitleTwo: "ideas into",
-  heroTitleThree: "intelligent systems.",
+  heroTitleOne: "I understand the idea.",
+  heroTitleTwo: "I engineer the solution.",
+  heroTitleThree: "I build what’s next.",
   heroDescription: "I'm Menat Allah Ahmed, a Software Engineer and Faculty of Information Technology graduate from the University of Tripoli. I build web and mobile experiences and explore how AI can solve real problems for real people.",
-  heroProjectButton: "Explore my work",
-  heroLearnMore: "Discover my story",
+  heroProjectButton: "Explore my projects",
+  heroLearnMore: "About me",
   heroCaption: "I don't just write code. I build systems that solve real problems.",
-  heroScroll: "Scroll to explore ↓",
+  heroScroll: "Explore my work and experience ↓",
+  heroIntro: "Hello, I’m Menat Allah Ahmed",
+  heroPanelText: "Clear thinking.<br>Smarter systems.<br>Real impact.",
   heroEngineState: "AI system concept",
-  posterHello: "Hello, I'm Menat! ✳",
-  posterRole: "Software Engineer • Web & Mobile Developer • AI & LegalTech",
-  posterFooter: "Ideas, powered by code",
-  mascotIntro: "Hi! I'm Spark, your guide to Menat Allah's world of code!",
-  guideTitle: "Hey, I'm Spark ✨",
-  guideWelcome: "I'll show you around Menat Allah's tech blog. Where shall we go?",
-  guideAbout: "Meet Menat Allah",
-  guideProjects: "Explore her projects",
-  guideSkills: "See her tech stack",
-  guideButton: "Spark",
   aboutKicker: "Behind the screen",
   aboutHeadOne: "Understand the problem.",
   aboutHeadTwo: "Then build the solution.",
@@ -260,18 +252,8 @@ function updateLanguage(next) {
   document.getElementById("mainNav").setAttribute("aria-label",language==="ar"?"القائمة الرئيسية":"Main navigation");
   document.getElementById("homeBrand").setAttribute("aria-label",language==="ar"?"منة الله أحمد — الرئيسية":"Menat Allah Ahmed — Home");
   closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
-  const heroDiagram = document.querySelector(".hero-art");
-  if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar"
-    ? "شرارة، الشخصية النارية المرحة التي ترحّب بزوار مدونة منة الله"
-    : "Spark, a friendly animated flame mascot welcoming visitors to Menat Allah's portfolio");
-  const sparkGuide = document.getElementById("sparkGuide");
-  const sparkTrigger = document.getElementById("sparkGuideToggle");
-  if (sparkGuide) sparkGuide.setAttribute("aria-label", language==="ar" ? "دليل شرارة للزوار" : "Spark visitor guide");
-  if (sparkTrigger) sparkTrigger.setAttribute("aria-label", language==="ar" ? "افتح دليل شرارة" : "Open Spark's guide");
-  const sparkPic = heroDiagram?.querySelector("img");
-  if (sparkPic) sparkPic.alt = language==="ar"
-    ? "شرارة، صديقة المدونة النارية، تلوّح خلف حاسوب برمجة"
-    : "Spark the friendly flame mascot waving behind a coding laptop";
+  const heroDiagram = document.getElementById("heroBoard");
+  if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar" ? "لوحة هندسية تجريدية لمراحل تحليل وتصميم وبناء الأنظمة" : "Abstract software engineering blueprint showing analysis, design, build and evolution");
   document.title = language==="ar"?"منة الله أحمد | مهندسة برمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
   const description = document.querySelector('meta[name="description"]');
   description.content = language==="ar"
@@ -381,42 +363,7 @@ if(!reduceMotion && window.matchMedia("(pointer:fine)").matches){
     const r=board.getBoundingClientRect();
     const x=(e.clientX-r.left)/r.width-.5;
     const y=(e.clientY-r.top)/r.height-.5;
-    board.style.transform="rotateX("+(-y*6)+"deg) rotateY("+(x*7)+"deg)";
+    board.style.transform="rotateX("+(-y*1.8)+"deg) rotateY("+(x*2.2)+"deg)";
   },{passive:true});
   board.addEventListener("pointerleave",()=>{board.style.transform="";});
-}
-
-
-// Spark is a lightweight visitor guide, not an external chat service.
-const sparkGuide = document.getElementById("sparkGuide");
-const sparkGuideToggle = document.getElementById("sparkGuideToggle");
-const sparkGuideBubble = document.getElementById("sparkGuideBubble");
-function hideSparkBubble() {
-  if (!sparkGuideBubble || !sparkGuideToggle) return;
-  sparkGuideBubble.hidden = true;
-  sparkGuideToggle.setAttribute("aria-expanded","false");
-}
-function updateSparkVisibility() {
-  if (!sparkGuide) return;
-  const visible = window.scrollY > Math.min(460,window.innerHeight*.6);
-  sparkGuide.classList.toggle("is-active",visible);
-  if (!visible) hideSparkBubble();
-}
-if(sparkGuide && sparkGuideToggle && sparkGuideBubble){
-  sparkGuideToggle.addEventListener("click",()=>{
-    const opening = sparkGuideBubble.hidden;
-    sparkGuideBubble.hidden = !opening;
-    sparkGuideToggle.setAttribute("aria-expanded",String(opening));
-  });
-  sparkGuideBubble.querySelectorAll("a").forEach(link=>{
-    link.addEventListener("click",hideSparkBubble);
-  });
-  document.addEventListener("pointerdown",event=>{
-    if(!sparkGuide.contains(event.target)) hideSparkBubble();
-  });
-  document.addEventListener("keydown",event=>{
-    if(event.key==="Escape")hideSparkBubble();
-  });
-  window.addEventListener("scroll",updateSparkVisibility,{passive:true});
-  updateSparkVisibility();
 }
