@@ -1,5 +1,5 @@
 /*
- * MENA software engineering portfolio — DEMO articles.
+ * منة الله software engineering portfolio — DEMO articles.
  * Replace these editorial samples with your own writing. They do not
  * represent verified personal experiences or published original works.
  */
@@ -89,7 +89,7 @@ function makeCard(post, index) {
     makeElement("span", "cover-number", String(index + 1).padStart(2, "0") + " / " + String(posts.length).padStart(2, "0")),
     makeElement("span", "cover-star", "✳"),
     makeElement("span", "cover-art", post.illustration),
-    makeElement("span", "cover-bottom", "MENA / DEV JOURNAL")
+    makeElement("span", "cover-bottom", "منة الله / DEV JOURNAL")
   );
   cover.setAttribute("aria-hidden", "true");
 
