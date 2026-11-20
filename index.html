@@ -1927,6 +1927,53 @@ html,body {background:#FFFFFF;color:#153A85}
  #stack .tech-item:hover{transform:none!important}
 }
 
+
+/* MATCHA MOOD / beverage-inspired original project cover */
+.matcha-card .matcha-art{
+  position:relative;
+  display:block;
+  min-height:0;
+  aspect-ratio:16 / 10;
+  overflow:hidden;
+  isolation:isolate;
+  background:#E8F1D1;
+}
+.matcha-card .matcha-cover-image{
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+  object-fit:cover;
+  object-position:center center;
+  transition:transform .55s cubic-bezier(.16,.8,.22,1);
+}
+.matcha-card:hover .matcha-cover-image{
+  transform:scale(1.025);
+}
+.matcha-cover-label{
+  position:absolute;
+  bottom:17px;
+  right:17px;
+  z-index:1;
+  border:1px solid rgba(255,255,255,.68);
+  background:rgba(255,255,255,.88);
+  color:#325B39;
+  border-radius:40px;
+  padding:7px 12px;
+  font:800 10px/1.4 "DM Sans",Arial,sans-serif;
+  letter-spacing:.06em;
+  box-shadow:0 5px 15px rgba(42,81,38,.06);
+}
+@media(max-width:570px){
+  .matcha-card .matcha-art{aspect-ratio:16 / 10;min-height:0}
+  .matcha-cover-label{right:11px;bottom:10px;font-size:8px;padding:6px 9px}
+}
+@media(prefers-reduced-motion:reduce){
+  .matcha-card .matcha-cover-image{transition:none!important}
+  .matcha-card:hover .matcha-cover-image{transform:none!important}
+}
+
   </style>
 
 </head>
@@ -2086,20 +2133,14 @@ html,body {background:#FFFFFF;color:#153A85}
             </div>
           </article>
           <article class="project-card matcha-card reveal">
-            <div class="matcha-art" aria-hidden="true">
-              <div class="matcha-grid"></div><div class="matcha-glow"></div>
-              <div class="matcha-app-window">
-                <div class="matcha-app-bar"><span class="matcha-app-dot"></span><span>MATCHA MOOD</span><span>↗</span></div>
-                <div class="matcha-brand-mark"><span>MM</span><i></i></div>
-                <div class="matcha-wordmark">MATCHA<br>MOOD<span>✳</span></div>
-                <div class="matcha-bottomline"><span>WEB APPLICATION</span><span>LIVE EXPERIENCE</span></div>
-              </div>
-              <div class="matcha-floating-orb"></div>
+            <div class="matcha-art">
+              <img class="matcha-cover-image" src="assets/matcha-mood-cover.svg?v=matcha-cup-20261121" alt="غلاف مشروع MATCHA MOOD بكوب ماتشا أخضر وأوراق شاي" width="1200" height="675" loading="lazy" decoding="async">
+              <span class="matcha-cover-label" aria-hidden="true">MATCHA MOOD · WEB EXPERIENCE</span>
             </div>
             <div class="project-details">
               <div class="project-meta"><span class="project-status"><span class="status-point"></span><span data-i18n="matchaStatus">مشروع منشور</span></span><span>04 / WEB APPLICATION</span></div>
               <h3 data-i18n="matchaTitle">MATCHA MOOD | ماتشا مود</h3>
-              <p data-i18n="matchaDesc">«MATCHA MOOD» مشروع آخر أشاركه هنا؛ تطبيق ويب منشور عبر Floot، ويمكن استكشاف تجربته مباشرة من الرابط المرفق.</p>
+              <p data-i18n="matchaDesc">«MATCHA MOOD» أحد مشاريعي على الويب. اخترت لعرضه غلافًا مستوحى من كوب الماتشا وألوانه الطبيعية الهادئة. التطبيق منشور عبر Floot، ويمكن استكشافه مباشرة من الرابط.</p>
               <div class="project-chips"><span>Web App</span><span>Floot</span><span>Live Demo</span></div>
               <a class="underlined-link" href="https://matcha-mood-ly.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="matchaLink">فتح تجربة MATCHA MOOD</span><span aria-hidden="true">↗</span></a>
               <div class="project-footnote" data-i18n="matchaNote">مشروع مستقل · رابط نشر مباشر</div>
@@ -2275,7 +2316,7 @@ const english = {
   videoWatch: "Watch video on YouTube",
   matchaStatus: "Published app",
   matchaTitle: "MATCHA MOOD | ماتشا مود",
-  matchaDesc: "MATCHA MOOD is another project I share here. It's a web app published on Floot, with a live link available to explore the experience.",
+  matchaDesc: "MATCHA MOOD is one of my web projects. I chose a matcha cup-inspired cover and a calm natural green palette to present it. The application is published on Floot, with a direct link to explore the live experience.",
   matchaLink: "Open MATCHA MOOD",
   matchaNote: "Independent web project · Live app link",
   cosmosStatus: "Published project",
