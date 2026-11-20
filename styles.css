@@ -2336,9 +2336,9 @@ html,body {background:#FFFFFF;color:#153A85}
   font-display:swap;
 }
 :root{
-  --thmanyah-body:"Thmanyah Web Sans","thmanyah sans","Cairo","Tahoma",sans-serif;
-  --thmanyah-heading:"Thmanyah Web Display","thmanyah serif display","Cairo","Tahoma",sans-serif;
-  --thmanyah-reading:"Thmanyah Web Reading","thmanyah serif text","Cairo","Tahoma",serif;
+  --thmanyah-body:"Thmanyah Web Sans","thmanyah sans","IBM Plex Sans Arabic","Tahoma",sans-serif;
+  --thmanyah-heading:"Thmanyah Web Display","thmanyah serif display","Zain","IBM Plex Sans Arabic",sans-serif;
+  --thmanyah-reading:"Thmanyah Web Reading","thmanyah serif text","Noto Naskh Arabic","IBM Plex Sans Arabic",serif;
   --ui:var(--thmanyah-body);
   --display:var(--thmanyah-heading);
   --reading:var(--thmanyah-reading);
