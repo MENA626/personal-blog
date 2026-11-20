@@ -1207,3 +1207,64 @@ html[lang="en"] .contact-title{font-family:"DM Sans",Arial,sans-serif}
 .section.contact .contact-title em{color:#FFFFFF}
 .section.contact .contact-title em{border-bottom-color:#FE5000}
 .section.contact .contact-content p{color:#EFE7F9}
+
+
+/* Reference mark: rounded double-arch symbol with a single dot.
+   The former angular M is retired; the exact vector silhouette is
+   reused on the cover, in the navigation and in the footer. */
+.hero-monogram {
+  width:clamp(70px,6.4vw,92px);
+  height:clamp(70px,6.4vw,92px);
+  display:block;
+  object-fit:contain;
+}
+.site-name .brand-monogram {
+  width:43px;
+  height:43px;
+  display:block;
+  flex:0 0 auto;
+}
+.footer-name .brand-monogram {
+  width:62px;
+  height:62px;
+  display:block;
+}
+@media (max-width:720px) {
+  .hero-monogram {width:77px;height:77px;}
+  .site-name .brand-monogram {width:38px;height:38px;}
+  .footer-name .brand-monogram {width:52px;height:52px;}
+}
+@media (max-width:440px) {
+  .hero-monogram {width:72px;height:72px;}
+  .site-name .brand-monogram {width:36px;height:36px;}
+}
+
+/* White lettering on the orange résumé panel.
+   The orange is deepened for readable white body text; the brand's
+   vivid #FE5000 remains in neighboring section accents and borders. */
+.cv .cv-summary {
+  background:linear-gradient(138deg,#D44500 0%,#C53B00 100%);
+  border:1px solid #C53B00;
+  color:#FFFFFF;
+}
+.cv .cv-summary .section-kicker,
+.cv .cv-summary .section-kicker span,
+.cv .cv-summary .editorial-heading,
+.cv .cv-summary .editorial-heading span,
+.cv .cv-summary .editorial-heading em,
+.cv .cv-summary p,
+.cv .cv-summary .cv-note,
+.cv .cv-summary small,
+.cv .cv-summary .cv-view,
+.cv .cv-summary .cv-view span {
+  color:#FFFFFF;
+  opacity:1;
+}
+.cv .cv-summary .cv-view {
+  background:#261A66;
+  border-color:#261A66;
+  color:#FFFFFF;
+}
+.cv .cv-summary .cv-view:hover {
+  background:#3F0B78;
+}
