@@ -4190,3 +4190,26 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #participations .participations-desc{font-size:15px}
 }
 
+/* TRIM EMPTY SPACE BELOW THE HAND — content-safe responsive cover height. */
+@media(min-width:901px){
+  #home.hero-poster .poster-shell{
+    min-height:max(770px,calc(63.68vw + 104px))!important;
+    height:auto!important;
+  }
+}
+@media(min-width:701px) and (max-width:900px){
+  #home.hero-poster .poster-shell{
+    min-height:max(720px,calc(75.14vw + 58px))!important;
+    height:auto!important;
+  }
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-shell{
+    min-height:0!important;
+    height:auto!important;
+  }
+  #home.hero-poster .poster-copy{
+    padding-bottom:56px!important;
+  }
+}
+
