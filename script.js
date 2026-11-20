@@ -21,6 +21,18 @@ const english = {
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hello, I’m Menat Allah Ahmed",
   heroPanelText: "Clear thinking.<br>Smarter systems.<br>Real impact.",
+  posterHello: "Hello!",
+  posterTagline: "MENAT ALLAH AHMED • SOFTWARE ENGINEER",
+  catCoverLabel: "CREATING THINGS WITH CODE",
+  catGuideTitle: "Hi, I'm the blog cat! 🐾",
+  catGuideWelcome: "I'm your guide to Menat Allah's portfolio. What would you like to explore?",
+  catGuideButton: "Meet the guide",
+  catAbout: "Let me introduce the mind behind these ideas!",
+  catProjects: "Where ideas become real-world projects!",
+  catSkills: "Discover the tools behind the work!",
+  catNotes: "Tech stories worth sharing.",
+  catContact: "Have an idea? Let's connect!",
+  catWelcome: "Welcome to Menat Allah's world of code!",
   aboutKicker: "Behind the screen",
   aboutHeadOne: "Understand the problem.",
   aboutHeadTwo: "Then build the solution.",
@@ -252,7 +264,7 @@ function updateLanguage(next) {
   document.getElementById("homeBrand").setAttribute("aria-label",language==="ar"?"منة الله أحمد — الرئيسية":"Menat Allah Ahmed — Home");
   closeBtn.setAttribute("aria-label",language==="ar"?"إغلاق":"Close");
   const heroDiagram = document.getElementById("heroBoard");
-  if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar" ? "لوحة هندسية تجريدية لمراحل تحليل وتصميم وبناء الأنظمة" : "Abstract software engineering blueprint showing analysis, design, build and evolution");
+  if (heroDiagram) heroDiagram.setAttribute("aria-label", language==="ar" ? "غلاف برتقالي مطوي ترفعه قطة سوداء بنظارة شمسية" : "Folded orange cover with a black cat wearing sunglasses");
   document.title = language==="ar"?"منة الله أحمد | مهندسة برمجيات — مشاريع وتقنية":"Menat Allah Ahmed | Software Engineer · Projects & AI";
   const description = document.querySelector('meta[name="description"]');
   description.content = language==="ar"
@@ -365,4 +377,60 @@ if(!reduceMotion && window.matchMedia("(pointer:fine)").matches){
     board.style.transform="rotateX("+(-y*1.8)+"deg) rotateY("+(x*2.2)+"deg)";
   },{passive:true});
   board.addEventListener("pointerleave",()=>{board.style.transform="";});
+}
+
+
+/* Recurring cat guide — section-specific hints in Arabic and English.
+ * No external services, chat accounts or collection of visitor data.
+ */
+const catGuide = document.getElementById("catGuide");
+const catGuideTrigger = document.getElementById("catGuideTrigger");
+const catGuidePanel = document.getElementById("catGuidePanel");
+const catGuideMessage = document.getElementById("catGuideMessage");
+let catCurrentSection = "home";
+const catPhrases = {
+  home: {ar:"بنعرّفك على منة الله ومشاريعها. وين تبي تبدأ؟",en:"I'll show you Menat Allah's work and ideas. Where shall we begin?"},
+  about: {ar:"هنا تتعرف على منة الله، مهندسة برمجيات من طرابلس.",en:"Meet Menat Allah, a Software Engineer from Tripoli."},
+  projects: {ar:"شوف مشروع ميزان! منصة قانونية مع ذكاء اصطناعي قيد التطوير.",en:"Explore Mizan, an AI-powered LegalTech platform in development."},
+  stack: {ar:"Laravel وFlutter وRAG… تعال نشوف الأدوات التقنية!",en:"Laravel, Flutter, RAG… explore the tech stack!"},
+  notes: {ar:"تفضل على أفكار ومقالات تقنية قيد الإعداد.",en:"Explore technical ideas and upcoming articles."},
+  contact: {ar:"عندك فكرة حلوة؟ تواصل مع منة الله عبر GitHub.",en:"Have an interesting idea? Reach Menat Allah on GitHub."}
+};
+function closeCatGuide() {
+  if(!catGuidePanel || !catGuideTrigger) return;
+  catGuidePanel.hidden = true;
+  catGuideTrigger.setAttribute("aria-expanded","false");
+}
+function setCatGuideLanguage() {
+  if(catGuideMessage) catGuideMessage.textContent = catPhrases[catCurrentSection][language];
+  if(catGuideTrigger) catGuideTrigger.setAttribute("aria-label", language==="ar" ? "افتح دليل القطة" : "Open the cat's guide");
+  if(catGuide) catGuide.setAttribute("aria-label", language==="ar" ? "دليل زوار المدونة" : "Blog visitor guide");
+}
+function updateCatSection(){
+  if(!catGuide) return;
+  catGuide.classList.toggle("is-active",window.scrollY > Math.min(520,window.innerHeight*.65));
+  if(!catGuide.classList.contains("is-active")) closeCatGuide();
+  let active="home";
+  // The last passed section in document order takes precedence.
+  ["about","projects","stack","notes","contact"].forEach(id=>{
+    const section=document.getElementById(id);
+    if(section && section.getBoundingClientRect().top < window.innerHeight*.55)active=id;
+  });
+  if(active!==catCurrentSection){
+    catCurrentSection=active;
+    setCatGuideLanguage();
+  }
+}
+if(catGuide && catGuideTrigger && catGuidePanel){
+  catGuideTrigger.addEventListener("click",()=>{
+    const open=catGuidePanel.hidden;
+    catGuidePanel.hidden=!open;
+    catGuideTrigger.setAttribute("aria-expanded",String(open));
+  });
+  catGuidePanel.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeCatGuide));
+  document.addEventListener("pointerdown",event=>{if(!catGuide.contains(event.target))closeCatGuide();});
+  document.addEventListener("keydown",event=>{if(event.key==="Escape")closeCatGuide();});
+  window.addEventListener("scroll",updateCatSection,{passive:true});
+  langToggle.addEventListener("click",setCatGuideLanguage);
+  updateCatSection();setCatGuideLanguage();
 }
