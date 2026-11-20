@@ -3848,3 +3848,19 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* FULL-BLEED ORIGINAL BLUE DIAGONAL — extend the existing arm stripe to the left screen edge. */
+#home.hero-poster .poster-art{
+  width:100%!important;
+  right:0!important;
+  left:auto!important;
+}
+@media(max-width:900px){
+  #home.hero-poster .poster-art{width:118%!important}
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-art{width:229%!important}
+}
+@media(max-width:365px){
+  #home.hero-poster .poster-art{width:243%!important}
+}
+
