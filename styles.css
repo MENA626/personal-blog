@@ -14,9 +14,9 @@
   --white: #FFFFFF;
   --soft: #EDF6FF;
   --ink: #193F7A;
-  --muted: #536C91;
+  --muted: #425F89;
   --line: #D5E6F5;
-  --display: "Thmanyah Serif Display", "Amiri", Georgia, serif;
+  --display: "Thmanyah Serif Display", "Readex Pro", "IBM Plex Sans Arabic", sans-serif;
   --reading: "Thmanyah Serif Text", "Amiri", Georgia, serif;
   --ui: "Thmanyah Sans", "IBM Plex Sans Arabic", "DM Sans", sans-serif;
   --english: "DM Sans", Arial, sans-serif;
@@ -497,4 +497,92 @@ html[dir="ltr"] .art-board,html[dir="ltr"] .demo-panel { direction:ltr; }
 @media (prefers-reduced-motion:reduce) {
  .engine-path-moving,.engine-core,.engine-core-orbit,.engine-outer-ring,.engine-inner-ring,.engine-dotted-ring,.engine-glow,.engine-pulse,.pipeline-node,.pipeline-scan::after,.engine-floating-sticker,.art-board::after { animation:none !important; }
  .hero-art .art-board { transform:none !important; }
+}
+
+
+/* ====================================================
+   STRONG ARABIC TYPOGRAPHY — clear, extended, readable
+   Kashida in editorial titles is intentional, NOT
+   CSS letter-spacing that would separate Arabic joins.
+   ==================================================== */
+:root { --display: "Thmanyah Serif Display", "Readex Pro", "IBM Plex Sans Arabic", sans-serif; }
+html[lang="ar"] .hero-heading,
+html[lang="ar"] .editorial-heading,
+html[lang="ar"] .contact-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-synthesis: weight;
+  font-feature-settings: "kern" 1;
+  letter-spacing: -.015em;
+  line-height: 1.43;
+  text-wrap: balance;
+  word-spacing: .085em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html[lang="ar"] .hero-heading { font-size:clamp(69px,7.6vw,124px); line-height:1.35; margin:24px 0 28px; }
+html[lang="ar"] .editorial-heading { font-size:clamp(49px,5.75vw,88px); line-height:1.39; }
+html[lang="ar"] .contact-title { font-size:clamp(50px,6.2vw,89px); line-height:1.43; }
+html[lang="ar"] .project-details h3,
+html[lang="ar"] .note-card h3,
+html[lang="ar"] .tech-group-head h3,
+html[lang="ar"] .bio-panel h3 {
+  font-family: var(--display);
+  font-weight:700;
+  line-height:1.64;
+  letter-spacing:0;
+}
+html[lang="ar"] .hero-description,
+html[lang="ar"] .section-deck,
+html[lang="ar"] .about-lead > p,
+html[lang="ar"] .project-details > p,
+html[lang="ar"] .note-card p,
+html[lang="ar"] .ai-banner p,
+html[lang="ar"] .contact-layout p {
+  font-family: "Thmanyah Sans", "IBM Plex Sans Arabic", "Readex Pro", sans-serif;
+  font-weight:500;
+  letter-spacing:0;
+  color:var(--muted);
+  line-height:2;
+}
+html[lang="ar"] .about-lead > p { font-size:clamp(17px,1.55vw,20px); }
+html[lang="ar"] .hero-description { font-size:clamp(17px,1.65vw,21px); }
+html[lang="ar"] .hero-heading > span,
+html[lang="ar"] .editorial-heading > span,
+html[lang="ar"] .editorial-heading > em,
+html[lang="ar"] .contact-title > span,
+html[lang="ar"] .contact-title > em {
+  display:inline-block;
+  transform-origin:right center;
+  transition:filter .4s ease, transform .5s cubic-bezier(.2,.7,.2,1);
+}
+html[lang="ar"] .hero-heading > span:hover,
+html[lang="ar"] .editorial-heading > span:hover,
+html[lang="ar"] .editorial-heading > em:hover,
+html[lang="ar"] .contact-title > span:hover,
+html[lang="ar"] .contact-title > em:hover { transform:skewX(-2deg) translateY(-2px); }
+html[lang="ar"] .hero-highlight::after { height:16%; bottom:13%; border-radius:10px; background:#FFA62B; }
+html[lang="ar"] .editorial-heading em::after { height:14%; bottom:14%; background:#F8E6A0; border-radius:5px; }
+html[lang="ar"] .contact-title em { border-bottom-color:#FFA62B; }
+.hero-overline { font-weight:700; }
+@media(max-width:1130px){
+ html[lang="ar"] .hero-heading { font-size:clamp(55px,6.7vw,92px); }
+ html[lang="ar"] .editorial-heading { font-size:clamp(48px,5.5vw,75px); }
+}
+@media(max-width:700px) {
+ html[lang="ar"] .hero-heading { font-size:clamp(53px,10.8vw,78px); line-height:1.4; word-spacing:.025em; }
+ html[lang="ar"] .editorial-heading { font-size:clamp(43px,9.3vw,65px); line-height:1.45; word-spacing:.025em; }
+ html[lang="ar"] .contact-title { font-size:clamp(44px,9.1vw,65px); }
+}
+@media(max-width:420px){
+ html[lang="ar"] .hero-heading { font-size:clamp(47px,10.6vw,58px); letter-spacing:0; }
+ html[lang="ar"] .editorial-heading { font-size:clamp(40px,9vw,53px); letter-spacing:0; }
+ html[lang="ar"] .contact-title { font-size:clamp(40px,8.9vw,54px); }
+}
+@media(prefers-reduced-motion:reduce){
+ html[lang="ar"] .hero-heading > span:hover,
+ html[lang="ar"] .editorial-heading > span:hover,
+ html[lang="ar"] .editorial-heading > em:hover,
+ html[lang="ar"] .contact-title > span:hover,
+ html[lang="ar"] .contact-title > em:hover { transform:none; }
 }
