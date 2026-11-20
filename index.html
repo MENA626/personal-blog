@@ -3249,6 +3249,32 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+
+/* ONE-LINE HERO HEADINGS — matching the requested copy, including on phones. */
+#home.hero-poster .poster-english{
+  white-space:nowrap!important;
+  font-size:clamp(34px,5.7vw,82px)!important;
+  letter-spacing:-.055em!important;
+  line-height:1.1!important;
+}
+#home.hero-poster .poster-title{
+  white-space:nowrap!important;
+  font-size:clamp(20px,2.8vw,40px)!important;
+  letter-spacing:-.035em!important;
+  line-height:1.5!important;
+}
+#home.hero-poster .poster-title span{display:inline!important}
+@media(max-width:700px){
+  #home.hero-poster .poster-english{
+    font-size:clamp(26px,8vw,42px)!important;
+    margin-bottom:490px;
+  }
+  #home.hero-poster .poster-title{
+    font-size:clamp(14px,3.55vw,19px)!important;
+    letter-spacing:-.055em!important;
+  }
+}
+
 </style>
 
 </head>
@@ -3288,9 +3314,9 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
       </svg>
     </div>
     <div class="poster-copy">
-      <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!"><span>Hello</span><span>world!</span></p>
+      <p class="poster-english" lang="en" dir="ltr" aria-label="Helloworld!">Helloworld!</p>
       <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا مساحتي الصغيرة! ✳</p>
-      <h1 id="heroMainTitle" class="poster-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span><span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
+      <h1 id="heroMainTitle" class="poster-title"><span data-i18n="saasTitleOne">أفكار أصمّمها.</span> <span data-i18n="saasTitleTwo">ومشاريع أبنيها.</span></h1>
       <p class="poster-description" data-i18n="saasDescription">هنا أشارككم مهاراتي وخبراتي وحكاياتي، وأوثّق تجاربي في التصميم والبرمجة، وكل فكرة ألهمتني أو علّمتني شيئًا جديدًا.</p>
       <p class="poster-tagline" data-i18n="saasTagline">أهلًا بكم في عالمي الرقمي، حيث تتحوّل الأفكار إلى تجارب ومشاريع!</p>
       <a href="#projects" class="poster-link"><span data-i18n="saasProjects">استعرض مشاريعي</span><span aria-hidden="true">↗</span></a>
