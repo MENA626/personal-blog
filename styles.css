@@ -1956,3 +1956,180 @@ html,body {background:#FFFFFF;color:#153A85}
   .matcha-card .matcha-cover-image{transition:none!important}
   .matcha-card:hover .matcha-cover-image{transform:none!important}
 }
+
+
+/* 2026 EDITORIAL BLUE SYSTEM — light-hearted flat artwork, not glossy 3D.
+   The reference uses bold lettering, simple planets, orbit strokes and stars. */
+.hero.hero-saas{
+ background:linear-gradient(130deg,#1552AD 0%,#0B78DA 52%,#009EFF 100%);
+}
+.hero-tech-grid{
+ opacity:.2;
+ background-size:50px 50px;
+}
+.hero-saas-glow{
+ opacity:.2;
+ animation:none!important;
+ filter:none;
+}
+.hero-saas-layout{gap:clamp(28px,5vw,80px)}
+.hero-saas-art{
+ perspective:none;
+ align-items:center;
+ justify-content:center;
+ min-height:470px;
+}
+.hero-flat-art{
+ position:relative;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ isolation:isolate;
+ width:min(100%,580px);
+ aspect-ratio:1 / 1;
+ max-height:550px;
+ overflow:hidden;
+ border-radius:30px;
+ background:linear-gradient(147deg,#048FEF,#1267C5 75%,#1A49AF);
+ box-shadow:0 20px 55px rgba(10,50,136,.15);
+ border:1px solid rgba(255,255,255,.13);
+}
+.hero-flat-art::before{
+ position:absolute;
+ inset:0;
+ content:"";
+ pointer-events:none;
+ opacity:.25;
+ background-image:radial-gradient(circle,#D7ECFF 1.25px,transparent 2px);
+ background-size:51px 51px;
+}
+.hero-flat-ring{
+ position:absolute;
+ top:50%;
+ left:50%;
+ width:72%;
+ height:72%;
+ border:1px solid rgba(217,242,255,.25);
+ border-radius:50%;
+ transform:translate(-50%,-50%) rotate(-21deg);
+}
+.hero-flat-ring-two{
+ width:58%;
+ height:58%;
+ border-color:rgba(255,216,80,.22);
+ transform:translate(-50%,-50%) rotate(20deg);
+}
+.hero-flat-spark{
+ position:absolute;
+ top:11%;
+ left:13%;
+ font:800 clamp(29px,4.5vw,53px)/1 var(--english);
+ color:#FFD850;
+ animation:flatSpark 8s linear infinite;
+}
+.hero-flat-dot{
+ position:absolute;
+ top:17%;
+ right:14%;
+ height:9px;
+ width:9px;
+ border-radius:50%;
+ background:#DDF4FF;
+}
+.hero-flat-word{
+ position:relative;
+ z-index:2;
+ font:900 clamp(84px,12vw,158px)/1 var(--english);
+ color:#FFFFFF;
+ letter-spacing:-.095em;
+ text-transform:lowercase;
+ direction:ltr;
+ text-shadow:none;
+ transform:translateX(-.04em);
+}
+.hero-flat-word span{color:#FFD850}
+.hero-flat-sub{
+ position:relative;
+ z-index:2;
+ margin-top:13px;
+ color:#D8F1FF;
+ letter-spacing:.14em;
+ font:700 clamp(12px,1.4vw,16px)/1.4 var(--english);
+ direction:ltr;
+}
+.hero-flat-bottom{
+ position:absolute;
+ left:9%;
+ right:9%;
+ bottom:9%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:8px;
+ border-top:1px solid rgba(230,245,255,.48);
+ padding-top:17px;
+ color:#DBEEFF;
+ font:700 10px/1.5 var(--english);
+ letter-spacing:.1em;
+}
+@keyframes flatSpark{50%{transform:rotate(18deg) scale(1.08)}}
+.hero-saas-title{letter-spacing:0}
+.hero-saas-title em{color:#FFD850}
+.hero-saas-description{color:#EAF7FF}
+.project-card,.video-card,.note-card{
+ box-shadow:none;
+ border-radius:20px;
+}
+.project-card:hover,.video-card:hover,.note-card:hover{
+ box-shadow:0 12px 31px rgba(9,64,160,.08);
+ transform:translateY(-2px);
+}
+.site-project-art{background:linear-gradient(145deg,#1A49AF,#009EFF)}
+.site-art-circle{border-color:rgba(237,248,255,.28);box-shadow:0 0 0 47px rgba(228,245,255,.07),0 0 0 90px rgba(232,246,255,.05)}
+.site-art-label,.site-art-code{color:#EAF7FF}
+.site-art-type{letter-spacing:-.06em;text-transform:lowercase;font-weight:900}
+.site-art-type span{color:#FFD850}
+.cosmos-art{
+ background:#163677;
+}
+.cosmos-orbit{border-width:1.5px;border-color:rgba(255,216,80,.37)}
+.cosmos-planet{
+ background:radial-gradient(circle at 32% 24%,#E6F8FF 0%,#68C6FF 33%,#009EFF 55%,#1555BA 100%);
+ box-shadow:none;
+}
+.cosmos-wordmark{text-shadow:none;letter-spacing:.14em}
+.cosmos-stars{color:#FFD850}
+.matcha-card .matcha-art{
+ aspect-ratio:16 / 9;
+ background:#1A49AF;
+}
+.matcha-card .matcha-cover-image{
+ object-fit:contain;
+ object-position:center;
+}
+.matcha-cover-label{
+ background:rgba(255,255,255,.94);
+ border-color:rgba(255,255,255,.8);
+ color:#1A49AF;
+ box-shadow:none;
+}
+.video-frame img{object-fit:cover}
+.video-play{box-shadow:none}
+@media(max-width:840px){
+ .hero-saas-art{min-height:330px}
+ .hero-flat-art{width:min(100%,450px);max-height:450px}
+ .hero-flat-word{font-size:clamp(85px,16vw,146px)}
+}
+@media(max-width:570px){
+ .hero-saas-art{min-height:280px}
+ .hero-flat-art{width:min(100%,370px);border-radius:19px;max-height:none}
+ .hero-flat-word{font-size:clamp(77px,21vw,110px)}
+ .hero-flat-sub{font-size:11px}
+ .hero-flat-bottom{font-size:7px}
+ .hero-flat-spark{font-size:35px}
+ .matcha-card .matcha-art{aspect-ratio:16 / 9}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-flat-spark{animation:none!important}
+}
