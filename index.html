@@ -6563,6 +6563,57 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
  }
  #participations .participations-aside{min-height:0!important}
 }
+
+/* Fixed AR / EN language selector dimensions in both language modes and at every scroll position. */
+.site-header .language-toggle,
+.site-header.is-scrolled .language-toggle,
+html[lang="ar"] .site-header .language-toggle,
+html[lang="en"] .site-header .language-toggle{
+ box-sizing:border-box!important;
+ flex:0 0 110px!important;
+ width:110px!important;min-width:110px!important;max-width:110px!important;
+ height:44px!important;min-height:44px!important;max-height:44px!important;
+ padding:3px!important;margin:0!important;
+ gap:0!important;direction:ltr!important;
+ font-size:12px!important;line-height:1!important;
+ transform:none!important;
+}
+.site-header .language-toggle .language-switch-track{
+ box-sizing:border-box!important;
+ width:100%!important;height:100%!important;
+ min-width:0!important;min-height:0!important;
+ grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+}
+.site-header .language-toggle .language-switch-option{
+ box-sizing:border-box!important;
+ width:100%!important;min-width:0!important;
+ font-size:12px!important;line-height:1!important;
+ padding:0!important;white-space:nowrap!important;
+}
+.site-header .language-toggle .language-switch-thumb{
+ width:50%!important;height:100%!important;
+ min-width:0!important;top:0!important;bottom:0!important;
+}
+@media(max-width:700px){
+ .site-header .language-toggle,
+ .site-header.is-scrolled .language-toggle,
+ html[lang="ar"] .site-header .language-toggle,
+ html[lang="en"] .site-header .language-toggle{
+  flex:0 0 94px!important;width:94px!important;min-width:94px!important;max-width:94px!important;
+  height:40px!important;min-height:40px!important;max-height:40px!important;
+ }
+ .site-header .language-toggle .language-switch-option{font-size:11px!important}
+}
+@media(max-width:390px){
+ .site-header .language-toggle,
+ .site-header.is-scrolled .language-toggle,
+ html[lang="ar"] .site-header .language-toggle,
+ html[lang="en"] .site-header .language-toggle{
+  flex:0 0 82px!important;width:82px!important;min-width:82px!important;max-width:82px!important;
+  height:37px!important;min-height:37px!important;max-height:37px!important;
+ }
+ .site-header .language-toggle .language-switch-option{font-size:10px!important}
+}
 </style>
 
 </head>
