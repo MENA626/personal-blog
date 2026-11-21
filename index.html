@@ -4677,7 +4677,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     padding:25px 9px 30px 5.5%!important;
     text-align:right!important;
     direction:rtl!important;
-    background:#F2E7E1!important;
+    background:transparent!important;
     box-shadow:none!important;
   }
   #home.hero-poster .poster-copy .poster-english{
@@ -4799,6 +4799,31 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 }
 
 
+
+/* Let the same original blue diagonal pass behind the text all the way to the left
+   viewport edge. The opaque mobile copy panel was concealing its left half. */
+@media(max-width:700px){
+  #home.hero-poster .poster-copy{
+    background:transparent!important;
+  }
+  #home.hero-poster .poster-art{
+    overflow:visible!important;
+    clip-path:none!important;
+    width:220%!important;
+    right:0!important;
+    left:auto!important;
+  }
+  #home.hero-poster .poster-art svg{
+    overflow:visible!important;
+  }
+  #home.hero-poster .poster-art .poster-static-ribbon{
+    display:block!important;
+    visibility:visible!important;
+  }
+}
+@media(max-width:360px){
+  #home.hero-poster .poster-art{width:235%!important}
+}
 </style>
 
 </head>
