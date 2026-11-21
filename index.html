@@ -5745,6 +5745,20 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
   -webkit-text-fill-color:#35134E!important;
 }
 
+
+/* Hero refresh: only the requested one-line message after the greeting. */
+/* Waving hand is sunny yellow; the original long ribbon remains grape purple. */
+#home.hero-poster .poster-art .poster-waving-palm,
+#home.hero-poster .poster-palm-overlay .poster-waving-palm{fill:#FFEB55!important}
+#home.hero-poster .poster-art .poster-waving-palm > path:first-child,
+#home.hero-poster .poster-palm-overlay .poster-waving-palm > path:first-child{fill:#FFEB55!important}
+#home.hero-poster .poster-art .poster-waving-palm > path[stroke],
+#home.hero-poster .poster-palm-overlay .poster-waving-palm > path[stroke]{
+  stroke:#35134E!important;fill:none!important
+}
+#home.hero-poster .poster-static-ribbon,
+#home.hero-poster .poster-static-ribbon path{fill:#913CDC!important}
+
 </style>
 
 </head>
@@ -5783,7 +5797,7 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
           <path class="poster-ribbon-desktop" d="M-520 719 C-260 577 63 404 365 259 L451 238 C493 223 550 215 586 224 L586 311 C540 297 488 309 457 323 L459 339 C465 391 485 445 515 470 C541 489 561 491 586 485 L586 1900 L506 1900 C506 1480 508 1020 508 647 C444 608 408 545 392 460 L378 352 L374 347 C68 499 -253 674 -520 829 Z"/>
           <path class="poster-ribbon-mobile" d="M-520 377 C-240 338 75 281 365 259 C432 241 496 214 551 219 C565 219 576 221 586 224 L586 311 C544 298 494 306 457 323 C457 383 484 443 515 470 C542 487 565 491 586 485 L586 1900 L506 1900 C506 1450 508 1030 508 647 C443 604 412 526 393 458 C387 430 380 373 373 351 C88 380 -245 469 -520 490 Z"/>
         </g>
-        <g class="poster-waving-palm" fill="#913CDC">
+        <g class="poster-waving-palm" fill="#FFEB55">
           <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
           <path d="M428 136 Q434 126 443 123" fill="none" stroke="#FFEB55" stroke-width="5" stroke-linecap="round"/>
         </g>
@@ -5792,7 +5806,7 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
     <!-- Foreground palm: floats in front of Hello world while the blue ribbon stays behind copy. -->
     <div class="poster-palm-overlay" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-430 0 1016 647" preserveAspectRatio="xMaxYMax meet" focusable="false" aria-hidden="true">
-        <g class="poster-waving-palm" fill="#913CDC">
+        <g class="poster-waving-palm" fill="#FFEB55">
           <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
           <path d="M428 136 Q434 126 443 123" fill="none" stroke="#FFEB55" stroke-width="5" stroke-linecap="round"/>
         </g>
@@ -5802,9 +5816,7 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
     <div class="poster-copy">
       <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!">Hello world!</p>
       <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا زاويتي الصغيرة من العالم الرقمي!</p>
-      <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا، حيث تُزهر الأفكار بالشغف،</span> <span data-i18n="saasTitleTwo">وتتحوّل إلى إبداعات <span class="title-keep-together">تنبض بالحياة.</span></span></mark></h1>
-      <p class="poster-description" data-i18n="saasDescription"><span class="description-beige-highlight">هذه مساحتي التي تشبهني… أطلق فيها العنان لخيالي، وأحوّل فضولي إلى تجارب، وشغفي إلى مشاريع تجمع بين سحر التصميم ومتعة البرمجة.</span></p>
-      <p class="poster-invitation" data-i18n="saasInvitation">تجوّل بين مشاريعي، فلعلّ إحداها تُلهمك</p>
+      <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا تُزهر الأفكار، ويُنسج الخيال بإبداع،</span> <span data-i18n="saasTitleTwo">حيث يمتزج سحر التصميم بمتعة البرمجة.</span></mark></h1>
     </div>
   </div>
 </section>
@@ -6081,8 +6093,8 @@ const english = {
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
   saasIntro: "Hello, hello… welcome to my little corner of the digital world!",
-  saasTitleOne: "Here, where ideas blossom with passion,",
-  saasTitleTwo: "and grow into creations full of life.",
+  saasTitleOne: "Here, ideas blossom and imagination is woven into creativity,",
+  saasTitleTwo: "where the magic of design meets the joy of coding.",
   saasDescription: "<span class=\"description-beige-highlight\">This space feels like me… I let my imagination roam, turn my curiosity into experiments, and my passion into projects that blend the magic of design with the joy of coding.</span>",
   saasInvitation: "Explore my projects—perhaps one of them will inspire you.",
   saasProjects: "✦ Explore my projects",
