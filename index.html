@@ -6469,6 +6469,51 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
  stroke:#FFFFFF!important;
 }
 #participations .participations-project-link:hover{opacity:.82!important}
+
+/* Fix: hamburger wrapper inherited the old solid-span background, producing a square. */
+.site-header .menu-toggle .menu-icon-bars,
+.site-header.is-scrolled .menu-toggle .menu-icon-bars{
+ background:transparent!important;
+ border:0!important;box-shadow:none!important;
+ padding:0!important;margin:0!important;
+ min-width:22px!important;max-width:22px!important;
+ min-height:23px!important;height:23px!important;
+ width:22px!important;
+ display:flex!important;flex-direction:column!important;
+ align-items:center!important;justify-content:center!important;
+ gap:5px!important;overflow:visible!important;
+}
+.site-header .menu-toggle .menu-icon-bars i,
+.site-header.is-scrolled .menu-toggle .menu-icon-bars i{
+ flex:0 0 2.5px!important;
+ display:block!important;
+ position:static!important;
+ height:2.5px!important;min-height:2.5px!important;
+ width:22px!important;min-width:22px!important;
+ background:#25364A!important;border:0!important;border-radius:4px!important;
+ box-shadow:none!important;transform:none!important;
+}
+.site-header .menu-toggle{
+ min-width:44px!important;width:44px!important;height:44px!important;
+ flex-shrink:0!important;overflow:hidden!important;
+}
+.site-header .nav-shell,.site-header .nav-actions{min-width:0!important}
+.site-header .nav-actions{flex-shrink:0!important}
+.site-header .language-toggle{flex-shrink:0!important}
+@media(max-width:700px){
+ .site-header .nav-shell{width:calc(100% - 24px)!important;gap:6px!important}
+ .site-header .nav-actions{gap:6px!important}
+ .site-header .menu-toggle{min-width:40px!important;width:40px!important;height:40px!important;flex-basis:40px!important}
+ .site-header .language-toggle{width:94px!important;min-width:94px!important;height:39px!important}
+ .site-header .nav-cta{min-height:39px!important}
+}
+@media(max-width:390px){
+ .site-header .nav-shell{width:calc(100% - 16px)!important}
+ .site-header .nav-actions{gap:4px!important}
+ .site-header .menu-toggle{min-width:37px!important;width:37px!important;height:37px!important;flex-basis:37px!important}
+ .site-header .language-toggle{width:82px!important;min-width:82px!important;height:36px!important}
+ .site-header .nav-cta{min-height:36px!important}
+}
 </style>
 
 </head>
