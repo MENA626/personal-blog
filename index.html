@@ -4849,6 +4849,12 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* Keep the closing words together on the same line in the Arabic hero. */
+#home.hero-poster .poster-title .title-keep-together{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+
 </style>
 
 </head>
@@ -4905,7 +4911,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
     <div class="poster-copy">
       <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!">Hello world!</p>
       <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا زاويتي الصغيرة من العالم الرقمي!</p>
-      <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا، حيث تُزهر الأفكار بالشغف،</span> <span data-i18n="saasTitleTwo">وتتحوّل إلى إبداعات تنبض بالحياة.</span></mark></h1>
+      <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا، حيث تُزهر الأفكار بالشغف،</span> <span data-i18n="saasTitleTwo">وتتحوّل إلى إبداعات <span class="title-keep-together">تنبض بالحياة.</span></span></mark></h1>
       <p class="poster-description" data-i18n="saasDescription">هذه مساحتي التي تشبهني… أطلق فيها العنان لخيالي، وأحوّل فضولي إلى تجارب، وشغفي إلى مشاريع تجمع بين سحر التصميم ومتعة البرمجة.</p>
     </div>
   </div>
