@@ -6301,6 +6301,48 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
 
 /* Final palette lock: no green or green-tinted teal; ice blue + orange only, navy used for readable text. */
 :root{--green:#FF5C34;--green-deep:#E74C2A;--deep-green:#25364A;--green-pale:#D7EFFF;--mint:#FF5C34;--pink:#FF5C34;--rose:#D7EFFF;--softbg:#D7EFFF;--surface:#FFFFFF;--slate:#D7EFFF;--white:#FFFFFF;--ink:#25364A;--muted:#46566B;--line:#B9DDEF;--orange:#FF5C34;--orange-soft:#D7EFFF;--apricot:#FF5C34;--solar-orange:#FF5C34;--solar-amber:#FF5C34;--brand-lime:#FF5C34;--brand-yellow:#FF5C34;--yellow-primary:#FF5C34;--yellow-pastel:#D7EFFF;--violet:#FF5C34;--violet-ink:#25364A;--violet-dark:#25364A;--brand-navy:#25364A;--blue-deep:#25364A;--brand-blue:#FF5C34;--brand-ice:#D7EFFF;--sky:#D7EFFF}
+
+/* Nov 21: hand removed completely; move hero wording to the top and close the empty space. */
+#home.hero-poster .hero-fresh-art,#home.hero-poster .poster-art,
+#home.hero-poster .poster-palm-overlay,#home.hero-poster .hero-gesture-wave,
+#home.hero-poster .hero-gesture-sparkles{display:none!important}
+#home.hero-poster .poster-shell{
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;
+ justify-content:flex-start!important;gap:0!important;
+ width:min(1120px,calc(100% - 64px))!important;max-width:1120px!important;
+ height:auto!important;min-height:0!important;
+ padding:clamp(28px,4vw,56px) 0 clamp(44px,6vw,76px)!important;
+ margin:0 auto!important;overflow:visible!important
+}
+#home.hero-poster .poster-copy{
+ position:relative!important;inset:auto!important;order:0!important;
+ display:block!important;flex:none!important;
+ width:100%!important;max-width:100%!important;min-width:0!important;
+ align-self:stretch!important;margin:0!important;padding:0!important;
+ transform:none!important;text-align:right!important;direction:rtl!important
+}
+#home.hero-poster .poster-copy .poster-english{
+ position:static!important;display:block!important;
+ margin:0 0 24px!important;padding:0!important;
+ font-size:clamp(48px,7vw,100px)!important;line-height:1.1!important;
+ text-align:right!important;transform:none!important
+}
+#home.hero-poster .poster-mobile-hello{display:none!important}
+#home.hero-poster .poster-intro{margin:0 0 13px!important}
+#home.hero-poster .poster-title{margin:0!important}
+@media(max-width:700px){
+ #home.hero-poster .poster-shell{
+  width:calc(100% - 36px)!important;
+  padding:22px 0 44px!important;min-height:0!important
+ }
+ #home.hero-poster .poster-copy{
+  width:100%!important;max-width:100%!important;
+  padding:0!important;margin:0!important
+ }
+ #home.hero-poster .poster-copy .poster-english{
+  font-size:clamp(40px,11vw,62px)!important;margin:0 0 19px!important
+ }
+}
 </style>
 
 </head>
@@ -6332,18 +6374,6 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
   <main id="main">
     <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
   <div class="poster-shell">
-    <div class="hero-fresh-art" aria-hidden="true">
-      <svg viewBox="0 0 510 440" xmlns="http://www.w3.org/2000/svg" focusable="false">
-        <g class="hero-gesture-wave">
-          <!-- First gesture: one open palm waving hello from the left. -->
-          <path d="M-75 318 C30 315 126 308 197 297 C207 285 211 266 211 241 L204 148 Q203 132 216 129 Q230 126 233 144 L245 207 L232 112 Q229 92 244 88 Q261 85 265 104 L278 201 L272 89 Q272 71 288 69 Q306 68 306 88 L307 201 L321 115 Q324 98 340 101 Q354 104 351 121 L336 219 C351 204 368 190 383 187 Q401 183 406 196 Q411 208 397 222 L375 247 C362 266 353 282 345 312 C332 353 295 374 254 380 C163 394 54 404 -75 412 Z" fill="#D7EFFF" stroke="#FF5C34" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M351 232 Q363 221 372 218" fill="none" stroke="#FF5C34" stroke-width="2" opacity=".45" stroke-linecap="round"/>
-        </g>
-        <g class="hero-gesture-sparkles" fill="none" stroke="#FF5C34" stroke-width="3.5" stroke-linecap="round">
-          <path d="M430 126l14-16M440 166h19M411 99l7-19"/>
-        </g>
-      </svg>
-    </div>
     <p class="poster-mobile-hello" lang="en" dir="ltr">Hello world!</p>
     <div class="poster-copy">
       <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!">Hello world!</p>
