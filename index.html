@@ -5871,6 +5871,24 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
 #videos .video-play{display:flex!important;align-items:center!important;justify-content:center!important}
 #videos .video-play .video-play-icon{display:block;flex:none;width:23px;height:23px;color:#35134E;transform:translateX(1px)}
 
+
+/* Remove the unwanted purple U-shaped seam at the base of the wrist.
+   The hand keeps its sun-yellow fill; its thin mauve contour stops above the wrist. */
+#home.hero-poster .poster-art .poster-waving-palm > path:first-child,
+#home.hero-poster .poster-palm-overlay .poster-waving-palm > path:first-child{
+  stroke:none!important;
+  fill:#FFEB55!important;
+}
+#home.hero-poster .poster-art .poster-waving-palm .poster-hand-upper-outline,
+#home.hero-poster .poster-palm-overlay .poster-waving-palm .poster-hand-upper-outline{
+  stroke:#913CDC!important;
+  stroke-width:1.1px!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  vector-effect:non-scaling-stroke!important;
+  fill:none!important;
+}
+
 </style>
 
 </head>
@@ -5911,6 +5929,7 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
         </g>
         <g class="poster-waving-palm" fill="#FFEB55">
           <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
+          <path class="poster-hand-upper-outline" d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323" fill="none"/>
           <path d="M428 136 Q434 126 443 123" fill="none" stroke="#FFEB55" stroke-width="5" stroke-linecap="round"/>
         </g>
       </svg>
@@ -5920,6 +5939,7 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-430 0 1016 647" preserveAspectRatio="xMaxYMax meet" focusable="false" aria-hidden="true">
         <g class="poster-waving-palm" fill="#FFEB55">
           <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
+          <path class="poster-hand-upper-outline" d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323" fill="none"/>
           <path d="M428 136 Q434 126 443 123" fill="none" stroke="#FFEB55" stroke-width="5" stroke-linecap="round"/>
         </g>
       </svg>
