@@ -5818,6 +5818,33 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
   fill:none!important;
 }
 
+
+/* Soft scalloped top edge for the yellow CV section instead of a straight rectangle. */
+#cv.cv.cv-featured{
+  position:relative!important;
+  isolation:isolate;
+  overflow:visible!important;
+  background:#FFEB55!important;
+}
+#cv.cv.cv-featured::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:auto 0 calc(100% - 1px) 0!important;
+  top:-58px!important;
+  bottom:auto!important;
+  width:100%!important;
+  height:60px!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80' preserveAspectRatio='none'%3E%3Cpath fill='%23FFEB55' d='M0 48 C100 10 205 8 300 42 S505 75 610 37 S820 3 920 42 S1110 64 1200 25 L1200 80 L0 80 Z'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat!important;
+  border:0!important;
+  transform:none!important;
+}
+@media(max-width:700px){
+  #cv.cv.cv-featured::after{top:-35px!important;height:37px!important}
+}
+
 </style>
 
 </head>
