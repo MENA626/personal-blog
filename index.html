@@ -5955,6 +5955,68 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
 }
 @media(prefers-reduced-motion:reduce){#home.hero-poster .hero-fresh-wave{animation:none!important}}
 
+
+/* A single minimal waving hand reaches into the page from the LEFT, not a floating sticker. */
+#home.hero-poster .poster-shell{
+ direction:ltr!important;
+ display:flex!important;flex-direction:row!important;
+ align-items:center!important;justify-content:space-between!important;
+ width:min(1240px,100%)!important;max-width:1240px!important;
+ gap:clamp(5px,3vw,35px)!important;
+ padding:clamp(56px,6vw,98px) clamp(25px,5vw,65px) clamp(60px,7vw,102px) 0!important;
+ min-height:580px!important;overflow:hidden!important
+}
+#home.hero-poster .hero-fresh-art{
+ order:0!important;flex:0 0 45%!important;
+ width:45%!important;max-width:none!important;
+ align-self:center!important;position:relative!important;
+ margin:0!important;padding:0!important;overflow:visible!important;
+ transform:none!important;z-index:1!important
+}
+#home.hero-poster .hero-fresh-art svg{
+ display:block!important;width:100%!important;height:auto!important;
+ overflow:visible!important
+}
+#home.hero-poster .hero-single-wave{
+ transform-box:view-box;transform-origin:0% 77%;
+ animation:singleGoodbyeWave 3.6s ease-in-out infinite;
+}
+@keyframes singleGoodbyeWave{
+ 0%,10%,80%,100%{transform:rotate(0)}
+ 21%{transform:rotate(-3deg)}
+ 36%{transform:rotate(3deg)}
+ 51%{transform:rotate(-2.5deg)}
+ 65%{transform:rotate(2deg)}
+}
+#home.hero-poster .poster-copy{
+ order:1!important;flex:1 1 55%!important;width:auto!important;max-width:590px!important;
+ margin:0!important;padding:0!important;
+ text-align:right!important;direction:rtl!important
+}
+@media(max-width:700px){
+ #home.hero-poster .poster-shell{
+  flex-direction:column!important;gap:0!important;
+  width:100%!important;max-width:100%!important;
+  min-height:0!important;
+  padding:30px 21px 57px 0!important;overflow:hidden!important
+ }
+ #home.hero-poster .hero-fresh-art{
+  order:0!important;flex:none!important;
+  width:min(84%,365px)!important;max-width:365px!important;
+  align-self:flex-start!important; margin:0!important;
+  transform:translateX(-13%)!important
+ }
+ #home.hero-poster .poster-copy{
+  order:1!important;flex:none!important;width:100%!important;max-width:none!important;
+  margin:0!important;padding:0 0 0 22px!important;
+  text-align:right!important
+ }
+ #home.hero-poster .poster-copy .poster-english{
+  font-size:clamp(40px,10vw,57px)!important;margin:0 0 20px!important
+ }
+}
+@media(prefers-reduced-motion:reduce){#home.hero-poster .hero-single-wave{animation:none!important}}
+
 </style>
 
 </head>
@@ -5987,20 +6049,13 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
     <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
   <div class="poster-shell">
     <div class="hero-fresh-art" aria-hidden="true">
-      <svg viewBox="0 0 500 470" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
-        <circle cx="250" cy="230" r="190" fill="#FFF9D4"/>
-        <circle cx="250" cy="230" r="169" fill="none" stroke="#913CDC" stroke-width="2" stroke-dasharray="5 11" opacity=".38"/>
-        <circle cx="92" cy="132" r="12" fill="#FFEB55"/>
-        <circle cx="400" cy="355" r="10" fill="#913CDC" opacity=".26"/>
-        <path d="M97 310C136 347 156 372 194 386" fill="none" stroke="#913CDC" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-        <path d="M398 116l18-16m-4 43 28-2m-290-56-20-17" fill="none" stroke="#913CDC" stroke-width="5" stroke-linecap="round"/>
-        <g class="hero-fresh-wave">
-          <path d="M222 427c-15-27-26-53-29-81l-15-100c-2-14 4-25 16-27 12-1 21 7 24 19l8 37-25-141c-3-17 4-29 18-31 14-2 24 8 27 24l23 127-16-154c-2-18 6-30 20-31 14-1 24 9 25 26l17 157 4-123c0-18 9-28 23-27 14 1 22 12 22 29l-4 136 20-72c4-15 16-22 28-17 12 4 17 16 12 32l-34 115c-9 32-21 57-38 81l-7 33H222Z" fill="#FFEB55" stroke="#913CDC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M248 368c28 14 62 10 89-10" fill="none" stroke="#913CDC" stroke-width="3" opacity=".42" stroke-linecap="round"/>
-          <path d="M224 417h118" fill="none" stroke="#913CDC" stroke-width="5" stroke-linecap="round"/>
+      <svg viewBox="0 0 510 440" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <g class="hero-single-wave">
+          <!-- A single natural waving hand, attached seamlessly to an arm emerging from the left edge. -->
+          <path d="M-75 318 C30 315 126 308 197 297 C207 285 211 266 211 241 L204 148 Q203 132 216 129 Q230 126 233 144 L245 207 L232 112 Q229 92 244 88 Q261 85 265 104 L278 201 L272 89 Q272 71 288 69 Q306 68 306 88 L307 201 L321 115 Q324 98 340 101 Q354 104 351 121 L336 219 C351 204 368 190 383 187 Q401 183 406 196 Q411 208 397 222 L375 247 C362 266 353 282 345 312 C332 353 295 374 254 380 C163 394 54 404 -75 412 Z" fill="#FFEB55" stroke="#913CDC" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M351 232 Q363 221 372 218" fill="none" stroke="#913CDC" stroke-width="2" opacity=".55" stroke-linecap="round"/>
         </g>
-        <path d="M110 209l-13 5m22-37-11-8m282 94 16 8" stroke="#913CDC" stroke-width="4" stroke-linecap="round" opacity=".65"/>
-        <circle cx="377" cy="95" r="6" fill="#913CDC"/>
+        <path d="M419 142l17-16M430 187h24M405 103l7-23" fill="none" stroke="#913CDC" stroke-width="3.5" stroke-linecap="round" opacity=".65"/>
       </svg>
     </div>
     <p class="poster-mobile-hello" lang="en" dir="ltr">Hello world!</p>
