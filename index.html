@@ -4855,6 +4855,17 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   white-space:nowrap!important;
 }
 
+/* Cream line-by-line highlight behind the hero description, legible over the blue ribbon. */
+#home.hero-poster .poster-description .description-beige-highlight{
+  display:inline!important;
+  background:#F2E7E1!important;
+  color:#2329A8!important;
+  padding:.10em .24em!important;
+  border-radius:3px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+
 </style>
 
 </head>
@@ -4912,7 +4923,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
       <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!">Hello world!</p>
       <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا زاويتي الصغيرة من العالم الرقمي!</p>
       <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا، حيث تُزهر الأفكار بالشغف،</span> <span data-i18n="saasTitleTwo">وتتحوّل إلى إبداعات <span class="title-keep-together">تنبض بالحياة.</span></span></mark></h1>
-      <p class="poster-description" data-i18n="saasDescription">هذه مساحتي التي تشبهني… أطلق فيها العنان لخيالي، وأحوّل فضولي إلى تجارب، وشغفي إلى مشاريع تجمع بين سحر التصميم ومتعة البرمجة.</p>
+      <p class="poster-description" data-i18n="saasDescription"><span class="description-beige-highlight">هذه مساحتي التي تشبهني… أطلق فيها العنان لخيالي، وأحوّل فضولي إلى تجارب، وشغفي إلى مشاريع تجمع بين سحر التصميم ومتعة البرمجة.</span></p>
     </div>
   </div>
 </section>
@@ -5133,7 +5144,7 @@ const english = {
   saasIntro: "Hello, hello… welcome to my little corner of the digital world!",
   saasTitleOne: "Here, where ideas blossom with passion,",
   saasTitleTwo: "and grow into creations full of life.",
-  saasDescription: "This space feels like me… I let my imagination roam, turn my curiosity into experiments, and my passion into projects that blend the magic of design with the joy of coding.",
+  saasDescription: "<span class=\"description-beige-highlight\">This space feels like me… I let my imagination roam, turn my curiosity into experiments, and my passion into projects that blend the magic of design with the joy of coding.</span>",
   saasProjects: "✦ Explore my projects",
   saasCV: "My résumé",
   saasScroll: "Get to know me",
