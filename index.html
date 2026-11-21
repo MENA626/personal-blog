@@ -6529,6 +6529,40 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
  color:#FFFFFF!important;
  -webkit-text-fill-color:#FFFFFF!important;
 }
+
+/* Compact participations spacing: eliminate double section+inner padding and align copy at top. */
+#participations.section.participations{
+ padding:0!important;
+ min-height:0!important;
+}
+#participations .participations-inner{
+ padding-top:clamp(26px,3.8vw,48px)!important;
+ padding-bottom:clamp(38px,4.5vw,60px)!important;
+ align-items:start!important;
+ row-gap:20px!important;
+ min-height:0!important;
+}
+#participations .participations-inner > .reveal:first-child{
+ align-self:start!important;
+ margin:0!important;
+ padding:0!important;
+}
+#participations .participations-kicker{margin:0 0 10px!important}
+#participations .participations-title{margin:0 0 14px!important}
+#participations .participations-desc{margin:0!important}
+#participations .participations-project-link{margin-top:16px!important}
+#participations .participations-aside{
+ align-self:start!important;
+ margin:0!important;
+}
+@media(max-width:700px){
+ #participations .participations-inner{
+  padding-top:25px!important;
+  padding-bottom:36px!important;
+  gap:22px!important;
+ }
+ #participations .participations-aside{min-height:0!important}
+}
 </style>
 
 </head>
