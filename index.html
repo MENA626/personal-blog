@@ -4445,6 +4445,192 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+
+/* NOV 21 — layered waving hand and mobile editorial cover: no giant spacer or clipped headlines. */
+#home.hero-poster .poster-art .poster-waving-palm{visibility:hidden!important}
+#home.hero-poster .poster-palm-overlay{
+  position:absolute!important;
+  z-index:4!important;
+  top:0!important;
+  bottom:0!important;
+  right:0!important;
+  left:auto!important;
+  width:100%!important;
+  height:100%!important;
+  pointer-events:none!important;
+  margin:0!important;
+}
+#home.hero-poster .poster-palm-overlay svg{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:visible!important;
+}
+#home.hero-poster .poster-palm-overlay .poster-waving-palm{
+  --palm-stretch:1.3;
+  transform-box:view-box;
+  transform-origin:410px 321px;
+  animation:menatPalmForward 3s ease-in-out infinite!important;
+  will-change:transform;
+}
+@keyframes menatPalmForward{
+  0%,10%,76%,100%{transform:scaleY(var(--palm-stretch)) rotate(0deg)}
+  21%{transform:scaleY(var(--palm-stretch)) rotate(-5deg)}
+  34%{transform:scaleY(var(--palm-stretch)) rotate(5deg)}
+  47%{transform:scaleY(var(--palm-stretch)) rotate(-4.5deg)}
+  60%{transform:scaleY(var(--palm-stretch)) rotate(3.5deg)}
+  70%{transform:scaleY(var(--palm-stretch)) rotate(0deg)}
+}
+@media(min-width:901px){
+  #home.hero-poster .poster-palm-overlay{
+    transform:translateY(68px)!important;
+  }
+  #home.hero-poster .poster-palm-overlay svg{
+    height:auto!important;
+    aspect-ratio:1016/647;
+  }
+}
+@media(min-width:701px) and (max-width:900px){
+  #home.hero-poster .poster-palm-overlay{
+    width:118%!important;
+    transform:translateY(28px)!important;
+  }
+  #home.hero-poster .poster-palm-overlay svg{
+    height:auto!important;
+    aspect-ratio:1016/647;
+  }
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-shell{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+  #home.hero-poster .poster-art,
+  #home.hero-poster .poster-palm-overlay{
+    position:absolute!important;
+    top:-6px!important;
+    bottom:auto!important;
+    right:0!important;
+    left:auto!important;
+    width:175%!important;
+    height:clamp(320px,108vw,420px)!important;
+    transform:none!important;
+    margin:0!important;
+    padding:0!important;
+    pointer-events:none!important;
+  }
+  #home.hero-poster .poster-art{z-index:1!important}
+  #home.hero-poster .poster-palm-overlay{z-index:4!important}
+  #home.hero-poster .poster-art svg,
+  #home.hero-poster .poster-palm-overlay svg{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    aspect-ratio:auto!important;
+    overflow:visible!important;
+  }
+  #home.hero-poster .poster-palm-overlay .poster-waving-palm{
+    --palm-stretch:1.06;
+  }
+  #home.hero-poster .poster-copy{
+    position:relative!important;
+    z-index:3!important;
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:24px 6% 34px!important;
+    text-align:right!important;
+  }
+  #home.hero-poster .poster-english{
+    display:block!important;
+    position:relative!important;
+    z-index:2!important;
+    top:0!important;
+    transform:none!important;
+    width:100%!important;
+    height:auto!important;
+    margin:0 0 clamp(320px,90vw,355px)!important;
+    padding:0!important;
+    font-size:clamp(32px,9.4vw,57px)!important;
+    line-height:1.15!important;
+    letter-spacing:-.06em!important;
+    font-weight:900!important;
+    text-align:left!important;
+    direction:ltr!important;
+    white-space:nowrap!important;
+  }
+  #home.hero-poster .poster-intro{
+    position:static!important;
+    top:auto!important;
+    transform:none!important;
+    margin:0 0 13px!important;
+    font-size:clamp(13px,3.5vw,15px)!important;
+    line-height:1.75!important;
+    font-weight:800!important;
+  }
+  #home.hero-poster .poster-title{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 0 17px!important;
+    font-size:clamp(24px,6.1vw,35px)!important;
+    line-height:1.6!important;
+    letter-spacing:0!important;
+    white-space:normal!important;
+    text-wrap:pretty!important;
+    overflow-wrap:normal!important;
+  }
+  #home.hero-poster .poster-title .poster-marker,
+  #home.hero-poster .poster-title .poster-marker span{
+    white-space:normal!important;
+  }
+  #home.hero-poster .poster-description{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 0 14px!important;
+    font-size:15px!important;
+    line-height:1.85!important;
+  }
+  #home.hero-poster .poster-followup{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 0 16px!important;
+    font-size:14px!important;
+    line-height:1.85!important;
+  }
+  #home.hero-poster .poster-tagline{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 0 17px!important;
+    padding:1px 12px 1px 0!important;
+    font-size:13px!important;
+    line-height:1.8!important;
+  }
+  #home.hero-poster .poster-link{
+    margin:0!important;
+    font-size:14px!important;
+  }
+}
+@media(max-width:360px){
+  #home.hero-poster .poster-english{
+    font-size:clamp(29px,9.1vw,34px)!important;
+  }
+  #home.hero-poster .poster-title{
+    font-size:clamp(21px,6.3vw,25px)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #home.hero-poster .poster-palm-overlay .poster-waving-palm{
+    animation:none!important;
+    transform:scaleY(var(--palm-stretch))!important;
+    will-change:auto!important;
+  }
+}
+
 </style>
 
 </head>
@@ -4482,6 +4668,15 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
           <!-- One continuous ribbon silhouette: no overlapping polygons or squared seams. -->
           <path d="M-520 524 L365 259 L451 238 C493 223 550 215 586 224 L586 311 C540 297 488 309 457 323 L459 339 C465 391 485 445 515 470 C541 489 561 491 586 485 L586 1900 L506 1900 C506 1480 508 1020 508 647 C444 608 408 545 392 460 L378 352 L374 347 L-520 619 Z"/>
         </g>
+        <g class="poster-waving-palm" fill="#355CF5">
+          <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
+          <path d="M428 136 Q434 126 443 123" fill="none" stroke="#F2E7E1" stroke-width="5" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <!-- Foreground palm: floats in front of Hello world while the blue ribbon stays behind copy. -->
+    <div class="poster-palm-overlay" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-430 0 1016 647" preserveAspectRatio="xMaxYMax meet" focusable="false" aria-hidden="true">
         <g class="poster-waving-palm" fill="#355CF5">
           <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
           <path d="M428 136 Q434 126 443 123" fill="none" stroke="#F2E7E1" stroke-width="5" stroke-linecap="round"/>
