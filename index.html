@@ -5225,6 +5225,12 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   color:inherit!important;stroke:currentColor!important;
 }
 
+
+/* Footer: location and an icon-only back-to-top button. */
+.site-footer .footer-up-arrow{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:46px!important;height:46px!important;padding:0!important;border:1.5px solid #FF9B29!important;border-radius:50%!important;color:#F2E7E1!important;text-decoration:none!important;flex-shrink:0!important}
+.site-footer .footer-up-arrow svg{display:block;width:23px;height:23px}
+.site-footer .footer-up-arrow:hover{background:#FF9B29!important;color:#2329A8!important}
+
 </style>
 
 </head>
@@ -5503,7 +5509,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-top"><div class="footer-contact-info"><p data-i18n="footerAbout">ليبيا - طرابلس</p><a class="footer-email" href="mailto:mena.v.v.v66@gmail.com" dir="ltr">mena.v.v.v66@gmail.com</a></div><a href="#home" class="top-link"><span data-i18n="topLink">للأعلى</span><span aria-hidden="true">↑</span></a></div>
+    <div class="shell footer-top"><div class="footer-contact-info"><p data-i18n="footerAbout">ليبيا - طرابلس</p></div><a href="#home" class="top-link footer-up-arrow" aria-label="العودة إلى أعلى الصفحة" title="العودة إلى أعلى الصفحة"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-7 7 7-7 7 7"/></svg></a></div>
   </footer>
 
   <dialog id="noteDialog" class="note-dialog" aria-labelledby="noteDialogTitle">
