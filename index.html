@@ -6343,6 +6343,66 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
   font-size:clamp(40px,11vw,62px)!important;margin:0 0 19px!important
  }
 }
+
+/* Editorial welcome cover: orange + ice-blue diagonal stripes, without the hand. */
+#home.hero-poster{
+ background:repeating-linear-gradient(135deg,#D7EFFF 0px,#D7EFFF 34px,#FF5C34 34px,#FF5C34 45px)!important;
+}
+#home.hero-poster .poster-shell{
+ background:transparent!important;
+ padding:clamp(48px,7vw,90px) 0 clamp(54px,8vw,100px)!important;
+}
+#home.hero-poster .poster-copy{
+ background:rgba(255,255,255,.95)!important;
+ border-radius:clamp(20px,3vw,34px)!important;
+ box-shadow:0 18px 55px rgba(37,54,74,.08)!important;
+ padding:clamp(28px,5.2vw,68px)!important;
+}
+#home.hero-poster .poster-copy .poster-english{
+ color:#FF5C34!important;
+ font-size:clamp(48px,7vw,91px)!important;
+ margin:0 0 clamp(22px,3vw,36px)!important;
+}
+#home.hero-poster .poster-intro{
+ color:#25364A!important;
+ font-weight:700!important;
+ font-size:clamp(16px,1.75vw,22px)!important;
+ line-height:1.9!important;
+ margin:0 0 19px!important;
+}
+#home.hero-poster .poster-title{
+ font-size:clamp(24px,3.1vw,42px)!important;
+ font-weight:800!important;line-height:1.75!important;
+ color:#25364A!important;margin:0 0 22px!important;
+}
+#home.hero-poster .poster-title span{display:inline!important;color:inherit!important}
+#home.hero-poster .poster-closing{
+ color:#25364A!important;
+ font-size:clamp(16px,1.7vw,22px)!important;
+ line-height:2!important;font-weight:650!important;
+ margin:0!important;
+ border-right:4px solid #FF5C34!important;
+ padding-right:16px!important;
+}
+@media(max-width:700px){
+ #home.hero-poster{
+  background:repeating-linear-gradient(135deg,#D7EFFF 0px,#D7EFFF 23px,#FF5C34 23px,#FF5C34 30px)!important;
+ }
+ #home.hero-poster .poster-shell{
+  width:calc(100% - 28px)!important;
+  padding:26px 0 35px!important;
+ }
+ #home.hero-poster .poster-copy{
+  padding:26px 20px 31px!important;
+  border-radius:20px!important;
+ }
+ #home.hero-poster .poster-copy .poster-english{
+  font-size:clamp(37px,10vw,60px)!important;margin:0 0 20px!important;
+ }
+ #home.hero-poster .poster-intro{font-size:15px!important;line-height:1.85!important}
+ #home.hero-poster .poster-title{font-size:clamp(22px,5.4vw,30px)!important;line-height:1.8!important}
+ #home.hero-poster .poster-closing{font-size:15px!important;line-height:1.9!important}
+}
 </style>
 
 </head>
@@ -6374,11 +6434,11 @@ html,body{background:#F3FAFF!important;color:#25364A!important}
   <main id="main">
     <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
   <div class="poster-shell">
-    <p class="poster-mobile-hello" lang="en" dir="ltr">Hello world!</p>
     <div class="poster-copy">
-      <p class="poster-english" lang="en" dir="ltr" aria-label="Hello world!">Hello world!</p>
-      <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا زاويتي الصغيرة من العالم الرقمي!</p>
-      <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا تُزهر الأفكار، ويُنسج الخيال بإبداع،</span> <span data-i18n="saasTitleTwo">حيث يمتزج سحر التصميم بمتعة البرمجة.</span></mark></h1>
+      <p class="poster-english" lang="en" dir="ltr" aria-label="Hello, World!">Hello, World!</p>
+      <p class="poster-intro" data-i18n="saasIntro">أهلًا وسهلًا… مرحبًا بكم في مساحتي الخاصة من العالم الرقمي!</p>
+      <h1 id="heroMainTitle" class="poster-title"><span data-i18n="saasTitleOne">هنا تولد الأفكار، ويُنسج الخيال بخيوط الإبداع،</span> <span data-i18n="saasTitleTwo">حيث يلتقي سحر التصميم بشغف البرمجة، لتتحوّل الأفكار إلى تجارب حقيقية.</span></h1>
+      <p class="poster-closing" data-i18n="saasInvitation">والآن… أدعوكم لاستكشاف عالمي، حيث لكل فكرة حكاية، ولكل إبداع بصمة.</p>
     </div>
   </div>
 </section>
@@ -6654,9 +6714,9 @@ const english = {
   heroCaption: "Good engineering begins with the right question, not the first line of code.",
   heroScroll: "Explore my work and experience ↓",
   heroIntro: "Hi, I'm Menat Allah Ahmed — Software Engineer",
-  saasIntro: "Hello, hello… welcome to my little corner of the digital world!",
-  saasTitleOne: "Here, ideas blossom and imagination is woven into creativity,",
-  saasTitleTwo: "where the magic of design meets the joy of coding.",
+  saasIntro: "Welcome… to my own little space in the digital world!",
+  saasTitleOne: "Here, ideas are born, and imagination is woven with threads of creativity,",
+  saasTitleTwo: "where the magic of design meets a passion for programming, turning ideas into real experiences.",
   saasDescription: "<span class=\"description-beige-highlight\">This space feels like me… I let my imagination roam, turn my curiosity into experiments, and my passion into projects that blend the magic of design with the joy of coding.</span>",
   saasInvitation: "Explore my projects—perhaps one of them will inspire you.",
   saasProjects: "✦ Explore my projects",
