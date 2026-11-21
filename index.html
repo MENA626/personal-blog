@@ -5039,6 +5039,16 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 #stack .tech-group-mark{font-family:"DM Sans",Arial,sans-serif;font-size:18px;letter-spacing:-.03em}
 #stack .tech-item strong{overflow-wrap:anywhere;line-height:1.45;text-align:center}
 
+
+/* Meaningful line-art icons for concepts without official logos. */
+#stack .tech-graphic .tech-concept-icon{
+  width:48px;height:48px;display:block;color:#355CF5;
+}
+/* Replit official symbol in its orange brand color, rather than black. */
+#stack .tech-item[data-tech="Replit"] .tech-graphic img{
+  filter:invert(51%) sepia(99%) saturate(2189%) hue-rotate(348deg) brightness(102%) contrast(102%)!important;
+}
+
 </style>
 
 </head>
@@ -5208,7 +5218,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
             <div class="tech-item" data-tech="Java"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Java</strong></div>
             <div class="tech-item" data-tech="PHP"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>PHP</strong></div>
             <div class="tech-item" data-tech="Laravel"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Laravel</strong></div>
-            <div class="tech-item" data-tech="REST APIs"><span class="tech-graphic"><svg class="tech-generic-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>REST APIs</strong></div>
+            <div class="tech-item" data-tech="REST APIs"><span class="tech-graphic"><svg class="tech-generic-icon tech-concept-icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="34" height="30" rx="7"/><path d="M13 18h20m-5-4 5 4-5 4M35 30H15m5-4-5 4 5 4"/></svg></span><strong>REST APIs</strong></div>
             <div class="tech-item" data-tech="Livewire"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/livewire.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Livewire</strong></div>
             <div class="tech-item" data-tech="Laravel Filament"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/filament.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Laravel Filament</strong></div>
             <div class="tech-item" data-tech="Tailwind CSS"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Tailwind CSS</strong></div>
@@ -5227,13 +5237,13 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
             <div class="tech-item" data-tech="Gemini API"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/googlegemini.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Gemini API</strong></div>
             <div class="tech-item" data-tech="RAG"><span class="tech-graphic"><img src="assets/icons/rag.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>RAG</strong></div>
             <div class="tech-item" data-tech="Embeddings"><span class="tech-graphic"><img src="assets/icons/embeddings.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Embeddings</strong></div>
-            <div class="tech-item" data-tech="Prompt Engineering"><span class="tech-graphic"><svg class="tech-generic-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>Prompt Engineering</strong></div>
+            <div class="tech-item" data-tech="Prompt Engineering"><span class="tech-graphic"><svg class="tech-generic-icon tech-concept-icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="34" height="34" rx="7"/><path d="M14 16h20M14 23h16M14 30h9"/><path d="m30 28 3 3 6-8"/></svg></span><strong>Prompt Engineering</strong></div>
             <div class="tech-item" data-tech="LangChain"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/langchain.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>LangChain</strong></div>
             <div class="tech-item" data-tech="Ollama"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ollama.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Ollama</strong></div>
             <div class="tech-item" data-tech="Hugging Face"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/huggingface.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>Hugging Face</strong></div>
-            <div class="tech-item" data-tech="AI Agents"><span class="tech-graphic"><svg class="tech-generic-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>AI Agents</strong></div>
-            <div class="tech-item" data-tech="MCP (Model Context Protocol)"><span class="tech-graphic"><svg class="tech-generic-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>MCP (Model Context Protocol)</strong></div>
-            <div class="tech-item" data-tech="Vector Databases"><span class="tech-graphic"><svg class="tech-generic-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>Vector Databases</strong></div>
+            <div class="tech-item" data-tech="AI Agents"><span class="tech-graphic"><svg class="tech-generic-icon tech-concept-icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="15" y="12" width="18" height="21" rx="6"/><path d="M24 7v5M13 34l-4 5m26-5 4 5"/><circle cx="21" cy="22" r="2"/><circle cx="28" cy="22" r="2"/><path d="M21 28h6"/></svg></span><strong>AI Agents</strong></div>
+            <div class="tech-item" data-tech="MCP (Model Context Protocol)"><span class="tech-graphic"><svg class="tech-generic-icon tech-concept-icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="17" width="12" height="14" rx="4"/><rect x="32" y="17" width="12" height="14" rx="4"/><path d="M16 24h16M21 19l-5 5 5 5m6-10 5 5-5 5"/><circle cx="24" cy="9" r="3"/><path d="M24 12v7"/></svg></span><strong>MCP (Model Context Protocol)</strong></div>
+            <div class="tech-item" data-tech="Vector Databases"><span class="tech-graphic"><svg class="tech-generic-icon tech-concept-icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="12" rx="15" ry="6"/><path d="M9 12v23c0 8 30 8 30 0V12M9 23c0 8 30 8 30 0"/><circle cx="18" cy="29" r="2"/><circle cx="29" cy="31" r="2"/><path d="M20 29l7 2"/></svg></span><strong>Vector Databases</strong></div>
           </div></section>
           <section class="tech-group reveal is-visible"><div class="tech-group-head"><span class="tech-group-mark">▤</span><h3>قواعد البيانات</h3><span>05 TECH</span></div><div class="tech-items">
             <div class="tech-item" data-tech="PostgreSQL"><span class="tech-graphic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" width="50" height="50" loading="lazy" decoding="async"></span><strong>PostgreSQL</strong></div>
@@ -5793,6 +5803,14 @@ function el(tag, className, text) {
   if (text !== undefined) node.textContent = text;
   return node;
 }
+const conceptIconShapes = {
+  "REST APIs": "<rect x=\"7\" y=\"9\" width=\"34\" height=\"30\" rx=\"7\"/><path d=\"M13 18h20m-5-4 5 4-5 4M35 30H15m5-4-5 4 5 4\"/>",
+  "Prompt Engineering": "<rect x=\"7\" y=\"7\" width=\"34\" height=\"34\" rx=\"7\"/><path d=\"M14 16h20M14 23h16M14 30h9\"/><path d=\"m30 28 3 3 6-8\"/>",
+  "AI Agents": "<rect x=\"15\" y=\"12\" width=\"18\" height=\"21\" rx=\"6\"/><path d=\"M24 7v5M13 34l-4 5m26-5 4 5\"/><circle cx=\"21\" cy=\"22\" r=\"2\"/><circle cx=\"28\" cy=\"22\" r=\"2\"/><path d=\"M21 28h6\"/>",
+  "MCP (Model Context Protocol)": "<rect x=\"4\" y=\"17\" width=\"12\" height=\"14\" rx=\"4\"/><rect x=\"32\" y=\"17\" width=\"12\" height=\"14\" rx=\"4\"/><path d=\"M16 24h16M21 19l-5 5 5 5m6-10 5 5-5 5\"/><circle cx=\"24\" cy=\"9\" r=\"3\"/><path d=\"M24 12v7\"/>",
+  "Vector Databases": "<ellipse cx=\"24\" cy=\"12\" rx=\"15\" ry=\"6\"/><path d=\"M9 12v23c0 8 30 8 30 0V12M9 23c0 8 30 8 30 0\"/><circle cx=\"18\" cy=\"29\" r=\"2\"/><circle cx=\"29\" cy=\"31\" r=\"2\"/><path d=\"M20 29l7 2\"/>"
+};
+
 function renderStack() {
   const groups = stackGroups.map(group => {
     const card = el("section","tech-group reveal is-visible");
@@ -5830,7 +5848,13 @@ function renderStack() {
         icon.setAttribute("viewBox","0 0 48 48");
         icon.setAttribute("class","tech-generic-icon");
         icon.setAttribute("aria-hidden","true");
-        icon.innerHTML = '<rect x="7" y="9" width="34" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+        icon.setAttribute("fill","none");
+        icon.setAttribute("stroke","currentColor");
+        icon.setAttribute("stroke-width","2.8");
+        icon.setAttribute("stroke-linecap","round");
+        icon.setAttribute("stroke-linejoin","round");
+        icon.classList.add("tech-concept-icon");
+        icon.innerHTML = conceptIconShapes[name] || '<rect x="7" y="9" width="34" height="30" rx="6"/><path d="M18 19L13 24L18 29M30 19L35 24L30 29M27 16L22 32"/>';
         holder.append(icon);
       }
       item.append(holder,el("strong","",name));
