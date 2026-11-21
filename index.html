@@ -5021,6 +5021,16 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   vertical-align:middle!important;transform:none!important;
 }
 
+/* Drawn arrow icons instead of typographic arrows on all project links. */
+#projects .project-card .underlined-link .project-link-arrow{
+  display:inline-block!important;
+  flex-shrink:0!important;
+  width:18px!important;
+  height:18px!important;
+  vertical-align:middle!important;
+  transform:none!important;
+}
+
 </style>
 
 </head>
@@ -5110,7 +5120,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
               <h3><span data-i18n="mizanTitle">ميزان</span> <span class="latin-sub">MIZAN</span></h3>
               <p data-i18n="mizanDesc">«ميزان» منصة LegalTech أنجزت تطوير نسختها الأولى، وتتوفر الآن بإطلاق تجريبي. تجمع مساعدًا قانونيًا ذكيًا، وخزنة مستندات Smart Vault مع OCR، ودليلًا للمحامين. يمكنك استكشاف النسخة التجريبية مباشرة.</p>
               <div class="project-chips"><span>LegalTech</span><span>AI Assistant</span><span>OCR</span><span>Smart Vault</span></div>
-              <a class="underlined-link" href="https://mizan-libya-demo.onrender.com" target="_blank" rel="noopener noreferrer"><span data-i18n="mizanDemoLink">عرض تجربة ميزان المباشرة</span><span aria-hidden="true">↗</span></a>
+              <a class="underlined-link" href="https://mizan-libya-demo.onrender.com" target="_blank" rel="noopener noreferrer"><span data-i18n="mizanDemoLink">عرض تجربة ميزان المباشرة</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
           <article class="project-card website-card reveal">
@@ -5120,7 +5130,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
               <h3 data-i18n="siteTitle">موقعي الشخصي ومدونتي التقنية</h3>
               <p data-i18n="siteDesc">هذه مساحتي الرقمية الخاصة: أعرّف فيها بنفسي، وأشارك مشاريعي والتقنيات التي أستخدمها وأفكاري لمقالات تقنية قادمة. صمّمت التجربة لتكون واضحة ومتجاوبة باللغتين العربية والإنجليزية.</p>
               <div class="project-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-              <a class="underlined-link" href="https://github.com/MENA626/personal-blog" target="_blank" rel="noopener noreferrer"><span data-i18n="viewSource">عرض الشفرة المصدرية</span><span aria-hidden="true">↗</span></a>
+              <a class="underlined-link" href="https://github.com/MENA626/personal-blog" target="_blank" rel="noopener noreferrer"><span data-i18n="viewSource">عرض الشفرة المصدرية</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
           <article class="project-card cosmos-card reveal">
@@ -5130,7 +5140,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
               <h3 data-i18n="cosmosTitle">COSMOS — تجربة فضائية بصرية</h3>
               <p data-i18n="cosmosDesc">«COSMOS» أحد مشاريعي البصرية على الويب. جرّبت فيه أجواء مستوحاة من الفضاء، وصورًا فلكية، وطريقة عرض أكثر حيوية وغمرًا للمحتوى.</p>
               <div class="project-chips"><span>Web</span><span>Visual Design</span><span>Space</span><span>Creative Frontend</span></div>
-              <a class="underlined-link" href="https://rawcdn.githack.com/MENA626/personal-blog/009f8918bfb3ff41165c9af129cdd845d0b28196/cosmos/index.html" target="_blank" rel="noopener noreferrer"><span data-i18n="cosmosLink">فتح تجربة COSMOS</span><span aria-hidden="true">↗</span></a>
+              <a class="underlined-link" href="https://rawcdn.githack.com/MENA626/personal-blog/009f8918bfb3ff41165c9af129cdd845d0b28196/cosmos/index.html" target="_blank" rel="noopener noreferrer"><span data-i18n="cosmosLink">فتح تجربة COSMOS</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
           <article class="project-card matcha-card reveal">
@@ -5143,7 +5153,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
               <h3 data-i18n="matchaTitle">MATCHA MOOD | ماتشا مود</h3>
               <p data-i18n="matchaDesc">«MATCHA MOOD» أحد مشاريعي على الويب. صمّمت له غلافًا لطيفًا على هيئة واجهة متجر داخل جهاز لوحي أزرق، مع كوب ماتشا بسيط. التطبيق منشور عبر Floot ويمكن استكشافه من الرابط.</p>
               <div class="project-chips"><span>Web App</span><span>Floot</span><span>Live Demo</span></div>
-              <a class="underlined-link" href="https://matcha-mood-ly.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="matchaLink">فتح تجربة MATCHA MOOD</span><span aria-hidden="true">↗</span></a>
+              <a class="underlined-link" href="https://matcha-mood-ly.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="matchaLink">فتح تجربة MATCHA MOOD</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
         </div>
