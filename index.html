@@ -4902,6 +4902,26 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+
+/* Subtle final invitation at the end of the welcome cover. */
+#home.hero-poster .poster-invitation{
+  position:relative!important;
+  z-index:3!important;
+  margin:18px 0 0!important;
+  color:#2329A8!important;
+  font-weight:800!important;
+  font-size:clamp(15px,1.3vw,19px)!important;
+  line-height:1.8!important;
+  background:transparent!important;
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-invitation{
+    margin:15px 0 0!important;
+    font-size:clamp(12px,3.35vw,15px)!important;
+    line-height:1.8!important;
+  }
+}
+
 </style>
 
 </head>
@@ -4961,6 +4981,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
       <p class="poster-intro" data-i18n="saasIntro">أهلًا أهلًا… نورتوا زاويتي الصغيرة من العالم الرقمي!</p>
       <h1 id="heroMainTitle" class="poster-title"><mark class="poster-marker"><span data-i18n="saasTitleOne">هنا، حيث تُزهر الأفكار بالشغف،</span> <span data-i18n="saasTitleTwo">وتتحوّل إلى إبداعات <span class="title-keep-together">تنبض بالحياة.</span></span></mark></h1>
       <p class="poster-description" data-i18n="saasDescription"><span class="description-beige-highlight">هذه مساحتي التي تشبهني… أطلق فيها العنان لخيالي، وأحوّل فضولي إلى تجارب، وشغفي إلى مشاريع تجمع بين سحر التصميم ومتعة البرمجة.</span></p>
+      <p class="poster-invitation" data-i18n="saasInvitation">تجوّل بين مشاريعي، فلعلّ إحداها تُلهمك</p>
     </div>
   </div>
 </section>
@@ -5182,6 +5203,7 @@ const english = {
   saasTitleOne: "Here, where ideas blossom with passion,",
   saasTitleTwo: "and grow into creations full of life.",
   saasDescription: "<span class=\"description-beige-highlight\">This space feels like me… I let my imagination roam, turn my curiosity into experiments, and my passion into projects that blend the magic of design with the joy of coding.</span>",
+  saasInvitation: "Explore my projects—perhaps one of them will inspire you.",
   saasProjects: "✦ Explore my projects",
   saasCV: "My résumé",
   saasScroll: "Get to know me",
