@@ -5845,6 +5845,27 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
   #cv.cv.cv-featured::after{top:-35px!important;height:37px!important}
 }
 
+
+/* Fine mauve outline ONLY around the yellow hand silhouette and its flowing ribbon. */
+#home.hero-poster .poster-static-ribbon path,
+#home.hero-poster .poster-art .poster-ribbon-desktop,
+#home.hero-poster .poster-art .poster-ribbon-mobile,
+#home.hero-poster .poster-art .poster-waving-palm > path:first-child,
+#home.hero-poster .poster-palm-overlay .poster-waving-palm > path:first-child{
+  fill:#FFEB55!important;
+  stroke:#913CDC!important;
+  stroke-width:1.1px!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  vector-effect:non-scaling-stroke!important;
+}
+/* Keep the hand's interior detail yellow; only the outer boundary is mauve. */
+#home.hero-poster .poster-art .poster-waving-palm > path[stroke],
+#home.hero-poster .poster-palm-overlay .poster-waving-palm > path[stroke]{
+  fill:none!important;
+  stroke:#FFEB55!important;
+}
+
 </style>
 
 </head>
