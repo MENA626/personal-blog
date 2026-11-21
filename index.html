@@ -5212,6 +5212,19 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #contact .contact-puzzle-decoration{width:100%!important;max-width:600px!important;margin:14px auto 0!important}
 }
 
+
+/* Replace typographic article-preview arrows with clean, hand-drawn SVG arrows. */
+#notes .note-read .note-read-icon{
+  display:inline-grid!important;place-items:center!important;
+  width:34px!important;height:34px!important;
+  flex:0 0 34px!important;border-radius:50%!important;
+  background:#2329A8!important;color:#F2E7E1!important;
+}
+#notes .note-read .note-read-icon svg{
+  display:block!important;width:18px!important;height:18px!important;
+  color:inherit!important;stroke:currentColor!important;
+}
+
 </style>
 
 </head>
@@ -6056,7 +6069,10 @@ function renderNotes() {
     const inner = el("div","note-card-body");
     inner.append(el("span","note-category",t.category),el("h3","",t.title),el("p","",t.description));
     const read = el("div","note-read");
-    read.append(el("span","",language==="ar"?"استعراض الفكرة":"Explore concept"),el("b","","↗"));
+    const arrowBadge = el("span","note-read-icon");
+    arrowBadge.setAttribute("aria-hidden","true");
+    arrowBadge.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>';
+    read.append(el("span","",language==="ar"?"استعراض الفكرة":"Explore concept"),arrowBadge);
     inner.append(read);
     trigger.append(cover,inner);
     trigger.addEventListener("click",()=>openNote(note.id));
