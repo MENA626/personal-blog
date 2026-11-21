@@ -5085,6 +5085,25 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   #participations .participations-event-number{font-size:82px}
 }
 
+
+/* Participation highlight: put MIZAN first and keep the number 14 in supporting copy only. */
+#participations .participations-project-name{
+  display:block;
+  color:#2329A8;
+  font-family:var(--display),var(--ui),sans-serif;
+  font-size:clamp(48px,7vw,85px);
+  font-weight:900;
+  line-height:1.25;
+  letter-spacing:-.035em;
+}
+#participations .participations-event-name{margin-top:1px!important}
+#participations .participations-status{
+  max-width:340px;
+  margin-top:13px!important;
+  font-size:clamp(14px,1.4vw,17px)!important;
+  font-weight:700!important;
+}
+
 </style>
 
 </head>
@@ -5317,15 +5336,15 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
         <div class="reveal">
           <span class="participations-kicker" data-i18n="participationsKicker">06 / مشاركاتي</span>
           <h2 id="participationsTitle" class="participations-title" data-i18n="participationsTitle">مشاركاتي.</h2>
-          <p class="participations-desc" data-i18n="participationsDesc">شاركت بمشروع التخرج «ميزان» في معرض التوظيف بجامعة طرابلس، بعد اختياره من بين مشاريع جامعات ليبية ليكون واحدًا من 14 مشروعًا مشاركًا في المعرض.</p>
+          <p class="participations-desc" data-i18n="participationsDesc">كان مشروع «ميزان» واحدًا من بين 14 مشروعًا اختيرت من عدد كبير من مشاريع الجامعات الليبية من مختلف أنحاء ليبيا للمشاركة في معرض التوظيف بجامعة طرابلس.</p>
           <a class="participations-project-link underlined-link" href="https://gto.com.ly/job-fair/projects/44" target="_blank" rel="noopener noreferrer"><span data-i18n="participationsLink">استعرض مشروع ميزان على موقع المعرض</span><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
         </div>
         <div class="participations-aside reveal" aria-label="مشاركة مشروع ميزان في معرض التوظيف">
           <div class="participations-event-card">
             <span class="participations-event-kicker" data-i18n="participationsEventLabel">معرض التوظيف · جامعة طرابلس</span>
-            <strong class="participations-event-number" dir="ltr">14</strong>
-            <span class="participations-status" data-i18n="participationsStatus">مشروعًا مشاركًا في المعرض، من بينها «ميزان».</span>
+            <strong class="participations-project-name" data-i18n="participationsProjectName">مِيـــــزَان</strong>
             <span class="participations-event-name" lang="en">MIZAN · LEGALTECH</span>
+            <span class="participations-status" data-i18n="participationsStatus">من بين 14 مشروعًا اختيرت من مشاريع جامعات ليبية من مختلف أنحاء البلاد.</span>
           </div>
         </div>
       </div>
@@ -5375,8 +5394,9 @@ const english = {
   navParticipations: "My Contributions",
   participationsKicker: "06 / My Contributions",
   participationsTitle: "My Contributions.",
-  participationsDesc: "I presented my graduation project, MIZAN, at the University of Tripoli Job Fair after it was selected from projects submitted by Libyan universities as one of 14 participating projects.",
-  participationsStatus: "projects featured at the fair, including MIZAN.",
+  participationsDesc: "MIZAN was selected as one of 14 projects from a large pool of submissions by universities across Libya to participate in the University of Tripoli Job Fair.",
+  participationsStatus: "One of 14 projects selected from universities across Libya.",
+  participationsProjectName: "MIZAN",
   participationsEventLabel: "University of Tripoli · Job Fair",
   participationsLink: "View MIZAN on the fair’s official website",
   navContact: "Contact",
