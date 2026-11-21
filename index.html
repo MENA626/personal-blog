@@ -5889,6 +5889,72 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
   fill:none!important;
 }
 
+
+/* 2026 hero rework: one compact, softly illustrated hand rather than an oversized ribbon. */
+#home.hero-poster{overflow:hidden!important;background:#FFFFFF!important}
+#home.hero-poster .poster-shell{
+ display:flex!important;flex-direction:row!important;align-items:center!important;
+ justify-content:space-between!important;gap:clamp(24px,5vw,76px)!important;
+ width:min(1190px,calc(100% - 72px))!important;
+ max-width:1190px!important;min-height:620px!important;height:auto!important;
+ padding:clamp(56px,8vw,118px) 0!important;
+ margin:0 auto!important;overflow:visible!important;background:#FFFFFF!important;
+}
+#home.hero-poster .hero-fresh-art{
+ display:block!important;position:relative!important;inset:auto!important;
+ width:min(44%,500px)!important;max-width:500px!important;min-width:0!important;
+ flex:0 1 44%!important;align-self:center!important;z-index:1!important;
+ margin:0!important;padding:0!important;pointer-events:none!important;
+ transform:none!important;visibility:visible!important;
+}
+#home.hero-poster .hero-fresh-art svg{width:100%;height:auto;display:block;overflow:visible}
+#home.hero-poster .hero-fresh-wave{transform-origin:50% 80%;animation:heroFriendlyWave 4s ease-in-out infinite}
+@keyframes heroFriendlyWave{0%,12%,75%,100%{transform:rotate(0deg)}25%{transform:rotate(-4deg)}40%{transform:rotate(3deg)}56%{transform:rotate(-2deg)}}
+#home.hero-poster .poster-copy{
+ position:relative!important;inset:auto!important;width:53%!important;max-width:620px!important;
+ flex:1 1 53%!important;margin:0!important;padding:0!important;
+ transform:none!important;text-align:right!important;direction:rtl!important;
+ z-index:3!important;opacity:1!important;
+}
+#home.hero-poster .poster-copy .poster-english{
+ display:block!important;margin:0 0 26px!important;text-align:right!important;
+ font-size:clamp(54px,6vw,94px)!important;line-height:1.05!important;
+}
+#home.hero-poster .poster-mobile-hello{display:none!important}
+#home.hero-poster .poster-intro{margin:0 0 18px!important}
+#home.hero-poster .poster-title{
+ margin:0!important;font-size:clamp(23px,2.8vw,37px)!important;
+ line-height:1.9!important;max-width:600px!important
+}
+#home.hero-poster .poster-title .poster-marker{background:none!important;background-image:none!important}
+#home.hero-poster::before,#home.hero-poster::after{content:none!important;display:none!important}
+@media(max-width:700px){
+ #home.hero-poster .poster-shell{
+  display:flex!important;flex-direction:column!important;gap:8px!important;
+  width:calc(100% - 40px)!important;min-height:0!important;height:auto!important;
+  padding:44px 0 68px!important;overflow:visible!important
+ }
+ #home.hero-poster .hero-fresh-art{
+  order:1!important;width:min(78%,310px)!important;max-width:310px!important;
+  flex:0 0 auto!important;align-self:center!important;margin:5px auto 0!important
+ }
+ #home.hero-poster .poster-copy{
+  order:2!important;width:100%!important;max-width:none!important;
+  flex:0 0 auto!important;margin:0!important;padding:0!important;
+  text-align:right!important
+ }
+ #home.hero-poster .poster-copy .poster-english{
+  display:block!important;font-size:clamp(40px,11vw,62px)!important;
+  line-height:1.05!important;margin:0 0 25px!important;text-align:right!important
+ }
+ #home.hero-poster .poster-intro{font-size:clamp(13px,3.5vw,16px)!important;margin-bottom:14px!important}
+ #home.hero-poster .poster-title{
+  font-size:clamp(20px,5vw,27px)!important;line-height:1.8!important;
+  width:100%!important;max-width:none!important;margin:0!important
+ }
+}
+@media(prefers-reduced-motion:reduce){#home.hero-poster .hero-fresh-wave{animation:none!important}}
+
 </style>
 
 </head>
@@ -5920,28 +5986,21 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
   <main id="main">
     <section id="home" class="hero-poster anchor" aria-labelledby="heroMainTitle">
   <div class="poster-shell">
-    <div class="poster-art" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-430 0 1016 647" preserveAspectRatio="xMaxYMax meet" focusable="false" aria-hidden="true">
-        <g class="poster-static-ribbon" fill="#913CDC">
-          <!-- One continuous ribbon silhouette: no overlapping polygons or squared seams. -->
-          <path class="poster-ribbon-desktop" d="M-520 719 C-260 577 63 404 365 259 L451 238 C493 223 550 215 586 224 L586 311 C540 297 488 309 457 323 L459 339 C465 391 485 445 515 470 C541 489 561 491 586 485 L586 1900 L506 1900 C506 1480 508 1020 508 647 C444 608 408 545 392 460 L378 352 L374 347 C68 499 -253 674 -520 829 Z"/>
-          <path class="poster-ribbon-mobile" d="M-520 377 C-240 338 75 281 365 259 C432 241 496 214 551 219 C565 219 576 221 586 224 L586 311 C544 298 494 306 457 323 C457 383 484 443 515 470 C542 487 565 491 586 485 L586 1900 L506 1900 C506 1450 508 1030 508 647 C443 604 412 526 393 458 C387 430 380 373 373 351 C88 380 -245 469 -520 490 Z"/>
+    <div class="hero-fresh-art" aria-hidden="true">
+      <svg viewBox="0 0 500 470" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+        <circle cx="250" cy="230" r="190" fill="#FFF9D4"/>
+        <circle cx="250" cy="230" r="169" fill="none" stroke="#913CDC" stroke-width="2" stroke-dasharray="5 11" opacity=".38"/>
+        <circle cx="92" cy="132" r="12" fill="#FFEB55"/>
+        <circle cx="400" cy="355" r="10" fill="#913CDC" opacity=".26"/>
+        <path d="M97 310C136 347 156 372 194 386" fill="none" stroke="#913CDC" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+        <path d="M398 116l18-16m-4 43 28-2m-290-56-20-17" fill="none" stroke="#913CDC" stroke-width="5" stroke-linecap="round"/>
+        <g class="hero-fresh-wave">
+          <path d="M222 427c-15-27-26-53-29-81l-15-100c-2-14 4-25 16-27 12-1 21 7 24 19l8 37-25-141c-3-17 4-29 18-31 14-2 24 8 27 24l23 127-16-154c-2-18 6-30 20-31 14-1 24 9 25 26l17 157 4-123c0-18 9-28 23-27 14 1 22 12 22 29l-4 136 20-72c4-15 16-22 28-17 12 4 17 16 12 32l-34 115c-9 32-21 57-38 81l-7 33H222Z" fill="#FFEB55" stroke="#913CDC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M248 368c28 14 62 10 89-10" fill="none" stroke="#913CDC" stroke-width="3" opacity=".42" stroke-linecap="round"/>
+          <path d="M224 417h118" fill="none" stroke="#913CDC" stroke-width="5" stroke-linecap="round"/>
         </g>
-        <g class="poster-waving-palm" fill="#FFEB55">
-          <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
-          <path class="poster-hand-upper-outline" d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323" fill="none"/>
-          <path d="M428 136 Q434 126 443 123" fill="none" stroke="#FFEB55" stroke-width="5" stroke-linecap="round"/>
-        </g>
-      </svg>
-    </div>
-    <!-- Foreground palm: floats in front of Hello world while the blue ribbon stays behind copy. -->
-    <div class="poster-palm-overlay" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-430 0 1016 647" preserveAspectRatio="xMaxYMax meet" focusable="false" aria-hidden="true">
-        <g class="poster-waving-palm" fill="#FFEB55">
-          <path d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323 Q445 351 412 362 Q386 363 368 348 Z"/>
-          <path class="poster-hand-upper-outline" d="M364 317 L365 164 L369 79 Q373 70 381 74 L385 106 L389 66 Q393 59 399 64 L402 105 L409 105 L410 56 Q413 49 419 51 Q425 53 425 60 L425 106 L431 105 L432 65 Q435 58 441 59 Q446 61 446 67 L445 120 Q438 121 430 138 Q435 140 440 130 Q455 115 465 113 Q480 107 475 119 L464 151 Q453 174 453 198 L455 232 L457 323" fill="none"/>
-          <path d="M428 136 Q434 126 443 123" fill="none" stroke="#FFEB55" stroke-width="5" stroke-linecap="round"/>
-        </g>
+        <path d="M110 209l-13 5m22-37-11-8m282 94 16 8" stroke="#913CDC" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+        <circle cx="377" cy="95" r="6" fill="#913CDC"/>
       </svg>
     </div>
     <p class="poster-mobile-hello" lang="en" dir="ltr">Hello world!</p>
