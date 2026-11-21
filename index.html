@@ -4855,15 +4855,34 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   white-space:nowrap!important;
 }
 
-/* Cream line-by-line highlight behind the hero description, legible over the blue ribbon. */
-#home.hero-poster .poster-description .description-beige-highlight{
-  display:inline!important;
+/* Quiet cream breathing room around the full description: the blue ribbon
+   disappears before the words and resumes immediately beyond the beige gap. */
+#home.hero-poster .poster-description{
+  position:relative!important;
+  z-index:3!important;
+  display:block!important;
   background:#F2E7E1!important;
   color:#2329A8!important;
-  padding:.10em .24em!important;
-  border-radius:3px;
-  box-decoration-break:clone;
-  -webkit-box-decoration-break:clone;
+  padding:13px 16px!important;
+  border-radius:8px!important;
+  box-shadow:0 0 0 9px #F2E7E1!important;
+  isolation:isolate;
+}
+#home.hero-poster .poster-description .description-beige-highlight{
+  display:inline!important;
+  background:transparent!important;
+  color:inherit!important;
+  padding:0!important;
+  border-radius:0!important;
+  box-decoration-break:slice!important;
+  -webkit-box-decoration-break:slice!important;
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-description{
+    padding:11px 12px!important;
+    box-shadow:0 0 0 7px #F2E7E1!important;
+    border-radius:7px!important;
+  }
 }
 
 </style>
