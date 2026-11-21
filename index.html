@@ -6667,6 +6667,72 @@ html[lang="en"] #stack.section.stack{
 #contact .contact-puzzle-art path.puzzle-center[fill]{
  fill:#FFFFFF!important;stroke:none!important;
 }
+
+/* Scroll journey: refined, lightweight movement in both languages and on mobile. */
+@keyframes journeyFadeUp{
+ from{opacity:0;transform:translate3d(0,26px,0)}
+ to{opacity:1;transform:translate3d(0,0,0)}
+}
+@keyframes journeyLine{
+ from{transform:scaleX(0);opacity:.35}
+ to{transform:scaleX(1);opacity:1}
+}
+@keyframes journeyImage{
+ from{transform:scale(1.065);filter:saturate(.88)}
+ to{transform:scale(1);filter:saturate(1)}
+}
+@keyframes journeyFloat{
+ 0%,100%{transform:translate3d(0,0,0)}
+ 50%{transform:translate3d(0,-8px,0)}
+}
+/* JS adds journey-ready only to items below the viewport; above-fold content never disappears. */
+html.journey-on .journey-ready:not(.journey-entered){
+ opacity:0!important;
+ transform:translate3d(0,26px,0)!important;
+ transition:none!important;
+}
+html.journey-on .journey-ready.journey-entered{
+ animation:journeyFadeUp .85s cubic-bezier(.17,.75,.23,1) both!important;
+ animation-delay:var(--journey-delay,0ms)!important;
+}
+html.journey-on .journey-entered .editorial-heading::after{
+ transform-origin:right center;
+ animation:journeyLine .9s cubic-bezier(.2,.7,.2,1) both;
+}
+html.journey-on .journey-entered .project-demo img,
+html.journey-on .journey-entered .video-frame > img,
+html.journey-on .journey-entered .matcha-cover-image{
+ animation:journeyImage 1.15s cubic-bezier(.2,.7,.2,1) both;
+}
+@media(hover:hover) and (pointer:fine){
+ .project-card,.video-card,.note-card,.tech-group{
+  transition:box-shadow .4s ease,border-color .35s ease,translate .4s cubic-bezier(.2,.7,.2,1)!important;
+ }
+ .project-card:hover,.video-card:hover,.note-card:hover,.tech-group:hover{
+  translate:0 -5px;
+  box-shadow:0 18px 42px rgba(37,54,74,.12)!important;
+ }
+}
+#scrollProgress{
+ transform-origin:0 50%!important;
+ background:#FF5C34!important;
+ height:3px!important;
+}
+@media(max-width:700px){
+ html.journey-on .journey-ready:not(.journey-entered){transform:translate3d(0,16px,0)!important}
+ html.journey-on .journey-ready.journey-entered{animation-duration:.67s!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html.journey-on .journey-ready,
+ html.journey-on .journey-ready.journey-entered,
+ html.journey-on .journey-entered .project-demo img,
+ html.journey-on .journey-entered .video-frame > img,
+ html.journey-on .journey-entered .matcha-cover-image,
+ html.journey-on .journey-entered .editorial-heading::after{
+  opacity:1!important;transform:none!important;animation:none!important;transition:none!important;
+ }
+ .project-card:hover,.video-card:hover,.note-card:hover,.tech-group:hover{translate:none!important}
+}
 </style>
 
 </head>
@@ -7688,6 +7754,36 @@ if (!reduceMotion) {
   });
 }
 
+
+
+/* Gentle section-by-section motion. Never blocks content if JS or observers are unavailable. */
+(function setupJourneyScrollMotion(){
+ const prefersReduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ if(prefersReduced || !("IntersectionObserver" in window)) return;
+ const selector=[
+  "#cv .cv-content", "#projects .section-header", "#videos .section-header",
+  "#stack .section-header", "#participations .participations-inner > div",
+  "#notes .section-header", "#contact .contact-layout > div",
+  "#projects .project-card", "#videos .video-card",
+  "#notes .note-card", "#stack .tech-group"
+ ].join(",");
+ const items=[...document.querySelectorAll(selector)];
+ const watcher=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(!entry.isIntersecting)return;
+   entry.target.classList.add("journey-entered");
+   watcher.unobserve(entry.target);
+  });
+ },{threshold:.08,rootMargin:"0px 0px -35px 0px"});
+ items.forEach((node,index)=>{
+  const box=node.getBoundingClientRect();
+  if(box.top < window.innerHeight - 10 && box.bottom > 0)return;
+  node.style.setProperty("--journey-delay",((index%3)*75)+"ms");
+  node.classList.add("journey-ready");
+  watcher.observe(node);
+ });
+ document.documentElement.classList.add("journey-on");
+})();
 
 /* Privacy-conscious YouTube previews: only embed the player on deliberate click.
    Videos and titles are the user's supplied works, not inferred metadata. */
