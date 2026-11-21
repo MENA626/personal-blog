@@ -5113,6 +5113,44 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 #contact .contact-email-link svg{flex-shrink:0}
 @media(max-width:500px){#contact .contact-actions{align-items:flex-start;flex-direction:column}#contact .contact-email-link{font-size:14px}}
 
+
+/* Orange email action matches the GitHub button, with clear white text. */
+#contact .contact-actions .contact-email-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:12px!important;
+  margin-top:18px!important;
+  padding:17px 22px!important;
+  border:1px solid #FF9B29!important;
+  border-radius:9px!important;
+  background:#FF9B29!important;
+  color:#FFFFFF!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  line-height:1.4!important;
+  text-decoration:none!important;
+  box-sizing:border-box!important;
+  max-width:100%!important;
+  transition:transform .2s,background .2s!important;
+}
+#contact .contact-actions .contact-email-link:hover{
+  transform:translateY(-3px)!important;
+  background:#F38C16!important;
+  color:#FFFFFF!important;
+  opacity:1!important;
+}
+#contact .contact-actions .contact-email-link svg{stroke:#FFFFFF!important;}
+#contact .contact-actions .contact-email-link span{color:#FFFFFF!important;direction:ltr!important;unicode-bidi:isolate}
+.site-footer .footer-contact-info{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}
+.site-footer .footer-contact-info p{margin:0!important;max-width:none!important}
+.site-footer .footer-email{color:#F2E7E1!important;text-decoration:none;border-bottom:1px solid #FF9B29;padding-bottom:5px;font:600 14px/1.7 var(--ui);overflow-wrap:anywhere;max-width:100%}
+.site-footer .footer-email:hover{color:#FF9B29!important}
+@media(max-width:500px){
+  #contact .contact-actions .contact-email-link{font-size:13px!important;padding:15px 16px!important;margin-top:0!important}
+  .site-footer .footer-top{align-items:flex-start!important}
+}
+
 </style>
 
 </head>
@@ -5379,7 +5417,7 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-top"><a href="#home" class="footer-name" aria-label="العودة للأعلى — منة الله أحمد"><span class="brand-letter" aria-hidden="true">m</span></a><p data-i18n="footerAbout">تقنيات الإنترنت · تطوير الويب والموبايل · ذكاء اصطناعي<br>هنا أشارك رحلتي ومشاريعي من طرابلس، ليبيا</p><a href="#home" class="top-link"><span data-i18n="topLink">للأعلى</span><span aria-hidden="true">↑</span></a></div>
+    <div class="shell footer-top"><div class="footer-contact-info"><p data-i18n="footerAbout">ليبيا - طرابلس</p><a class="footer-email" href="mailto:mena.v.v.v66@gmail.com" dir="ltr">mena.v.v.v66@gmail.com</a></div><a href="#home" class="top-link"><span data-i18n="topLink">للأعلى</span><span aria-hidden="true">↑</span></a></div>
     <div class="shell footer-bottom"><span>© <span id="year">2026</span> <span data-i18n="footerName">منة الله أحمد</span></span><span>BUILD · LEARN · CREATE ✳</span></div>
   </footer>
 
@@ -5486,7 +5524,7 @@ const english = {
   contactHeadTwo: "we could build on?",
   contactDesc: "I value technical discussions, exchanging ideas, and connecting with people who enjoy building useful things. You can reach me on GitHub or by email.",
   contactButton: "Connect on GitHub",
-  footerAbout: "Internet Technologies · Web & Mobile · AI<br>Tripoli, Libya",
+  footerAbout: "Libya - Tripoli",
   topLink: "Back to top",
   footerName: "Menat Allah Ahmed",
   draftDisclaimer: "This article idea is being prepared.",
