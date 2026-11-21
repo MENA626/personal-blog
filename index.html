@@ -6068,6 +6068,27 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
  #home.hero-poster .hero-gesture-ok{opacity:0!important}
 }
 
+
+/* Wave hello only — no OK gesture or gesture switching. */
+#home.hero-poster .hero-gesture-wave{
+  opacity:1!important;
+  transform-box:view-box!important;
+  transform-origin:9% 77%!important;
+  animation:heroWaveOnly 3.8s ease-in-out infinite!important;
+}
+@keyframes heroWaveOnly{
+  0%,10%,82%,100%{transform:rotate(0deg)}
+  22%{transform:rotate(-5deg)}
+  35%{transform:rotate(4.5deg)}
+  49%{transform:rotate(-4deg)}
+  63%{transform:rotate(3deg)}
+  74%{transform:rotate(0deg)}
+}
+#home.hero-poster .hero-gesture-sparkles{animation:none!important;opacity:.55!important}
+@media(prefers-reduced-motion:reduce){
+ #home.hero-poster .hero-gesture-wave{animation:none!important;transform:none!important}
+}
+
 </style>
 
 </head>
@@ -6105,13 +6126,6 @@ html,body{background:#FFFFFF!important;color:#35134E!important}
           <!-- First gesture: one open palm waving hello from the left. -->
           <path d="M-75 318 C30 315 126 308 197 297 C207 285 211 266 211 241 L204 148 Q203 132 216 129 Q230 126 233 144 L245 207 L232 112 Q229 92 244 88 Q261 85 265 104 L278 201 L272 89 Q272 71 288 69 Q306 68 306 88 L307 201 L321 115 Q324 98 340 101 Q354 104 351 121 L336 219 C351 204 368 190 383 187 Q401 183 406 196 Q411 208 397 222 L375 247 C362 266 353 282 345 312 C332 353 295 374 254 380 C163 394 54 404 -75 412 Z" fill="#FFEB55" stroke="#913CDC" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M351 232 Q363 221 372 218" fill="none" stroke="#913CDC" stroke-width="2" opacity=".45" stroke-linecap="round"/>
-        </g>
-        <g class="hero-gesture-ok">
-          <!-- Second gesture: same single arm, three relaxed raised fingers, index and thumb forming a clear OK ring. -->
-          <path d="M-75 318 C30 315 126 308 196 297 C207 280 211 260 209 238 L204 151 Q202 133 217 130 Q232 127 235 145 L245 214 L235 116 Q233 97 248 94 Q263 92 267 110 L279 212 L277 103 Q277 84 292 84 Q306 85 308 103 L311 233 C325 248 331 272 334 302 C337 341 302 373 254 380 C163 394 54 404 -75 412 Z" fill="#FFEB55" stroke="#913CDC" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M322 306 Q344 315 365 296 C388 277 399 258 405 241 C414 214 403 194 382 185 C359 176 337 187 329 207 C322 225 332 246 349 250 C370 256 387 239 388 222 C389 206 374 196 358 200 C346 204 342 216 345 225" fill="none" stroke="#913CDC" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M322 306 Q344 315 365 296 C388 277 399 258 405 241 C414 214 403 194 382 185 C359 176 337 187 329 207 C322 225 332 246 349 250 C370 256 387 239 388 222 C389 206 374 196 358 200 C346 204 342 216 345 225" fill="none" stroke="#FFEB55" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="364" cy="220" r="16" fill="#FFFFFF" stroke="#913CDC" stroke-width="3.2"/>
         </g>
         <g class="hero-gesture-sparkles" fill="none" stroke="#913CDC" stroke-width="3.5" stroke-linecap="round">
           <path d="M430 126l14-16M440 166h19M411 99l7-19"/>
