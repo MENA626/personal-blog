@@ -4798,6 +4798,79 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   }
 }
 
+/* MOBILE COVER FINISH — keep the greeting and Arabic copy legible beside the hand.
+   The diagonal stroke begins after the editorial copy instead of crossing its lines. */
+@media(max-width:700px){
+  #home.hero-poster .poster-shell{
+    background:#F2E7E1!important;
+    min-height:0!important;
+    height:auto!important;
+    overflow:hidden!important;
+  }
+  #home.hero-poster .poster-copy{
+    width:61%!important;
+    max-width:61%!important;
+    padding:25px 11px 30px 5%!important;
+    background:#F2E7E1!important;
+    isolation:isolate!important;
+    z-index:5!important;
+  }
+  #home.hero-poster .poster-mobile-hello{
+    z-index:6!important;
+    right:3.5%!important;
+    width:42%!important;
+    font-size:clamp(20px,5.7vw,33px)!important;
+  }
+  #home.hero-poster .poster-intro{
+    font-size:clamp(11px,2.85vw,13px)!important;
+    line-height:1.65!important;
+    margin-bottom:17px!important;
+  }
+  #home.hero-poster .poster-title{
+    font-size:clamp(20px,5.15vw,29px)!important;
+    line-height:1.55!important;
+    margin-bottom:20px!important;
+  }
+  #home.hero-poster .poster-description{
+    font-size:clamp(12px,3vw,14px)!important;
+    line-height:1.9!important;
+    margin-bottom:19px!important;
+  }
+  #home.hero-poster .poster-tagline{
+    font-size:clamp(12px,2.95vw,14px)!important;
+    line-height:1.85!important;
+    margin-bottom:22px!important;
+  }
+  #home.hero-poster .poster-link{
+    display:inline-flex!important;
+    flex-wrap:wrap!important;
+    font-size:clamp(12px,3vw,14px)!important;
+    max-width:100%!important;
+  }
+  #home.hero-poster .poster-art,
+  #home.hero-poster .poster-palm-overlay{
+    top:64px!important;
+    right:0!important;
+    width:162%!important;
+    height:clamp(360px,105vw,440px)!important;
+  }
+  #home.hero-poster .poster-art .poster-static-ribbon{
+    transform:translateY(225px)!important;
+  }
+  #home.hero-poster .poster-palm-overlay{z-index:4!important}
+  #home.hero-poster .poster-art{z-index:1!important}
+}
+@media(max-width:360px){
+  #home.hero-poster .poster-copy{
+    width:63%!important;
+    max-width:63%!important;
+    padding-right:8px!important;
+  }
+  #home.hero-poster .poster-title{font-size:19px!important}
+  #home.hero-poster .poster-art,
+  #home.hero-poster .poster-palm-overlay{width:166%!important}
+}
+
 </style>
 
 </head>
