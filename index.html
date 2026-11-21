@@ -5151,6 +5151,52 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   .site-footer .footer-top{align-items:flex-start!important}
 }
 
+
+/* Matching orange action buttons, kept adjacent on both desktop and mobile. */
+#contact .contact-actions{
+  display:flex!important;flex-flow:row nowrap!important;align-items:stretch!important;
+  gap:10px!important;width:100%!important;max-width:600px!important;
+}
+#contact .contact-actions .contact-button,
+#contact .contact-actions .contact-email-link{
+  flex:1 1 0!important;min-width:0!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:9px!important;margin:0!important;padding:15px 12px!important;
+  background:#FF9B29!important;border:1px solid #FF9B29!important;
+  color:#FFFFFF!important;border-radius:11px!important;
+  font-size:clamp(11px,1.1vw,14px)!important;font-weight:800!important;
+  white-space:nowrap!important;text-decoration:none!important;line-height:1.45!important;
+}
+#contact .contact-actions .contact-button span,
+#contact .contact-actions .contact-email-link span{color:#FFFFFF!important}
+#contact .contact-actions .contact-button svg,
+#contact .contact-actions .contact-email-link svg{
+  width:18px!important;height:18px!important;flex:none!important;
+  color:#FFFFFF!important;stroke:#FFFFFF!important;
+}
+#contact .contact-actions .contact-button:hover,
+#contact .contact-actions .contact-email-link:hover{
+  background:#F18B16!important;border-color:#F18B16!important;
+  color:#FFFFFF!important;transform:translateY(-2px)!important;
+}
+@media(max-width:420px){
+  #contact .contact-actions{gap:7px!important}
+  #contact .contact-actions .contact-button,
+  #contact .contact-actions .contact-email-link{padding:13px 6px!important;font-size:11px!important;gap:5px!important}
+  #contact .contact-actions .contact-button svg,
+  #contact .contact-actions .contact-email-link svg{width:15px!important;height:15px!important}
+}
+/* The puzzle illustration replaces the old oversized star and circle. */
+#contact .contact-puzzle-decoration{
+  width:100%!important;max-width:540px!important;aspect-ratio:4/3!important;
+  border:none!important;border-radius:0!important;overflow:hidden!important;
+  background:transparent!important;display:block!important;min-height:0!important;
+}
+#contact .contact-puzzle-art{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:900px){
+  #contact .contact-puzzle-decoration{width:min(100%,540px)!important;margin:22px auto 0!important}
+}
+
 </style>
 
 </head>
@@ -5410,8 +5456,21 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
 
     <section id="contact" class="section contact anchor">
       <div class="shell contact-layout">
-        <div class="reveal"><div class="section-kicker"><span>08 /</span> <span data-i18n="contactKicker">للتواصل معي</span></div><h2 class="contact-title"><span data-i18n="contactHeadOne">عندك فكرة</span><br><em data-i18n="contactHeadTwo">تستحق أن نناقشها؟</em></h2><p data-i18n="contactDesc">أدعم النقاشات التقنية وتبادل الأفكار والتعرّف على أشخاص يهتمون ببناء أشياء مفيدة. يمكن التواصل معي عبر GitHub أو البريد الإلكتروني.</p><div class="contact-actions"><a href="https://github.com/MENA626" class="contact-button magnetic" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">التواصل عبر GitHub</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a><a href="mailto:mena.v.v.v66@gmail.com" class="contact-email-link"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span dir="ltr">mena.v.v.v66@gmail.com</span></a></div></div>
-        <div class="contact-decoration reveal"><div class="contact-symbol">✳</div><span>LET'S BUILD SOMETHING MEANINGFUL.</span></div>
+        <div class="reveal"><div class="section-kicker"><span>08 /</span> <span data-i18n="contactKicker">للتواصل معي</span></div><h2 class="contact-title"><span data-i18n="contactHeadOne">عندك فكرة</span><br><em data-i18n="contactHeadTwo">تستحق أن نناقشها؟</em></h2><p data-i18n="contactDesc">أدعم النقاشات التقنية وتبادل الأفكار والتعرّف على أشخاص يهتمون ببناء أشياء مفيدة. يمكن التواصل معي عبر GitHub أو البريد الإلكتروني.</p><div class="contact-actions"><a href="https://github.com/MENA626" class="contact-button magnetic" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">التواصل عبر GitHub</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a><a href="mailto:mena.v.v.v66@gmail.com" class="contact-email-link contact-button magnetic" aria-label="إرسال بريد إلى mena.v.v.v66@gmail.com"><span data-i18n="contactEmailButton">البريد الإلكتروني</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a></div></div>
+        <div class="contact-decoration contact-puzzle-decoration reveal" role="img" aria-label="ثلاث قطع بازل متجاورة باللون الأزرق، القطعة الوسطى ممتلئة والخارجيتان بخطوط رفيعة">
+          <svg class="contact-puzzle-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" aria-hidden="true" focusable="false">
+            <rect width="1200" height="900" fill="#F9F8F6"/>
+            <g fill="none" stroke="#355CF5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M145 405 V339 Q145 320 167 319 L243 325 Q264 326 267 304 Q268 289 262 274 Q258 256 274 246 Q287 236 305 243 Q324 252 316 275 Q308 300 329 322 Q337 330 358 326 L411 323 Q431 325 432 348"/>
+              <path d="M145 405 V434 Q146 457 166 456 Q201 444 203 475 Q205 501 179 498 Q146 490 145 521 V599 Q144 620 166 620 H234 Q255 620 258 598 Q257 578 277 570 Q293 564 310 572 Q330 582 316 604 Q310 622 336 621 H415 Q435 619 434 600 V560 Q434 539 417 525 Q368 476 327 494 Q290 516 258 491"/>
+              <path d="M752 349 Q753 323 778 326 L845 328 Q865 327 869 307 Q869 287 865 276 Q860 255 877 244 Q898 231 916 244 Q930 256 923 276 Q918 299 937 321 Q943 328 960 326 L1030 324 Q1051 324 1051 346 V444 Q1051 466 1030 467 Q1005 458 992 472 Q979 486 992 503 Q1008 521 1032 508 Q1051 498 1056 521"/>
+              <path d="M753 561 V598 Q754 621 774 621 H843 Q862 619 867 596 Q866 577 886 571 Q907 565 921 577 Q931 586 920 604 Q918 622 942 622 H1031 Q1051 620 1051 599"/>
+              <path d="M-22 472 Q54 447 116 503 Q164 548 207 563 Q256 578 257 525 Q257 496 236 474 Q217 454 225 447 Q243 438 260 462 Q278 495 260 529 Q249 552 258 568"/>
+              <path d="M1056 521 Q1090 534 1118 578 Q1172 644 1230 523"/>
+            </g>
+            <path d="M448 347 Q449 325 471 325 H539 Q561 325 566 347 Q569 369 586 371 Q608 375 612 352 Q615 324 638 324 H720 Q742 324 742 349 L747 418 Q746 442 722 443 Q700 435 703 460 Q700 479 722 482 Q747 479 746 504 V592 Q746 620 722 621 H637 Q615 621 613 600 Q617 574 592 569 Q565 566 565 594 Q564 622 539 621 H473 Q451 621 451 600 V510 Q451 486 429 486 Q403 493 394 476 Q386 455 411 450 Q445 449 447 421 Z" fill="#355CF5"/>
+          </svg>
+        </div>
       </div>
     </section>
   </main>
@@ -5524,6 +5583,7 @@ const english = {
   contactHeadTwo: "we could build on?",
   contactDesc: "I value technical discussions, exchanging ideas, and connecting with people who enjoy building useful things. You can reach me on GitHub or by email.",
   contactButton: "Connect on GitHub",
+  contactEmailButton: "Send an email",
   footerAbout: "Libya - Tripoli",
   topLink: "Back to top",
   footerName: "Menat Allah Ahmed",
