@@ -5049,6 +5049,42 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
   filter:invert(51%) sepia(99%) saturate(2189%) hue-rotate(348deg) brightness(102%) contrast(102%)!important;
 }
 
+
+/* Featured participation, retaining cream and orange brand palette. */
+#participations .participations-aside{
+  transform:none!important;
+  text-align:center!important;
+  padding:26px 30px!important;
+  min-height:235px!important;
+  background:#FF9B29!important;
+}
+#participations .participations-event-card{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;width:100%;
+}
+#participations .participations-event-kicker{
+  font-size:13px;font-weight:850;letter-spacing:.025em;
+}
+#participations .participations-event-number{
+  font-family:var(--display),var(--ui),sans-serif;
+  color:#2329A8;font-size:clamp(76px,10vw,126px);
+  font-weight:900;line-height:1;
+}
+#participations .participations-status{font-size:clamp(14px,1.6vw,18px)!important;line-height:1.7!important}
+#participations .participations-event-name{
+  margin-top:12px;font-size:12px;font-weight:800;letter-spacing:.13em;
+}
+#participations .participations-project-link{
+  margin-top:22px!important;display:inline-flex!important;gap:12px!important;
+  align-items:center!important;color:#2329A8!important;border-color:#355CF5!important;
+  font-size:clamp(13px,1.2vw,15px)!important;
+}
+#participations .participations-project-link svg{flex-shrink:0}
+@media(max-width:700px){
+  #participations .participations-aside{min-height:210px!important}
+  #participations .participations-event-number{font-size:82px}
+}
+
 </style>
 
 </head>
@@ -5065,8 +5101,8 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
         <a href="#projects" data-i18n="navProjects">المشاريع</a>
         <a href="#videos" data-i18n="navVideos">الأعمال المرئية</a>
         <a href="#stack" data-i18n="navStack">التقنيات</a>
-        <a href="#notes" data-i18n="navNotes">المقالات</a>
         <a href="#participations" data-i18n="navParticipations">مشاركاتي</a>
+        <a href="#notes" data-i18n="navNotes">المقالات</a>
         <a href="#contact" data-i18n="navContact">التواصل</a>
       </nav>
       <div class="nav-actions">
@@ -5283,26 +5319,32 @@ html,body{background:#F2E7E1!important;color:#2329A8!important}
       </div>
     </section>
 
-    <section id="notes" class="section notes anchor">
-      <div class="shell">
-        <div class="section-header reveal"><div><div class="section-kicker"><span>06 /</span> <span data-i18n="notesKicker">أفكار من مدونتي</span></div><h2 class="editorial-heading"><span data-i18n="notesHeadOne">أشياء أتعلمها.</span><br><em data-i18n="notesHeadTwo">وأفكار أجهّز لمشاركتها.</em></h2><p class="section-deck" data-i18n="notesDesc">أجمع أفكاري عن هندسة البرمجيات وRAG والتقنيات القانونية خلال رحلتي في التعلّم والتطوير. هذه معاينات لمقالات أريد كتابتها لاحقًا، وليست مقالات منشورة بعد.</p></div><span class="section-stamp" aria-hidden="true">✳</span></div>
-        <div class="notes-grid" id="notesGrid">
-          <article class="note-card"><div class="note-cover"><span>AI</span></div><div class="note-card-body"><span class="note-category">الذكاء الاصطناعي · فكرة مقال</span><h3>حين تتعلّم الآلة أن تبحث قبل أن تجيب.</h3><p>عن أنظمة RAG: كيف نربط النماذج اللغوية بمصادر معرفة؟</p></div></article>
-          <article class="note-card"><div class="note-cover"><span>◈</span></div><div class="note-card-body"><span class="note-category">LegalTech · فكرة مقال</span><h3>عندما تلتقي العدالة بالتقنية.</h3><p>لماذا يستحق القطاع القانوني أدوات أذكى لتنظيم المستندات؟</p></div></article>
-          <article class="note-card"><div class="note-cover"><span>{ }</span></div><div class="note-card-body"><span class="note-category">هندسة البرمجيات · فكرة مقال</span><h3>أن يعمل الكود؟ هذه مجرد البداية.</h3><p>عن المعمارية الواضحة والاختبارات وقابلية التطوير.</p></div></article>
+    <section id="participations" class="section participations anchor" aria-labelledby="participationsTitle">
+      <div class="shell participations-inner">
+        <div class="reveal">
+          <span class="participations-kicker" data-i18n="participationsKicker">06 / مشاركاتي</span>
+          <h2 id="participationsTitle" class="participations-title" data-i18n="participationsTitle">مشاركاتي.</h2>
+          <p class="participations-desc" data-i18n="participationsDesc">شاركت بمشروع التخرج «ميزان» في معرض التوظيف بجامعة طرابلس، بعد اختياره من بين مشاريع جامعات ليبية ليكون واحدًا من 14 مشروعًا مشاركًا في المعرض.</p>
+          <a class="participations-project-link underlined-link" href="https://gto.com.ly/job-fair/projects/44" target="_blank" rel="noopener noreferrer"><span data-i18n="participationsLink">استعرض مشروع ميزان على موقع المعرض</span><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
+        </div>
+        <div class="participations-aside reveal" aria-label="مشاركة مشروع ميزان في معرض التوظيف">
+          <div class="participations-event-card">
+            <span class="participations-event-kicker" data-i18n="participationsEventLabel">معرض التوظيف · جامعة طرابلس</span>
+            <strong class="participations-event-number" dir="ltr">14</strong>
+            <span class="participations-status" data-i18n="participationsStatus">مشروعًا مشاركًا في المعرض، من بينها «ميزان».</span>
+            <span class="participations-event-name" lang="en">MIZAN · LEGALTECH</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="participations" class="section participations anchor" aria-labelledby="participationsTitle">
-      <div class="shell participations-inner">
-        <div class="reveal">
-          <span class="participations-kicker" data-i18n="participationsKicker">07 / مشاركاتي</span>
-          <h2 id="participationsTitle" class="participations-title" data-i18n="participationsTitle">مشاركاتي.</h2>
-          <p class="participations-desc" data-i18n="participationsDesc">هنا سأجمع مشاركاتي في الفعاليات والمبادرات والتجارب المشتركة، وأضيف تفاصيل كل مشاركة وروابطها عند توثيقها.</p>
-        </div>
-        <div class="participations-aside reveal" aria-label="قسم مشاركاتي">
-          <span class="participations-status" data-i18n="participationsStatus">مساحة لتوثيق المشاركات والتجارب القادمة.</span>
+    <section id="notes" class="section notes anchor">
+      <div class="shell">
+        <div class="section-header reveal"><div><div class="section-kicker"><span>07 /</span> <span data-i18n="notesKicker">أفكار من مدونتي</span></div><h2 class="editorial-heading"><span data-i18n="notesHeadOne">أشياء أتعلمها.</span><br><em data-i18n="notesHeadTwo">وأفكار أجهّز لمشاركتها.</em></h2><p class="section-deck" data-i18n="notesDesc">أجمع أفكاري عن هندسة البرمجيات وRAG والتقنيات القانونية خلال رحلتي في التعلّم والتطوير. هذه معاينات لمقالات أريد كتابتها لاحقًا، وليست مقالات منشورة بعد.</p></div><span class="section-stamp" aria-hidden="true">✳</span></div>
+        <div class="notes-grid" id="notesGrid">
+          <article class="note-card"><div class="note-cover"><span>AI</span></div><div class="note-card-body"><span class="note-category">الذكاء الاصطناعي · فكرة مقال</span><h3>حين تتعلّم الآلة أن تبحث قبل أن تجيب.</h3><p>عن أنظمة RAG: كيف نربط النماذج اللغوية بمصادر معرفة؟</p></div></article>
+          <article class="note-card"><div class="note-cover"><span>◈</span></div><div class="note-card-body"><span class="note-category">LegalTech · فكرة مقال</span><h3>عندما تلتقي العدالة بالتقنية.</h3><p>لماذا يستحق القطاع القانوني أدوات أذكى لتنظيم المستندات؟</p></div></article>
+          <article class="note-card"><div class="note-cover"><span>{ }</span></div><div class="note-card-body"><span class="note-category">هندسة البرمجيات · فكرة مقال</span><h3>أن يعمل الكود؟ هذه مجرد البداية.</h3><p>عن المعمارية الواضحة والاختبارات وقابلية التطوير.</p></div></article>
         </div>
       </div>
     </section>
@@ -5338,10 +5380,12 @@ const english = {
   navStack: "Expertise",
   navNotes: "Journal",
   navParticipations: "My Contributions",
-  participationsKicker: "07 / My Contributions",
+  participationsKicker: "06 / My Contributions",
   participationsTitle: "My Contributions.",
-  participationsDesc: "A place for my participation in events, initiatives, and shared experiences. I’ll add the details and links as they’re documented.",
-  participationsStatus: "A space to document future contributions and experiences.",
+  participationsDesc: "I presented my graduation project, MIZAN, at the University of Tripoli Job Fair after it was selected from projects submitted by Libyan universities as one of 14 participating projects.",
+  participationsStatus: "projects featured at the fair, including MIZAN.",
+  participationsEventLabel: "University of Tripoli · Job Fair",
+  participationsLink: "View MIZAN on the fair’s official website",
   navContact: "Contact",
   navCta: "Start a conversation",
   heroEyebrow: "Menat Allah Ahmed / Internet Technologies · Web & AI",
