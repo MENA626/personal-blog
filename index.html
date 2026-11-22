@@ -6822,6 +6822,26 @@ html.journey-on .journey-entered .matcha-cover-image{
 .note-dialog .article-sources-list{margin:0;padding-inline-start:22px;display:grid;gap:7px}
 .note-dialog .article-sources-list a{color:#CA4C30;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:1.75}
 .note-dialog .article-sources-list a:hover{color:#25364A}
+
+/* Copy-link button: always white text and a real SVG arrow, not a text glyph. */
+.note-dialog #shareNote.dialog-share{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:9px!important;direction:inherit!important;
+ background:#FF5C34!important;border:1px solid #FF5C34!important;
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+ min-height:46px!important;padding:11px 18px!important;
+ border-radius:11px!important;white-space:normal!important;
+ font-weight:800!important;
+}
+.note-dialog #shareNote.dialog-share .share-label,
+.note-dialog #shareNote.dialog-share .share-link-icon{
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+}
+.note-dialog #shareNote.dialog-share .share-link-icon{
+ display:block!important;width:18px!important;height:18px!important;
+ flex:0 0 18px!important;stroke:#FFFFFF!important;
+}
+.note-dialog #shareNote.dialog-share:hover{background:#E64E2B!important}
 </style>
 
 </head>
@@ -7110,7 +7130,7 @@ html.journey-on .journey-entered .matcha-cover-image{
   </footer>
 
   <dialog id="noteDialog" class="note-dialog" aria-labelledby="noteDialogTitle">
-    <div class="dialog-shell"><button type="button" class="dialog-close" id="dialogClose" aria-label="إغلاق">×</button><span class="dialog-eyebrow" id="dialogEyebrow"></span><div class="dialog-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h11l5 5v19H9z"/><path d="M20 4v6h5M13 16h8M13 21h8"/></svg></div><h2 id="noteDialogTitle"></h2><div class="dialog-copy" id="dialogBody"></div><div class="dialog-actions"><span data-i18n="draftDisclaimer">مقالات تقنية تحليلية للتوعية والتعلّم، وليست بديلًا عن الاستشارة المتخصصة.</span><button type="button" id="shareNote" class="dialog-share" data-i18n="copyLink">نسخ الرابط ↗</button></div></div>
+    <div class="dialog-shell"><button type="button" class="dialog-close" id="dialogClose" aria-label="إغلاق">×</button><span class="dialog-eyebrow" id="dialogEyebrow"></span><div class="dialog-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h11l5 5v19H9z"/><path d="M20 4v6h5M13 16h8M13 21h8"/></svg></div><h2 id="noteDialogTitle"></h2><div class="dialog-copy" id="dialogBody"></div><div class="dialog-actions"><span data-i18n="draftDisclaimer">مقالات تقنية تحليلية للتوعية والتعلّم، وليست بديلًا عن الاستشارة المتخصصة.</span><button type="button" id="shareNote" class="dialog-share"><span class="share-label">نسخ الرابط</span><svg class="share-link-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div></div>
   </dialog>
   <!-- Local interactions remain available without fetching a separate script. -->
   <script>
@@ -7789,6 +7809,10 @@ function renderDialog() {
   }
 }
 
+function setShareButtonLabel(label){
+  const text = shareBtn.querySelector(".share-label");
+  if(text)text.textContent=label;
+}
 function updateLanguage(next) {
   language = next === "en" ? "en" : "ar";
   root.lang = language;
@@ -7801,6 +7825,7 @@ function updateLanguage(next) {
       else node.textContent = english[key];
     }
   });
+  setShareButtonLabel(language==="ar"?"نسخ الرابط":"Copy link");
   const menuLabel = document.querySelector("#menuToggle .menu-label");
   if(menuLabel) menuLabel.textContent = language==="ar" ? "القائمة" : "Menu";
   langLabel.textContent = language==="ar" ? "العربية" : "English";
@@ -7859,9 +7884,9 @@ shareBtn.addEventListener("click",async()=>{
   const shareUrl=location.href.split("#")[0]+"#note-"+currentNote;
   try {
     await navigator.clipboard.writeText(shareUrl);
-    shareBtn.textContent=language==="ar"?"تم النسخ ✓":"Copied ✓";
-  } catch { shareBtn.textContent=language==="ar"?"يمكن نسخ الرابط من شريط العنوان":"Copy from address bar"; }
-  window.setTimeout(()=>{shareBtn.textContent=language==="ar"?"نسخ الرابط ↗":"Copy link ↗";},2300);
+    setShareButtonLabel(language==="ar"?"تم النسخ":"Copied");
+  } catch { setShareButtonLabel(language==="ar"?"انسخي الرابط من شريط العنوان":"Copy from address bar"); }
+  window.setTimeout(()=>{setShareButtonLabel(language==="ar"?"نسخ الرابط":"Copy link");},2300);
 });
 
 const nav = document.getElementById("mainNav");
