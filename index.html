@@ -7730,7 +7730,7 @@ function renderNotes() {
     const article = el("article","note-card reveal is-visible");
     const trigger = el("button","note-open");
     trigger.type = "button";
-    trigger.setAttribute("aria-label",("language==="ar"?"قراءة المقال: ":"Read article: ")+t.title);
+    trigger.setAttribute("aria-label",(language==="ar"?"قراءة المقال: ":"Read article: ")+t.title);
     const cover = el("div","note-cover");
     cover.setAttribute("aria-hidden","true");
     const coverImage=el("img","note-cover-image");
