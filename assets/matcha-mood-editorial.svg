@@ -1,13 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="MATCHA MOOD — tablet storefront and matcha drink design">
-<defs><filter id="shadow" x="-30%" y="-40%" width="170%" height="190%"><feDropShadow dx="0" dy="19" stdDeviation="22" flood-color="#25364A" flood-opacity=".18"/></filter><linearGradient id="matcha" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#96AC82"/><stop offset="1" stop-color="#66835F"/></linearGradient></defs>
-<rect width="1200" height="675" rx="32" fill="#D7EFFF"/><path d="M0 0H1200V106H0Z" fill="#FF5C34"/><text x="67" y="72" fill="#FFFFFF" font-size="35" font-weight="800" letter-spacing="4" font-family="Arial,sans-serif">MATCHA MOOD</text><text x="1130" y="66" text-anchor="end" fill="#FFFFFF" font-size="17" font-weight="700" letter-spacing="3" font-family="Arial,sans-serif">WEB EXPERIENCE / 02</text>
-<circle cx="1000" cy="490" r="223" fill="#C2E3F7"/><circle cx="172" cy="588" r="145" fill="#FF5C34" opacity=".14"/>
-<g filter="url(#shadow)" transform="rotate(-4 553 373)"><rect x="190" y="150" width="752" height="455" rx="38" fill="#25364A"/><rect x="211" y="170" width="710" height="415" rx="22" fill="#FFFFFF"/>
-<rect x="211" y="170" width="710" height="63" rx="21" fill="#F3FAFF"/><path d="M211 208H921V233H211Z" fill="#F3FAFF"/><text x="254" y="211" fill="#25364A" font-family="Arial,sans-serif" font-weight="900" font-size="21">matcha mood.</text><rect x="756" y="194" width="121" height="22" rx="11" fill="#FF5C34"/><text x="816" y="209" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="12" font-weight="700">EXPLORE</text>
-<rect x="234" y="253" width="665" height="304" rx="18" fill="#D7EFFF"/><circle cx="695" cy="397" r="145" fill="#B8DAEA"/><text x="269" y="323" fill="#25364A" font-size="43" font-family="Arial,sans-serif" font-weight="900">A little sip</text><text x="269" y="371" fill="#25364A" font-size="43" font-family="Arial,sans-serif" font-weight="900">of calm.</text><text x="272" y="409" fill="#436070" font-family="Arial,sans-serif" font-size="18">A cozy digital matcha corner.</text><rect x="272" y="445" width="148" height="44" rx="22" fill="#FF5C34"/><text x="346" y="473" text-anchor="middle" fill="#FFFFFF" font-size="17" font-family="Arial,sans-serif" font-weight="700">DISCOVER</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="MATCHA MOOD — fresh pastel storefront displayed in a blue tablet alongside an iced matcha cup">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E8F7FF"/><stop offset="1" stop-color="#D0EAFE"/></linearGradient>
+ <linearGradient id="matcha" x1="0" y1="0" x2=".25" y2="1"><stop stop-color="#BAD5A5"/><stop offset="1" stop-color="#819F78"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".93"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".52"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="17" flood-color="#25364A" flood-opacity=".13"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<circle cx="55" cy="70" r="220" fill="#FFFFFF" opacity=".4"/><circle cx="1150" cy="625" r="225" fill="#BEDFF5" opacity=".65"/>
+<path d="M0 563q192-85 370 15t390 17 440-26v106H0Z" fill="#EAF8FF" opacity=".65"/>
+<text x="71" y="91" font-family="Arial,sans-serif" font-size="23" font-weight="800" letter-spacing="5" fill="#25364A">WEB APP / 04</text>
+<g filter="url(#shadow)">
+ <rect x="128" y="147" width="810" height="450" rx="38" fill="#25364A"/>
+ <rect x="145" y="164" width="776" height="417" rx="25" fill="#FFFFFF"/>
+ <rect x="145" y="164" width="776" height="60" rx="24" fill="#F2F9FD"/>
+ <path d="M145 198H921V224H145Z" fill="#F2F9FD"/>
+ <circle cx="177" cy="195" r="7" fill="#FF5C34"/><circle cx="202" cy="195" r="7" fill="#B4DDEC"/><circle cx="227" cy="195" r="7" fill="#DCEFF9"/>
+ <text x="273" y="202" font-size="21" font-family="Arial,sans-serif" font-weight="900" letter-spacing="-1" fill="#25364A">matcha mood.</text>
+ <text x="711" y="201" font-family="Arial,sans-serif" font-size="13" fill="#4F677A">MENU</text>
+ <rect x="805" y="180" width="86" height="29" rx="15" fill="#FF5C34"/><text x="848" y="199" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" font-weight="800" fill="#FFFFFF">SHOP NOW</text>
+ <rect x="166" y="241" width="731" height="321" rx="17" fill="#E4F2FC"/>
+ <circle cx="738" cy="400" r="145" fill="#D1E8F7"/>
+ <text x="211" y="334" font-family="Arial,sans-serif" font-size="19" fill="#597388" letter-spacing="3">YOUR DAILY RITUAL</text>
+ <text x="207" y="394" font-family="Arial,sans-serif" font-size="52" font-weight="900" letter-spacing="-1" fill="#25364A">A cup of calm.</text>
+ <text x="210" y="426" font-size="17" font-family="Arial,sans-serif" fill="#456579">A little joy in every sip.</text>
+ <rect x="210" y="458" width="175" height="44" rx="22" fill="#FF5C34"/><text x="297" y="486" font-family="Arial,sans-serif" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">EXPLORE MENU</text>
+ <g transform="translate(626 266)">
+  <ellipse cx="119" cy="233" rx="110" ry="14" fill="#A9C7D5" opacity=".4"/>
+  <path d="M32 44H202L185 202Q182 227 158 227H77Q53 227 50 202Z" fill="url(#glass)" stroke="#FFFFFF" stroke-width="8"/>
+  <path d="M44 105H190L181 201Q179 214 157 214H78Q60 214 58 201Z" fill="url(#matcha)"/>
+  <path d="M37 46H197" stroke="#F4FFFB" stroke-width="9" stroke-linecap="round"/>
+  <path d="M97 113l-15 18 20 12M145 155l-13 24 13 13" fill="none" stroke="#EDF7E8" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <ellipse cx="116" cy="46" rx="83" ry="20" fill="#F8FBFB" stroke="#FFFFFF" stroke-width="6"/>
+  <ellipse cx="116" cy="45" rx="65" ry="11" fill="#9DBA8B"/>
+  <path d="M135 37L158 -54" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <path d="M135 37L158 -54" stroke="#FF5C34" stroke-width="5" stroke-linecap="round"/>
+ </g>
 </g>
-<!-- Transparent iced matcha glass overlaps the tablet for an editorial product-photo silhouette -->
-<g filter="url(#shadow)" transform="translate(745 270) rotate(9 120 160)">
-<ellipse cx="136" cy="320" rx="108" ry="18" fill="#25364A" opacity=".13"/><path d="M46 42H225L203 293Q196 316 173 316H99Q76 316 69 293Z" fill="#FFFFFF" opacity=".92" stroke="#FFFFFF" stroke-width="9"/><path d="M61 130H209L193 290Q189 302 175 303H98Q83 303 79 290Z" fill="url(#matcha)"/><path d="M52 42Q136 12 219 42V76Q137 98 52 76Z" fill="#F3FAFF"/><ellipse cx="136" cy="42" rx="85" ry="19" fill="#E7F4F8"/><ellipse cx="136" cy="40" rx="65" ry="13" fill="#849A73"/><path d="M147 34L177 -94" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/><path d="M147 34L177 -94" stroke="#FF5C34" stroke-width="5" stroke-linecap="round"/>
-<path d="M91 116Q110 133 126 114M168 119L187 105M98 214L115 197" stroke="#FFFFFF" opacity=".32" stroke-width="8" stroke-linecap="round"/>
-</g></svg>
+<g transform="translate(962 175) rotate(11)" filter="url(#shadow)">
+ <ellipse cx="108" cy="407" rx="104" ry="15" fill="#25364A" opacity=".12"/>
+ <path d="M12 97H203L182 366Q179 392 152 392H68Q42 392 38 366Z" fill="url(#glass)" stroke="#FFFFFF" stroke-width="10"/>
+ <path d="M29 171H188L173 361Q172 376 151 376H69Q52 376 50 361Z" fill="url(#matcha)"/>
+ <path d="M13 97H203" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/>
+ <ellipse cx="108" cy="97" rx="95" ry="22" fill="#EDF5F6" stroke="#FFFFFF" stroke-width="8"/>
+ <ellipse cx="109" cy="95" rx="76" ry="13" fill="#A6C59C"/>
+ <path d="M127 90L173 4" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round"/>
+ <path d="M127 90L173 4" stroke="#FF5C34" stroke-width="5" stroke-linecap="round"/>
+ <path d="M73 214q20 13 38 0M101 290q20 13 38 0" fill="none" stroke="#EDF7E8" stroke-width="11" opacity=".65" stroke-linecap="round"/>
+</g>
+<path d="m1006 100 19-22m22 39 21-10M80 458l-21 16m28 10-17 28" fill="none" stroke="#FF5C34" stroke-width="10" stroke-linecap="round"/>
+</svg>
