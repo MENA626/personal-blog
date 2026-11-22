@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="هندسة البرمجيات واختبار جودة الكود">
+<rect width="1200" height="675" fill="#D7EFFF"/><circle cx="70" cy="0" r="275" fill="#CBE8FC"/><circle cx="1116" cy="650" r="285" fill="#F0FAFF"/><circle cx="600" cy="334" r="280" fill="#E4F5FF" opacity=".8"/>
+<rect x="250" y="160" width="700" height="405" rx="38" fill="#FFFFFF" stroke="#25364A" stroke-width="20"/><path d="M259 215q0-46 45-46h585q52 0 52 51v55H259z" fill="#25364A"/><circle cx="320" cy="224" r="13" fill="#FF5C34"/><circle cx="360" cy="224" r="13" fill="#C7E5FA"/><circle cx="400" cy="224" r="13" fill="#FFFFFF"/>
+<rect x="338" y="323" width="525" height="174" rx="27" fill="#25364A"/><path d="M485 362l-47 49 47 49M713 362l47 49-47 49M650 348l-62 127" fill="none" stroke="#FF5C34" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="891" cy="184" r="108" fill="#FF5C34" stroke="#FFFFFF" stroke-width="14"/><path d="m839 182 38 37 72-79" fill="none" stroke="#FFFFFF" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="338" y="521" width="164" height="9" rx="4" fill="#B9DCEF"/><rect x="529" y="521" width="103" height="9" rx="4" fill="#B9DCEF"/>
+</svg>
