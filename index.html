@@ -6815,6 +6815,13 @@ html.journey-on .journey-entered .matcha-cover-image{
  .note-dialog{max-height:90vh!important}
  .note-dialog .dialog-copy p{font-size:15px!important;line-height:2!important}
 }
+
+/* Editorial references: compact accessible links instead of decorative emoji. */
+.note-dialog .article-sources{border-top:1px solid #D7EFFF;margin-top:26px;padding-top:18px}
+.note-dialog .article-sources-title{font:800 16px/1.7 "Cairo",sans-serif;color:#25364A;margin:0 0 9px}
+.note-dialog .article-sources-list{margin:0;padding-inline-start:22px;display:grid;gap:7px}
+.note-dialog .article-sources-list a{color:#CA4C30;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:1.75}
+.note-dialog .article-sources-list a:hover{color:#25364A}
 </style>
 
 </head>
@@ -7068,7 +7075,7 @@ html.journey-on .journey-entered .matcha-cover-image{
 
     <section id="notes" class="section notes anchor">
       <div class="shell">
-        <div class="section-header reveal"><div><div class="section-kicker"><span>07 /</span> <span data-i18n="notesKicker">مقالات من رحلتي</span></div><h2 class="editorial-heading"><span data-i18n="notesHeadOne">تجارب أعيشها.</span><br><em data-i18n="notesHeadTwo">وأفكار أشاركها.</em></h2><p class="section-deck" data-i18n="notesDesc">هنا أترك للكلمات مساحة تحكي عن رحلتي في عالم البرمجة؛ أشارك من خلالها أفكاري، وما أتعلمه من تجاربي، والموضوعات التي تثير فضولي وتستحق أن تُروى. مقالات تولد من الشغف، وتنمو مع كل خطوة أخطوها في هذا العالم.</p></div><span class="section-stamp" aria-hidden="true">✳</span></div>
+        <div class="section-header reveal"><div><div class="section-kicker"><span>07 /</span> <span data-i18n="notesKicker">مقالات من رحلتي</span></div><h2 class="editorial-heading"><span data-i18n="notesHeadOne">تجارب أعيشها.</span><br><em data-i18n="notesHeadTwo">وأفكار أشاركها.</em></h2><p class="section-deck" data-i18n="notesDesc">هنا أترك للكلمات مساحة تحكي عن رحلتي في عالم البرمجة؛ أشارك من خلالها أفكاري، وما أتعلمه من تجاربي، والموضوعات التي تثير فضولي وتستحق أن تُروى. مقالات تولد من الشغف، وتنمو مع كل خطوة أخطوها في هذا العالم.</p></div><span class="section-stamp" aria-hidden="true"><svg viewBox="0 0 36 36" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M9 4h14l6 6v22H9z"/><path d="M23 4v7h6M14 18h11M14 24h11"/></svg></span></div>
         <div class="notes-grid" id="notesGrid">
           <article class="note-card"><div class="note-cover"><img class="note-cover-image" src="assets/article-rag.svg?v=articles-refined-20261122" alt=""></div><div class="note-card-body"><span class="note-category">الذكاء الاصطناعي · مقال تقني</span><h3>حين تتعلّم الآلة أن تبحث قبل أن تجيب.</h3><p>كيف نبني نظام RAG يربط الإجابة بمعلومات يمكن الرجوع إليها؟</p></div></article>
           <article class="note-card"><div class="note-cover"><img class="note-cover-image" src="assets/article-legaltech.svg?v=articles-refined-20261122" alt=""></div><div class="note-card-body"><span class="note-category">التقنية القانونية · مقال تحليلي</span><h3>عندما تلتقي العدالة بالتقنية.</h3><p>تنظيم المستندات والبحث الذكي دون التضحية بالخصوصية.</p></div></article>
@@ -7103,7 +7110,7 @@ html.journey-on .journey-entered .matcha-cover-image{
   </footer>
 
   <dialog id="noteDialog" class="note-dialog" aria-labelledby="noteDialogTitle">
-    <div class="dialog-shell"><button type="button" class="dialog-close" id="dialogClose" aria-label="إغلاق">×</button><span class="dialog-eyebrow" id="dialogEyebrow"></span><div class="dialog-symbol">✳</div><h2 id="noteDialogTitle"></h2><div class="dialog-copy" id="dialogBody"></div><div class="dialog-actions"><span data-i18n="draftDisclaimer">مقالات تقنية تحليلية للتوعية والتعلّم، وليست بديلًا عن الاستشارة المتخصصة.</span><button type="button" id="shareNote" class="dialog-share" data-i18n="copyLink">نسخ الرابط ↗</button></div></div>
+    <div class="dialog-shell"><button type="button" class="dialog-close" id="dialogClose" aria-label="إغلاق">×</button><span class="dialog-eyebrow" id="dialogEyebrow"></span><div class="dialog-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h11l5 5v19H9z"/><path d="M20 4v6h5M13 16h8M13 21h8"/></svg></div><h2 id="noteDialogTitle"></h2><div class="dialog-copy" id="dialogBody"></div><div class="dialog-actions"><span data-i18n="draftDisclaimer">مقالات تقنية تحليلية للتوعية والتعلّم، وليست بديلًا عن الاستشارة المتخصصة.</span><button type="button" id="shareNote" class="dialog-share" data-i18n="copyLink">نسخ الرابط ↗</button></div></div>
   </dialog>
   <!-- Local interactions remain available without fetching a separate script. -->
   <script>
@@ -7529,6 +7536,7 @@ const drafts = [
   {
     "id": "rag-explained",
     "motif": "AI",
+    "sources": [["Microsoft Learn · RAG overview","https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation"],["Microsoft Learn · RAG evaluation","https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rag-evaluators"],["OWASP · Prompt injection risks","https://genai.owasp.org/llmrisk/llm01-prompt-injection/"]],
     "image": "assets/article-rag.svg",
     "ar": {
       "category": "الذكاء الاصطناعي · مقال تقني",
@@ -7565,6 +7573,7 @@ const drafts = [
   {
     "id": "mizan-vision",
     "motif": "◈",
+    "sources": [["Microsoft Learn · Retrieval and source grounding","https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation"],["OWASP · LLM security risks","https://owasp.org/projects/top-10-for-large-language-model-applications"]],
     "image": "assets/article-legaltech.svg",
     "ar": {
       "category": "التقنية القانونية · مقال تحليلي",
@@ -7600,6 +7609,7 @@ const drafts = [
   {
     "id": "architecture-matters",
     "motif": "{ }",
+    "sources": [["NIST · Developer verification guidance","https://www.nist.gov/publications/guidelines-minimum-standards-developer-verification-software"]],
     "image": "assets/article-engineering.svg",
     "ar": {
       "category": "هندسة البرمجيات · مقال تقني",
@@ -7762,6 +7772,21 @@ function renderDialog() {
   noteTitle.textContent = t.title;
   noteEyebrow.textContent = t.category;
   noteBody.replaceChildren(...t.content.map(p=>el("p","",p)));
+  if(note.sources && note.sources.length){
+    const resources=el("div","article-sources");
+    const label=el("h3","article-sources-title",language==="ar"?"مراجع للاستزادة والتحقق":"Further reading and references");
+    resources.append(label);
+    const list=el("ul","article-sources-list");
+    note.sources.forEach(([title,url])=>{
+      const li=el("li","");
+      const a=el("a","",title);
+      a.href=url;
+      a.target="_blank";
+      a.rel="noopener noreferrer";
+      li.append(a);list.append(li);
+    });
+    resources.append(list);noteBody.append(resources);
+  }
 }
 
 function updateLanguage(next) {
