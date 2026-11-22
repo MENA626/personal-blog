@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="CODEX LEARN educational app preview">
+                <rect width="1200" height="675" fill="#D7EFFF"/>
+                <circle cx="92" cy="20" r="195" fill="#FFFFFF" opacity=".55"/><circle cx="1160" cy="602" r="205" fill="#FFFFFF" opacity=".52"/>
+                <text x="70" y="152" fill="#25364A" font-family="Arial,sans-serif" font-size="67" font-weight="900" letter-spacing="-2">CODEX</text>
+                <text x="70" y="229" fill="#FF5C34" font-family="Arial,sans-serif" font-size="70" font-weight="900" letter-spacing="-2">LEARN</text>
+                <path d="M110 285l-33 28 33 28 M190 285l33 28-33 28 M174 268l-47 90" fill="none" stroke="#FF5C34" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="75" y="402" width="295" height="65" rx="32" fill="#FF5C34"/>
+                <text x="222" y="445" text-anchor="middle" fill="#FFFFFF" font-size="30" font-weight="700" font-family="Arial,sans-serif">IN DEVELOPMENT</text>
+                <ellipse cx="793" cy="568" rx="326" ry="30" fill="#A7CCE5" opacity=".45"/>
+                <rect x="447" y="110" width="683" height="441" rx="27" fill="#25364A"/>
+                <rect x="469" y="136" width="639" height="385" rx="14" fill="#EDF8FF"/>
+                <rect x="469" y="136" width="639" height="50" rx="14" fill="#C8E5F8"/>
+                <circle cx="504" cy="160" r="8" fill="#FF5C34"/><circle cx="529" cy="160" r="8" fill="#FFFFFF"/><circle cx="554" cy="160" r="8" fill="#FFFFFF"/>
+                <rect x="493" y="211" width="155" height="282" rx="14" fill="#25364A"/>
+                <path d="M518 256h103M518 279h77M518 329h103M518 352h80M518 401h103M518 424h60" stroke="#D7EFFF" stroke-width="8" stroke-linecap="round"/>
+                <rect x="676" y="208" width="404" height="80" rx="15" fill="#FFFFFF"/>
+                <path d="M724 243l-19 15 19 15M757 243l19 15-19 15M752 234l-22 49" fill="none" stroke="#FF5C34" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M812 236h204M812 257h144" stroke="#B5D7E8" stroke-width="11" stroke-linecap="round"/>
+                <rect x="676" y="311" width="187" height="180" rx="18" fill="#FFFFFF"/>
+                <rect x="883" y="311" width="197" height="180" rx="18" fill="#FFFFFF"/>
+                <path d="M714 356h105M714 380h73" stroke="#D7EFFF" stroke-width="12" stroke-linecap="round"/>
+                <path d="M718 436l31-28 30 28 37-46" stroke="#FF5C34" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M928 393l56-25 56 25-56 25z" fill="#25364A"/><path d="M941 407v30q43 32 85 0v-30" fill="#FF5C34"/>
+                <rect x="415" y="551" width="747" height="24" rx="12" fill="#A7CAE3"/><rect x="690" y="549" width="195" height="18" rx="9" fill="#FFFFFF"/>
+                <circle cx="1047" cy="90" r="31" fill="#FF5C34"/><path d="M1047 68v22l-14 14M1047 68l11 13" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round"/>
+              </svg>
