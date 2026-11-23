@@ -6910,6 +6910,19 @@ html[lang="en"] .site-header .language-switch-option{
  html[lang="en"] .project-details h3,
  html[lang="en"] .note-card h3{line-height:1.3!important}
 }
+
+/* Pharmacy cover: consistent responsive editorial artwork without gradient overlays. */
+#projects .pharmacy-card .pharmacy-project-art{
+ display:block!important;aspect-ratio:1200/675!important;
+ min-height:0!important;padding:0!important;
+ position:relative!important;overflow:hidden!important;background:#D7EFFF!important;
+}
+#projects .pharmacy-card .pharmacy-project-art::after,
+#projects .pharmacy-card .pharmacy-project-art::before{content:none!important;display:none!important}
+#projects .pharmacy-card .pharmacy-project-art img{
+ display:block!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;opacity:1!important;visibility:visible!important;position:relative!important;z-index:3!important;
+}
 </style>
 
 </head>
@@ -7015,17 +7028,16 @@ html[lang="en"] .site-header .language-switch-option{
               <a class="underlined-link" href="https://rawcdn.githack.com/MENA626/personal-blog/009f8918bfb3ff41165c9af129cdd845d0b28196/cosmos/index.html" target="_blank" rel="noopener noreferrer"><span data-i18n="cosmosLink">فتح تجربة COSMOS</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
-          <article class="project-card matcha-card reveal">
-            <div class="matcha-art">
-              <img class="matcha-cover-image" src="assets/matcha-mood-editorial.svg?v=matcha-tablet-only-20261122" alt="واجهة متجر ماتشا مود داخل جهاز لوحي أزرق مع كوب ماتشا داخل الشاشة فقط" width="1200" height="675" loading="lazy" decoding="async">
-              <span class="matcha-cover-label" aria-hidden="true">MATCHA MOOD · WEB EXPERIENCE</span>
+          <article class="project-card pharmacy-card reveal">
+            <div class="project-demo editorial-project-cover pharmacy-project-art">
+              <img src="assets/pharmacy-cover.svg?v=pharmacy-20261123" width="1200" height="675" alt="غلاف مشروع Pharmacy: واجهة صيدلية رقمية باللون الأزرق والبرتقالي" loading="lazy" decoding="async">
             </div>
             <div class="project-details">
-              <div class="project-meta"><span class="project-status"><span class="status-point"></span><span data-i18n="matchaStatus">مشروع منشور</span></span><span>04 / WEB APPLICATION</span></div>
-              <h3 data-i18n="matchaTitle">MATCHA MOOD | ماتشا مود</h3>
-              <p data-i18n="matchaDesc">«MATCHA MOOD» أحد مشاريعي على الويب. صمّمت له غلافًا لطيفًا على هيئة واجهة متجر داخل جهاز لوحي أزرق، مع كوب ماتشا بسيط. التطبيق منشور عبر Floot ويمكن استكشافه من الرابط.</p>
-              <div class="project-chips"><span>Web App</span><span>Floot</span><span>Live Demo</span></div>
-              <a class="underlined-link" href="https://matcha-mood-ly.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="matchaLink">فتح تجربة MATCHA MOOD</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
+              <div class="project-meta"><span class="project-status"><span class="status-point"></span><span data-i18n="pharmacyStatus">مشروع ويب</span></span><span>04 / PHARMACY WEB APP</span></div>
+              <h3 data-i18n="pharmacyTitle">PHARMACY | فارماسي</h3>
+              <p data-i18n="pharmacyDesc">«PHARMACY» مشروع ويب في مجال الصيدلة أضيفه إلى أعمالي الرقمية، ويتيح الرابط استكشاف واجهة التطبيق مباشرة عبر Floot.</p>
+              <div class="project-chips"><span>Pharmacy</span><span>Web App</span><span>Floot</span></div>
+              <a class="underlined-link" href="https://pharmacy.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="pharmacyLink">زيارة مشروع PHARMACY</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
           <article class="project-card codex-card reveal">
@@ -7038,6 +7050,19 @@ html[lang="en"] .site-header .language-switch-option{
               <p data-i18n="codexDesc">«CODEX LEARN» مشروع ويب تعليمي باللغة العربية لا يزال قيد الإنشاء والتطوير. أشارك النسخة الحالية للاطلاع على العمل الجاري، وقد تتغير مميزاته ومحتوياته مع استمرار التطوير.</p>
               <div class="project-chips"><span>Education</span><span>Arabic</span><span>Web App</span><span>Floot</span></div>
               <a class="underlined-link" href="https://codex-learn-ar.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="codexLink">معاينة المشروع قيد التطوير</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
+            </div>
+          </article>
+          <article class="project-card matcha-card reveal">
+            <div class="matcha-art">
+              <img class="matcha-cover-image" src="assets/matcha-mood-editorial.svg?v=matcha-tablet-only-20261122" alt="واجهة متجر ماتشا مود داخل جهاز لوحي أزرق مع كوب ماتشا داخل الشاشة فقط" width="1200" height="675" loading="lazy" decoding="async">
+              <span class="matcha-cover-label" aria-hidden="true">MATCHA MOOD · WEB EXPERIENCE</span>
+            </div>
+            <div class="project-details">
+              <div class="project-meta"><span class="project-status"><span class="status-point"></span><span data-i18n="matchaStatus">مشروع منشور</span></span><span>06 / WEB APPLICATION</span></div>
+              <h3 data-i18n="matchaTitle">MATCHA MOOD | ماتشا مود</h3>
+              <p data-i18n="matchaDesc">«MATCHA MOOD» أحد مشاريعي على الويب. صمّمت له غلافًا لطيفًا على هيئة واجهة متجر داخل جهاز لوحي أزرق، مع كوب ماتشا بسيط. التطبيق منشور عبر Floot ويمكن استكشافه من الرابط.</p>
+              <div class="project-chips"><span>Web App</span><span>Floot</span><span>Live Demo</span></div>
+              <a class="underlined-link" href="https://matcha-mood-ly.floot.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="matchaLink">فتح تجربة MATCHA MOOD</span><svg class="project-link-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></a>
             </div>
           </article>
         </div>
@@ -7273,6 +7298,10 @@ const english = {
   videoTwoTitle: "Self-Driving Cars — Educational Video",
   videoTwoDesc: "I created and edited an educational video about self-driving cars, focusing on clear visual storytelling and pacing to present the topic. The full video is available on YouTube.",
   videoWatch: "Watch video on YouTube",
+  pharmacyStatus: "Web project",
+  pharmacyTitle: "PHARMACY | Pharmacy Web App",
+  pharmacyDesc: "PHARMACY is a pharmacy-related web project in my digital portfolio. The application interface can be explored directly through its Floot link.",
+  pharmacyLink: "Explore PHARMACY",
   matchaStatus: "Published app",
   matchaTitle: "MATCHA MOOD | ماتشا مود",
   matchaDesc: "MATCHA MOOD is one of my web projects. I present it through a playful flat-blue iPad storefront illustration with a simple cup of matcha. The application is published on Floot, with a direct link to explore it.",
