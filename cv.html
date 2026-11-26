@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#D7EFFF">
+<meta name="theme-color" content="#FFFFFF">
 <meta name="description" content="الملف المهني لمنة الله أحمد — تخصص تقنيات الإنترنت بكلية تقنية المعلومات، جامعة طرابلس">
 <title>السيرة الذاتية | منة الله أحمد</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,6 +245,91 @@ body,html[lang="ar"] body,html[lang="en"] body{
  .head .role{font-size:18px!important}
  .head .intro{font-size:13px!important}
 }
+
+/* Unified 2026 portfolio/CV identity — clear neutral document, precise blue accents. */
+:root{
+ --dark:#111318;--ink:#111318;--muted:#555d69;
+ --purple:#1E45FB;--lilac:#1E45FB;--peach:#1E45FB;--sky:#F5F5F7;
+ --font:"IBM Plex Sans Arabic","Cairo",Arial,sans-serif;
+ --eng:"Inter","DM Sans",Arial,sans-serif;
+}
+html,body{background:#F5F5F7!important;color:#111318!important}
+body{font-family:var(--font)!important}
+html[lang="en"] body{font-family:var(--eng)!important}
+.toolbar{
+ background:#F5F5F7!important;max-width:1020px!important;
+ padding:22px 25px!important;
+}
+.toolbar #back{color:#111318!important}
+.toolbar #back::before{color:#1E45FB!important}
+.toolbar-actions button,
+.toolbar #ar,.toolbar #en{
+ color:#333A46!important;background:#FFFFFF!important;
+ border:1px solid #DDE1E9!important;border-radius:8px!important;
+ box-shadow:none!important;
+}
+.toolbar #ar[aria-pressed="true"],.toolbar #en[aria-pressed="true"]{
+ color:#FFFFFF!important;background:#111318!important;border-color:#111318!important;
+}
+.toolbar .print,.toolbar .print:hover{
+ background:#1E45FB!important;border-color:#1E45FB!important;
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+ box-shadow:none!important;border-radius:8px!important;
+}
+.cv-paper{
+ max-width:970px!important;border:1px solid #E2E5EB!important;
+ border-radius:18px!important;box-shadow:0 10px 40px rgba(17,19,24,.05)!important;
+}
+.head{
+ background:#111318!important;background-image:none!important;
+ border:0!important;color:#FFFFFF!important;
+ padding:55px clamp(27px,5.2vw,68px)!important;
+}
+.head::before,.head::after{display:none!important}
+.head .overline{color:#AFBDFF!important;-webkit-text-fill-color:#AFBDFF!important;font-family:var(--eng)!important}
+.head h1{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;line-height:1.45!important}
+.head .role{color:#E0E5FF!important;-webkit-text-fill-color:#E0E5FF!important}
+.head .intro{color:#E6E9F1!important;-webkit-text-fill-color:#E6E9F1!important;max-width:740px!important}
+.content{padding:clamp(29px,4.5vw,59px)!important;background:#FFFFFF!important}
+.section{margin-bottom:38px!important}
+.section h2{
+ color:#111318!important;-webkit-text-fill-color:#111318!important;
+ font-weight:750!important;font-size:21px!important;
+ border-bottom:1px solid #E7E9EE!important;
+ padding-bottom:13px!important;margin-bottom:16px!important;
+}
+.section h2:before{
+ width:3px!important;height:23px!important;border-radius:2px!important;
+ background:#1E45FB!important;
+}
+.section p,.panel p,.note,.bottom,.skill small{color:#555D69!important}
+.panel,.skill{
+ background:#FFFFFF!important;
+ border:1px solid #E3E6EC!important;border-radius:10px!important;
+ box-shadow:none!important;
+}
+.panel{padding:20px!important}
+.skill{padding:17px!important}
+.skill strong,.panel strong{color:#111318!important}
+.links a{background:#FFFFFF!important;border:1px solid #E3E6EC!important;color:#1E45FB!important}
+.links a:hover{background:#F5F6FD!important;color:#1E45FB!important}
+@media(max-width:700px){
+ .toolbar{padding:16px!important}
+ .cv-paper{margin:0 0 25px!important;border-radius:0!important;border-inline:0!important}
+ .head{padding:40px 24px 50px!important}
+ .content{padding:29px 22px 36px!important}
+}
+@media print{
+ html,body,.cv-paper,.content{background:#FFFFFF!important}
+ .toolbar{display:none!important}
+ .cv-paper{max-width:none!important;margin:0!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+ .head{padding:28px 34px!important}
+ .content{padding:24px 34px 0!important}
+ .section{margin-bottom:20px!important}
+ .head h1{font-size:43px!important}
+ .panel{padding:11px!important}
+ .skill{padding:10px!important}
+}
 </style></head>
 <body>
 <div class="toolbar">
@@ -253,7 +338,7 @@ body,html[lang="ar"] body,html[lang="en"] body{
 </div>
 <article class="cv-paper">
 <header class="head">
-<span class="overline">SOFTWARE ENGINEER · TRIPOLI, LIBYA</span>
+<span class="overline">SOFTWARE DEVELOPER · TRIPOLI, LIBYA</span>
 <h1 data-ar="منة الله أحمد" data-en="Menat Allah Ahmed">منة الله أحمد</h1>
 <p class="role" data-ar="تقنيات الإنترنت · ويب وموبايل · ذكاء اصطناعي" data-en="Internet Technologies · Web &amp; Mobile · AI">تقنيات الإنترنت · ويب وموبايل · ذكاء اصطناعي</p>
 <p class="intro" data-ar="درست تخصص تقنيات الإنترنت بكلية تقنية المعلومات في جامعة طرابلس. أحب تحليل الأفكار وتصميم التجارب الرقمية وتطوير الويب والموبايل، وأستكشف كيف يساعد الذكاء الاصطناعي في بناء حلول مفيدة." data-en="I studied Internet Technologies at the University of Tripoli's Faculty of Information Technology. I enjoy analyzing ideas, designing digital experiences, building web and mobile solutions, and exploring practical AI.">درست تخصص تقنيات الإنترنت بكلية تقنية المعلومات في جامعة طرابلس. أحب تحليل الأفكار وتصميم التجارب الرقمية وتطوير الويب والموبايل، وأستكشف كيف يساعد الذكاء الاصطناعي في بناء حلول مفيدة.</p>
