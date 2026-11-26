@@ -364,3 +364,18 @@ html[lang="en"] .contact-panel h2{font-family:var(--editorial);font-weight:400}
  .recognition-board strong{font-size:clamp(48px,12vw,67px)}
 }
 @media(prefers-reduced-motion:reduce){.editorial-sculpture{animation:none}}
+
+/* Prevent inherited technology-hero decorative shadows leaking into the art canvas */
+.hero-scene.editorial-scene::before{
+ position:absolute;inset:0;width:auto;height:auto;bottom:0;left:0;right:0;top:0;
+ z-index:0;border-radius:0;filter:none;transform:none;box-shadow:none;
+ background:repeating-linear-gradient(0deg,transparent 0 71px,rgba(233,185,135,.08) 72px),
+ repeating-linear-gradient(90deg,transparent 0 71px,rgba(233,185,135,.07) 72px);
+ opacity:.34;
+}
+.hero-scene.editorial-scene::after{
+ position:absolute;inset:13px;width:auto;height:auto;bottom:13px;left:13px;right:13px;top:13px;
+ z-index:3;border-radius:0;filter:none;transform:none;box-shadow:none;opacity:1;
+ background:none;border:1px solid rgba(241,194,142,.27);pointer-events:none
+}
+.editorial-scene .editorial-sculpture,.editorial-scene .editorial-serial,.editorial-scene .editorial-scene-caption{z-index:2}
