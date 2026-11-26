@@ -6923,6 +6923,76 @@ html[lang="en"] .site-header .language-switch-option{
  display:block!important;width:100%!important;height:100%!important;
  object-fit:cover!important;opacity:1!important;visibility:visible!important;position:relative!important;z-index:3!important;
 }
+
+/* Laptop / desktop layout refinement, scoped away from phone styles. */
+@media (min-width:1024px){
+  .shell{width:min(1232px,calc(100% - 96px))!important;max-width:1232px!important}
+  .section{overflow-x:clip}
+  .section-header{gap:35px!important;align-items:start!important}
+  .section-header > div:first-child{min-width:0!important;max-width:970px}
+  .section-deck{max-width:810px!important;line-height:1.9!important}
+  #projects .project-list{gap:28px!important}
+  #projects .project-card{
+    display:grid!important;
+    grid-template-columns:minmax(0,44%) minmax(0,56%)!important;
+    align-items:stretch!important;
+    min-height:350px!important;height:auto!important;
+    border-radius:20px!important;
+    box-shadow:0 8px 26px rgba(37,54,74,.06)!important;
+  }
+  #projects .project-card > :first-child{
+    grid-column:1!important;grid-row:1!important;
+    min-width:0!important;width:100%!important;min-height:350px!important;
+  }
+  #projects .project-card > .project-details{
+    grid-column:2!important;grid-row:1!important;
+    min-width:0!important;width:100%!important;
+    padding:32px clamp(28px,3.15vw,44px)!important;
+    justify-content:center!important;align-items:flex-start!important;
+    gap:0!important;
+  }
+  #projects .project-card .project-details h3{
+    margin:16px 0 10px!important;
+    font-size:clamp(25px,2.2vw,33px)!important;
+    line-height:1.45!important;
+  }
+  #projects .project-card .project-details > p{
+    margin:0 0 18px!important;
+    font-size:clamp(14px,1.05vw,15px)!important;
+    line-height:1.95!important;
+    max-width:630px!important;
+  }
+  #projects .project-card .project-meta{flex-wrap:wrap!important;row-gap:8px!important}
+  #projects .project-card .project-chips{margin:0 0 15px!important;gap:7px!important}
+  #projects .project-card .project-chips span{padding:6px 10px!important;font-size:10px!important}
+  #projects .project-card .underlined-link{margin-top:0!important;align-self:flex-start!important}
+  #projects .project-card .project-demo,
+  #projects .project-card .editorial-project-cover,
+  #projects .project-card .site-project-illustration,
+  #projects .project-card .matcha-art{
+    aspect-ratio:auto!important;height:100%!important;min-height:350px!important;
+    max-height:none!important;overflow:hidden!important;
+  }
+  #projects .project-card .editorial-project-cover > img,
+  #projects .project-card .project-demo > img,
+  #projects .project-card .site-project-illustration > img,
+  #projects .project-card .matcha-cover-image{
+    width:100%!important;height:100%!important;
+    object-fit:cover!important;object-position:center!important;
+  }
+  #projects .project-card .matcha-art .matcha-cover-image{
+    position:absolute!important;inset:0!important;
+  }
+  #notes .notes-grid{gap:23px!important;align-items:stretch!important}
+  #notes .note-card{height:100%!important}
+  #videos .video-grid{gap:26px!important}
+}
+@media (min-width:1024px) and (max-width:1199px){
+  #projects .project-card{grid-template-columns:minmax(0,42%) minmax(0,58%)!important}
+  #projects .project-card > .project-details{padding:28px 30px!important}
+  #projects .project-card .project-details h3{font-size:25px!important}
+  .shell{width:calc(100% - 64px)!important}
+}
 </style>
 
 </head>
