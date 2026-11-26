@@ -1,34 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="MATCHA MOOD pastel-blue tablet storefront with matcha products, no cup outside tablet">
-<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EFF9FF"/><stop offset="1" stop-color="#D7EFFF"/></linearGradient><filter id="drop" x="-15%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="13" stdDeviation="17" flood-color="#25364A" flood-opacity=".14"/></filter></defs>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EFF9FF"/><stop offset="1" stop-color="#CDF22B"/></linearGradient><filter id="drop" x="-15%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="13" stdDeviation="17" flood-color="#101317" flood-opacity=".14"/></filter></defs>
 <rect width="1200" height="675" fill="url(#sky)"/>
-<circle cx="118" cy="166" r="95" fill="#CBE7FB"/><circle cx="1130" cy="538" r="130" fill="#C4E3F8"/>
-<ellipse cx="605" cy="596" rx="480" ry="43" fill="#A9CDEC" opacity=".35"/>
+<circle cx="118" cy="166" r="95" fill="#DDE4FA"/><circle cx="1130" cy="538" r="130" fill="#DDE4FA"/>
+<ellipse cx="605" cy="596" rx="480" ry="43" fill="#A8BBF8" opacity=".35"/>
 <g filter="url(#drop)">
 <path d="M207 540L178 591L286 591L326 528Z" fill="#8096B0"/>
-<rect x="179" y="69" width="860" height="499" rx="45" fill="#25364A"/>
+<rect x="179" y="69" width="860" height="499" rx="45" fill="#101317"/>
 <rect x="198" y="88" width="822" height="461" rx="31" fill="#FFFFFF"/>
-<circle cx="233" cy="119" r="8" fill="#FF5C34"/><circle cx="259" cy="119" r="8" fill="#D7EFFF"/>
+<circle cx="233" cy="119" r="8" fill="#1E45FB"/><circle cx="259" cy="119" r="8" fill="#CDF22B"/>
 <path d="M240 176q16-40 38-37-8 35-38 37M245 181q3-35-20-39 0 27 20 39" fill="#96B993"/>
-<text x="285" y="157" font-family="Arial,sans-serif" font-size="29" font-weight="900" fill="#25364A">Matcha Mood</text>
-<text x="680" y="148" font-family="Arial,sans-serif" font-size="18" fill="#25364A">Home</text><text x="757" y="148" font-family="Arial,sans-serif" font-size="18" fill="#25364A">Menu</text><text x="839" y="148" font-family="Arial,sans-serif" font-size="18" fill="#25364A">About</text>
-<path d="M934 136a12 12 0 1 0 -1 1l11 11" fill="none" stroke="#25364A" stroke-width="4" stroke-linecap="round"/>
-<rect x="215" y="186" width="790" height="238" rx="28" fill="#E2F2FC"/>
-<path d="M215 375Q354 310 469 371T758 350T1005 374V425H215Z" fill="#D0E7F8" opacity=".65"/>
-<text x="254" y="267" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="#25364A">Matcha</text><text x="254" y="320" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="#25364A">Mood</text>
-<text x="255" y="345" font-family="Arial,sans-serif" font-size="17" fill="#45677A">A little joy in every sip</text>
-<rect x="252" y="368" width="152" height="40" rx="20" fill="#FF5C34"/><text x="328" y="394" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" font-weight="700" fill="white">SHOP NOW</text>
+<text x="285" y="157" font-family="Arial,sans-serif" font-size="29" font-weight="900" fill="#101317">Matcha Mood</text>
+<text x="680" y="148" font-family="Arial,sans-serif" font-size="18" fill="#101317">Home</text><text x="757" y="148" font-family="Arial,sans-serif" font-size="18" fill="#101317">Menu</text><text x="839" y="148" font-family="Arial,sans-serif" font-size="18" fill="#101317">About</text>
+<path d="M934 136a12 12 0 1 0 -1 1l11 11" fill="none" stroke="#101317" stroke-width="4" stroke-linecap="round"/>
+<rect x="215" y="186" width="790" height="238" rx="28" fill="#ECF0FC"/>
+<path d="M215 375Q354 310 469 371T758 350T1005 374V425H215Z" fill="#E0E6F5" opacity=".65"/>
+<text x="254" y="267" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="#101317">Matcha</text><text x="254" y="320" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="#101317">Mood</text>
+<text x="255" y="345" font-family="Arial,sans-serif" font-size="17" fill="#1E45FB">A little joy in every sip</text>
+<rect x="252" y="368" width="152" height="40" rx="20" fill="#1E45FB"/><text x="328" y="394" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" font-weight="700" fill="white">SHOP NOW</text>
 <g transform="translate(730 218)"><ellipse cx="111" cy="170" rx="115" ry="15" fill="#ACCFE1" opacity=".4"/>
 <path d="M25 37h168l-20 130q-5 21-27 21h-72q-20 0-25-21z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="9"/>
 <path d="M38 91h143l-13 75q-3 13-23 13h-68q-17 0-20-13z" fill="#96B58C"/>
-<path d="M28 36q78-22 160 0" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/><ellipse cx="109" cy="35" rx="75" ry="19" fill="#EAF5F4"/><ellipse cx="109" cy="34" rx="59" ry="10" fill="#9CB890"/><path d="M124 34L147 -29" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/><path d="M124 34L147 -29" stroke="#FF5C34" stroke-width="4" stroke-linecap="round"/>
+<path d="M28 36q78-22 160 0" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/><ellipse cx="109" cy="35" rx="75" ry="19" fill="#EAF5F4"/><ellipse cx="109" cy="34" rx="59" ry="10" fill="#9CB890"/><path d="M124 34L147 -29" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/><path d="M124 34L147 -29" stroke="#1E45FB" stroke-width="4" stroke-linecap="round"/>
 </g>
-<g font-family="Arial,sans-serif" font-size="15" fill="#25364A" text-anchor="middle" font-weight="700">
-<rect x="219" y="443" width="187" height="90" rx="16" fill="#EAF5FD"/><rect x="421" y="443" width="187" height="90" rx="16" fill="#EAF5FD"/><rect x="623" y="443" width="187" height="90" rx="16" fill="#EAF5FD"/><rect x="825" y="443" width="176" height="90" rx="16" fill="#EAF5FD"/>
-<path d="M280 479l23-16 23 16-23 18z" fill="#9DBB89"/><path d="M280 479h46v12h-46z" fill="#FFDFB6"/><text x="312" y="519">DESSERTS</text>
+<g font-family="Arial,sans-serif" font-size="15" fill="#101317" text-anchor="middle" font-weight="700">
+<rect x="219" y="443" width="187" height="90" rx="16" fill="#EDF0FB"/><rect x="421" y="443" width="187" height="90" rx="16" fill="#EDF0FB"/><rect x="623" y="443" width="187" height="90" rx="16" fill="#EDF0FB"/><rect x="825" y="443" width="176" height="90" rx="16" fill="#EDF0FB"/>
+<path d="M280 479l23-16 23 16-23 18z" fill="#9DBB89"/><path d="M280 479h46v12h-46z" fill="#CDF22B"/><text x="312" y="519">DESSERTS</text>
 <path d="M477 473h55v26q-7 15-25 15t-30-15z" fill="#FFFFFF" stroke="#9DBB89" stroke-width="3"/><path d="M532 478q28-6 19 18-6 8-19 4" fill="none" stroke="#9DBB89" stroke-width="4"/><text x="515" y="519">HOT MATCHA</text>
 <rect x="698" y="467" width="38" height="40" rx="7" fill="#92B58B"/><path d="M713 468l9-20" stroke="#FFFFFF" stroke-width="5"/><text x="716" y="519">ICED MATCHA</text>
 <path d="M885 464h48l-5 41h-38z" fill="#9AB88F"/><path d="M893 482h31" stroke="#FFFFFF" stroke-width="3"/><text x="912" y="519">ESSENTIALS</text>
 </g>
 </g>
-<path d="M1097 226l13-22M1117 243l21-7M1068 204l-5-17" stroke="#FF5C34" stroke-width="9" stroke-linecap="round"/>
+<path d="M1097 226l13-22M1117 243l21-7M1068 204l-5-17" stroke="#1E45FB" stroke-width="9" stroke-linecap="round"/>
 </svg>
