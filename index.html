@@ -18,36 +18,43 @@
   <script defer src="assets/portfolio-articles.js?v=20261126"></script>
   <script defer src="assets/portfolio-2026.js?v=tech-strong-motion-20261126"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap">
-  <script defer src="assets/lamp-intro.js?v=cinema-photo-20261126-7"></script>
+  <script defer src="assets/lamp-intro.js?v=interactive-story-20261126-8"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=DM+Sans:wght@200;300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/atelier-edition.css?v=thmanyah-editorial-20261126-6">
-  <link rel="stylesheet" href="assets/lamp-intro.css?v=cinema-photo-20261126-7">
+  <link rel="stylesheet" href="assets/lamp-intro.css?v=interactive-story-20261126-8">
   <script defer src="assets/atelier-edition.js?v=20261126-1"></script>
 </head>
 <body>
-<section class="lamp-intro lamp-cinematic-intro" id="lampIntro" data-lit="false" aria-label="مدخل مدونة منة الله أحمد — أنير الطريق لترى رحلتي">
-  <div class="lamp-photo-plane">
-    <img class="lamp-photograph" src="assets/lamp-hero-final.png" alt="" width="1671" height="941" fetchpriority="high" decoding="async">
-    <button class="lamp-cord-touch" id="lampCord" type="button" aria-label="اسحبي خيط المصباح لإطفاء الإضاءة" aria-pressed="false">
+<section class="lamp-intro lamp-cinematic-intro" id="lampIntro" data-lit="false" aria-label="واجهة مدونة منة الله أحمد — أُنير الطريق لترى رحلتي">
+  <div class="lamp-photo-plane" aria-hidden="true">
+    <img class="lamp-photograph" src="assets/menat-hero-clean.webp" alt="" width="1671" height="941" fetchpriority="high" decoding="async">
+    <button class="lamp-cord-touch" id="lampCord" type="button" aria-label="اسحبي خيط المصباح لتبديل الإضاءة" aria-pressed="false">
       <span class="lamp-cord-focus" aria-hidden="true"></span>
     </button>
   </div>
   <div class="lamp-cinematic-vignette" aria-hidden="true"></div>
-  <div class="lamp-night" aria-hidden="true"></div>
   <div class="lamp-light-flare" aria-hidden="true"></div>
+  <div class="lamp-night" aria-hidden="true"></div>
+  <div class="lamp-editorial-copy" dir="rtl">
+    <span class="lamp-editorial-kicker" data-ar="حيث تلتقي الأفكار بالتفاصيل" data-en="WHERE IDEAS MEET DETAIL">حيث تلتقي الأفكار بالتفاصيل</span>
+    <h1 class="lamp-editorial-title" id="lampTitle">
+      <span data-ar="أُنيرُ الطريقَ،" data-en="Lighting the way,">أُنيرُ الطريقَ،</span>
+      <span class="lamp-editorial-last" data-ar="لِتَرى رحلتي." data-en="telling my story.">لِتَرى رحلتي.</span>
+    </h1>
+    <p class="lamp-editorial-description" data-ar="هنا تبدأ الحكاية بين التقنية والتصميم." data-en="Where technology and design begin their story.">هنا تبدأ الحكاية بين التقنية والتصميم.</p>
+    <span class="lamp-editorial-stroke" aria-hidden="true"></span>
+  </div>
   <button class="lamp-awaken" id="lampAwaken" type="button" aria-label="اضغطي لإضاءة المكان">
     <span class="lamp-awaken-mark" aria-hidden="true"></span>
-    <span class="lamp-awaken-text" data-ar="اضغطي هنا ليبدأ الضوء" data-en="Click to turn on the light">اضغطي هنا ليبدأ الضوء</span>
-    <span class="lamp-awaken-hint" aria-hidden="true">01 — LIGHT / STORY</span>
+    <span class="lamp-awaken-text" data-ar="اضغطي لتبدئي الحكاية" data-en="Touch to bring the scene to light">اضغطي لتبدئي الحكاية</span>
+    <span class="lamp-awaken-hint" aria-hidden="true">THE LIGHT STUDY — 01</span>
   </button>
-  <h1 class="lamp-screenreader-title">أُنير الطريق، لترى رحلتي — منة الله أحمد</h1>
-  <div class="lamp-mobile-copy" dir="rtl">
-    <span class="lamp-mobile-kicker" data-ar="أفكارٌ تُضاء" data-en="LIGHTING UP IDEAS">أفكارٌ تُضاء</span>
-    <h1 id="lampTitle" data-ar="أُنيرُ الطريقَ، لِتَرى رحلتي." data-en="Lighting the way, telling my story.">أُنيرُ الطريقَ، لِتَرى رحلتي.</h1>
-    <p data-ar="هنا تبدأ الحكاية بين التقنية والتصميم." data-en="A story where technology meets design.">هنا تبدأ الحكاية بين التقنية والتصميم.</p>
-  </div>
-  <div class="lamp-pull-note" id="lampInstructionText" aria-hidden="true">اسحبي الخيط لتبديل الإضاءة</div>
-  <a href="#home" class="lamp-next" aria-label="انتقلي لاستكشاف المدونة">
+  <button class="lamp-light-toggle" id="lampLightToggle" type="button" aria-pressed="true">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6m-6.3-4a6 6 0 1 1 6.6 0c-.8.65-1.3 1.25-1.3 2h-4c0-.75-.5-1.35-1.3-2ZM10 21h4"/></svg>
+    <span data-ar="إطفاء الإضاءة" data-en="Switch off the light">إطفاء الإضاءة</span>
+  </button>
+  <p class="lamp-pull-note" id="lampInstructionText">اسحبي خيط المصباح لتبديل الإضاءة</p>
+  <a href="#home" class="lamp-next" aria-label="الانتقال إلى محتوى المدونة">
     <span data-ar="استكشفي المدونة" data-en="Explore the journal">استكشفي المدونة</span>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17m-6-6 6 6 6-6"/></svg>
   </a>
