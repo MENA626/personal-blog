@@ -18,25 +18,94 @@
   <script defer src="assets/portfolio-articles.js?v=20261126"></script>
   <script defer src="assets/portfolio-2026.js?v=tech-strong-motion-20261126"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap">
-  <script defer src="assets/lamp-intro.js?v=story-lamp-20261126-3"></script>
+  <script defer src="assets/lamp-intro.js?v=vector-lamp-20261126-4"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/atelier-edition.css?v=20261126-nav-always">
-  <link rel="stylesheet" href="assets/lamp-intro.css?v=story-lamp-20261126-3">
+  <link rel="stylesheet" href="assets/lamp-intro.css?v=vector-lamp-20261126-4">
   <script defer src="assets/atelier-edition.js?v=20261126-1"></script>
 </head>
 <body>
-<section class="lamp-intro lamp-photo-intro" id="lampIntro" data-lit="true" aria-label="مقدمة المدونة — مصباح يروي الحكايات">
-  <div class="lamp-photo-stage">
-    <img class="lamp-photo" src="assets/lamp-stories.webp" width="400" height="711" fetchpriority="high" decoding="async" alt="مصباح نحاسي معلق فوق جدار بني مضاء بضوء ذهبي، وخيط للتحكم بالإضاءة، مع عبارة Lights That Tell Stories">
-    <button class="lamp-cord" id="lampCord" type="button" aria-pressed="true" aria-label="اضغطي على خيط المصباح أو اسحبيه لإطفاء الإضاءة">
-      <span class="lamp-cord-target" aria-hidden="true"></span>
-    </button>
-  </div>
-  <div class="lamp-heading" dir="rtl">
-    <h1 id="lampTitle">أَنِرِ الطَّريقَ لِتَرَى رِحْلَتِي</h1>
-  </div>
-  <p class="lamp-hint">اسحبي خيط المصباح لتغيير الإضاءة</p>
-  <a class="lamp-next" href="#home" aria-label="انتقلي إلى محتوى المدونة"><span>استكشفي المدونة</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a>
+<section class="lamp-intro lamp-vector-intro" id="lampIntro" data-lit="true" aria-label="Lights That Tell Stories — مدخل المدونة">
+<div class="lamp-story-art" aria-hidden="true"><svg class="lamp-illustration lamp-desktop-art" viewBox="0 0 1600 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+<linearGradient id="s-bg" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#06090a"/><stop offset=".52" stop-color="#130d09"/><stop offset="1" stop-color="#040505"/></linearGradient>
+<radialGradient id="s-wall"><stop stop-color="#c67638" stop-opacity=".92"/><stop offset=".34" stop-color="#9c4a1f" stop-opacity=".8"/><stop offset=".7" stop-color="#5d270e" stop-opacity=".37"/><stop offset="1" stop-color="#160b07" stop-opacity="0"/></radialGradient>
+<radialGradient id="s-hot"><stop stop-color="#ffca87" stop-opacity=".8"/><stop offset=".41" stop-color="#ef914e" stop-opacity=".45"/><stop offset="1" stop-color="#7c3010" stop-opacity="0"/></radialGradient>
+<linearGradient id="s-bar" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#150b08"/><stop offset=".23" stop-color="#45220e"/><stop offset=".43" stop-color="#c18a44"/><stop offset=".52" stop-color="#f1b86a"/><stop offset=".68" stop-color="#4e250e"/><stop offset="1" stop-color="#100907"/></linearGradient>
+<linearGradient id="s-post"><stop stop-color="#120907"/><stop offset=".25" stop-color="#b37537"/><stop offset=".43" stop-color="#f2bf76"/><stop offset=".59" stop-color="#5d2a12"/><stop offset=".78" stop-color="#180c07"/><stop offset="1" stop-color="#070504"/></linearGradient>
+<linearGradient id="s-cone"><stop stop-color="#080605"/><stop offset=".16" stop-color="#261305"/><stop offset=".3" stop-color="#ad6f30"/><stop offset=".36" stop-color="#edab5d"/><stop offset=".44" stop-color="#4c230e"/><stop offset=".58" stop-color="#140906"/><stop offset=".79" stop-color="#1a0d05"/><stop offset=".94" stop-color="#42220c"/><stop offset="1" stop-color="#090604"/></linearGradient>
+<radialGradient id="s-inside"><stop stop-color="#fffbe7"/><stop offset=".47" stop-color="#ffebbc"/><stop offset=".83" stop-color="#ffce77"/><stop offset="1" stop-color="#e88e31"/></radialGradient>
+<filter id="s-blur"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="s-smudge"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="s-grain"><feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="2" stitchTiles="stitch" seed="8"/><feColorMatrix type="saturate" values="0"/></filter><clipPath id="s-shade-clip"><path d="M1060 202 C1026 271 920 389 815 445 Q1060 461 1305 445 C1215 377 1108 259 1084 202 Z"/></clipPath></defs>
+<rect width="1600" height="900" fill="url(#s-bg)"/>
+<ellipse class="s-illumination" cx="1013" cy="630" rx="710" ry="530" fill="url(#s-wall)"/>
+<ellipse class="s-illumination" cx="1070" cy="540" rx="470" ry="275" fill="url(#s-hot)"/>
+<path class="s-illumination" d="M820 446H1310L1555 850H460Z" fill="#f09349" filter="url(#s-blur)" opacity=".13"/>
+<rect width="1600" height="900" filter="url(#s-grain)" opacity=".08" style="mix-blend-mode:screen"/>
+<rect x="70" y="120" width="1460" height="695" fill="none" stroke="#fff4e6" stroke-opacity=".62" stroke-width="1"/>
+<!-- Wall-mounted brass arm and vertical support, like the supplied reference -->
+<path d="M1452 205V920" stroke="#0b0807" stroke-width="24"/>
+<path d="M1445 203V920" stroke="url(#s-post)" stroke-width="15"/>
+<path d="M1445 210V920" stroke="#f5c17b" stroke-width="1" opacity=".55"/>
+<path d="M777 152 1453 205Q1462 209 1456 223L777 175Z" fill="url(#s-bar)"/>
+<path d="M779 154 1451 205" stroke="#efb06a" stroke-opacity=".76" stroke-width="2"/>
+<ellipse cx="775" cy="164" rx="13" ry="19" fill="#b77c3b"/>
+<ellipse cx="774" cy="164" rx="8" ry="13" fill="#5f3517"/>
+<rect x="1058" y="187" width="13" height="31" rx="2" fill="url(#s-post)"/>
+<!-- Satin-bronze conical shade with shaped specular highlights -->
+<ellipse class="s-illumination" cx="1060" cy="444" rx="253" ry="36" fill="#ffb15a" filter="url(#s-smudge)" opacity=".66"/>
+<path d="M1060 202 C1026 271 920 389 815 445 Q1060 461 1305 445 C1215 377 1108 259 1084 202 Z" fill="url(#s-cone)"/>
+<g clip-path="url(#s-shade-clip)">
+<path d="M1058 215C1013 308 942 411 928 451" stroke="#ffc980" stroke-opacity=".35" stroke-width="25" filter="url(#s-smudge)"/>
+<path d="M1039 230 912 447" stroke="#f6ae62" stroke-opacity=".18" stroke-width="4"/>
+<path d="M1094 222 1223 447" stroke="#9f5321" stroke-opacity=".28" stroke-width="5"/>
+<path d="M1166 330 1250 445" stroke="#160904" stroke-opacity=".46" stroke-width="17" filter="url(#s-smudge)"/>
+</g>
+<!-- Pearlescent pale-gold underside, not a flat yellow cartoon ellipse -->
+<ellipse class="s-illumination" cx="1060" cy="446" rx="250" ry="30" fill="#ffb451" opacity=".64" filter="url(#s-smudge)"/>
+<ellipse cx="1060" cy="446" rx="248" ry="27" fill="url(#s-inside)"/>
+<ellipse cx="1060" cy="445" rx="234" ry="21" fill="#fff2c6" opacity=".34"/>
+<g stroke="#c07a37" stroke-width="1" opacity=".22"><path d="M843 440 860 424M884 450 897 424M925 457 937 424M971 466 975 424M1020 470 1022 424M1064 470 1064 424M1110 469 1107 424M1153 464 1148 424M1197 459 1188 424M1239 451 1224 424M1271 443 1253 424"/></g>
+<path d="M812 444Q1060 462 1308 444" stroke="#d8802d" stroke-width="3" fill="none"/>
+</svg><svg class="lamp-illustration lamp-mobile-art" viewBox="0 0 760 1220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+<linearGradient id="s-bg" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#06090a"/><stop offset=".52" stop-color="#130d09"/><stop offset="1" stop-color="#040505"/></linearGradient>
+<radialGradient id="s-wall"><stop stop-color="#c67638" stop-opacity=".92"/><stop offset=".34" stop-color="#9c4a1f" stop-opacity=".8"/><stop offset=".7" stop-color="#5d270e" stop-opacity=".37"/><stop offset="1" stop-color="#160b07" stop-opacity="0"/></radialGradient>
+<radialGradient id="s-hot"><stop stop-color="#ffca87" stop-opacity=".8"/><stop offset=".41" stop-color="#ef914e" stop-opacity=".45"/><stop offset="1" stop-color="#7c3010" stop-opacity="0"/></radialGradient>
+<linearGradient id="s-bar" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#150b08"/><stop offset=".23" stop-color="#45220e"/><stop offset=".43" stop-color="#c18a44"/><stop offset=".52" stop-color="#f1b86a"/><stop offset=".68" stop-color="#4e250e"/><stop offset="1" stop-color="#100907"/></linearGradient>
+<linearGradient id="s-post"><stop stop-color="#120907"/><stop offset=".25" stop-color="#b37537"/><stop offset=".43" stop-color="#f2bf76"/><stop offset=".59" stop-color="#5d2a12"/><stop offset=".78" stop-color="#180c07"/><stop offset="1" stop-color="#070504"/></linearGradient>
+<linearGradient id="s-cone"><stop stop-color="#080605"/><stop offset=".16" stop-color="#261305"/><stop offset=".3" stop-color="#ad6f30"/><stop offset=".36" stop-color="#edab5d"/><stop offset=".44" stop-color="#4c230e"/><stop offset=".58" stop-color="#140906"/><stop offset=".79" stop-color="#1a0d05"/><stop offset=".94" stop-color="#42220c"/><stop offset="1" stop-color="#090604"/></linearGradient>
+<radialGradient id="s-inside"><stop stop-color="#fffbe7"/><stop offset=".47" stop-color="#ffebbc"/><stop offset=".83" stop-color="#ffce77"/><stop offset="1" stop-color="#e88e31"/></radialGradient>
+<filter id="s-blur"><feGaussianBlur stdDeviation="45"/></filter>
+<filter id="s-smudge"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="s-grain"><feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="2" stitchTiles="stitch" seed="8"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+<rect width="760" height="1220" fill="url(#s-bg)"/>
+<ellipse class="s-illumination" cx="370" cy="655" rx="550" ry="565" fill="url(#s-wall)"/>
+<ellipse class="s-illumination" cx="378" cy="575" rx="310" ry="244" fill="url(#s-hot)" opacity=".69"/>
+<rect width="760" height="1220" filter="url(#s-grain)" opacity=".085" style="mix-blend-mode:screen"/>
+<rect x="47" y="142" width="666" height="1025" fill="none" stroke="#fff3e1" stroke-opacity=".68" stroke-width="1.5"/>
+<path d="M682 203V1245" stroke="#0d0906" stroke-width="24"/>
+<path d="M676 206V1245" stroke="url(#s-post)" stroke-width="12"/>
+<path d="M163 171 689 206 682 224 161 190Z" fill="url(#s-bar)"/>
+<path d="M164 173 687 207" stroke="#f3b876" stroke-width="1.7" opacity=".74"/>
+<ellipse cx="160" cy="181" rx="13" ry="18" fill="#bc8141"/><ellipse cx="160" cy="181" rx="8" ry="13" fill="#4a2812"/>
+<rect x="376" y="185" width="12" height="32" rx="2" fill="url(#s-post)"/>
+<ellipse class="s-illumination" cx="379" cy="452" rx="198" ry="34" fill="#ffb963" filter="url(#s-smudge)" opacity=".73"/>
+<path d="M379 212 C345 289 260 390 178 449 Q379 466 585 449 C502 377 416 279 395 212Z" fill="url(#s-cone)"/>
+<path d="M366 227 278 451" stroke="#f7b46b" stroke-width="13" opacity=".25" filter="url(#s-smudge)"/>
+<ellipse class="s-illumination" cx="382" cy="451" rx="200" ry="27" fill="#ffb653" opacity=".55" filter="url(#s-smudge)"/>
+<ellipse cx="382" cy="452" rx="198" ry="26" fill="url(#s-inside)"/>
+<ellipse cx="382" cy="450" rx="188" ry="18" fill="#fff9d1" opacity=".26"/>
+<g stroke="#c07739" stroke-width="1" opacity=".23"><path d="M221 445 235 429M256 458 267 428M300 462 309 427M342 469 345 426M388 469 388 427M433 467 426 427M478 464 466 427M524 457 503 427M548 446 529 427"/></g>
+<path d="M181 450 Q380 467 584 450" stroke="#d9873b" stroke-width="2.5" fill="none"/>
+</svg></div>
+<div class="lamp-title-block" dir="ltr"><p class="lamp-kicker">A CREATIVE TECHNOLOGIST'S JOURNAL</p>
+<h1 class="lamp-title" id="lampTitle"><span>Lights That</span><em>Tell Stories</em></h1>
+<div class="lamp-title-rule" aria-hidden="true"><span class="dot tiny"></span><span class="dot"></span><span class="hairline"></span><span class="dot"></span><span class="dot tiny"></span></div></div>
+<button class="lamp-cord" id="lampCord" type="button" aria-pressed="true" aria-label="اسحبي خيط المصباح لإطفاء الضوء"><span class="lamp-cord-string" aria-hidden="true"></span><span class="lamp-cord-neck" aria-hidden="true"></span><span class="lamp-cord-drop" aria-hidden="true"></span></button>
+<p class="lamp-instruction" id="lampInstructionText">اسحبي الخيط لتغيير الإضاءة</p>
+<a class="lamp-next" href="#home" aria-label="الانتقال إلى المدونة"><span>اكتشفي المدونة</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17m-6-6 6 6 6-6"/></svg></a>
 </section>
 
 <a class="skip-link" href="#main" data-ar="تجاوز إلى المحتوى" data-en="Skip to content">تجاوز إلى المحتوى</a>
