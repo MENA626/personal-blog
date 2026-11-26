@@ -155,6 +155,52 @@
     });
   });
 
+  // Brand icons have a local typographic fallback if a CDN is unavailable.
+  $(".tech-icon-brand img").forEach(icon => {
+    const useFallback = () => { icon.parentElement.classList.add("is-fallback"); };
+    icon.addEventListener("error", useFallback, {once:true});
+    if (icon.complete && icon.naturalWidth === 0) useFallback();
+  });
+
+  // A formal, chapter-by-chapter reading flow. Lines draw once as sections
+  // enter the viewport; the side index follows the actual scroll position.
+  const pageChapters = ["home","featured","work","expertise","journal","visuals","about","contact"]
+    .map(id => document.getElementById(id)).filter(Boolean);
+  const railLinks = $("#sectionRail a[data-track]");
+  let activeChapter = "";
+  function syncSectionNavigation(){
+    const focusLine = window.innerHeight * .44;
+    let selected = pageChapters[0]?.id || "home";
+    for(const chapter of pageChapters){
+      if(chapter.getBoundingClientRect().top <= focusLine) selected = chapter.id;
+    }
+    if(selected === activeChapter) return;
+    activeChapter = selected;
+    railLinks.forEach(a => {
+      const active = a.dataset.track === selected;
+      a.classList.toggle("is-current",active);
+      if(active) a.setAttribute("aria-current","location");
+      else a.removeAttribute("aria-current");
+    });
+    $("#siteNav a").forEach(a => a.classList.toggle("active",a.getAttribute("href") === "#" + selected));
+  }
+  function setupSectionLines(){
+    const chapters = $(".section-space,.recognition,.contact,.statement");
+    if(reduced.matches || !("IntersectionObserver" in window)){
+      chapters.forEach(node=>node.classList.add("section-active"));
+      return;
+    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add("section-active");
+        observer.unobserve(entry.target);
+      });
+    },{threshold:.08,rootMargin:"0px 0px -10% 0px"});
+    chapters.forEach(node => observer.observe(node));
+  }
+  setupSectionLines();
+
   // Intersection reveals: visible by default when JS fails or motion is reduced.
   function setupReveals() {
     if (reduced.matches || !("IntersectionObserver" in window)) return;
@@ -167,7 +213,7 @@
       });
     }, {threshold:.1,rootMargin:"0px 0px -25px 0px"});
     nodes.forEach((node,index) => {
-      node.style.transitionDelay = (index % 2) * 75 + "ms";
+      node.style.transitionDelay = node.matches(".skill-col") ? ($(".skill-col").indexOf(node)%2)*125 + "ms" : (index % 2)*75 + "ms";
       if (node.getBoundingClientRect().top < innerHeight - 18) node.classList.add("in-view");
       else reveal.observe(node);
     });
@@ -198,6 +244,7 @@
     const y = window.scrollY || document.documentElement.scrollTop || 0;
     const total = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     meter.style.transform = "scaleX(" + Math.max(0,Math.min(1,y / total)).toFixed(5) + ")";
+    syncSectionNavigation();
     if (reduced.matches) return;
     if (!onMobile.matches && featureTrack) {
       const rect = featureTrack.getBoundingClientRect();
