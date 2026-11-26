@@ -220,3 +220,22 @@
 @media(prefers-reduced-motion:reduce){
  .lamp-intro, .lamp-intro *{transition-duration:.01ms!important;animation:none!important;scroll-behavior:auto!important}
 }
+
+/* Light falloff is layered, so switching off fades smoothly rather than swapping an image. */
+.lamp-intro .lamp-grain::after{
+ content:"";position:absolute;inset:0;
+ background:radial-gradient(ellipse 110% 90% at 50% 35%,rgba(7,3,2,.46),rgba(4,2,2,.80));
+ opacity:0;transition:opacity 1.08s cubic-bezier(.16,.8,.24,1);pointer-events:none;
+}
+.lamp-intro[data-lit="false"] .lamp-grain::after{opacity:.79}
+.lamp-intro[data-lit="false"]{
+ background-image:
+   radial-gradient(ellipse 75% 42% at 50% 32%,#71351b 0%,rgba(71,30,15,.86) 33%,transparent 77%),
+   radial-gradient(ellipse 110% 105% at 50% 45%,#2d130b 0%,#180a06 68%,#0f0705 100%);
+}
+@media(max-width:430px){
+ .lamp-intro .lamp-heading h1{
+   font-size:clamp(50px,13.4vw,60px)!important;
+   line-height:1.46!important;
+ }
+}
