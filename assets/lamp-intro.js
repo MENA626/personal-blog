@@ -12,14 +12,17 @@
   let resetAnimation = null;
 
   const render = () => {
+    const en = document.documentElement.lang === "en";
     scene.dataset.lit = String(isOn);
     cord.setAttribute("aria-pressed", String(isOn));
-    cord.setAttribute(
-      "aria-label",
-      isOn ? "اسحب الخيط لإطفاء المصباح" : "اسحب الخيط لإضاءة المصباح"
+    cord.setAttribute("aria-label",
+      en ? (isOn ? "Pull the cord to turn the light off" : "Pull the cord to turn the light on")
+         : (isOn ? "اسحبي الخيط لإطفاء المصباح" : "اسحبي الخيط لإضاءة المصباح")
     );
     if (instruction) {
-      instruction.textContent = "اسحب الخيط لتغيّر الضوء";
+      instruction.textContent = en
+        ? "Pull the cord to change the light"
+        : "اسحبي الخيط لتبديل الإضاءة";
     }
   };
 
@@ -81,5 +84,7 @@
     if (pointerStart?.id === event.pointerId) release(event, true);
   });
 
+  // The rest of the portfolio allows changing language without a reload.
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
   render();
 })();
