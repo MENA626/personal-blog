@@ -1,0 +1,319 @@
+/* Editorial refinement — portfolio identity, November 2026.
+   Restraint, clear typography, neutral surfaces, consistent components.
+   Intentionally leaves project artwork and content unchanged. */
+
+:root{
+  --portfolio-ink:#25364A;
+  --portfolio-muted:#506174;
+  --portfolio-accent:#E95839;
+  --portfolio-border:#DEE5EB;
+  --portfolio-soft:#F7F9FB;
+}
+html, body{background:#FFFFFF!important;color:var(--portfolio-ink)!important}
+body{overflow-x:hidden}
+::selection{background:#D7EFFF!important;color:#25364A!important}
+
+/* Clean, quiet navigation */
+.site-header,.site-header.is-scrolled{
+  background:#FFFFFF!important;
+  border-bottom:1px solid var(--portfolio-border)!important;
+  box-shadow:none!important;
+}
+.site-header .nav-links a{color:#33465A!important}
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active{color:var(--portfolio-accent)!important}
+.site-header .nav-cta,
+.site-header.is-scrolled .nav-cta,
+.site-header .nav-cta:hover,
+.site-header.is-scrolled .nav-cta:hover{
+  background:#25364A!important;
+  border:1px solid #25364A!important;
+  color:#FFFFFF!important;
+  box-shadow:none!important;
+  border-radius:8px!important;
+}
+.site-header .nav-cta .nav-cta-text,
+.site-header.is-scrolled .nav-cta .nav-cta-text{
+  color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important
+}
+.site-header #homeBrand .brand-custom-logo path{fill:#E95839!important}
+
+/* Hero: remove diagonal candy stripes and floating-card treatment */
+#home.hero-poster{
+  background:#F7F9FB!important;
+  background-image:none!important;
+  border-bottom:1px solid var(--portfolio-border)!important;
+}
+#home.hero-poster .poster-shell{background:transparent!important}
+#home.hero-poster .poster-copy{
+  background:#FFFFFF!important;
+  border:1px solid var(--portfolio-border)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+#home.hero-poster .poster-copy .poster-english{
+  color:var(--portfolio-accent)!important;
+  -webkit-text-fill-color:var(--portfolio-accent)!important;
+}
+#home.hero-poster .poster-intro,
+#home.hero-poster .poster-closing{color:#46576A!important}
+#home.hero-poster .poster-title,
+#home.hero-poster .poster-title span{color:#25364A!important}
+#home.hero-poster .poster-closing{
+  border-right:2px solid var(--portfolio-accent)!important;
+  padding-right:17px!important;
+}
+
+/* One typography and spacing hierarchy across sections */
+#cv.cv-featured,
+#projects.projects,
+#videos.videos,
+#stack.stack,
+#participations.participations,
+#notes.notes{
+  color:#25364A!important;
+}
+#cv.cv-featured{background:#F7F9FB!important}
+#cv.cv-featured::before,
+#cv.cv-featured::after{display:none!important}
+#projects.projects{background:#FFFFFF!important}
+#videos.videos{background:#F7F9FB!important}
+#stack.stack{background:#FFFFFF!important}
+#participations.participations{background:#F7F9FB!important}
+#notes.notes{background:#FFFFFF!important}
+#cv.section,#projects.section,#videos.section,
+#stack.section,#participations.section,#notes.section{
+  padding-top:clamp(65px,7vw,100px)!important;
+  padding-bottom:clamp(65px,7vw,100px)!important;
+}
+#cv .editorial-heading,#cv .editorial-heading em,
+#projects .editorial-heading,#projects .editorial-heading em,
+#videos .editorial-heading,#videos .editorial-heading em,
+#stack .editorial-heading,#stack .editorial-heading em,
+#notes .editorial-heading,#notes .editorial-heading em{
+  color:#25364A!important;
+  -webkit-text-fill-color:#25364A!important;
+  font-style:normal!important;
+  font-weight:700!important;
+  letter-spacing:-.015em!important;
+  line-height:1.4!important;
+}
+html[lang="ar"] #cv .editorial-heading,
+html[lang="ar"] #projects .editorial-heading,
+html[lang="ar"] #videos .editorial-heading,
+html[lang="ar"] #stack .editorial-heading,
+html[lang="ar"] #notes .editorial-heading{
+  font-family:"IBM Plex Sans Arabic","Cairo",sans-serif!important;
+}
+html[lang="en"] #cv .editorial-heading,
+html[lang="en"] #projects .editorial-heading,
+html[lang="en"] #videos .editorial-heading,
+html[lang="en"] #stack .editorial-heading,
+html[lang="en"] #notes .editorial-heading{
+  font-family:"Playfair Display",Georgia,serif!important;
+}
+#cv .section-kicker,#projects .section-kicker,
+#videos .section-kicker,#stack .section-kicker,
+#notes .section-kicker{
+  color:#6B7685!important;
+  -webkit-text-fill-color:#6B7685!important;
+  letter-spacing:.02em!important;
+}
+#cv .section-kicker span,#projects .section-kicker span,
+#videos .section-kicker span,#stack .section-kicker span,
+#notes .section-kicker span{
+  color:#6B7685!important;-webkit-text-fill-color:#6B7685!important
+}
+#cv .section-deck,#projects .section-deck,
+#videos .section-deck,#stack .section-deck,#notes .section-deck{
+  color:#506174!important;
+  -webkit-text-fill-color:#506174!important;
+  max-width:790px!important;
+  line-height:1.9!important;
+}
+.section-stamp{display:none!important}
+
+/* Project cards: shared, magazine-style treatment */
+#projects .project-list{gap:24px!important}
+#projects .project-card{
+  border:1px solid var(--portfolio-border)!important;
+  border-radius:14px!important;
+  background:#FFFFFF!important;
+  box-shadow:none!important;
+}
+#projects .project-card:hover{
+  transform:none!important;
+  border-color:#C8D3DC!important;
+  box-shadow:0 7px 22px rgba(37,54,74,.05)!important;
+}
+#projects .project-details h3,
+#projects .project-card .project-details h3{color:#25364A!important}
+#projects .project-card .project-details>p{
+  color:#506174!important;
+  font-weight:500!important;
+}
+#projects .project-meta,#projects .project-status{
+  color:#66798A!important;
+}
+#projects .project-card .project-chips span{
+  color:#506174!important;
+  background:#F7F9FB!important;
+  border:1px solid #E2E8EF!important;
+  border-radius:6px!important;
+  box-shadow:none!important;
+  font-weight:600!important;
+}
+#projects .project-card .underlined-link{
+  color:#25364A!important;border-color:#CAD3DC!important;
+}
+#projects .project-card .underlined-link:hover{color:#E95839!important}
+#projects .project-card .status-point{
+  background:#E95839!important;
+  box-shadow:none!important;
+}
+
+/* Video cards: remove elevated, bubbly look */
+#videos .video-card{
+  background:#FFFFFF!important;
+  border:1px solid var(--portfolio-border)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+#videos .video-card:hover{transform:none!important;box-shadow:0 6px 20px rgba(37,54,74,.05)!important}
+#videos .video-card-copy h3{color:#25364A!important}
+#videos .video-card-copy p{color:#506174!important}
+#videos .video-card .underlined-link{
+  color:#25364A!important;border-color:#CAD3DC!important;
+}
+#videos .video-play{
+  background:#FFFFFF!important;
+  border:1px solid rgba(37,54,74,.15)!important;
+  color:#25364A!important;
+  box-shadow:0 6px 20px rgba(37,54,74,.09)!important;
+}
+
+/* Technical stack and articles: understated frames */
+#stack .tech-group,
+#stack .stack-use-card{
+  border:1px solid var(--portfolio-border)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+  background:#FFFFFF!important;
+}
+#stack .tech-item{
+  background:#FFFFFF!important;
+  border:1px solid #E5E9EE!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+#stack .tech-item:hover{
+  background:#F7F9FB!important;
+  border-color:#BBC8D3!important;
+  transform:none!important;
+}
+#notes .note-card{
+  background:#FFFFFF!important;
+  border:1px solid var(--portfolio-border)!important;
+  border-radius:14px!important;
+  box-shadow:none!important;
+}
+#notes .note-card:hover{
+  transform:none!important;
+  box-shadow:0 7px 22px rgba(37,54,74,.05)!important;
+}
+#notes .note-card h3{color:#25364A!important}
+#notes .note-card p{color:#506174!important}
+#notes .note-read .note-read-icon{background:#25364A!important;color:#FFFFFF!important}
+
+/* Participation: one confident dark panel instead of a bright orange tile */
+#participations .participations-kicker,
+#participations .participations-title{color:#25364A!important}
+#participations .participations-desc{color:#506174!important}
+#participations .participations-aside{
+  border:1px solid #25364A!important;
+  border-radius:14px!important;
+  background:#25364A!important;
+  box-shadow:none!important;
+}
+#participations .participations-event-card,
+#participations .participations-event-card *,
+#participations .participations-project-name,
+#participations .participations-event-name,
+#participations .participations-status{
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+}
+#participations .participations-project-link{
+  color:#25364A!important;border-color:#CAD3DC!important;
+}
+
+/* Contact: considered dark closing panel, with soft monochrome line artwork */
+#contact.contact{
+  background:#25364A!important;
+  color:#FFFFFF!important;
+}
+#contact .section-kicker,#contact .section-kicker span,
+#contact .contact-title,#contact .contact-title span,
+#contact .contact-title em,#contact .contact-layout p{
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+}
+#contact .contact-title em{font-style:normal!important}
+#contact .contact-actions .contact-button,
+#contact .contact-actions .contact-email-link{
+  background:#FFFFFF!important;
+  border:1px solid #FFFFFF!important;
+  border-radius:8px!important;
+  color:#25364A!important;
+  box-shadow:none!important;
+}
+#contact .contact-actions .contact-button span,
+#contact .contact-actions .contact-email-link span{
+  color:#25364A!important;
+  -webkit-text-fill-color:#25364A!important;
+}
+#contact .contact-actions .contact-button svg,
+#contact .contact-actions .contact-email-link svg{
+  color:#25364A!important;stroke:#25364A!important;
+}
+#contact .contact-puzzle-decoration{opacity:.17!important}
+.site-footer{
+  background:#1B2938!important;
+  color:#FFFFFF!important;
+  border-top:1px solid rgba(255,255,255,.12)!important;
+}
+.site-footer a,.site-footer p,.site-footer span{
+  color:#FFFFFF!important;
+}
+.site-footer .footer-up-arrow{
+  color:#FFFFFF!important;
+  border-color:rgba(255,255,255,.3)!important;
+}
+
+/* Maintain space and legibility on small screens without forcing desktop grids. */
+@media(max-width:900px){
+  #cv.section,#projects.section,#videos.section,
+  #stack.section,#participations.section,#notes.section{
+    padding-top:58px!important;padding-bottom:62px!important;
+  }
+  #projects .project-card,#videos .video-card,#notes .note-card,
+  #stack .tech-group{border-radius:12px!important}
+}
+@media(max-width:700px){
+  #home.hero-poster .poster-copy{
+    border-radius:12px!important;
+    padding:26px 22px!important;
+  }
+  #home.hero-poster .poster-shell{
+    padding-top:22px!important;
+    padding-bottom:28px!important;
+  }
+  #home.hero-poster .poster-title{line-height:1.7!important}
+  #projects .project-list{gap:20px!important}
+  #videos .video-grid{gap:20px!important}
+  #notes .notes-grid{gap:18px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #projects .project-card,#videos .video-card,
+  #notes .note-card,#stack .tech-item{transition:none!important}
+}
