@@ -18,64 +18,25 @@
   <script defer src="assets/portfolio-articles.js?v=20261126"></script>
   <script defer src="assets/portfolio-2026.js?v=tech-strong-motion-20261126"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap">
-  <script defer src="assets/lamp-intro.js?v=20261126-2"></script>
+  <script defer src="assets/lamp-intro.js?v=story-lamp-20261126-3"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/atelier-edition.css?v=20261126-nav-always">
-  <link rel="stylesheet" href="assets/lamp-intro.css?v=20261126-2">
+  <link rel="stylesheet" href="assets/lamp-intro.css?v=story-lamp-20261126-3">
   <script defer src="assets/atelier-edition.js?v=20261126-1"></script>
 </head>
 <body>
-<section class="lamp-intro" id="lampIntro" data-lit="true" aria-label="مساحة مضيئة — مقدمة المدونة">
-  <div class="lamp-art" id="lampArt" aria-hidden="true">
-    <svg viewBox="0 0 940 1600" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="li-stem" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#190703"/><stop offset=".22" stop-color="#6e2b0b"/><stop offset=".48" stop-color="#e86d0d"/><stop offset=".68" stop-color="#7f2c08"/><stop offset="1" stop-color="#160805"/></linearGradient>
-        <linearGradient id="li-dome" x1=".04" y1=".1" x2=".9" y2=".94"><stop offset="0" stop-color="#ed7310"/><stop offset=".17" stop-color="#b34405"/><stop offset=".38" stop-color="#682106"/><stop offset=".66" stop-color="#290a02"/><stop offset="1" stop-color="#0c0302"/></linearGradient>
-        <radialGradient id="li-shine" cx=".25" cy=".3" r=".62"><stop offset="0" stop-color="#ffb04c" stop-opacity=".52"/><stop offset=".5" stop-color="#e65b0b" stop-opacity=".14"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-        <linearGradient id="li-inside" x1=".5" y1="0" x2=".5" y2="1"><stop offset="0" stop-color="#7a2204"/><stop offset=".4" stop-color="#ca4f08"/><stop offset="1" stop-color="#ff9c2e"/></linearGradient>
-        <linearGradient id="li-ring" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffca6d"/><stop offset=".47" stop-color="#fff0bd"/><stop offset="1" stop-color="#ff8e22"/></linearGradient>
-        <linearGradient id="li-gloss" x1="0" y1="0" x2=".65" y2="1"><stop offset="0" stop-color="#fff5d0" stop-opacity=".92"/><stop offset=".46" stop-color="#ffe6a3" stop-opacity=".8"/><stop offset="1" stop-color="#ffcf72" stop-opacity="0"/></linearGradient>
-        <filter id="li-blur" x="-60%" y="-90%" width="220%" height="280%"><feGaussianBlur stdDeviation="45"/></filter>
-        <filter id="li-glow" x="-25%" y="-130%" width="150%" height="360%"><feGaussianBlur stdDeviation="13"/></filter>
-        <filter id="li-smallblur"><feGaussianBlur stdDeviation="3"/></filter>
-      </defs>
-      <ellipse class="lamp-ambient" cx="468" cy="506" rx="470" ry="270" fill="#df691d" opacity=".24" filter="url(#li-blur)"/>
-      <rect x="445" y="405" width="50" height="1195" rx="3" fill="url(#li-stem)"/>
-      <path class="lamp-lit-base" d="M463 420v1168" stroke="#ff841c" stroke-width="10" opacity=".7" filter="url(#li-glow)"/>
-      <path class="lamp-reflection" d="M458 410v1170" stroke="#ffc16c" stroke-width="3" opacity=".55"/>
-      <ellipse class="lamp-ambient" cx="469" cy="481" rx="420" ry="78" fill="#ffa133" opacity=".7" filter="url(#li-glow)"/>
-      <ellipse cx="470" cy="480" rx="416" ry="75" fill="#331005"/>
-      <ellipse class="lamp-inner-glow" cx="470" cy="474" rx="408" ry="65" fill="url(#li-inside)"/>
-      <ellipse class="lamp-outer-rim" cx="470" cy="480" rx="412" ry="71" fill="none" stroke="#dd751e" stroke-width="19"/>
-      <ellipse class="lamp-lightline" cx="470" cy="480" rx="406" ry="68" fill="none" stroke="url(#li-ring)" stroke-width="10"/>
-      <ellipse class="lamp-lightline" cx="470" cy="483" rx="395" ry="59" fill="none" stroke="#ffe3a0" stroke-width="3" opacity=".9"/>
-      <path d="M46 418C59 283 183 160 447 144c244-15 419 116 453 263q9 36-11 51c-86-31-241-46-418-46-182 0-334 15-405 49-15-8-22-22-20-43Z" fill="url(#li-dome)"/>
-      <path d="M46 418C59 283 183 160 447 144c244-15 419 116 453 263q9 36-11 51c-86-31-241-46-418-46-182 0-334 15-405 49-15-8-22-22-20-43Z" fill="url(#li-shine)" opacity=".95"/>
-      <path class="lamp-reflection" d="M95 335c37-94 121-144 224-162 26-5 50 1 39 11-90 24-156 74-193 125-27 38-50 97-70 87-15-7-11-34 0-61Z" fill="url(#li-gloss)" opacity=".92" filter="url(#li-smallblur)"/>
-      <path class="lamp-reflection" d="M124 295c25-43 63-71 102-89" stroke="#ffdaa0" opacity=".32" stroke-width="17" stroke-linecap="round" fill="none" filter="url(#li-blur)"/>
-      <path d="M168 210c174-91 381-91 568 5" stroke="#eb6b18" stroke-width="3" fill="none" opacity=".24"/>
-      <path d="M70 456c85-48 235-63 401-63 188 0 322 19 418 65" fill="none" stroke="#ff8122" stroke-width="4" opacity=".35"/>
-    </svg>
+<section class="lamp-intro lamp-photo-intro" id="lampIntro" data-lit="true" aria-label="مقدمة المدونة — مصباح يروي الحكايات">
+  <div class="lamp-photo-stage">
+    <img class="lamp-photo" src="assets/lamp-stories.webp" width="400" height="711" fetchpriority="high" decoding="async" alt="مصباح نحاسي معلق فوق جدار بني مضاء بضوء ذهبي، وخيط للتحكم بالإضاءة، مع عبارة Lights That Tell Stories">
+    <button class="lamp-cord" id="lampCord" type="button" aria-pressed="true" aria-label="اضغطي على خيط المصباح أو اسحبيه لإطفاء الإضاءة">
+      <span class="lamp-cord-target" aria-hidden="true"></span>
+    </button>
   </div>
-
-  <div class="lamp-halo" aria-hidden="true"></div>
-  <div class="lamp-grain" aria-hidden="true"></div>
-  <!-- The global identity and navigation remain visible over this opening scene. -->
-  <button class="lamp-cord" id="lampCord" type="button" aria-pressed="true" aria-label="اسحب الخيط لإطفاء المصباح">
-    <span class="lamp-cord-line" aria-hidden="true"></span>
-    <span class="lamp-cord-ferrule" aria-hidden="true"></span>
-    <span class="lamp-cord-weight" aria-hidden="true"></span>
-  </button>
   <div class="lamp-heading" dir="rtl">
-    <span class="lamp-overline" aria-hidden="true">مَسَاحَةٌ لِلأَفْكَارِ وَالتَّجَارِبِ</span>
-    <h1 id="lampTitle"><span>أَنِرِ الطَّريقَ</span><span>لِتَرَى رِحْلَتِي</span></h1>
-    <p>بين سطور البرمجة، وتفاصيل التصميم… تبدأ الحكاية.</p>
+    <h1 id="lampTitle">أَنِرِ الطَّريقَ لِتَرَى رِحْلَتِي</h1>
   </div>
-  <div class="lamp-instruction" aria-hidden="true">
-    <span class="lamp-instruction-line"></span><span id="lampInstructionText">اسحب الخيط لتغيّر الضوء</span>
-  </div>
-  <a class="lamp-next" href="#home" aria-label="انتقل لاستكشاف المدونة"><span>اكتشف المزيد</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a>
-  <span class="lamp-edition" aria-hidden="true">MENAT · PERSONAL JOURNAL / 2026</span>
+  <p class="lamp-hint">اسحبي خيط المصباح لتغيير الإضاءة</p>
+  <a class="lamp-next" href="#home" aria-label="انتقلي إلى محتوى المدونة"><span>استكشفي المدونة</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a>
 </section>
 
 <a class="skip-link" href="#main" data-ar="تجاوز إلى المحتوى" data-en="Skip to content">تجاوز إلى المحتوى</a>
