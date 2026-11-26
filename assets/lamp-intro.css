@@ -1,94 +1,53 @@
-/* THE STORY LAMP — photograph is the artwork; all interactions stay live. */
-.lamp-intro.lamp-photo-intro{
-  position:relative;isolation:isolate;
-  width:100%;height:100svh;min-height:530px;
-  display:grid;place-items:center;overflow:hidden;
-  background:#050708;color:#f1dbc3;
-  text-align:center;direction:ltr;
-  font-family:"IBM Plex Sans Arabic",sans-serif;
-}
-.lamp-photo-intro::before{
-  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(ellipse 46% 55% at 50% 43%,rgba(163,82,30,.24),transparent 95%);
-}
-.lamp-photo-intro .lamp-photo-stage{
-  position:relative;z-index:1;
-  width:min(100vw,56.22svh);
-  max-height:100svh;
-  aspect-ratio:400/711;
-  flex:none;
-  overflow:hidden;
-  background:#080a09;
-}
-.lamp-photo-intro .lamp-photo{
-  display:block;width:100%;height:100%;
-  object-fit:fill;
-  filter:brightness(1) saturate(1);
-  transition:filter 1.05s cubic-bezier(.23,.82,.31,1);
-  pointer-events:none;
-  user-select:none;-webkit-user-drag:none;
-}
-.lamp-photo-intro[data-lit="false"] .lamp-photo{
-  filter:brightness(.27) saturate(.58) contrast(1.15);
-}
-.lamp-photo-intro .lamp-cord{
-  position:absolute;z-index:7;left:65%;top:30%;
-  width:13%;height:20%;
-  padding:0;border:0;border-radius:20px;
-  background:transparent;cursor:grab;touch-action:none;
-  -webkit-tap-highlight-color:transparent;
-}
-.lamp-photo-intro .lamp-cord:active{cursor:grabbing}
-.lamp-photo-intro .lamp-cord:focus-visible{
-  outline:2px solid rgba(255,204,134,.95);outline-offset:2px;
-}
-.lamp-photo-intro .lamp-cord-target{
-  position:absolute;left:50%;bottom:0;
-  transform:translate(-50%,0);
-  width:18px;height:27px;border-radius:12px;
-  pointer-events:none;
-  background:radial-gradient(circle,rgba(255,211,144,.0) 35%,rgba(255,211,144,0) 75%);
-  transition:background .3s;
-}
-.lamp-photo-intro .lamp-cord:hover .lamp-cord-target,
-.lamp-photo-intro .lamp-cord:focus-visible .lamp-cord-target{
-  background:radial-gradient(circle,rgba(255,209,128,.26),transparent 75%);
-}
-.lamp-photo-intro .lamp-heading{
-  position:absolute!important;
-  width:1px!important;height:1px!important;
-  padding:0!important;margin:-1px!important;
-  overflow:hidden!important;clip:rect(0,0,0,0)!important;
-  white-space:nowrap!important;border:0!important;
-  transform:none!important;pointer-events:none!important;
-}
-.lamp-photo-intro .lamp-heading h1{margin:0}
-.lamp-photo-intro .lamp-hint{
-  position:absolute;z-index:3;left:50%;bottom:clamp(60px,7.5vh,85px);
-  transform:translateX(-50%);margin:0;width:max-content;max-width:90vw;
-  font:400 clamp(10px,1.1vw,12px)/1.7 "IBM Plex Sans Arabic",sans-serif;
-  letter-spacing:0;color:rgba(239,213,184,.74);
-  background:rgba(8,7,6,.24);padding:3px 12px;
-  border-radius:25px;pointer-events:none;direction:rtl;
-}
-.lamp-photo-intro .lamp-next{
-  position:absolute;z-index:5;bottom:clamp(14px,3.5vh,30px);
-  left:50%;transform:translateX(-50%);
-  display:flex;align-items:center;gap:8px;flex-direction:row;
-  text-decoration:none;white-space:nowrap;
-  color:#f4dfc9;font:500 11px/1.6 "IBM Plex Sans Arabic",sans-serif;
-  transition:opacity .25s ease;
-}
-.lamp-photo-intro .lamp-next:hover{opacity:.65}
-.lamp-photo-intro .lamp-next svg{
-  width:20px;height:20px;fill:none;stroke:currentColor;
-  stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;
-}
+/* MENAT • LIGHTS THAT TELL STORIES — infinitely scalable, not a raster image. */
+.lamp-intro.lamp-vector-intro{position:relative;isolation:isolate;overflow:hidden;width:100%;height:100svh;min-height:640px;background:#070809;color:#fff3df;direction:ltr;text-align:left;font-family:"DM Sans",Arial,sans-serif}
+.lamp-vector-intro *,.lamp-vector-intro *:before,.lamp-vector-intro *:after{box-sizing:border-box}
+.lamp-vector-intro .lamp-story-art{position:absolute;inset:0;z-index:0;pointer-events:none}
+.lamp-vector-intro .lamp-illustration{position:absolute;inset:0;display:block;width:100%;height:100%}
+.lamp-vector-intro .lamp-mobile-art{display:none}
+.lamp-vector-intro .s-illumination{opacity:1;transition:opacity 1.08s cubic-bezier(.22,.6,.22,1)}
+.lamp-vector-intro .lamp-story-art::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(2,5,6,.15),transparent 75%);transition:background .95s}
+.lamp-vector-intro[data-lit="false"] .s-illumination{opacity:.035}
+.lamp-vector-intro[data-lit="false"] .lamp-story-art::after{background:rgba(0,0,0,.27)}
+.lamp-vector-intro .lamp-title-block{position:absolute;z-index:4;left:15.1%;top:54%;width:43%;transform:translateY(-18%);text-align:left;pointer-events:none;text-shadow:0 5px 20px rgba(0,0,0,.12)}
+.lamp-vector-intro .lamp-kicker{font:500 clamp(9px,.75vw,12px)/1.6 "DM Sans",Arial,sans-serif;letter-spacing:.24em;color:rgba(250,226,202,.60);margin:0 0 clamp(18px,3vh,36px)}
+.lamp-vector-intro .lamp-title{display:flex;flex-direction:column;gap:clamp(0px,.6vw,8px);margin:0;color:#fbead4;font:200 clamp(56px,5.4vw,101px)/1.13 "DM Sans","Helvetica Neue",Arial,sans-serif!important;letter-spacing:-.065em!important;font-weight:200!important;text-transform:none!important}
+.lamp-vector-intro .lamp-title span,.lamp-vector-intro .lamp-title em{display:block;white-space:nowrap;font-weight:200;font-style:normal}
+.lamp-vector-intro .lamp-title em{font-style:italic;color:#ffe4c4}
+.lamp-vector-intro .lamp-title-rule{width:min(85%,510px);height:28px;display:flex;align-items:center;gap:8px;margin-top:30px}
+.lamp-vector-intro .lamp-title-rule .dot{display:block;width:10px;height:10px;border-radius:50%;background:#fff3e4;flex:none}
+.lamp-vector-intro .lamp-title-rule .dot.tiny{height:6px;width:6px}
+.lamp-vector-intro .lamp-title-rule .hairline{height:1px;flex:1;background:rgba(255,242,223,.82);margin:0 4px}
+.lamp-vector-intro .lamp-cord{--cord-travel:0px;position:absolute;z-index:12;left:74.95%;top:49.15%;width:56px;height:156px;transform:translateX(-50%);border:0;border-radius:16px;background:transparent;cursor:grab;touch-action:none;display:flex;flex-direction:column;align-items:center;padding:0;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+.lamp-vector-intro .lamp-cord:active{cursor:grabbing}
+.lamp-vector-intro .lamp-cord:focus-visible{outline:1px solid #ffe5bb;outline-offset:3px}
+.lamp-vector-intro .lamp-cord-string{display:block;width:2px;height:calc(92px + var(--cord-travel));background:linear-gradient(90deg,#3b1b0a,#eec17a,#713e1e);box-shadow:1px 0 2px rgba(255,193,105,.19);flex:none;transition:height .36s cubic-bezier(.24,1.45,.28,1)}
+.lamp-vector-intro .lamp-cord.is-dragging .lamp-cord-string{transition:none}
+.lamp-vector-intro .lamp-cord-neck{width:7px;height:10px;flex:none;background:linear-gradient(90deg,#5a2b0f,#da9b4c,#482009);border-radius:2px}
+.lamp-vector-intro .lamp-cord-drop{display:block;flex:none;width:17px;height:31px;border-radius:54% 54% 52% 52% / 65% 65% 38% 38%;background:linear-gradient(90deg,#361608 0%,#a4672e 24%,#ffce7d 47%,#ae6b2e 66%,#2d1409 100%);box-shadow:inset 1px 0 4px rgba(255,220,157,.3),0 7px 12px rgba(8,4,2,.45);transform-origin:50% -98px}
+.lamp-vector-intro .lamp-cord:hover .lamp-cord-drop{filter:brightness(1.25)}
+.lamp-vector-intro .lamp-cord.is-pulled .lamp-cord-drop{animation:lamp-cord-sway .65s cubic-bezier(.26,.72,.33,1)}
+@keyframes lamp-cord-sway{0%,100%{transform:rotate(0deg)}30%{transform:rotate(8deg)}70%{transform:rotate(-5deg)}}
+.lamp-vector-intro .lamp-instruction{position:absolute;z-index:4;left:9%;bottom:clamp(31px,6vh,64px);margin:0;color:rgba(250,226,197,.6);direction:rtl;font:400 clamp(11px,.8vw,13px)/1.5 "IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+.lamp-vector-intro .lamp-next{position:absolute;z-index:5;right:9%;bottom:clamp(25px,5.6vh,61px);display:flex;gap:12px;align-items:center;color:#f6d9b9;text-decoration:none;font:500 12px/1.5 "IBM Plex Sans Arabic",sans-serif;transition:gap .3s,opacity .3s}
+.lamp-vector-intro .lamp-next:hover{gap:20px;opacity:.82}
+.lamp-vector-intro .lamp-next svg{width:21px;height:21px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lamp-vector-intro[data-lit="false"] .lamp-title-block{opacity:.65;transition:opacity .9s}
+@media(min-width:1600px){.lamp-vector-intro .lamp-title-block{top:56%}.lamp-vector-intro .lamp-title{font-size:clamp(88px,5.1vw,118px)!important}}
+@media(max-width:980px){.lamp-vector-intro .lamp-title{font-size:clamp(43px,5.8vw,68px)!important}.lamp-vector-intro .lamp-title-block{left:12%;width:50%;top:56%}.lamp-vector-intro .lamp-cord{height:142px}.lamp-vector-intro .lamp-cord-string{height:calc(80px + var(--cord-travel))}}
 @media(max-width:700px){
- .lamp-intro.lamp-photo-intro{min-height:500px}
- .lamp-photo-intro .lamp-hint{bottom:64px;font-size:10px}
- .lamp-photo-intro .lamp-next{bottom:22px;font-size:10px}
+.lamp-intro.lamp-vector-intro{min-height:580px}
+.lamp-vector-intro .lamp-desktop-art{display:none}
+.lamp-vector-intro .lamp-mobile-art{display:block}
+.lamp-vector-intro .lamp-title-block{left:50%;top:62.5%;width:84%;transform:translateX(-50%);text-align:center}
+.lamp-vector-intro .lamp-kicker{font-size:9px;letter-spacing:.12em;margin-bottom:15px}
+.lamp-vector-intro .lamp-title{font-size:clamp(49px,11vw,72px)!important;line-height:1.13!important;letter-spacing:-.06em!important;align-items:center}
+.lamp-vector-intro .lamp-title-rule{width:96%;margin:24px auto 0}
+.lamp-vector-intro .lamp-cord{left:68.5%;top:36.8%;width:48px;height:130px}
+.lamp-vector-intro .lamp-cord-string{height:calc(77px + var(--cord-travel))}
+.lamp-vector-intro .lamp-cord-drop{height:24px;width:14px}
+.lamp-vector-intro .lamp-instruction{left:10%;bottom:73px;font-size:10px}
+.lamp-vector-intro .lamp-next{right:10%;bottom:30px;font-size:10px;gap:6px}
 }
-@media(prefers-reduced-motion:reduce){
- .lamp-photo-intro .lamp-photo{transition:none}
-}
+@media(max-width:390px){.lamp-vector-intro .lamp-title{font-size:clamp(38px,11.3vw,51px)!important}.lamp-vector-intro .lamp-title-block{top:63.5%}}
+@media(max-height:590px) and (min-width:701px){.lamp-vector-intro .lamp-title-block{top:58%}.lamp-vector-intro .lamp-title{font-size:clamp(40px,5vw,70px)!important}.lamp-vector-intro .lamp-kicker{margin-bottom:10px}.lamp-vector-intro .lamp-title-rule{margin-top:14px}.lamp-vector-intro .lamp-cord-string{height:calc(65px + var(--cord-travel))}}
+@media(prefers-reduced-motion:reduce){.lamp-vector-intro *{transition:none!important;animation:none!important}}
