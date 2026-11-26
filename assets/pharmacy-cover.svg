@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Pharmacy web application concept illustrated as an elegant digital storefront">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E8F6FF"/><stop offset="1" stop-color="#D7EFFF"/></linearGradient><filter id="shadow" x="-20%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#25364A" flood-opacity=".14"/></filter></defs>
-<rect width="1200" height="675" rx="30" fill="url(#bg)"/><circle cx="1080" cy="50" r="245" fill="#FF5C34"/><circle cx="70" cy="640" r="255" fill="#C8E6FA"/><path d="M50 110H1150" stroke="#FFFFFF" stroke-width="2" opacity=".8"/>
-<text x="81" y="90" font-family="Arial,sans-serif" font-size="24" font-weight="800" letter-spacing="5" fill="#25364A">DIGITAL HEALTH / WEB</text>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7F8FC"/><stop offset="1" stop-color="#CDF22B"/></linearGradient><filter id="shadow" x="-20%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#101317" flood-opacity=".14"/></filter></defs>
+<rect width="1200" height="675" rx="30" fill="url(#bg)"/><circle cx="1080" cy="50" r="245" fill="#1E45FB"/><circle cx="70" cy="640" r="255" fill="#E7EAF6"/><path d="M50 110H1150" stroke="#FFFFFF" stroke-width="2" opacity=".8"/>
+<text x="81" y="90" font-family="Arial,sans-serif" font-size="24" font-weight="800" letter-spacing="5" fill="#101317">DIGITAL HEALTH / WEB</text>
 <g filter="url(#shadow)"><rect x="140" y="144" width="922" height="425" rx="30" fill="#FFFFFF"/>
-<rect x="140" y="144" width="922" height="61" rx="30" fill="#25364A"/><path d="M140 177H1062V205H140Z" fill="#25364A"/>
-<circle cx="179" cy="175" r="8" fill="#FF5C34"/><circle cx="205" cy="175" r="8" fill="#D7EFFF"/><circle cx="231" cy="175" r="8" fill="#FFFFFF"/>
-<text x="291" y="186" font-family="Arial,sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">PHARMACY</text><text x="992" y="184" text-anchor="end" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#D7EFFF">WEB EXPERIENCE</text>
-<rect x="169" y="230" width="304" height="310" rx="19" fill="#D7EFFF"/>
-<rect x="194" y="255" width="255" height="105" rx="16" fill="#FFFFFF"/><path d="M300 276h43v63h-43zM290 287h63v41h-63z" fill="#FF5C34"/>
-<text x="212" y="396" font-family="Arial,sans-serif" font-size="31" font-weight="900" fill="#25364A">Care, made</text><text x="212" y="433" font-family="Arial,sans-serif" font-size="31" font-weight="900" fill="#25364A">simpler.</text>
-<rect x="211" y="461" width="157" height="43" rx="21" fill="#FF5C34"/><text x="290" y="488" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#FFFFFF">EXPLORE</text>
-<rect x="503" y="230" width="526" height="62" rx="14" fill="#F2F9FE"/><circle cx="539" cy="261" r="15" stroke="#25364A" stroke-width="5" fill="none"/><path d="m551 273 15 15" stroke="#25364A" stroke-width="5" stroke-linecap="round"/><rect x="588" y="254" width="267" height="13" rx="6" fill="#CADFEF"/>
-<rect x="503" y="322" width="246" height="217" rx="18" fill="#EFF8FE"/><rect x="773" y="322" width="256" height="217" rx="18" fill="#EFF8FE"/>
-<g transform="translate(565 349)"><rect x="29" y="13" width="95" height="120" rx="14" fill="#FFFFFF" stroke="#25364A" stroke-width="7"/><rect x="46" y="0" width="61" height="28" rx="7" fill="#25364A"/><path d="M77 49v46M54 72h46" stroke="#FF5C34" stroke-width="15" stroke-linecap="round"/></g>
-<g transform="translate(825 345)"><rect x="31" y="28" width="134" height="94" rx="47" fill="#FFFFFF" stroke="#25364A" stroke-width="7"/><path d="M97 31v90" stroke="#25364A" stroke-width="6"/><path d="M100 32h17q47 0 47 47t-47 43h-17" fill="#FF5C34"/></g>
+<rect x="140" y="144" width="922" height="61" rx="30" fill="#101317"/><path d="M140 177H1062V205H140Z" fill="#101317"/>
+<circle cx="179" cy="175" r="8" fill="#1E45FB"/><circle cx="205" cy="175" r="8" fill="#CDF22B"/><circle cx="231" cy="175" r="8" fill="#FFFFFF"/>
+<text x="291" y="186" font-family="Arial,sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">PHARMACY</text><text x="992" y="184" text-anchor="end" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#CDF22B">WEB EXPERIENCE</text>
+<rect x="169" y="230" width="304" height="310" rx="19" fill="#CDF22B"/>
+<rect x="194" y="255" width="255" height="105" rx="16" fill="#FFFFFF"/><path d="M300 276h43v63h-43zM290 287h63v41h-63z" fill="#1E45FB"/>
+<text x="212" y="396" font-family="Arial,sans-serif" font-size="31" font-weight="900" fill="#101317">Care, made</text><text x="212" y="433" font-family="Arial,sans-serif" font-size="31" font-weight="900" fill="#101317">simpler.</text>
+<rect x="211" y="461" width="157" height="43" rx="21" fill="#1E45FB"/><text x="290" y="488" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#FFFFFF">EXPLORE</text>
+<rect x="503" y="230" width="526" height="62" rx="14" fill="#F7F8FC"/><circle cx="539" cy="261" r="15" stroke="#101317" stroke-width="5" fill="none"/><path d="m551 273 15 15" stroke="#101317" stroke-width="5" stroke-linecap="round"/><rect x="588" y="254" width="267" height="13" rx="6" fill="#CADFEF"/>
+<rect x="503" y="322" width="246" height="217" rx="18" fill="#F7F8FC"/><rect x="773" y="322" width="256" height="217" rx="18" fill="#F7F8FC"/>
+<g transform="translate(565 349)"><rect x="29" y="13" width="95" height="120" rx="14" fill="#FFFFFF" stroke="#101317" stroke-width="7"/><rect x="46" y="0" width="61" height="28" rx="7" fill="#101317"/><path d="M77 49v46M54 72h46" stroke="#1E45FB" stroke-width="15" stroke-linecap="round"/></g>
+<g transform="translate(825 345)"><rect x="31" y="28" width="134" height="94" rx="47" fill="#FFFFFF" stroke="#101317" stroke-width="7"/><path d="M97 31v90" stroke="#101317" stroke-width="6"/><path d="M100 32h17q47 0 47 47t-47 43h-17" fill="#1E45FB"/></g>
 <path d="M535 496h184M804 496h192" stroke="#B3D8EB" stroke-width="13" stroke-linecap="round"/>
-</g><text x="1060" y="618" font-size="19" text-anchor="end" font-family="Arial,sans-serif" font-weight="800" letter-spacing="3" fill="#25364A">PHARMACY × DIGITAL DESIGN</text></svg>
+</g><text x="1060" y="618" font-size="19" text-anchor="end" font-family="Arial,sans-serif" font-weight="800" letter-spacing="3" fill="#101317">PHARMACY × DIGITAL DESIGN</text></svg>
