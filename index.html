@@ -37,12 +37,12 @@
 <radialGradient id="s-inside"><stop stop-color="#fffbe7"/><stop offset=".47" stop-color="#ffebbc"/><stop offset=".83" stop-color="#ffce77"/><stop offset="1" stop-color="#e88e31"/></radialGradient>
 <filter id="s-blur"><feGaussianBlur stdDeviation="45"/></filter>
 <filter id="s-smudge"><feGaussianBlur stdDeviation="12"/></filter>
-<filter id="s-grain"><feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="2" stitchTiles="stitch" seed="8"/><feColorMatrix type="saturate" values="0"/></filter><clipPath id="s-shade-clip"><path d="M1060 202 C1026 271 920 389 815 445 Q1060 461 1305 445 C1215 377 1108 259 1084 202 Z"/></clipPath></defs>
+<filter id="s-grain"><feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="2" stitchTiles="stitch" seed="8"/><feColorMatrix type="saturate" values="0"/></filter><clipPath id="s-shade-clip"><path d="M1060 202 C1026 271 920 389 815 445 Q1060 461 1305 445 C1215 377 1108 259 1084 202 Z"/></clipPath><pattern id="s-stipple" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".65" fill="#ffdfaa" opacity=".38"/><circle cx="12" cy="16" r=".75" fill="#a76834" opacity=".35"/><circle cx="19" cy="8" r=".4" fill="#e6aa67" opacity=".36"/><circle cx="7" cy="20" r=".35" fill="#8b4d25" opacity=".3"/></pattern></defs>
 <rect width="1600" height="900" fill="url(#s-bg)"/>
 <ellipse class="s-illumination" cx="1013" cy="630" rx="710" ry="530" fill="url(#s-wall)"/>
 <ellipse class="s-illumination" cx="1070" cy="540" rx="470" ry="275" fill="url(#s-hot)"/>
 <path class="s-illumination" d="M820 446H1310L1555 850H460Z" fill="#f09349" filter="url(#s-blur)" opacity=".13"/>
-<rect width="1600" height="900" filter="url(#s-grain)" opacity=".08" style="mix-blend-mode:screen"/>
+<rect width="1600" height="900" fill="url(#s-stipple)" opacity=".45"/>
 <rect x="70" y="120" width="1460" height="695" fill="none" stroke="#fff4e6" stroke-opacity=".62" stroke-width="1"/>
 <!-- Wall-mounted brass arm and vertical support, like the supplied reference -->
 <path d="M1452 205V920" stroke="#0b0807" stroke-width="24"/>
@@ -79,11 +79,11 @@
 <radialGradient id="m-inside"><stop stop-color="#fffbe7"/><stop offset=".47" stop-color="#ffebbc"/><stop offset=".83" stop-color="#ffce77"/><stop offset="1" stop-color="#e88e31"/></radialGradient>
 <filter id="m-blur"><feGaussianBlur stdDeviation="45"/></filter>
 <filter id="m-smudge"><feGaussianBlur stdDeviation="12"/></filter>
-<filter id="m-grain"><feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="2" stitchTiles="stitch" seed="8"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+<filter id="m-grain"><feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="2" stitchTiles="stitch" seed="8"/><feColorMatrix type="saturate" values="0"/></filter><pattern id="m-stipple" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".65" fill="#ffdfaa" opacity=".38"/><circle cx="12" cy="16" r=".75" fill="#a76834" opacity=".35"/><circle cx="19" cy="8" r=".4" fill="#e6aa67" opacity=".36"/><circle cx="7" cy="20" r=".35" fill="#8b4d25" opacity=".3"/></pattern></defs>
 <rect width="760" height="1220" fill="url(#m-bg)"/>
 <ellipse class="s-illumination" cx="370" cy="655" rx="550" ry="565" fill="url(#m-wall)"/>
 <ellipse class="s-illumination" cx="378" cy="575" rx="310" ry="244" fill="url(#m-hot)" opacity=".69"/>
-<rect width="760" height="1220" filter="url(#m-grain)" opacity=".085" style="mix-blend-mode:screen"/>
+<rect width="760" height="1220" fill="url(#m-stipple)" opacity=".45"/>
 <rect x="47" y="142" width="666" height="1025" fill="none" stroke="#fff3e1" stroke-opacity=".68" stroke-width="1.5"/>
 <path d="M682 203V1245" stroke="#0d0906" stroke-width="24"/>
 <path d="M676 206V1245" stroke="url(#m-post)" stroke-width="12"/>
