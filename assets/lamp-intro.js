@@ -1,101 +1,136 @@
-/* MENAT / cinematic welcome: begin dark, ignite on first click.
-   Pull/click the photographed lamp's chain to switch off and restart. */
+/* MENAT — photo-real studio scene with real HTML and genuine on/off controls.
+ * The image is a clean background: no headline or navigation is baked into it.
+ * Starts DARK on every fresh load. First touch = illuminate; chain or switch = off.
+ */
 (() => {
   "use strict";
   const scene = document.getElementById("lampIntro");
   const awaken = document.getElementById("lampAwaken");
   const cord = document.getElementById("lampCord");
-  if (!scene || !awaken || !cord) return;
+  const toggleButton = document.getElementById("lampLightToggle");
+  const instruction = document.getElementById("lampInstructionText");
 
-  const pullNote = document.getElementById("lampInstructionText");
-  let isLit = false;
-  let pointerStart = null;
-  let suppressClick = false;
-  let flareTimer = 0;
+  if (!scene || !awaken || !cord || !toggleButton) return;
+  let lit = false;
+  let pressed = null;
+  let suppressCordClick = false;
+  let bloomTimer = null;
 
   const isEnglish = () => document.documentElement.lang === "en";
 
-  const updateLabels = () => {
+  const updateAccessibleText = () => {
     const en = isEnglish();
     cord.setAttribute("aria-label", en
-      ? (isLit ? "Pull the lamp chain to turn the light off" : "Turn on the lamp")
-      : (isLit ? "اسحبي خيط المصباح لإطفاء الضوء" : "أضيئي المصباح"));
-    cord.setAttribute("aria-pressed", String(isLit));
-    awaken.setAttribute("aria-label", en ? "Turn on the light" : "اضغطي لإضاءة المكان");
-    if (pullNote) pullNote.textContent = en
-      ? "Pull the chain to switch the light"
-      : "اسحبي الخيط لتبديل الإضاءة";
+      ? (lit ? "Pull lamp chain to turn the light off" : "Pull lamp chain to turn the light on")
+      : (lit ? "اسحبي خيط المصباح لإطفاء الضوء" : "اسحبي خيط المصباح لتشغيل الضوء"));
+    cord.setAttribute("aria-pressed", String(lit));
+    toggleButton.setAttribute("aria-pressed", String(lit));
+    toggleButton.setAttribute("aria-label", en ? "Switch off the light" : "إطفاء الإضاءة");
+    awaken.setAttribute("aria-label", en ? "Touch to switch the light on" : "اضغطي لإضاءة المكان");
+    if (instruction) instruction.textContent = en
+      ? "Pull the lamp chain to change the light"
+      : "اسحبي خيط المصباح لتبديل الإضاءة";
   };
 
-  function setLight(next, userAction = false) {
-    isLit = Boolean(next);
-    scene.dataset.lit = String(isLit);
-    awaken.tabIndex = isLit ? -1 : 0;
-    updateLabels();
-
-    if (isLit && userAction) {
-      scene.classList.remove("is-igniting");
-      // Restart the one-time light bloom only when the visitor turns it on.
+  const update = (next, animate = false) => {
+    lit = !!next;
+    scene.dataset.lit = String(lit);
+    awaken.tabIndex = lit ? -1 : 0;
+    toggleButton.tabIndex = lit ? 0 : -1;
+    cord.tabIndex = lit ? 0 : -1;
+    updateAccessibleText();
+    window.clearTimeout(bloomTimer);
+    scene.classList.remove("is-igniting");
+    if (lit && animate) {
       void scene.offsetWidth;
       scene.classList.add("is-igniting");
-      window.clearTimeout(flareTimer);
-      flareTimer = window.setTimeout(() => scene.classList.remove("is-igniting"), 1800);
-    } else if (!isLit) {
-      window.clearTimeout(flareTimer);
-      scene.classList.remove("is-igniting");
+      bloomTimer = window.setTimeout(() => scene.classList.remove("is-igniting"), 1850);
     }
-  }
+  };
 
-  awaken.addEventListener("click", () => {
-    if (!isLit) setLight(true, true);
+  // An entire dark scene becomes a large first-click light switch.
+  awaken.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (!lit) update(true, true);
   });
 
-  cord.addEventListener("click", () => {
-    if (suppressClick || !isLit) return;
-    setLight(false);
+  // While illuminated, touching the background also switches the lamp off.
+  // Navigation and interactive controls are intentionally exempt.
+  scene.addEventListener("click", (event) => {
+    if (event.target.closest("a, button")) return;
+    update(!lit, !lit);
   });
 
-  cord.addEventListener("pointerdown", event => {
-    if (!isLit) return;
+  toggleButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    update(false);
+  });
+
+  cord.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (suppressCordClick) return;
+    update(!lit, !lit);
+  });
+
+  // Pulling the existing chain in the photograph is supported in addition to a
+  // regular click or keyboard activation.
+  cord.addEventListener("pointerdown", (event) => {
+    if (!lit) return;
     if (event.pointerType === "mouse" && event.button !== 0) return;
-    pointerStart = { id: event.pointerId, y: event.clientY };
+    event.stopPropagation();
+    pressed = { id: event.pointerId, initialY: event.clientY };
     cord.classList.add("is-dragging");
-    try { cord.setPointerCapture(event.pointerId); } catch (_) { /* safe fallback */ }
+    try { cord.setPointerCapture(event.pointerId); } catch (_) {}
   });
 
-  cord.addEventListener("pointermove", event => {
-    if (!pointerStart || pointerStart.id !== event.pointerId) return;
-    const travel = Math.max(0, Math.min(38, event.clientY - pointerStart.y));
-    cord.style.setProperty("--cord-travel", travel + "px");
+  cord.addEventListener("pointermove", (event) => {
+    if (!pressed || pressed.id !== event.pointerId) return;
+    const delta = Math.min(42, Math.max(0, event.clientY - pressed.initialY));
+    cord.style.setProperty("--cord-travel", delta + "px");
   });
 
   function release(event, cancelled = false) {
-    if (!pointerStart || pointerStart.id !== event.pointerId) return;
-    const dragged = !cancelled && (event.clientY - pointerStart.y >= 18);
-    pointerStart = null;
+    if (!pressed || pressed.id !== event.pointerId) return;
+    const downward = event.clientY - pressed.initialY;
+    pressed = null;
     cord.classList.remove("is-dragging");
     cord.style.removeProperty("--cord-travel");
-    if (dragged) {
-      suppressClick = true;
+    if (!cancelled && downward >= 16) {
+      suppressCordClick = true;
       cord.classList.add("is-pulled");
-      setLight(false);
+      update(!lit, !lit);
       window.setTimeout(() => {
-        suppressClick = false;
+        suppressCordClick = false;
         cord.classList.remove("is-pulled");
-      }, 120);
+      }, 210);
     }
   }
 
-  cord.addEventListener("pointerup", event => release(event));
-  cord.addEventListener("pointercancel", event => release(event, true));
-  cord.addEventListener("lostpointercapture", event => {
-    if (pointerStart?.id === event.pointerId) release(event, true);
+  cord.addEventListener("pointerup", (event) => release(event));
+  cord.addEventListener("pointercancel", (event) => release(event, true));
+  cord.addEventListener("lostpointercapture", (event) => {
+    if (pressed?.id === event.pointerId) release(event, true);
   });
 
-  // The site's language toggle changes the <html lang> without navigation.
-  new MutationObserver(updateLabels).observe(document.documentElement, {
+  // Low-amplitude optical movement lends depth without fake zooming/warping.
+  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    scene.addEventListener("pointermove", (event) => {
+      if (!lit || event.pointerType !== "mouse" || pressed) return;
+      const x = ((event.clientX / Math.max(1, scene.clientWidth)) - 0.5) * -7;
+      const y = ((event.clientY / Math.max(1, scene.clientHeight)) - 0.5) * -4;
+      scene.style.setProperty("--scene-move-x", x.toFixed(2) + "px");
+      scene.style.setProperty("--scene-move-y", y.toFixed(2) + "px");
+    }, { passive: true });
+    scene.addEventListener("pointerleave", () => {
+      scene.style.removeProperty("--scene-move-x");
+      scene.style.removeProperty("--scene-move-y");
+    }, { passive: true });
+  }
+
+  new MutationObserver(updateAccessibleText).observe(document.documentElement, {
     attributes: true, attributeFilter: ["lang"]
   });
 
-  setLight(false);
+  update(false);
 })();
