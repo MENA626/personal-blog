@@ -1,0 +1,32 @@
+name: Import approved hero artwork
+
+on:
+  push:
+    paths:
+      - .github/workflows/import-lamp-hero.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download the original high-resolution approved artwork
+        env:
+          ART_URL: "https://16c19152-d295-42e6-97a1-2f8b61486640.sandbox.floot.app/_cdn/static/12bd23e5-684b-4d46-8349-e7538b8431f6-menat-hero-light.jpg"
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --fail --location --silent --show-error --retry 2 --retry-delay 2 "$ART_URL" --output assets/lamp-hero-final.png
+          file assets/lamp-hero-final.png
+          test "$(wc -c < assets/lamp-hero-final.png)" -eq 1899387
+          echo "d1b043caf044140c3360ff7f5c1d4e0863995b496eeb3296e2c30ff1db3fa470  assets/lamp-hero-final.png" | sha256sum --check
+      - name: Add photo to blog repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/lamp-hero-final.png
+          git commit -m "Add high-resolution approved photo-real cinematic lamp intro"
+          git push
