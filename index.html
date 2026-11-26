@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Noto+Naskh+Arabic:wght@400;500;600;700&amp;family=Zain:wght@400;700;800;900&amp;display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap">
   <!-- Critical CSS is embedded: works even if external asset requests are blocked. -->
   <style>
 /* Blog palette inspired by supplied reference: ice blue #D7EFFF + vivid coral orange #FF5C34. */
@@ -6844,10 +6844,10 @@ html.journey-on .journey-entered .matcha-cover-image{
 }
 .note-dialog #shareNote.dialog-share:hover{background:#E64E2B!important}
 
-/* Formal English typography: clean Inter throughout; Arabic styling unchanged. */
+/* English typography: Playfair Display applied when EN is selected. */
 html[lang="en"]{
- --english:"Inter","DM Sans",Arial,sans-serif;
- --english-head:"Inter","DM Sans",Arial,sans-serif;
+ --english:"Playfair Display",Georgia,serif;
+ --english-head:"Playfair Display",Georgia,serif;
 }
 html[lang="en"] body,
 html[lang="en"] button,
@@ -7116,6 +7116,24 @@ html[lang="en"] .site-header .language-switch-option{
 @media (min-width:901px) and (max-width:1120px){
   #home.hero-poster .poster-copy > *{max-width:660px!important}
   #home.hero-poster .poster-title{max-width:660px!important}
+}
+
+/* The visible English greeting uses the selected display family in both language views. */
+#home.hero-poster .poster-copy .poster-english{
+ font-family:"Playfair Display",Georgia,serif!important;
+ font-weight:700!important;
+ letter-spacing:-.035em!important;
+}
+/* Ensure bilingual titles and English body text use the requested font when EN is active. */
+html[lang="en"] .poster-copy,
+html[lang="en"] .poster-title,
+html[lang="en"] .poster-intro,
+html[lang="en"] .poster-closing,
+html[lang="en"] .project-details,
+html[lang="en"] .site-header .nav-shell,
+html[lang="en"] .note-card-body,
+html[lang="en"] .section-kicker{
+ font-family:"Playfair Display",Georgia,serif!important;
 }
 </style>
 
