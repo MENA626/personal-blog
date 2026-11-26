@@ -468,3 +468,74 @@ body.past-lamp .site-header{
 }
 /* Keep lamp-heading and pull cord interactive and legible beneath the overlay. */
 .lamp-intro .lamp-heading{z-index:6}
+
+
+/* EDITORIAL ARABIC TYPOGRAPHY · Nov 2026
+   Thmanyah's family names are preferred when legitimately installed.
+   The freely served Amiri / IBM Plex fonts are consistent public fallbacks. */
+:root{
+  --arabic:"Thmanyah Sans","IBM Plex Sans Arabic",sans-serif;
+  --arabic-editorial:"Thmanyah Serif Display","Amiri","Noto Naskh Arabic",serif;
+  --arabic-reading:"Thmanyah Serif Text","Amiri","Noto Naskh Arabic",serif;
+}
+html[lang="ar"] body{
+  font-family:var(--arabic);
+  font-weight:400;
+}
+html[lang="ar"] .hero h1,
+html[lang="ar"] .section-heading h2,
+html[lang="ar"] .feature-narrative h3,
+html[lang="ar"] .feature-story .feature-intro h2,
+html[lang="ar"] .work-copy h3,
+html[lang="ar"] .journal-info h3,
+html[lang="ar"] .video-content h3,
+html[lang="ar"] .about h2,
+html[lang="ar"] .statement h2,
+html[lang="ar"] .recognition h2,
+html[lang="ar"] .contact-panel h2,
+html[lang="ar"] .dialog-inner h2{
+  font-family:var(--arabic-editorial)!important;
+  letter-spacing:0!important;
+  font-weight:700;
+}
+html[lang="ar"] .hero-desc,
+html[lang="ar"] .statement p,
+html[lang="ar"] .about p,
+html[lang="ar"] .journal-info p,
+html[lang="ar"] .dialog-body p{
+  font-family:var(--arabic-reading);
+  letter-spacing:0;
+}
+html[lang="ar"] .site-nav a,
+html[lang="ar"] .nav-contact,
+html[lang="ar"] .eyebrow,
+html[lang="ar"] .section-heading p,
+html[lang="ar"] .work-copy p,
+html[lang="ar"] .video-content p,
+html[lang="ar"] .btn,
+html[lang="ar"] .text-link,
+html[lang="ar"] .about-meta,
+html[lang="ar"] .contact-links{
+  font-family:var(--arabic);
+  letter-spacing:0;
+}
+body:not(.past-lamp) .site-header{
+  background:rgba(8,7,6,.28)!important;
+  border-bottom-color:rgba(255,231,204,.17)!important;
+}
+.site-header .site-nav a{
+  font-weight:500;
+  font-size:clamp(11px,.85vw,13px);
+}
+.site-header .identity-label{
+  font-size:10px;
+  font-weight:650;
+  letter-spacing:.07em;
+}
+.site-header .nav-contact{
+  border-radius:2px;
+  box-shadow:none;
+}
+@media(max-width:700px){
+  .site-header .site-nav a{font-size:15px;padding-block:13px}
+}
