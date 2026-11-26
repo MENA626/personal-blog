@@ -600,3 +600,39 @@ html.journey-on .journey-ready{
   translate:none!important;
  }
 }
+
+/* Cosmos composition — replace all legacy pastel/orange visuals. */
+#projects .cosmos-art{
+ background:#1E45FB!important;
+ background-image:radial-gradient(circle at 42% 35%,#3159FF 0%,#1E45FB 70%)!important;
+ color:#CDF22B!important;
+ overflow:hidden!important;
+}
+#projects .cosmos-art .cosmos-planet{
+ background:radial-gradient(circle at 31% 28%,#CDF22B 0%,#B7DA24 28%,#1E45FB 75%,#101317 100%)!important;
+ box-shadow:0 0 0 13px rgba(205,242,43,.07)!important;
+ animation:planetPulse 9s ease-in-out infinite!important;
+}
+#projects .cosmos-art .cosmos-orbit{border-color:rgba(205,242,43,.5)!important}
+#projects .cosmos-art .cosmos-wordmark,
+#projects .cosmos-art .cosmos-submark{
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+ letter-spacing:.1em!important;
+}
+#projects .cosmos-art .cosmos-stars{
+ color:#CDF22B!important;-webkit-text-fill-color:#CDF22B!important;
+ opacity:.38!important;
+}
+#projects .website-card .site-project-illustration{background:#1E45FB!important}
+#projects .matcha-cover-label{
+ color:#1E45FB!important;
+ background:#CDF22B!important;
+ border-color:#CDF22B!important;
+}
+@keyframes planetPulse{
+ 0%,100%{filter:brightness(1);transform:scale(1)}
+ 50%{filter:brightness(1.08);transform:scale(1.025)}
+}
+@media(prefers-reduced-motion:reduce){
+ #projects .cosmos-art .cosmos-planet{animation:none!important;transform:none!important}
+}
