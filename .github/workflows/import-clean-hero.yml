@@ -1,0 +1,27 @@
+name: Import clean editorial photo
+on:
+  push:
+    paths:
+      - .github/workflows/import-clean-hero.yml
+permissions:
+  contents: write
+jobs:
+  import-clean-photo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download clean photographic scene
+        env:
+          ART_URL: "https://16c19152-d295-42e6-97a1-2f8b61486640.sandbox.floot.app/_cdn/static/6756238a-8a5a-420c-a308-479316404321-menat-hero-clean.webp"
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 "$ART_URL" --output assets/menat-hero-clean.webp
+          test "$(wc -c < assets/menat-hero-clean.webp)" -eq 201810
+          echo "eb47daf29087ebfc384890e158022bcf814014a35b619f93b2fa94691c72dfc2  assets/menat-hero-clean.webp" | sha256sum --check
+      - name: Commit clean image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/menat-hero-clean.webp
+          git commit -m "Use clean hero image with separately editable headline"
+          git push
