@@ -1,0 +1,44 @@
+/* MENAT / ATELIER — complementary resume art direction */
+:root{--purple:#a45f3c!important;--dark:#2b160e!important;--sky:#f4e8d8!important;--lilac:#c58753!important;--peach:#bb7950!important;--ink:#352016!important;--muted:#756052!important;--font:"IBM Plex Sans Arabic","Cairo",sans-serif!important;--eng:"DM Sans",Arial,sans-serif!important}
+html,body,html[lang="ar"] body,html[lang="en"] body{background:#e9d9c5!important;color:#372116!important}
+body{font-family:var(--font)!important}
+.toolbar{background:#e9d9c5!important;border-bottom:1px solid #d5bba1!important}
+.toolbar #back{color:#3b2116!important;font-weight:600!important}
+.toolbar #back:before{background:#5c321d!important;color:#f6e8d5!important;border-radius:2px!important}
+.toolbar-actions button,.toolbar #ar,.toolbar #en{background:#f5e9da!important;color:#4d2d1a!important;border:1px solid #bf9d7e!important;border-radius:2px!important;font-weight:600!important}
+.toolbar #ar[aria-pressed="true"],.toolbar #en[aria-pressed="true"]{background:#5c321d!important;color:#fff2df!important;border-color:#5c321d!important}
+.toolbar .print,.toolbar button.print{background:#3c2218!important;color:#fff0dc!important;border-color:#3c2218!important;border-radius:2px!important}
+.toolbar .print:hover{background:#94562e!important}
+.cv-paper{background:#f7eee1!important;box-shadow:0 24px 65px rgba(53,25,11,.15)!important;border-radius:2px!important;border:1px solid #d1b293!important}
+.head{background:radial-gradient(circle at 83% 14%,rgba(212,143,85,.34),transparent 44%),linear-gradient(120deg,#4b291c,#1b0c08)!important;color:#fff0dc!important;padding-block:55px!important}
+.head:after{color:rgba(242,196,147,.1)!important;font-family:"Bodoni Moda","DM Sans",serif!important;font-weight:400!important}
+.head .overline{color:#dfb88f!important;letter-spacing:.16em!important;font-weight:500!important}
+.head h1{color:#fff0dd!important;font-weight:500!important}
+html[lang="ar"] .head h1{font-family:"Noto Naskh Arabic","IBM Plex Sans Arabic",serif!important;line-height:1.5!important}
+html[lang="en"] .head h1{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:400!important}
+.head .role,.head .intro{color:#e0c8b2!important}
+.content{background:#f7eee1!important}
+.section h2{color:#482b1d!important;font-weight:600!important}
+html[lang="ar"] .section h2{font-family:"Noto Naskh Arabic","IBM Plex Sans Arabic",serif!important;font-size:27px!important;font-weight:500!important}
+.section h2:before{background:#ae6d41!important;border-radius:0!important;width:2px!important}
+.section p,.note,.bottom,.skill small{color:#71594a!important}
+.panel,.skill{background:#fcf7ee!important;border:1px solid #dec8b0!important;border-radius:2px!important}
+.panel strong,.skill strong{color:#492c1b!important}
+.links a{background:#f4e6d3!important;border:1px solid #c69f7b!important;border-radius:2px!important;color:#603c27!important}
+.links a:hover{background:#603c27!important;color:#fff1db!important}
+.bottom{border-color:#d7bca3!important}
+@media(max-width:620px){
+ .toolbar{gap:9px!important;padding:12px 15px!important}
+ .toolbar #back{font-size:13px!important}
+ .toolbar-actions button{font-size:11px!important;padding:7px 9px!important;min-height:37px!important}
+ .head{padding:40px 24px!important}
+ .cv-paper{border-inline:0!important}
+}
+@media print{
+ html,body,html[lang="ar"] body,html[lang="en"] body{background:white!important;color:#281a13!important}
+ .cv-paper{background:white!important;border:0!important;box-shadow:none!important}
+ .content{background:white!important}
+ .panel,.skill{background:#fffaf4!important}
+ .toolbar{display:none!important}
+ .head{background:#382015!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
